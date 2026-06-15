@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadro Perfecto — Sistema 3.3 "La Vencida"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="description" content="Análisis hípico profesional con Sistema 3.3. Predicciones, bombas y cuadro perfecto.">
+    <meta property="og:title" content="Cuadro Perfecto — Sistema 3.3">
+    <meta property="og:description" content="Análisis hípico profesional con Sistema 3.3">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">🏇 CP<span class="gold">3.3</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menú">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" class="active">Análisis</a></li>
+                <li><a href="/stream">🎥 En Vivo</a></li>
+                <li><a href="/resultados">📊 Resultados</a></li>
+                <li><a href="/recaudacion">💰 Recaudación</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1><span class="gold">CUADRO</span> PERFECTO</h1>
+            <p class="hero-sub">Sistema 3.3 <span class="gold">"La Vencida"</span></p>
+            <p class="hero-desc">Análisis hípico profesional con inteligencia artificial</p>
+            <div class="hero-badges">
+                <span class="badge">🏇 67% efectividad</span>
+                <span class="badge">🔥 Validado públicamente</span>
+                <span class="badge">📊 IA + datos reales</span>
+            </div>
+        </div>
+    </header>
+
+    <div id="app"></div>
+
+    <div id="stream-page" style="display:none;">
+        <section class="stream-hero">
+            <div class="container">
+                <h1 class="section-title">🎥 <span class="gold">TRANSMISIÓN</span> EN VIVO</h1>
+                <p class="section-sub">Carreras de caballos en directo desde La Rinconada y Valencia</p>
+            </div>
+        </section>
+        <section class="stream-embed">
+            <div class="container">
+                <div class="channel-selector">
+                    <button class="channel-btn active" data-channel="inh" onclick="loadStream('inh')">🏇 La Rinconada</button>
+                    <button class="channel-btn" data-channel="hinava" onclick="loadStream('hinava')">🐎 Valencia</button>
+                </div>
+                <div class="stream-wrapper">
+                    <iframe id="streamIframe" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="stream-info">
+                    <div class="stream-status">
+                        <span class="status-dot"></span> Transmisión en vivo
+                    </div>
+                    <p class="stream-desc">Señal oficial del hipódromo vía YouTube. Cambia entre La Rinconada y Valencia con los botones de arriba.</p>
+                </div>
+                <div class="stream-schedule">
+                    <h3>📅 Próximas Jornadas</h3>
+                    <div class="schedule-list" id="scheduleList">
+                        <div class="schedule-item">
+                            <span class="schedule-day">Sábado</span>
+                            <span class="schedule-date">13 Jun</span>
+                            <span class="schedule-place">📍 Valencia</span>
+                            <span class="schedule-time">1:30 PM</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-day">Domingo</span>
+                            <span class="schedule-date">14 Jun</span>
+                            <span class="schedule-place">📍 La Rinconada</span>
+                            <span class="schedule-time">1:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="results-section" id="resultados">
+        <div class="container">
+            <h2 class="section-title">📊 RESULTADOS vs <span class="gold">PREDICCIONES</span></h2>
+            <p class="section-sub">Nuestros picks vs ganadores reales — efectividad del Sistema 3.3</p>
+            <div id="resultsContainer"></div>
+        </div>
+    </section>
+
+    <section class="recaudacion-section" id="recaudacion">
+        <div class="container">
+            <h2 class="section-title">💰 <span class="gold">RECAUDACIÓN</span> POR HIPÓDROMO</h2>
+            <p class="section-sub">Montos acumulados de las jornadas</p>
+            <div id="recaudacionContainer"></div>
+        </div>
+    </section>
+
+    <section class="ads-section" id="publicidad">
+        <div class="container">
+            <h2 class="section-title">🤝 <span class="gold">PATROCINANTES</span></h2>
+            <div class="ads-grid" id="adsContainer">
+                <div class="ad-card placeholder">
+                    <div class="ad-placeholder-content">
+                        <span class="ad-icon">🏠</span>
+                        <h3>Tu Inmobiliaria Aquí</h3>
+                        <p>Espacio publicitario disponible</p>
+                        <a href="https://t.me/LaRectaCaliente" class="ad-cta">Contáctanos</a>
+                    </div>
+                </div>
+                <div class="ad-card placeholder">
+                    <div class="ad-placeholder-content">
+                        <span class="ad-icon">🔧</span>
+                        <h3>Tu Tienda de Repuestos Aquí</h3>
+                        <p>Espacio publicitario disponible</p>
+                        <a href="https://t.me/LaRectaCaliente" class="ad-cta">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="telegram-section">
+        <div class="container">
+            <div class="telegram-box">
+                <h3>📱 SÍGUENOS EN TELEGRAM</h3>
+                <p>Análisis en vivo, resultados y alertas de bombas</p>
+                <a href="https://t.me/LaRectaCaliente" target="_blank" rel="noopener" class="tg-btn">@LaRectaCaliente</a>
+                <a href="https://whatsapp.com/channel/0029Vb7FGL74IBhBg53SQ33J" target="_blank" rel="noopener" class="wa-btn">WhatsApp Channel</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-brand">🏇 <strong>Cuadro Perfecto</strong> — Sistema 3.3 "La Vencida"</p>
+            <p class="footer-disclaimer">⚠️ Juega responsablemente. Este análisis es orientativo, no garantía de resultados.</p>
+            <p class="footer-copy">© 2026 Cuadro Perfecto · <a href="https://t.me/LaRectaCaliente">@LaRectaCaliente</a> · 👁️ <span id="visitorCount">—</span> visitantes</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
