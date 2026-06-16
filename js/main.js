@@ -59,6 +59,13 @@ function showPage(page) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // SPA redirect from 404.html
+    const redirect = sessionStorage.getItem('redirect');
+    if (redirect) {
+        sessionStorage.removeItem('redirect');
+        history.replaceState(null, '', redirect);
+    }
+
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('navMenu');
     if (toggle && menu) {
@@ -97,9 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
 
                 const nav = document.getElementById('navMenu');
-                nav.innerHTML += `<li><a href="#${slug}">${j.hipodromo} ${j.fecha}</a></li>`;
-                if (j.bombas) nav.innerHTML += `<li><a href="#${slug}-bombas">Bombas</a></li>`;
-                if (j.validas) nav.innerHTML += `<li><a href="#${slug}-5y6">5y6</a></li>`;
+                nav.insertAdjacentHTML('beforeend', `<li><a href="#${slug}">${j.hipodromo} ${j.fecha}</a></li>`);
+                if (j.bombas) nav.insertAdjacentHTML('beforeend', `<li><a href="#${slug}-bombas">Bombas</a></li>`);
+                if (j.validas) nav.insertAdjacentHTML('beforeend', `<li><a href="#${slug}-5y6">5y6</a></li>`);
             });
         });
 
