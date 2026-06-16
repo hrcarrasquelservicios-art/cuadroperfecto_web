@@ -265,19 +265,18 @@ document.addEventListener('DOMContentLoaded', () => {
         let html = '';
         jornadas.forEach(j => {
             const ganadores = j.ganadores || [];
-            const picks = j.lineas_fijas ? j.lineas_fijas.map(c => {
-                const top = c.top3[0];
-                return { carrera: c.numero, nombre: top.nombre, dorsal: top.dorsal, pts: top.pts };
+            const picks = j.validas ? j.validas.map(v => {
+                return { carrera: v.carrera, nombre: v.top.nombre, dorsal: v.top.dorsal, pts: v.top.pts, bomba: v.top.bomba };
             }) : [];
             html += `
             <div class="results-jornada">
-                <h3 class="results-hipodromo">📍 ${j.hipodromo} — ${j.fecha}</h3>
+                <h3 class="results-hipodromo">📍 ${j.hipodromo} — ${j.fecha} ${j.reunion ? '· ' + j.reunion : ''}</h3>
                 ${j.efectividad ? `<div class="results-efectividad">Efectividad: <span class="gold">${j.efectividad}</span></div>` : ''}
                 <div class="results-table-wrapper">
                     <table class="results-table">
                         <thead>
                             <tr>
-                                <th>Carrera</th>
+                                <th>Válida</th>
                                 <th>Nuestro Pick</th>
                                 <th>Ganador Real</th>
                                 <th>Estado</th>
@@ -285,8 +284,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         </thead>
                         <tbody>
                             ${ganadores.map(g => {
-                                const pick = picks.find(p => p.carrera === g.carrera);
-                                const acerto = pick && (pick.nombre === g.ganador.split('#')[1]?.trim() || g.ganador.includes(pick.nombre));
+                                const pick = picks.find(p => g.carrera.includes(p.carrera));
+                                const acerto = pick && (g.ganador.toLowerCase().includes(pick.nombre.toLowerCase()));
                                 return `
                                 <tr class="${acerto ? 'hit' : 'miss'}">
                                     <td class="race-cell">${g.carrera}</td>
@@ -297,6 +296,22 @@ document.addEventListener('DOMContentLoaded', () => {
                             }).join('')}
                         </tbody>
                     </table>
+                    ${j.recaudacion?.dividendo_6 ? `
+                    <div class="dividendos-box">
+                        <h4>💰 Dividendos 5y6 Nacional</h4>
+                        <div class="dividendos-grid">
+                            <div class="dividendo-card">
+                                <span class="dividendo-label">6 Aciertos</span>
+                                <span class="dividendo-value">${j.recaudacion.dividendo_6}</span>
+                                <span class="dividendo-count">16 ganadores</span>
+                            </div>
+                            <div class="dividendo-card">
+                                <span class="dividendo-label">5 Aciertos</span>
+                                <span class="dividendo-value">${j.recaudacion.dividendo_5}</span>
+                                <span class="dividendo-count">675 ganadores</span>
+                            </div>
+                        </div>
+                    </div>` : ''}
                 </div>
             </div>`;
         });
@@ -316,6 +331,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="recaudacion-detalle">
                     <div class="recaudacion-row"><span>Carreras:</span> <span>${j.recaudacion.carreras}</span></div>
                     <div class="recaudacion-row"><span>Válidas 5y6:</span> <span>${j.recaudacion.validas}</span></div>
+                    ${j.recaudacion.dividendo_6 ? `
+                    <div class="recaudacion-row"><span>Dividendo 6:</span> <span class="gold">${j.recaudacion.dividendo_6}</span></div>
+                    <div class="recaudacion-row"><span>Dividendo 5:</span> <span>${j.recaudacion.dividendo_5}</span></div>` : ''}
                 </div>
             </div>`;
         });

@@ -128,19 +128,20 @@
     "stats": { "carreras": 13, "bombas": 5, "efectividad_con_trabajos": "67%", "efectividad_sin_trabajos": "9.1%" },
     "efectividad": "67%",
     "recaudacion": {
-      "monto": "Bs. 82.150",
-      "carreras": "13",
-      "validas": "6"
+      "monto": "Bs. 390.367",
+      "carreras": "10",
+      "validas": "6",
+      "dividendo_6": "Bs. 390.367,76",
+      "dividendo_5": "Bs. 2.398,97"
     },
     "ganadores": [
-      {"carrera": "C1", "ganador": "#8 MISS MORGAN"},
-      {"carrera": "C7", "ganador": "#4 EKATI KING 💣"},
-      {"carrera": "C8 V1", "ganador": "#1 ASTUTO 💣"},
-      {"carrera": "C9 V2", "ganador": "#6 VIEJO PARRA"},
-      {"carrera": "C10 V3", "ganador": "#5 HAYES BAY 💣💣"},
-      {"carrera": "C11 V4", "ganador": "#7 GRAN FERONIA"},
-      {"carrera": "C12 V5", "ganador": "#4 CARORA'S DREAM"},
-      {"carrera": "C13 V6", "ganador": "#3 BUNKER 💣💣"}
-    ]
+      {"carrera": "C5 V1", "ganador": "#7 BAHÍA DEPERICANTAR"},
+      {"carrera": "C6 V2", "ganador": "#2 WILLIEHORTON"},
+      {"carrera": "C7 V3", "ganador": "#1 OPORTO"},
+      {"carrera": "C8 V4", "ganador": "#5 STRENGTHJERUSALEMA"},
+      {"carrera": "C9 V5", "ganador": "#2 EL DE FROIX"},
+      {"carrera": "C10 V6", "ganador": "#5 BITCOIN"}
+    ],
+    "reunion": "Reunión N° 30"
   }
 ]
