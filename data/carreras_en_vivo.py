@@ -15,6 +15,22 @@ WEB_DATA_DIR = os.path.join(os.path.dirname(__file__))
 OUTPUT_FILE = os.path.join(WEB_DATA_DIR, "live_status.json")
 
 # Horarios de carreras
+VALENCIA_20JUN = {
+    "fecha": "2026-06-20",
+    "hipodromo": "Valencia",
+    "carreras": [
+        ("C1", "13:05", "Línea Fija NO VÁLIDA", "MAGICAL SONG #4 (13.5 pts)"),
+        ("C2", "13:30", "Línea Fija NO VÁLIDA", "UNSTOPPABLE #5 (13.5 pts)"),
+        ("C3", "13:55", "Línea Fija NO VÁLIDA", "THE ISAAC #5 (13.0 pts)"),
+        ("C4", "14:50", "V1 - 5y6", "CHATEAU LAFITE #4 (12.5 pts)"),
+        ("C5", "15:15", "V2 - 5y6 💣", "LA SUPREMA #8 (14.0 pts)"),
+        ("C6", "15:40", "V3 - 5y6", "PRECIOSA DOLORES #7 (13.5 pts)"),
+        ("C7", "16:05", "V4 - 5y6 💣", "VERMELHO #7 (14.5 pts)"),
+        ("C8", "16:30", "V5 - 5y6 💣 CLÁSICO", "TEMPLARIO #6 (14.0 pts)"),
+        ("C9", "16:55", "V6 - 5y6", "ENDORA #5 (12.5 pts)"),
+    ]
+}
+
 VALENCIA = {
     "fecha": "2026-06-13",
     "hipodromo": "Valencia",
@@ -27,6 +43,25 @@ VALENCIA = {
         ("C6", "16:05", "V4 - 5y6", "LEGIONARIA #5 (15 pts)"),
         ("C7", "16:30", "V5 - 5y6", "STELLA CADENTE #3 (20 pts)"),
         ("C8", "16:55", "V6 - 5y6", "MI GUERRERO #2 (17 pts)"),
+    ]
+}
+
+RINCONADA_21JUN = {
+    "fecha": "2026-06-21",
+    "hipodromo": "La Rinconada",
+    "carreras": [
+        ("C281", "13:00", "Línea Fija", "TUSCAN GOLD #7 (13.2 pts)"),
+        ("C282", "13:25", "Línea Fija", "GRAN MANUEL #4 (13.8 pts)"),
+        ("C283", "13:50", "Línea Fija", "COMANDANTE CAMILO #6 (13.9 pts)"),
+        ("C284", "14:15", "Línea Fija", "DIOSA DEL SON #2 (13.2 pts)"),
+        ("C285", "14:40", "Línea Fija 💣", "PRINCESA FINA #7 (14.6 pts)"),
+        ("C286", "15:05", "Línea Fija", "ONLY IN AMERICA #7 (12.9 pts)"),
+        ("C287", "15:30", "V1 - 5y6", "VALERIA TIME #9 (12.8 pts)"),
+        ("C288", "15:55", "V2 - 5y6 ⚠️", "SEÑORA ISABEL #5 (10.2 pts)"),
+        ("C289", "16:20", "V3 - 5y6", "CANCILLER #3 (13.1 pts)"),
+        ("C290", "16:45", "V4 - 5y6", "EL TRUENO #2 (13.4 pts)"),
+        ("C291", "17:10", "V5 - 5y6", "HONEY TIME #9 (12.7 pts)"),
+        ("C292", "17:35", "V6 - 5y6", "CHOSEN FACTOR #10 (13.2 pts)"),
     ]
 }
 
@@ -104,14 +139,17 @@ def generar_live_status():
     hoy = ahora_venezuela().strftime("%Y-%m-%d")
 
     jornadas = []
-    if hoy == "2026-06-13":
+    if hoy == "2026-06-21":
+        jornadas.append(RINCONADA_21JUN)
+    elif hoy == "2026-06-20":
+        jornadas.append(VALENCIA_20JUN)
+    elif hoy == "2026-06-13":
         jornadas.append(VALENCIA)
     elif hoy == "2026-06-14":
         jornadas.append(RINCONADA)
     else:
-        # Mostrar la proxima
-        jornadas.append(VALENCIA)
-        jornadas.append(RINCONADA)
+        # Mostrar las proximas
+        jornadas.append(RINCONADA_21JUN)
 
     status = {
         "timestamp": ahora_venezuela().isoformat(),

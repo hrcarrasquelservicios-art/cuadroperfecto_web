@@ -143,5 +143,177 @@
       {"carrera": "C10 V6", "ganador": "#5 BITCOIN"}
     ],
     "reunion": "Reunión N° 30"
+  },
+  {
+    "id": "valencia-20-06-2026",
+    "hipodromo": "Valencia",
+    "fecha": "20 de Junio 2026",
+    "slug": "valencia-20-06",
+    "condiciones": "sin trabajos matinales",
+    "trabajos": "no disponibles",
+    "expectativa": "30-50%",
+    "efectividad_con_trabajos": "67%",
+    "efectividad_sin_trabajos": "30-50%",
+    "lineas_fijas": [
+      {
+        "numero": "C1", "hora": "1:05 PM", "distancia": "1300m",
+        "categoria": "Yeguas 3+ sin ganar 3 meses",
+        "bomb_tag": null,
+        "top3": [
+          { "pos": 1, "dorsal": 4, "nombre": "MAGICAL SONG", "pts": 13.5, "icono": "🔥" },
+          { "pos": 2, "dorsal": 3, "nombre": "LA DE NINO", "pts": 11.5, "icono": "🔥" },
+          { "pos": 3, "dorsal": 1, "nombre": "MONEY ON TIME", "pts": 0, "icono": "💰" }
+        ],
+        "clave": "Magical Song #4: Ganó feb/1300m, 2° mayo, consistente — LÍNEA FIJA"
+      },
+      {
+        "numero": "C2", "hora": "1:30 PM", "distancia": "1200m",
+        "categoria": "Reclamación hasta 6 victorias",
+        "bomb_tag": null,
+        "top3": [
+          { "pos": 1, "dorsal": 5, "nombre": "UNSTOPPABLE", "pts": 13.5, "icono": "🔥" },
+          { "pos": 2, "dorsal": 4, "nombre": "PARTY PRINCE", "pts": 11.5, "icono": "🔥" },
+          { "pos": 3, "dorsal": 3, "nombre": "RODDRICK", "pts": 0, "icono": "💰" }
+        ],
+        "clave": "Unstoppable #5: 1ª marca, ganó V60/marzo, constante top3 — LÍNEA FIJA"
+      },
+      {
+        "numero": "C3", "hora": "1:55 PM", "distancia": "1300m",
+        "categoria": "Caballos 7+ años, 3-4 victorias",
+        "bomb_tag": null,
+        "top3": [
+          { "pos": 1, "dorsal": 5, "nombre": "THE ISAAC", "pts": 13.0, "icono": "🔥" },
+          { "pos": 2, "dorsal": 1, "nombre": "KING OF SUCCESS", "pts": 11.0, "icono": "" },
+          { "pos": 3, "dorsal": 4, "nombre": "MY TOWERING MATE", "pts": 0, "icono": "💰" }
+        ],
+        "clave": "The Isaac #5: Ganó hace 7 días C121/junio, en racha ganadora — LÍNEA FIJA"
+      }
+    ],
+    "validas": [
+      { "v": "V1", "carrera": "C4", "distancia": "1100m", "hora": "2:50 PM", "top": { "nombre": "CHATEAU LAFITE", "dorsal": 4, "pts": 12.5, "bomba": false }, "alt": { "nombre": "ROBERTO ERRE", "dorsal": 8, "pts": 11.0, "bomba": false }, "color": "v1" },
+      { "v": "V2", "carrera": "C5", "distancia": "1200m", "hora": "3:15 PM", "top": { "nombre": "LA SUPREMA", "dorsal": 8, "pts": 14.0, "bomba": true }, "alt": { "nombre": "MONEY CLEANER", "dorsal": 5, "pts": 10.5, "bomba": false }, "color": "v2" },
+      { "v": "V3", "carrera": "C6", "distancia": "1100m", "hora": "3:40 PM", "top": { "nombre": "PRECIOSA DOLORES", "dorsal": 7, "pts": 13.5, "bomba": false }, "alt": { "nombre": "LUZ DEL VALLE", "dorsal": 3, "pts": 11.5, "bomba": false }, "color": "v3" },
+      { "v": "V4", "carrera": "C7", "distancia": "1300m", "hora": "4:05 PM", "top": { "nombre": "VERMELHO", "dorsal": 7, "pts": 14.5, "bomba": true }, "alt": { "nombre": "FORZESCO", "dorsal": 1, "pts": 12.0, "bomba": false }, "color": "v4" },
+      { "v": "V5", "carrera": "C8", "distancia": "2000m", "hora": "4:30 PM", "top": { "nombre": "TEMPLARIO", "dorsal": 6, "pts": 14.0, "bomba": true }, "alt": { "nombre": "ANIMAL JUNGLE", "dorsal": 7, "pts": 12.5, "bomba": false }, "color": "v5", "copa": true, "featured": true },
+      { "v": "V6", "carrera": "C9", "distancia": "1400m", "hora": "4:55 PM", "top": { "nombre": "ENDORA", "dorsal": 5, "pts": 12.5, "bomba": false }, "alt": { "nombre": "MARRAKECH", "dorsal": 8, "pts": 11.0, "bomba": false }, "color": "v6" }
+    ],
+    "jugada_oficial": "4/8 - 8/5 - 7/3 - 7/1 - 6/7 - 5/8",
+    "jugada_combos": ["4/8", "8/5", "7/3", "7/1", "6/7", "5/8"],
+    "jugada_info": "64 combinaciones · 3 bombas: La Suprema, Vermelho, Templario",
+    "bombas": [
+      { "rank": 1, "nombre": "VERMELHO", "dorsal": 7, "carrera": "C7 V4", "hora": "4:05 PM", "pts": 14.5, "nivel": "mega" },
+      { "rank": 2, "nombre": "LA SUPREMA", "dorsal": 8, "carrera": "C5 V2", "hora": "3:15 PM", "pts": 14.0, "nivel": "alta" },
+      { "rank": 3, "nombre": "TEMPLARIO", "dorsal": 6, "carrera": "C8 V5", "hora": "4:30 PM", "pts": 14.0, "nivel": "alta" }
+    ],
+    "stats": { "carreras": 9, "bombas": 3, "efectividad_con_trabajos": "67%", "efectividad_sin_trabajos": "30-50%" },
+    "efectividad": "30-50%",
+    "recaudacion": {
+      "monto": "—",
+      "carreras": "9",
+      "validas": "6"
+    },
+    "ganadores": []
+  },
+  {
+    "id": "rinconada-21-06-2026",
+    "hipodromo": "La Rinconada",
+    "fecha": "21 de Junio 2026",
+    "slug": "rinconada-21-06",
+    "condiciones": "sin trabajos matinales",
+    "trabajos": "no disponibles",
+    "expectativa": "20-30%",
+    "efectividad_con_trabajos": "67%",
+    "efectividad_sin_trabajos": "20-30%",
+    "reunion": "Reunión N° 35",
+    "lineas_fijas": [
+      {
+        "numero": "C281", "hora": "1:00 PM", "distancia": "1800m",
+        "categoria": "Ejemplares 4+ años, debutantes o no",
+        "bomb_tag": null,
+        "top3": [
+          { "pos": 1, "dorsal": 7, "nombre": "TUSCAN GOLD", "pts": 13.2, "icono": "🔥" },
+          { "pos": 2, "dorsal": 1, "nombre": "GRAN YACO", "pts": 12.1, "icono": "🔥" },
+          { "pos": 3, "dorsal": 3, "nombre": "ARCANO", "pts": 10.8, "icono": "" }
+        ],
+        "clave": "Tuscan Gold #7: Ganador 14/jun 1800m, dorsal ideal, descanso 7 días — LÍNEA FIJA"
+      },
+      {
+        "numero": "C282", "hora": "1:25 PM", "distancia": "1100m",
+        "categoria": "IX Clásico El Corsario (GIII)",
+        "bomb_tag": null,
+        "top3": [
+          { "pos": 1, "dorsal": 4, "nombre": "GRAN MANUEL", "pts": 13.8, "icono": "🔥" },
+          { "pos": 2, "dorsal": 5, "nombre": "FUROR NOBLE", "pts": 12.4, "icono": "🔥" },
+          { "pos": 3, "dorsal": 3, "nombre": "GRAN TORRENTE", "pts": 10.2, "icono": "" }
+        ],
+        "clave": "Gran Manuel #4: Ganador 17/may 1100m, dorsal 4 ideal — LÍNEA FIJA"
+      },
+      {
+        "numero": "C283", "hora": "1:50 PM", "distancia": "1100m",
+        "categoria": "Caballos 4 años, debutantes o no",
+        "bomb_tag": null,
+        "top3": [
+          { "pos": 1, "dorsal": 6, "nombre": "COMANDANTE CAMILO", "pts": 13.9, "icono": "🔥" },
+          { "pos": 2, "dorsal": 8, "nombre": "EROS", "pts": 12.0, "icono": "" },
+          { "pos": 3, "dorsal": 5, "nombre": "LIGHTNING SPIRIT", "pts": 11.7, "icono": "" }
+        ],
+        "clave": "Comandante Camilo #6: Ganador 07/jun, 2° 31/may, TOP3 24/may — CONFIANZA MÁXIMA"
+      },
+      {
+        "numero": "C284", "hora": "2:15 PM", "distancia": "1100m",
+        "categoria": "Reclamo $(10-8K) — Yeguas 6+ años",
+        "bomb_tag": null,
+        "top3": [
+          { "pos": 1, "dorsal": 2, "nombre": "DIOSA DEL SON", "pts": 13.2, "icono": "🔥" },
+          { "pos": 2, "dorsal": 8, "nombre": "MANCHEGA", "pts": 11.8, "icono": "" },
+          { "pos": 3, "dorsal": 6, "nombre": "MOSTAZA", "pts": 11.5, "icono": "" }
+        ],
+        "clave": "Diosa del Son #2: 2° 29/mar, 2° 25/ene, dorsal 2 excelente — LÍNEA FIJA"
+      },
+      {
+        "numero": "C285", "hora": "2:40 PM", "distancia": "1800m",
+        "categoria": "VI Clásico Bambera (GII) — Pesos Efectivos",
+        "bomb_tag": "💣 BOMBA DEL DÍA",
+        "top3": [
+          { "pos": 1, "dorsal": 7, "nombre": "PRINCESA FINA", "pts": 14.6, "icono": "💣" },
+          { "pos": 2, "dorsal": 4, "nombre": "MARAKOVITS", "pts": 12.8, "icono": "🔥" },
+          { "pos": 3, "dorsal": 6, "nombre": "QUALITY PRINCESS", "pts": 12.1, "icono": "" }
+        ],
+        "clave": "Princesa Fina #7: Ganadora 26/abr, 17/may 1800m, jockey R. Capriles élite — MÁXIMA CONFIANZA"
+      },
+      {
+        "numero": "C286", "hora": "3:05 PM", "distancia": "1300m",
+        "categoria": "Caballos 4 años, ganadores de 1",
+        "bomb_tag": null,
+        "top3": [
+          { "pos": 1, "dorsal": 7, "nombre": "ONLY IN AMERICA", "pts": 12.9, "icono": "🔥" },
+          { "pos": 2, "dorsal": 5, "nombre": "THE NOTORIOU", "pts": 12.1, "icono": "" },
+          { "pos": 3, "dorsal": 2, "nombre": "JUAN ANDRES", "pts": 11.7, "icono": "" }
+        ],
+        "clave": "Only In America #7: TOP3 consistente, dorsal 7 bueno — LÍNEA FIJA"
+      }
+    ],
+    "validas": [
+      { "v": "V1", "carrera": "C287", "distancia": "1200m", "hora": "3:30 PM", "top": { "nombre": "VALERIA TIME", "dorsal": 9, "pts": 12.8, "bomba": false }, "alt": { "nombre": "CANELA", "dorsal": 2, "pts": 11.4, "bomba": false }, "color": "v1" },
+      { "v": "V2", "carrera": "C288", "distancia": "1100m", "hora": "3:55 PM", "top": { "nombre": "SEÑORA ISABEL", "dorsal": 5, "pts": 10.2, "bomba": false }, "alt": { "nombre": "DONOSTIA", "dorsal": 6, "pts": 9.8, "bomba": false }, "color": "v2", "warning": "Todas debutantes — riesgo máximo" },
+      { "v": "V3", "carrera": "C289", "distancia": "1300m", "hora": "4:20 PM", "top": { "nombre": "CANCILLER", "dorsal": 3, "pts": 13.1, "bomba": false }, "alt": { "nombre": "ONLINE", "dorsal": 5, "pts": 12.3, "bomba": false }, "color": "v3" },
+      { "v": "V4", "carrera": "C290", "distancia": "1200m", "hora": "4:45 PM", "top": { "nombre": "EL TRUENO", "dorsal": 2, "pts": 13.4, "bomba": false }, "alt": { "nombre": "MAD MAX", "dorsal": 7, "pts": 12.6, "bomba": false }, "color": "v4" },
+      { "v": "V5", "carrera": "C291", "distancia": "1300m", "hora": "5:10 PM", "top": { "nombre": "HONEY TIME", "dorsal": 9, "pts": 12.7, "bomba": false }, "alt": { "nombre": "CRAIGH NA DUN", "dorsal": 2, "pts": 11.5, "bomba": false }, "color": "v5" },
+      { "v": "V6", "carrera": "C292", "distancia": "1300m", "hora": "5:35 PM", "top": { "nombre": "CHOSEN FACTOR", "dorsal": 10, "pts": 13.2, "bomba": false }, "alt": { "nombre": "PITTALUGA", "dorsal": 6, "pts": 12.1, "bomba": false }, "color": "v6" }
+    ],
+    "jugada_oficial": "9-5-3-2-9-10 / 2-6-5-7-2-6",
+    "jugada_combos": ["9/2", "5/6", "3/5", "2/7", "9/2", "10/6"],
+    "jugada_info": "64 combinaciones · 1 bomba: Princesa Fina",
+    "bombas": [
+      { "rank": 1, "nombre": "PRINCESA FINA", "dorsal": 7, "carrera": "C285 C5", "hora": "2:40 PM", "pts": 14.6, "nivel": "mega" }
+    ],
+    "stats": { "carreras": 12, "bombas": 1, "efectividad_con_trabajos": "67%", "efectividad_sin_trabajos": "20-30%" },
+    "efectividad": "20-30%",
+    "recaudacion": {
+      "monto": "—",
+      "carreras": "12",
+      "validas": "6"
+    },
+    "ganadores": []
   }
 ]

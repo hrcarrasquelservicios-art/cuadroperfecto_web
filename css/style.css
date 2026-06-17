@@ -44,6 +44,23 @@ body {
     position: relative; text-align: center;
     background: linear-gradient(135deg, #0a0a12 0%, #1a0a0a 50%, #0a0a12 100%);
     padding: 120px 20px 60px;
+    overflow: hidden;
+}
+.hero-videos {
+    position: absolute; inset: 0;
+}
+.hero-video {
+    position: absolute; top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s ease;
+}
+.hero-video.active {
+    opacity: 0.3;
 }
 .hero-overlay {
     position: absolute; inset: 0;
@@ -169,6 +186,33 @@ section { padding: 50px 0; }
 .metodologia-box p { color: var(--text-muted); margin-bottom: 16px; }
 .metodologia-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 0.9rem; }
 .metodologia-list li { padding: 4px 0; }
+
+/* Infografia Gallery */
+.infografia-section { padding: 50px 0; }
+.infografia-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;
+    max-width: 1000px; margin: 0 auto;
+}
+.infografia-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 12px; overflow: hidden; transition: all 0.3s;
+}
+.infografia-card:hover {
+    transform: translateY(-4px); border-color: var(--gold);
+    box-shadow: 0 8px 30px rgba(255,215,0,0.15);
+}
+.infografia-card img {
+    width: 100%; display: block; aspect-ratio: 4/5; object-fit: contain;
+    background: #000;
+}
+.infografia-label {
+    padding: 10px 14px; text-align: center; font-weight: 700;
+    font-size: 0.85rem; color: var(--gold);
+    background: rgba(0,0,0,0.3);
+}
+@media (max-width: 768px) {
+    .infografia-grid { grid-template-columns: 1fr; }
+}
 
 /* Telegram CTA */
 .telegram-section { padding: 60px 0; }

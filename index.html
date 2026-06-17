@@ -25,6 +25,20 @@
     </nav>
 
     <header class="hero">
+        <div class="hero-videos">
+            <video class="hero-video active" autoplay muted loop playsinline data-index="0">
+                <source src="assets/promo.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video" autoplay muted loop playsinline data-index="1">
+                <source src="assets/promo2.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video" autoplay muted loop playsinline data-index="2">
+                <source src="assets/promo3.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video" autoplay muted loop playsinline data-index="3">
+                <source src="assets/promo4.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1><span class="gold">CUADRO</span> PERFECTO</h1>
@@ -126,6 +140,27 @@
         </div>
     </section>
 
+    <section class="infografia-section">
+        <div class="container">
+            <h2 class="section-title">🎨 <span class="gold">INFOGRAFÍAS</span> DEL DÍA</h2>
+            <p class="section-sub">Análisis visual generado por IA — Sistema 3.3</p>
+            <div class="infografia-grid">
+                <div class="infografia-card">
+                    <img src="assets/infografia_1.png" alt="Líneas Fijas" loading="lazy">
+                    <div class="infografia-label">Líneas Fijas</div>
+                </div>
+                <div class="infografia-card">
+                    <img src="assets/infografia_2.png" alt="Cuadro Perfecto 5Y6" loading="lazy">
+                    <div class="infografia-label">Cuadro Perfecto 5Y6</div>
+                </div>
+                <div class="infografia-card">
+                    <img src="assets/infografia_3.png" alt="Bombas del Día" loading="lazy">
+                    <div class="infografia-label">Bombas del Día</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="telegram-section">
         <div class="container">
             <div class="telegram-box">
@@ -145,6 +180,20 @@
         </div>
     </footer>
 
+    <script>
+    // Hero video slider - rotar cada 8 segundos
+    (function() {
+        const videos = document.querySelectorAll('.hero-video');
+        if (videos.length < 2) return;
+        let current = 0;
+        setInterval(() => {
+            videos[current].classList.remove('active');
+            current = (current + 1) % videos.length;
+            videos[current].classList.add('active');
+            videos[current].play();
+        }, 8000);
+    })();
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>

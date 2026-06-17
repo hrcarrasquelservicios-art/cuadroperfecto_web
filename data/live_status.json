@@ -1,26 +1,13 @@
 {
-  "timestamp": "2026-06-13T17:30:00",
-  "dia": "2026-06-13",
+  "timestamp": "2026-06-17T19:14:08.251526",
+  "dia": "2026-06-17",
   "jornadas": [
     {
       "activa": false,
       "hipodromo": "Valencia",
-      "mensaje": "Jornada finalizada — 8 carreras",
+      "mensaje": "Proxima jornada: 2026-06-20",
       "carrera_actual": null,
-      "siguiente": null,
-      "siguiente_hora": null,
-      "resultados": [
-        {"carrera": "C1", "ganador": "#5 HACHA", "favorito": "Tapital #6"},
-        {"carrera": "C2", "ganador": "#4 STRENGTH MONSTER 💣", "favorito": "✅ Strength Monster"},
-        {"carrera": "C3 V1", "ganador": "#7 DRAXLER", "favorito": "Cassiusclay #6"},
-        {"carrera": "C4 V2", "ganador": "#8 BELLA ANTONELLA 💣", "favorito": "✅ Bella Antonella"},
-        {"carrera": "C5 V3", "ganador": "#2 SKYDIVE", "favorito": "Gran Canelo #3"},
-        {"carrera": "C6 V4", "ganador": "ENCHANTED MOON", "favorito": "Legionaria #5"},
-        {"carrera": "C7 V5 🏆", "ganador": "STELLA CADENTE #3 💣💣", "favorito": "✅ Stella Cadente"},
-        {"carrera": "C8 V6", "ganador": "#6 THE ISAAC", "favorito": "Mi Guerrero #2"}
-      ],
-      "bombas_pegadas": 3,
-      "proxima": "La Rinconada — Domingo 14 Jun 1:00 PM"
+      "siguiente": "C1"
     }
   ]
 }
