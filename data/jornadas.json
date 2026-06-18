@@ -225,6 +225,10 @@
     "efectividad_con_trabajos": "67%",
     "efectividad_sin_trabajos": "20-30%",
     "reunion": "Reunión N° 35",
+    "retirados": [
+      { "carrera": "C281", "dorsales": [3, 6], "nombres": ["ARCANO", "SUANFONSON"], "motivo": "Claudicación miembros anteriores" },
+      { "carrera": "C290", "dorsales": [9], "nombres": ["EL GRAN MARIO"], "motivo": "Claudicación miembro posterior izquierdo" }
+    ],
     "lineas_fijas": [
       {
         "numero": "C281", "hora": "1:00 PM", "distancia": "1800m",
@@ -232,10 +236,9 @@
         "bomb_tag": null,
         "top3": [
           { "pos": 1, "dorsal": 7, "nombre": "TUSCAN GOLD", "pts": 13.2, "icono": "🔥" },
-          { "pos": 2, "dorsal": 1, "nombre": "GRAN YACO", "pts": 12.1, "icono": "🔥" },
-          { "pos": 3, "dorsal": 3, "nombre": "ARCANO", "pts": 10.8, "icono": "" }
+          { "pos": 2, "dorsal": 1, "nombre": "GRAN YACO", "pts": 12.1, "icono": "🔥" }
         ],
-        "clave": "Tuscan Gold #7: Ganador 14/jun 1800m, dorsal ideal, descanso 7 días — LÍNEA FIJA"
+        "clave": "Tuscan Gold #7: Ganador 14/jun 1800m, dorsal ideal, descanso 7 días — LÍNEA FIJA | ⚠️ RETIRADOS: #3 Arcano, #6 Suanfonson"
       },
       {
         "numero": "C282", "hora": "1:25 PM", "distancia": "1100m",

@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const slug = j.slug || `jornada-${idx}`;
         return [
             renderBanner(j, slug),
+            j.retirados ? renderRetirados(j, slug) : '',
             j.lineas_fijas ? renderLineasFijas(j, slug) : '',
             j.validas ? renderValidas(j, slug) : '',
             j.bombas ? renderBombas(j, slug) : '',
@@ -155,6 +156,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="stat"><span class="num">${j.stats?.carreras || j.lineas_fijas?.length || '-'}</span><span class="label">Carreras</span></div>
                     <div class="stat"><span class="num">${j.stats?.bombas || j.bombas?.length || '-'}</span><span class="label">Bombas</span></div>
                     ${j.expectativa ? `<div class="stat"><span class="num">${j.expectativa}</span><span class="label">Expectativa</span></div>` : ''}
+                </div>
+            </div>
+        </section>`;
+    }
+
+    function renderRetirados(j, slug) {
+        if (!j.retirados || !j.retirados.length) return '';
+        return `
+        <section class="retirados-section" id="${slug}-retirados">
+            <div class="container">
+                <h2 class="section-title">🚩 EJEMPLARES RETIRADOS</h2>
+                <div class="retirados-list">
+                    ${j.retirados.map(r => `
+                    <div class="retirado-card">
+                        <div class="retirado-header">${r.carrera}</div>
+                        <div class="retirado-body">
+                            ${r.dorsales.map((d, i) => `
+                            <span class="retirado-item">#${d} ${r.nombres[i]} — ${r.motivo}</span>
+                            `).join('')}
+                        </div>
+                    </div>`).join('')}
                 </div>
             </div>
         </section>`;
