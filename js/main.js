@@ -98,30 +98,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('navMenu');
     if (toggle && menu) {
         toggle.addEventListener('click', () => menu.classList.toggle('open'));
-        document.querySelectorAll('.nav-menu a').forEach(a => {
-            a.addEventListener('click', (e) => {
-                const href = a.getAttribute('href');
-                if (href.startsWith('/')) {
-                    e.preventDefault();
-                    menu.classList.remove('open');
-                    history.pushState(null, '', href);
-                    showPage(href.split('?')[0]);
-                }
-            });
+        menu.addEventListener('click', (e) => {
+            const a = e.target.closest('a');
+            if (!a) return;
+            const href = a.getAttribute('href');
+            if (href && href.startsWith('/')) {
+                e.preventDefault();
+                menu.classList.remove('open');
+                history.pushState(null, '', href);
+                showPage(href.split('?')[0]);
+            }
         });
     }
 
     window.addEventListener('popstate', () => {
         showPage(location.pathname || '/');
-        // Re-render si hay ?j= en la URL
-        const params = new URLSearchParams(location.search);
-        if (params.get('j') && jornadasData.length) {
-            const app = document.getElementById('app');
-            const j = jornadasData.find(d => d.slug === params.get('j'));
-            if (j) {
-                app.innerHTML = renderJornadaCompleta(j, jornadasData.indexOf(j));
-            }
-        }
     });
 
     fetch('data/jornadas.json')
