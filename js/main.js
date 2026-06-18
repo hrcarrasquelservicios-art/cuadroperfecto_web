@@ -1,17 +1,7 @@
 const CHANNELS = {
-    inh: {
-        name: 'La Rinconada',
-        id: 'UCR0C0QitI9WGwLPv5t2Mjxw',
-        icon: '🏇'
-    },
-    hinava: {
-        name: 'Valencia',
-        id: 'UCeElPxYsX8MZZm25zMgg0Gg',
-        videoId: 'vOoCQb1U1Gc',
-        icon: '🐎'
-    }
+    inh: { name: 'La Rinconada', id: 'UCR0C0QitI9WGwLPv5t2Mjxw', icon: '🏇' },
+    hinava: { name: 'Valencia', id: 'UCeElPxYsX8MZZm25zMgg0Gg', videoId: 'vOoCQb1U1Gc', icon: '🐎' }
 };
-
 let currentChannel = 'inh';
 
 function loadStream(channelKey) {
@@ -31,12 +21,8 @@ function loadStream(channelKey) {
 let jornadasData = [];
 
 document.addEventListener('DOMContentLoaded', () => {
-    // SPA redirect from 404.html
     const redirect = sessionStorage.getItem('redirect');
-    if (redirect) {
-        sessionStorage.removeItem('redirect');
-        history.replaceState(null, '', redirect);
-    }
+    if (redirect) { sessionStorage.removeItem('redirect'); history.replaceState(null, '', redirect); }
 
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('navMenu');
@@ -50,14 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 menu.classList.remove('open');
                 history.pushState(null, '', href);
-                showPage(href.split('?')[0]);
+                showPage(href);
             }
         });
     }
 
-    window.addEventListener('popstate', () => {
-        showPage(location.pathname || '/');
-    });
+    window.addEventListener('popstate', () => showPage(location.pathname || '/'));
 
     function showPage(page) {
         const app = document.getElementById('app');
@@ -82,22 +66,51 @@ document.addEventListener('DOMContentLoaded', () => {
             const iframe = document.getElementById('streamIframe');
             if (iframe) iframe.src = '';
 
-            const params = new URLSearchParams(location.search);
-            const jSlug = params.get('j');
-            if (jSlug && jornadasData.length) {
-                const j = jornadasData.find(d => d.slug === jSlug);
-                if (j) app.innerHTML = renderJornadaCompleta(j, jornadasData.indexOf(j));
-            } else if (jornadasData.length) {
-                const ultima = jornadasData[jornadasData.length - 1];
-                app.innerHTML = renderJornadaCompleta(ultima, jornadasData.length - 1);
+            if (!jornadasData.length) return;
+
+            // Home: muestra las 2 jornadas mas recientes (Valencia + Rinconada)
+            if (page === '/' || page === '') {
+                app.innerHTML = renderHome();
+            } else if (page === '/valencia') {
+                app.innerHTML = renderHipodromo('Valencia');
+            } else if (page === '/rinconada') {
+                app.innerHTML = renderHipodromo('La Rinconada');
             }
         }
 
         navLinks.forEach(a => {
-            const href = a.getAttribute('href');
-            const base = href.split('?')[0] || href;
-            a.classList.toggle('active', base === page || (page === '/' && base === '/'));
+            const href = a.getAttribute('href') || '';
+            const active = href === page || (page === '/' && href === '/');
+            a.classList.toggle('active', active);
         });
+    }
+
+    function renderHome() {
+        const valencia = jornadasData.filter(j => j.hipodromo === 'Valencia');
+        const rinconada = jornadasData.filter(j => j.hipodromo === 'La Rinconada');
+        const ultimaV = valencia[valencia.length - 1];
+        const ultimaR = rinconada[rinconada.length - 1];
+        let html = '<div class="hipodromo-tabs">';
+        html += `<a href="/valencia" class="hipo-tab" onclick="event.preventDefault();history.pushState(null,'','/valencia');showPage('/valencia')">🏇 Valencia</a>`;
+        html += `<a href="/rinconada" class="hipo-tab" onclick="event.preventDefault();history.pushState(null,'','/rinconada');showPage('/rinconada')">🐎 La Rinconada</a>`;
+        html += '</div>';
+        if (ultimaV) html += renderJornadaCompleta(ultimaV, jornadasData.indexOf(ultimaV));
+        if (ultimaR) html += renderJornadaCompleta(ultimaR, jornadasData.indexOf(ultimaR));
+        return html;
+    }
+
+    function renderHipodromo(nombre) {
+        const filtradas = jornadasData.filter(j => j.hipodromo === nombre);
+        let html = '<div class="hipodromo-tabs">';
+        html += `<a href="/valencia" class="hipo-tab${nombre === 'Valencia' ? ' active' : ''}" onclick="event.preventDefault();history.pushState(null,'','/valencia');showPage('/valencia')">🏇 Valencia</a>`;
+        html += `<a href="/rinconada" class="hipo-tab${nombre === 'La Rinconada' ? ' active' : ''}" onclick="event.preventDefault();history.pushState(null,'','/rinconada');showPage('/rinconada')">🐎 La Rinconada</a>`;
+        html += '</div>';
+        // Mas reciente primero
+        filtradas.slice().reverse().forEach((j, i) => {
+            html += renderJornadaCompleta(j, jornadasData.indexOf(j));
+            if (i < filtradas.length - 1) html += '<div class="hist-separator"><span>Análisis anterior</span></div>';
+        });
+        return html;
     }
 
     function renderJornadaCompleta(j, idx) {
@@ -117,22 +130,15 @@ document.addEventListener('DOMContentLoaded', () => {
             jornadasData = data;
             renderResultados(data);
             renderRecaudacion(data);
-
-            // Nav
             const nav = document.getElementById('navMenu');
             nav.innerHTML = `
                 <li><a href="/" class="active">Análisis</a></li>
+                <li><a href="/valencia">🏇 Valencia</a></li>
+                <li><a href="/rinconada">🐎 La Rinconada</a></li>
                 <li><a href="/stream">🎥 En Vivo</a></li>
                 <li><a href="/resultados">📊 Resultados</a></li>
                 <li><a href="/recaudacion">💰 Recaudación</a></li>
             `;
-            // Jornadas anteriores como enlaces
-            data.slice(0, -1).reverse().forEach((j, i) => {
-                const s = j.slug || `jornada-${i}`;
-                nav.insertAdjacentHTML('beforeend', `<li><a href="/?j=${s}">📅 ${j.hipodromo} ${j.fecha}</a></li>`);
-            });
-
-            // Mostrar página actual
             showPage(location.pathname || '/');
         });
 
@@ -281,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="metodologia-box">
                     <h3>🎯 Metodología</h3>
-                    <p>Sistema 3.3 "La Vencida" pondera 14 factores por caballo: forma reciente, consistencia, trabajos matinales, distancia, hipódromo, jinete, peso, dorsal, edad, código de trabajo (shn, ddlr, cómoda, animada), y más.</p>
+                    <p>Sistema 3.3 "La Vencida" pondera 14 factores por caballo.</p>
                     <ul class="metodologia-list">
                         <li>≥ 14 pts → 💣 BOMBA</li>
                         <li>12-13.9 pts → 🔥 Alta confianza</li>
@@ -310,12 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="results-table-wrapper">
                     <table class="results-table">
                         <thead>
-                            <tr>
-                                <th>Válida</th>
-                                <th>Nuestro Pick</th>
-                                <th>Ganador Real</th>
-                                <th>Estado</th>
-                            </tr>
+                            <tr><th>Válida</th><th>Nuestro Pick</th><th>Ganador Real</th><th>Estado</th></tr>
                         </thead>
                         <tbody>
                             ${ganadores.map(g => {
@@ -376,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = html;
     }
 
-    // Live status polling
+    // Live status
     function showLiveBanner(j) {
         if (document.querySelector('.live-banner')) return;
         const hero = document.querySelector('.hero');
@@ -401,32 +402,22 @@ document.addEventListener('DOMContentLoaded', () => {
         </section>`;
         hero.insertAdjacentHTML('afterend', html);
     }
-
     function processLiveStatus(status) {
-        const jornadas = status.jornadas || [];
-        jornadas.forEach(j => { if (j.activa) showLiveBanner(j); });
+        (status.jornadas || []).forEach(j => { if (j.activa) showLiveBanner(j); });
     }
-
     function pollLiveStatus() {
         fetch('https://mibot-n8n-auto.duckdns.org/race-status/live_status.json?_=' + Date.now())
-            .then(r => r.json())
-            .then(s => processLiveStatus(s))
+            .then(r => r.json()).then(s => processLiveStatus(s))
             .catch(() => {
                 fetch('data/live_status.json?_=' + Date.now())
-                    .then(r => r.json())
-                    .then(s => processLiveStatus(s))
-                    .catch(() => {});
+                    .then(r => r.json()).then(s => processLiveStatus(s)).catch(() => {});
             });
     }
     pollLiveStatus();
     setInterval(pollLiveStatus, 30000);
 
-    // Visitor counter (CountAPI)
     fetch('https://api.countapi.xyz/hit/cuadroperfecto-com/visitas')
         .then(r => r.json())
-        .then(data => {
-            document.getElementById('visitorCount').textContent = (data.value || 0).toLocaleString('es');
-        })
+        .then(data => { document.getElementById('visitorCount').textContent = (data.value || 0).toLocaleString('es'); })
         .catch(() => {});
-
 });

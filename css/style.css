@@ -79,6 +79,26 @@ body {
     border: 1px solid rgba(255,215,0,0.2); background: rgba(255,215,0,0.05);
 }
 
+/* Hipodromo Tabs */
+.hipodromo-tabs {
+    display: flex; gap: 0; justify-content: center; margin: 20px auto; max-width: 500px;
+}
+.hipo-tab {
+    flex: 1; padding: 12px 20px; text-align: center; font-weight: 700; font-size: 0.95rem;
+    text-decoration: none; color: var(--text-muted);
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    transition: all 0.2s; cursor: pointer;
+}
+.hipo-tab:first-child { border-radius: 10px 0 0 10px; }
+.hipo-tab:last-child { border-radius: 0 10px 10px 0; }
+.hipo-tab:hover { border-color: var(--gold); color: #fff; }
+.hipo-tab.active { background: var(--gold); color: #000; border-color: var(--gold); }
+.hist-separator {
+    text-align: center; padding: 10px 0; margin: 10px 0;
+    color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;
+    border-top: 1px solid var(--card-border);
+}
+
 /* Race Day Banner */
 .race-day-banner {
     background: linear-gradient(135deg, var(--orange), var(--red));
