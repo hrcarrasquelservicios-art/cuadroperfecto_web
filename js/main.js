@@ -30,62 +30,6 @@ function loadStream(channelKey) {
 
 let jornadasData = [];
 
-function showPage(page) {
-    const app = document.getElementById('app');
-    const stream = document.getElementById('stream-page');
-    const resultados = document.getElementById('resultados');
-    const recaudacion = document.getElementById('recaudacion');
-    const publicidad = document.getElementById('publicidad');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-
-    [app, stream, resultados, recaudacion, publicidad].forEach(el => { if (el) el.style.display = 'none'; });
-
-    if (page === '/stream') {
-        stream.style.display = 'block';
-        loadStream(currentChannel);
-    } else if (page === '/resultados') {
-        resultados.style.display = 'block';
-    } else if (page === '/recaudacion') {
-        recaudacion.style.display = 'block';
-    } else {
-        app.style.display = 'block';
-        publicidad.style.display = 'block';
-        const iframe = document.getElementById('streamIframe');
-        if (iframe) iframe.src = '';
-
-        const params = new URLSearchParams(location.search);
-        const jSlug = params.get('j');
-        if (jSlug && jornadasData.length) {
-            const j = jornadasData.find(d => d.slug === jSlug);
-            if (j) {
-                const idx = jornadasData.indexOf(j);
-                app.innerHTML = renderJornadaCompleta(j, idx);
-            }
-        } else if (jornadasData.length) {
-            const ultima = jornadasData[jornadasData.length - 1];
-            app.innerHTML = renderJornadaCompleta(ultima, jornadasData.length - 1);
-        }
-    }
-
-    navLinks.forEach(a => {
-        const href = a.getAttribute('href');
-        const base = href.split('?')[0] || href;
-        const active = base === page || (page === '/' && base === '/');
-        a.classList.toggle('active', active);
-    });
-}
-
-function renderJornadaCompleta(j, idx) {
-    const slug = j.slug || `jornada-${idx}`;
-    return `
-        ${renderBanner(j, slug)}
-        ${j.lineas_fijas ? renderLineasFijas(j, slug) : ''}
-        ${j.validas ? renderValidas(j, slug) : ''}
-        ${j.bombas ? renderBombas(j, slug) : ''}
-        ${j.stats ? renderStats(j) : ''}
-    `;
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     // SPA redirect from 404.html
     const redirect = sessionStorage.getItem('redirect');
@@ -114,6 +58,58 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('popstate', () => {
         showPage(location.pathname || '/');
     });
+
+    function showPage(page) {
+        const app = document.getElementById('app');
+        const stream = document.getElementById('stream-page');
+        const resultados = document.getElementById('resultados');
+        const recaudacion = document.getElementById('recaudacion');
+        const publicidad = document.getElementById('publicidad');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        [app, stream, resultados, recaudacion, publicidad].forEach(el => { if (el) el.style.display = 'none'; });
+
+        if (page === '/stream') {
+            stream.style.display = 'block';
+            loadStream(currentChannel);
+        } else if (page === '/resultados') {
+            resultados.style.display = 'block';
+        } else if (page === '/recaudacion') {
+            recaudacion.style.display = 'block';
+        } else {
+            app.style.display = 'block';
+            publicidad.style.display = 'block';
+            const iframe = document.getElementById('streamIframe');
+            if (iframe) iframe.src = '';
+
+            const params = new URLSearchParams(location.search);
+            const jSlug = params.get('j');
+            if (jSlug && jornadasData.length) {
+                const j = jornadasData.find(d => d.slug === jSlug);
+                if (j) app.innerHTML = renderJornadaCompleta(j, jornadasData.indexOf(j));
+            } else if (jornadasData.length) {
+                const ultima = jornadasData[jornadasData.length - 1];
+                app.innerHTML = renderJornadaCompleta(ultima, jornadasData.length - 1);
+            }
+        }
+
+        navLinks.forEach(a => {
+            const href = a.getAttribute('href');
+            const base = href.split('?')[0] || href;
+            a.classList.toggle('active', base === page || (page === '/' && base === '/'));
+        });
+    }
+
+    function renderJornadaCompleta(j, idx) {
+        const slug = j.slug || `jornada-${idx}`;
+        return [
+            renderBanner(j, slug),
+            j.lineas_fijas ? renderLineasFijas(j, slug) : '',
+            j.validas ? renderValidas(j, slug) : '',
+            j.bombas ? renderBombas(j, slug) : '',
+            j.stats ? renderStats(j) : '',
+        ].join('');
+    }
 
     fetch('data/jornadas.json')
         .then(r => r.json())
@@ -433,5 +429,4 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(() => {});
 
-    showPage(location.pathname || '/');
 });
