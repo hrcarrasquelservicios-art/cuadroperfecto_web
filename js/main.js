@@ -28,6 +28,8 @@ function loadStream(channelKey) {
     btns.forEach(b => b.classList.toggle('active', b.dataset.channel === channelKey));
 }
 
+let jornadasData = [];
+
 function showPage(page) {
     const app = document.getElementById('app');
     const stream = document.getElementById('stream-page');
@@ -50,12 +52,38 @@ function showPage(page) {
         publicidad.style.display = 'block';
         const iframe = document.getElementById('streamIframe');
         if (iframe) iframe.src = '';
+
+        const params = new URLSearchParams(location.search);
+        const jSlug = params.get('j');
+        if (jSlug && jornadasData.length) {
+            const j = jornadasData.find(d => d.slug === jSlug);
+            if (j) {
+                const idx = jornadasData.indexOf(j);
+                app.innerHTML = renderJornadaCompleta(j, idx);
+            }
+        } else if (jornadasData.length) {
+            const ultima = jornadasData[jornadasData.length - 1];
+            app.innerHTML = renderJornadaCompleta(ultima, jornadasData.length - 1);
+        }
     }
 
     navLinks.forEach(a => {
         const href = a.getAttribute('href');
-        a.classList.toggle('active', href === page || (page === '/' && href === '/'));
+        const base = href.split('?')[0] || href;
+        const active = base === page || (page === '/' && base === '/');
+        a.classList.toggle('active', active);
     });
+}
+
+function renderJornadaCompleta(j, idx) {
+    const slug = j.slug || `jornada-${idx}`;
+    return `
+        ${renderBanner(j, slug)}
+        ${j.lineas_fijas ? renderLineasFijas(j, slug) : ''}
+        ${j.validas ? renderValidas(j, slug) : ''}
+        ${j.bombas ? renderBombas(j, slug) : ''}
+        ${j.stats ? renderStats(j) : ''}
+    `;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -77,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     menu.classList.remove('open');
                     history.pushState(null, '', href);
-                    showPage(href);
+                    showPage(href.split('?')[0]);
                 }
             });
         });
@@ -85,29 +113,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('popstate', () => {
         showPage(location.pathname || '/');
+        // Re-render si hay ?j= en la URL
+        const params = new URLSearchParams(location.search);
+        if (params.get('j') && jornadasData.length) {
+            const app = document.getElementById('app');
+            const j = jornadasData.find(d => d.slug === params.get('j'));
+            if (j) {
+                app.innerHTML = renderJornadaCompleta(j, jornadasData.indexOf(j));
+            }
+        }
     });
 
     fetch('data/jornadas.json')
         .then(r => r.json())
         .then(data => {
+            jornadasData = data;
             renderResultados(data);
             renderRecaudacion(data);
-            const app = document.getElementById('app');
-            data.forEach((j, idx) => {
-                const slug = j.slug || `jornada-${idx}`;
-                app.innerHTML += `
-                    ${renderBanner(j, slug)}
-                    ${j.lineas_fijas ? renderLineasFijas(j, slug) : ''}
-                    ${j.validas ? renderValidas(j, slug) : ''}
-                    ${j.bombas ? renderBombas(j, slug) : ''}
-                    ${j.stats ? renderStats(j) : ''}
-                `;
 
-                const nav = document.getElementById('navMenu');
-                nav.insertAdjacentHTML('beforeend', `<li><a href="#${slug}">${j.hipodromo} ${j.fecha}</a></li>`);
-                if (j.bombas) nav.insertAdjacentHTML('beforeend', `<li><a href="#${slug}-bombas">Bombas</a></li>`);
-                if (j.validas) nav.insertAdjacentHTML('beforeend', `<li><a href="#${slug}-5y6">5y6</a></li>`);
+            // Nav
+            const nav = document.getElementById('navMenu');
+            nav.innerHTML = `
+                <li><a href="/" class="active">Análisis</a></li>
+                <li><a href="/stream">🎥 En Vivo</a></li>
+                <li><a href="/resultados">📊 Resultados</a></li>
+                <li><a href="/recaudacion">💰 Recaudación</a></li>
+            `;
+            // Jornadas anteriores como enlaces
+            data.slice(0, -1).reverse().forEach((j, i) => {
+                const s = j.slug || `jornada-${i}`;
+                nav.insertAdjacentHTML('beforeend', `<li><a href="/?j=${s}">📅 ${j.hipodromo} ${j.fecha}</a></li>`);
             });
+
+            // Mostrar página actual
+            showPage(location.pathname || '/');
         });
 
     function renderBanner(j, slug) {
@@ -129,10 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderLineasFijas(j, slug) {
+        const carreras = j.lineas_fijas || [];
+        const rango = carreras.length ? `${carreras[0].numero}-${carreras[carreras.length-1].numero}` : '';
         return `
         <section class="race-cards" id="${slug}-fijas">
             <div class="container">
-                <h2 class="section-title">🏇 LÍNEAS FIJAS <span class="gold">C1-C2</span></h2>
+                <h2 class="section-title">🏇 LÍNEAS FIJAS <span class="gold">${rango}</span></h2>
                 <div class="card-grid">
                     ${j.lineas_fijas.map(c => renderCard(c)).join('')}
                 </div>
