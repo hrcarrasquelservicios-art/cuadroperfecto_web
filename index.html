@@ -6,9 +6,33 @@
     <title>Cuadro Perfecto — Sistema 3.3 "La Vencida"</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <meta name="description" content="Análisis hípico profesional con Sistema 3.3. Predicciones, bombas y cuadro perfecto.">
+    <meta name="description" content="Análisis hípico profesional con Sistema 3.3. Predicciones, bombas y cuadro perfecto. Belmont Park, La Rinconada, Valencia.">
     <meta property="og:title" content="Cuadro Perfecto — Sistema 3.3">
     <meta property="og:description" content="Análisis hípico profesional con Sistema 3.3">
+    <style>
+    /* ── Belmont Park Section ── */
+    .belmont-section { padding: 60px 0; background: linear-gradient(135deg, #0a0a1a 0%, #0d1f3c 100%); }
+    .belmont-header-row { display: flex; justify-content: space-between; align-items: center; margin: 16px 0 24px; }
+    .belmont-badge { background: rgba(30,80,160,0.5); border: 1px solid #2563eb; color: #93c5fd; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+    .belmont-update { color: #6b7280; font-size: 0.8rem; }
+    .belmont-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 8px; }
+    .belmont-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; transition: transform .2s, border-color .2s; }
+    .belmont-card:hover { transform: translateY(-3px); border-color: rgba(37,99,235,0.5); }
+    .belmont-card-flag { font-size: 1.4rem; margin-bottom: 8px; }
+    .belmont-card-title { font-size: 0.95rem; font-weight: 600; color: #e2e8f0; margin: 0 0 8px; line-height: 1.4; }
+    .belmont-card-meta { font-size: 0.75rem; color: #6b7280; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .belmont-card-source { color: #93c5fd; }
+    .belmont-card-link { display: inline-block; margin-top: 10px; color: #60a5fa; font-size: 0.8rem; text-decoration: none; }
+    .belmont-card-link:hover { color: #93c5fd; text-decoration: underline; }
+    .belmont-footer { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+    .tg-btn-small { background: #229ED9; color: #fff; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: opacity .2s; }
+    .tg-btn-small:hover { opacity: 0.85; }
+    .nyra-btn { background: rgba(255,255,255,0.08); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.15); padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; transition: background .2s; }
+    .nyra-btn:hover { background: rgba(255,255,255,0.15); }
+    .belmont-loading { text-align: center; color: #6b7280; padding: 40px; grid-column: 1/-1; }
+    .loading-spinner { width: 36px; height: 36px; border: 3px solid rgba(255,255,255,0.1); border-top-color: #2563eb; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 12px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -19,6 +43,7 @@
                 <li><a href="/" class="active">Análisis</a></li>
                 <li><a href="/stream">🎥 En Vivo</a></li>
                 <li><a href="/resultados">📊 Resultados</a></li>
+                <li><a href="#belmont">🇺🇸 Belmont</a></li>
                 <li><a href="/recaudacion">💰 Recaudación</a></li>
             </ul>
         </div>
@@ -116,6 +141,37 @@
         </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════════════════════
+         SECCIÓN BELMONT PARK — Noticias en Tiempo Real
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="belmont-section" id="belmont">
+        <div class="container">
+            <h2 class="section-title">🇺🇸 <span class="gold">BELMONT PARK</span> — Noticias</h2>
+            <p class="section-sub">Resultados y noticias del hipódromo más histórico de EE.UU. · Actualizado automáticamente</p>
+
+            <div class="belmont-header-row">
+                <div class="belmont-badge">🏇 NYRA · Nueva York</div>
+                <div class="belmont-update" id="belmontUpdateTime">Cargando...</div>
+            </div>
+
+            <div class="belmont-grid" id="belmontGrid">
+                <div class="belmont-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Cargando noticias de Belmont Park...</p>
+                </div>
+            </div>
+
+            <div class="belmont-footer">
+                <a href="https://t.me/LaRectaCaliente" target="_blank" rel="noopener" class="tg-btn-small">
+                    📲 Más en @LaRectaCaliente
+                </a>
+                <a href="https://www.nyra.com/belmont" target="_blank" rel="noopener" class="nyra-btn">
+                    🔗 NYRA.com
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="ads-section" id="publicidad">
         <div class="container">
             <h2 class="section-title">🤝 <span class="gold">PATROCINANTES</span></h2>
@@ -208,6 +264,83 @@
             videos[current].classList.add('active');
             videos[current].play();
         }, 8000);
+    })();
+    </script>
+    <script>
+    // ──────────────────────────────────────────────
+    // Belmont Park — Cargador de noticias RSS
+    // ──────────────────────────────────────────────
+    (function loadBelmontNews() {
+        const grid = document.getElementById('belmontGrid');
+        const updateEl = document.getElementById('belmontUpdateTime');
+        const RSS_URL = encodeURIComponent('https://news.google.com/rss/search?q=Belmont+Park+horse+racing+results&hl=en-US&gl=US&ceid=US:en');
+        const API = `https://api.rss2json.com/v1/api.json?rss_url=${RSS_URL}&count=4`;
+
+        function timeAgo(dateStr) {
+            const diff = Date.now() - new Date(dateStr).getTime();
+            const h = Math.floor(diff / 3600000);
+            if (h < 1) return 'hace menos de 1h';
+            if (h < 24) return `hace ${h}h`;
+            return `hace ${Math.floor(h/24)}d`;
+        }
+
+        function renderCards(items) {
+            if (!items || items.length === 0) {
+                grid.innerHTML = '<p style="color:#6b7280;grid-column:1/-1;text-align:center">Sin noticias disponibles. <a href="https://www.nyra.com/belmont" target="_blank" style="color:#60a5fa">Ver NYRA.com</a></p>';
+                return;
+            }
+            grid.innerHTML = items.slice(0, 4).map(item => {
+                const title = item.title.replace(/\s*-\s*[^-]+$/, ''); // Quitar fuente del título
+                const source = item.author || 'Google News';
+                const ago = timeAgo(item.pubDate);
+                const link = item.link;
+                return `
+                <div class="belmont-card">
+                    <div class="belmont-card-flag">🇺🇸🏇</div>
+                    <p class="belmont-card-title">${title}</p>
+                    <div class="belmont-card-meta">
+                        <span class="belmont-card-source">${source}</span>
+                        <span>${ago}</span>
+                    </div>
+                    <a class="belmont-card-link" href="${link}" target="_blank" rel="noopener">Ver noticia →</a>
+                </div>`;
+            }).join('');
+        }
+
+        function fetchNews() {
+            fetch(API)
+                .then(r => r.json())
+                .then(data => {
+                    if (data.status === 'ok') {
+                        renderCards(data.items);
+                        const now = new Date().toLocaleTimeString('es-VE', { hour: '2-digit', minute: '2-digit' });
+                        updateEl.textContent = `Actualizado a las ${now}`;
+                    } else {
+                        throw new Error('API error');
+                    }
+                })
+                .catch(() => {
+                    // Fallback con cards de ejemplo
+                    grid.innerHTML = `
+                    <div class="belmont-card">
+                        <div class="belmont-card-flag">🇺🇸🏇</div>
+                        <p class="belmont-card-title">Belmont Park — Programa completo de carreras</p>
+                        <div class="belmont-card-meta"><span class="belmont-card-source">NYRA</span></div>
+                        <a class="belmont-card-link" href="https://www.nyra.com/belmont" target="_blank" rel="noopener">Ver en NYRA.com →</a>
+                    </div>
+                    <div class="belmont-card">
+                        <div class="belmont-card-flag">🏅</div>
+                        <p class="belmont-card-title">Resultados y dividendos — Última jornada Belmont</p>
+                        <div class="belmont-card-meta"><span class="belmont-card-source">@LaRectaCaliente</span></div>
+                        <a class="belmont-card-link" href="https://t.me/LaRectaCaliente" target="_blank" rel="noopener">Ver en Telegram →</a>
+                    </div>`;
+                    updateEl.textContent = 'Modo offline';
+                });
+        }
+
+        fetchNews();
+        // Auto-refrescar cada 30 minutos
+        setInterval(fetchNews, 30 * 60 * 1000);
     })();
     </script>
     <script src="js/main.js"></script>
