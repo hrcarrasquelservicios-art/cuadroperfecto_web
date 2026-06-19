@@ -1,6 +1,6 @@
 const CHANNELS = {
     inh: { name: 'La Rinconada', id: 'UCR0C0QitI9WGwLPv5t2Mjxw', icon: '🏇' },
-    hinava: { name: 'Valencia', id: 'UCeElPxYsX8MZZm25zMgg0Gg', videoId: 'vOoCQb1U1Gc', icon: '🐎' }
+    hinava: { name: 'Valencia', id: 'UCeElPxYsX8MZZm25zMgg0Gg', videoId: '', icon: '🐎' }
 };
 let currentChannel = 'inh';
 
