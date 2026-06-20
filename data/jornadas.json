@@ -11,49 +11,267 @@
     "efectividad_sin_trabajos": "9.1%",
     "lineas_fijas": [
       {
-        "numero": "C1", "hora": "1:30 PM", "distancia": "1100m",
+        "numero": "C1",
+        "hora": "1:30 PM",
+        "distancia": "1100m",
         "categoria": "Ganadores — Debutantes / Perdedores / Gan. 1",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 6, "nombre": "TAPITAL", "pts": 13.5, "icono": "🔥" },
-          { "pos": 2, "dorsal": 5, "nombre": "EL HACHA", "pts": 13.0, "icono": "🔥" },
-          { "pos": 3, "dorsal": 4, "nombre": "THE ORPHAN", "pts": 9.5, "icono": "" }
+          {
+            "pos": 1,
+            "dorsal": 6,
+            "nombre": "TAPITAL",
+            "pts": 13.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 5,
+            "nombre": "EL HACHA",
+            "pts": 13.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 3,
+            "dorsal": 4,
+            "nombre": "THE ORPHAN",
+            "pts": 9.5,
+            "icono": ""
+          }
         ],
         "clave": "Tapital #6: Trabajo HOY 'salió al tiro, movido y bien'"
       },
       {
-        "numero": "C2", "hora": "1:55 PM", "distancia": "1100m",
+        "numero": "C2",
+        "hora": "1:55 PM",
+        "distancia": "1100m",
         "categoria": "No Ganadores 3 Meses",
         "bomb_tag": "💣 DOBLE BOMBA",
         "top3": [
-          { "pos": 1, "dorsal": 4, "nombre": "STRENGTH MONSTER", "pts": 15.0, "icono": "💣" },
-          { "pos": 1, "dorsal": 3, "nombre": "CANDOROSO", "pts": 15.0, "icono": "💣" },
-          { "pos": 3, "dorsal": 2, "nombre": "SKULL TROOPER", "pts": 13.5, "icono": "" }
+          {
+            "pos": 1,
+            "dorsal": 4,
+            "nombre": "STRENGTH MONSTER",
+            "pts": 15.0,
+            "icono": "💣"
+          },
+          {
+            "pos": 1,
+            "dorsal": 3,
+            "nombre": "CANDOROSO",
+            "pts": 15.0,
+            "icono": "💣"
+          },
+          {
+            "pos": 3,
+            "dorsal": 2,
+            "nombre": "SKULL TROOPER",
+            "pts": 13.5,
+            "icono": ""
+          }
         ],
         "clave": "Strength Monster: 'Extraordinario y tronó /r.12/' — Candoroso: 'Sigue en el aire'"
       }
     ],
     "validas": [
-      { "v": "V1", "carrera": "C3", "distancia": "1200m", "hora": "2:50 PM", "top": { "nombre": "CASSIUSCLAY", "dorsal": 6, "pts": 13.5, "bomba": false }, "alt": { "nombre": "STRENGTH ROMA", "dorsal": 4, "pts": 13.0, "bomba": false }, "color": "v1" },
-      { "v": "V2", "carrera": "C4", "distancia": "1300m", "hora": "3:15 PM", "top": { "nombre": "BELLA ANTONELLA", "dorsal": 8, "pts": 15.0, "bomba": true }, "alt": { "nombre": "FRIDA", "dorsal": 3, "pts": 10.5, "bomba": false }, "color": "v2" },
-      { "v": "V3", "carrera": "C5", "distancia": "1200m", "hora": "3:40 PM", "top": { "nombre": "GRAN CANELO", "dorsal": 3, "pts": 17.5, "bomba": "mega" }, "alt": { "nombre": "SKYDIVE", "dorsal": 2, "pts": 13.0, "bomba": false }, "color": "v3" },
-      { "v": "V4", "carrera": "C6", "distancia": "1200m", "hora": "4:05 PM", "top": { "nombre": "LEGIONARIA", "dorsal": 5, "pts": 15.0, "bomba": true }, "alt": { "nombre": "ENIGMA", "dorsal": 1, "pts": 13.5, "bomba": false }, "color": "v4" },
-      { "v": "V5", "carrera": "C7", "distancia": "1200m", "hora": "4:30 PM", "top": { "nombre": "STELLA CADENTE", "dorsal": 3, "pts": 20.0, "bomba": "mega" }, "alt": { "nombre": "QUEEN OF SOUTH", "dorsal": 6, "pts": 13.0, "bomba": false }, "color": "v5", "copa": true, "featured": true },
-      { "v": "V6", "carrera": "C8", "distancia": "1200m", "hora": "4:55 PM", "top": { "nombre": "MI GUERRERO", "dorsal": 2, "pts": 17.0, "bomba": "mega" }, "alt": { "nombre": "THE ISAAC", "dorsal": 6, "pts": 13.0, "bomba": false }, "color": "v6" }
+      {
+        "v": "V1",
+        "carrera": "C3",
+        "distancia": "1200m",
+        "hora": "2:50 PM",
+        "top": {
+          "nombre": "CASSIUSCLAY",
+          "dorsal": 6,
+          "pts": 13.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "STRENGTH ROMA",
+          "dorsal": 4,
+          "pts": 13.0,
+          "bomba": false
+        },
+        "color": "v1"
+      },
+      {
+        "v": "V2",
+        "carrera": "C4",
+        "distancia": "1300m",
+        "hora": "3:15 PM",
+        "top": {
+          "nombre": "BELLA ANTONELLA",
+          "dorsal": 8,
+          "pts": 15.0,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "FRIDA",
+          "dorsal": 3,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "color": "v2"
+      },
+      {
+        "v": "V3",
+        "carrera": "C5",
+        "distancia": "1200m",
+        "hora": "3:40 PM",
+        "top": {
+          "nombre": "GRAN CANELO",
+          "dorsal": 3,
+          "pts": 17.5,
+          "bomba": "mega"
+        },
+        "alt": {
+          "nombre": "SKYDIVE",
+          "dorsal": 2,
+          "pts": 13.0,
+          "bomba": false
+        },
+        "color": "v3"
+      },
+      {
+        "v": "V4",
+        "carrera": "C6",
+        "distancia": "1200m",
+        "hora": "4:05 PM",
+        "top": {
+          "nombre": "LEGIONARIA",
+          "dorsal": 5,
+          "pts": 15.0,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "ENIGMA",
+          "dorsal": 1,
+          "pts": 13.5,
+          "bomba": false
+        },
+        "color": "v4"
+      },
+      {
+        "v": "V5",
+        "carrera": "C7",
+        "distancia": "1200m",
+        "hora": "4:30 PM",
+        "top": {
+          "nombre": "STELLA CADENTE",
+          "dorsal": 3,
+          "pts": 20.0,
+          "bomba": "mega"
+        },
+        "alt": {
+          "nombre": "QUEEN OF SOUTH",
+          "dorsal": 6,
+          "pts": 13.0,
+          "bomba": false
+        },
+        "color": "v5",
+        "copa": true,
+        "featured": true
+      },
+      {
+        "v": "V6",
+        "carrera": "C8",
+        "distancia": "1200m",
+        "hora": "4:55 PM",
+        "top": {
+          "nombre": "MI GUERRERO",
+          "dorsal": 2,
+          "pts": 17.0,
+          "bomba": "mega"
+        },
+        "alt": {
+          "nombre": "THE ISAAC",
+          "dorsal": 6,
+          "pts": 13.0,
+          "bomba": false
+        },
+        "color": "v6"
+      }
     ],
     "jugada_oficial": "6/4 - 8/3 - 3/2 - 5/1 - 3/6 - 2/6",
-    "jugada_combos": ["6/4", "8/3", "3/2", "5/1", "3/6", "2/6"],
+    "jugada_combos": [
+      "6/4",
+      "8/3",
+      "3/2",
+      "5/1",
+      "3/6",
+      "2/6"
+    ],
     "jugada_info": "64 combinaciones · Base fija: 6-8-3-5-3-2",
     "bombas": [
-      { "rank": 1, "nombre": "STELLA CADENTE", "dorsal": 3, "carrera": "C7", "hora": "4:30 PM", "pts": 20.0, "nivel": "mega" },
-      { "rank": 2, "nombre": "MI GUERRERO", "dorsal": 2, "carrera": "C8", "hora": "4:55 PM", "pts": 17.0, "nivel": "mega" },
-      { "rank": 3, "nombre": "GRAN CANELO", "dorsal": 3, "carrera": "C5", "hora": "3:40 PM", "pts": 17.5, "nivel": "mega" },
-      { "rank": 4, "nombre": "BELLA ANTONELLA", "dorsal": 8, "carrera": "C4", "hora": "3:15 PM", "pts": 15.0, "nivel": "normal" },
-      { "rank": 5, "nombre": "STRENGTH MONSTER", "dorsal": 4, "carrera": "C2", "hora": "1:55 PM", "pts": 15.0, "nivel": "normal" },
-      { "rank": 6, "nombre": "CANDOROSO", "dorsal": 3, "carrera": "C2", "hora": "1:55 PM", "pts": 15.0, "nivel": "normal" },
-      { "rank": 7, "nombre": "LEGIONARIA", "dorsal": 5, "carrera": "C6", "hora": "4:05 PM", "pts": 15.0, "nivel": "normal" }
+      {
+        "rank": 1,
+        "nombre": "STELLA CADENTE",
+        "dorsal": 3,
+        "carrera": "C7",
+        "hora": "4:30 PM",
+        "pts": 20.0,
+        "nivel": "mega"
+      },
+      {
+        "rank": 2,
+        "nombre": "MI GUERRERO",
+        "dorsal": 2,
+        "carrera": "C8",
+        "hora": "4:55 PM",
+        "pts": 17.0,
+        "nivel": "mega"
+      },
+      {
+        "rank": 3,
+        "nombre": "GRAN CANELO",
+        "dorsal": 3,
+        "carrera": "C5",
+        "hora": "3:40 PM",
+        "pts": 17.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 4,
+        "nombre": "BELLA ANTONELLA",
+        "dorsal": 8,
+        "carrera": "C4",
+        "hora": "3:15 PM",
+        "pts": 15.0,
+        "nivel": "normal"
+      },
+      {
+        "rank": 5,
+        "nombre": "STRENGTH MONSTER",
+        "dorsal": 4,
+        "carrera": "C2",
+        "hora": "1:55 PM",
+        "pts": 15.0,
+        "nivel": "normal"
+      },
+      {
+        "rank": 6,
+        "nombre": "CANDOROSO",
+        "dorsal": 3,
+        "carrera": "C2",
+        "hora": "1:55 PM",
+        "pts": 15.0,
+        "nivel": "normal"
+      },
+      {
+        "rank": 7,
+        "nombre": "LEGIONARIA",
+        "dorsal": 5,
+        "carrera": "C6",
+        "hora": "4:05 PM",
+        "pts": 15.0,
+        "nivel": "normal"
+      }
     ],
-    "stats": { "carreras": 8, "bombas": 7, "efectividad_con_trabajos": "67%", "efectividad_sin_trabajos": "9.1%" },
+    "stats": {
+      "carreras": 8,
+      "bombas": 7,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": "9.1%"
+    },
     "efectividad": "67%",
     "recaudacion": {
       "monto": "Bs. 45.230",
@@ -61,14 +279,38 @@
       "validas": "6"
     },
     "ganadores": [
-      {"carrera": "C1", "ganador": "#5 EL HACHA"},
-      {"carrera": "C2", "ganador": "#4 STRENGTH MONSTER 💣"},
-      {"carrera": "C3 V1", "ganador": "#7 DRAXLER"},
-      {"carrera": "C4 V2", "ganador": "#8 BELLA ANTONELLA 💣"},
-      {"carrera": "C5 V3", "ganador": "#2 SKYDIVE"},
-      {"carrera": "C6 V4", "ganador": "ENCHANTED MOON"},
-      {"carrera": "C7 V5", "ganador": "STELLA CADENTE #3 💣💣"},
-      {"carrera": "C8 V6", "ganador": "#6 THE ISAAC"}
+      {
+        "carrera": "C1",
+        "ganador": "#5 EL HACHA"
+      },
+      {
+        "carrera": "C2",
+        "ganador": "#4 STRENGTH MONSTER 💣"
+      },
+      {
+        "carrera": "C3 V1",
+        "ganador": "#7 DRAXLER"
+      },
+      {
+        "carrera": "C4 V2",
+        "ganador": "#8 BELLA ANTONELLA 💣"
+      },
+      {
+        "carrera": "C5 V3",
+        "ganador": "#2 SKYDIVE"
+      },
+      {
+        "carrera": "C6 V4",
+        "ganador": "ENCHANTED MOON"
+      },
+      {
+        "carrera": "C7 V5",
+        "ganador": "STELLA CADENTE #3 💣💣"
+      },
+      {
+        "carrera": "C8 V6",
+        "ganador": "#6 THE ISAAC"
+      }
     ]
   },
   {
@@ -83,49 +325,269 @@
     "efectividad_sin_trabajos": "9.1%",
     "lineas_fijas": [
       {
-        "numero": "C1", "hora": "1:00 PM", "distancia": "1200m",
+        "numero": "C1",
+        "hora": "1:00 PM",
+        "distancia": "1200m",
         "categoria": "Yeguas 3-4 años No Ganadoras",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 8, "nombre": "MISS MORGAN (USA)", "pts": 13.5, "icono": "🔥" },
-          { "pos": 2, "dorsal": 7, "nombre": "RUE DU BAC", "pts": 12.8, "icono": "🔥" },
-          { "pos": 3, "dorsal": 5, "nombre": "MACARENA", "pts": 11.2, "icono": "" }
+          {
+            "pos": 1,
+            "dorsal": 8,
+            "nombre": "MISS MORGAN (USA)",
+            "pts": 13.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 7,
+            "nombre": "RUE DU BAC",
+            "pts": 12.8,
+            "icono": "🔥"
+          },
+          {
+            "pos": 3,
+            "dorsal": 5,
+            "nombre": "MACARENA",
+            "pts": 11.2,
+            "icono": ""
+          }
         ],
         "clave": "Miss Morgan #8: Tercera marca, trabajo 'Al tiro, movido', Quevedo (23%) arriba"
       },
       {
-        "numero": "C7", "hora": "3:30 PM", "distancia": "1200m",
+        "numero": "C7",
+        "hora": "3:30 PM",
+        "distancia": "1200m",
         "categoria": "Machos 4+ años Ganadores 5+",
         "bomb_tag": "💣 DOBLE BOMBA",
         "top3": [
-          { "pos": 1, "dorsal": 4, "nombre": "EKATI KING (USA)", "pts": 16.5, "icono": "💣" },
-          { "pos": 1, "dorsal": 1, "nombre": "MAGICSHADOW (USA)", "pts": 15.8, "icono": "💣" },
-          { "pos": 3, "dorsal": 6, "nombre": "PERFECT LA COMBEE (USA)", "pts": 12.0, "icono": "" }
+          {
+            "pos": 1,
+            "dorsal": 4,
+            "nombre": "EKATI KING (USA)",
+            "pts": 16.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 1,
+            "dorsal": 1,
+            "nombre": "MAGICSHADOW (USA)",
+            "pts": 15.8,
+            "icono": "💣"
+          },
+          {
+            "pos": 3,
+            "dorsal": 6,
+            "nombre": "PERFECT LA COMBEE (USA)",
+            "pts": 12.0,
+            "icono": ""
+          }
         ],
         "clave": "Ekati King #4: Trabajo 'Al tiro veloz y extraordinario', ganó su última GI. Magicshadow #1: SHN extraordinario"
       }
     ],
     "validas": [
-      { "v": "V1", "carrera": "C8", "distancia": "1800m", "hora": "3:55 PM", "top": { "nombre": "ASTUTO", "dorsal": 1, "pts": 16.2, "bomba": true }, "alt": { "nombre": "LI TRE FRATELLI", "dorsal": 2, "pts": 13.5, "bomba": false }, "color": "v1", "copa": true, "featured": true },
-      { "v": "V2", "carrera": "C9", "distancia": "1100m", "hora": "4:20 PM", "top": { "nombre": "VIEJO PARRA", "dorsal": 6, "pts": 13.8, "bomba": false }, "alt": { "nombre": "MISTER WILL", "dorsal": 7, "pts": 13.2, "bomba": false }, "color": "v2" },
-      { "v": "V3", "carrera": "C10", "distancia": "1400m", "hora": "4:45 PM", "top": { "nombre": "HAYES BAY (USA)", "dorsal": 5, "pts": 16.8, "bomba": "mega" }, "alt": { "nombre": "TALE OF MAY (USA)", "dorsal": 1, "pts": 14.2, "bomba": false }, "color": "v3" },
-      { "v": "V4", "carrera": "C11", "distancia": "1300m", "hora": "5:10 PM", "top": { "nombre": "GRAN FERONIA", "dorsal": 7, "pts": 14.5, "bomba": false }, "alt": { "nombre": "CATIRA MERCEDES (USA)", "dorsal": 12, "pts": 13.8, "bomba": false }, "color": "v4" },
-      { "v": "V5", "carrera": "C12", "distancia": "1100m", "hora": "5:35 PM", "top": { "nombre": "CARORA'S DREAM (USA)", "dorsal": 4, "pts": 14.8, "bomba": false }, "alt": { "nombre": "INSPECTORA", "dorsal": 1, "pts": 12.5, "bomba": false }, "color": "v5" },
-      { "v": "V6", "carrera": "C13", "distancia": "1600m", "hora": "6:00 PM", "top": { "nombre": "BUNKER", "dorsal": 3, "pts": 16.5, "bomba": "mega" }, "alt": { "nombre": "PONTEVECCHIO", "dorsal": 4, "pts": 15.2, "bomba": false }, "color": "v6", "copa": true, "featured": true }
+      {
+        "v": "V1",
+        "carrera": "C8",
+        "distancia": "1800m",
+        "hora": "3:55 PM",
+        "top": {
+          "nombre": "ASTUTO",
+          "dorsal": 1,
+          "pts": 16.2,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "LI TRE FRATELLI",
+          "dorsal": 2,
+          "pts": 13.5,
+          "bomba": false
+        },
+        "color": "v1",
+        "copa": true,
+        "featured": true
+      },
+      {
+        "v": "V2",
+        "carrera": "C9",
+        "distancia": "1100m",
+        "hora": "4:20 PM",
+        "top": {
+          "nombre": "VIEJO PARRA",
+          "dorsal": 6,
+          "pts": 13.8,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "MISTER WILL",
+          "dorsal": 7,
+          "pts": 13.2,
+          "bomba": false
+        },
+        "color": "v2"
+      },
+      {
+        "v": "V3",
+        "carrera": "C10",
+        "distancia": "1400m",
+        "hora": "4:45 PM",
+        "top": {
+          "nombre": "HAYES BAY (USA)",
+          "dorsal": 5,
+          "pts": 16.8,
+          "bomba": "mega"
+        },
+        "alt": {
+          "nombre": "TALE OF MAY (USA)",
+          "dorsal": 1,
+          "pts": 14.2,
+          "bomba": false
+        },
+        "color": "v3"
+      },
+      {
+        "v": "V4",
+        "carrera": "C11",
+        "distancia": "1300m",
+        "hora": "5:10 PM",
+        "top": {
+          "nombre": "GRAN FERONIA",
+          "dorsal": 7,
+          "pts": 14.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "CATIRA MERCEDES (USA)",
+          "dorsal": 12,
+          "pts": 13.8,
+          "bomba": false
+        },
+        "color": "v4"
+      },
+      {
+        "v": "V5",
+        "carrera": "C12",
+        "distancia": "1100m",
+        "hora": "5:35 PM",
+        "top": {
+          "nombre": "CARORA'S DREAM (USA)",
+          "dorsal": 4,
+          "pts": 14.8,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "INSPECTORA",
+          "dorsal": 1,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "color": "v5"
+      },
+      {
+        "v": "V6",
+        "carrera": "C13",
+        "distancia": "1600m",
+        "hora": "6:00 PM",
+        "top": {
+          "nombre": "BUNKER",
+          "dorsal": 3,
+          "pts": 16.5,
+          "bomba": "mega"
+        },
+        "alt": {
+          "nombre": "PONTEVECCHIO",
+          "dorsal": 4,
+          "pts": 15.2,
+          "bomba": false
+        },
+        "color": "v6",
+        "copa": true,
+        "featured": true
+      }
     ],
     "jugada_oficial": "1-2 / 6-7 / 5-1 / 7-12 / 4-1 / 3-4",
-    "jugada_combos": ["1-2", "6-7", "5-1", "7-12", "4-1", "3-4"],
+    "jugada_combos": [
+      "1-2",
+      "6-7",
+      "5-1",
+      "7-12",
+      "4-1",
+      "3-4"
+    ],
     "jugada_info": "64 combinaciones · 4 bombas en válidas",
     "bombas": [
-      { "rank": 1, "nombre": "HAYES BAY (USA)", "dorsal": 5, "carrera": "C10 V3", "hora": "4:45 PM", "pts": 16.8, "nivel": "mega" },
-      { "rank": 2, "nombre": "ASTUTO", "dorsal": 1, "carrera": "C8 V1", "hora": "3:55 PM", "pts": 16.2, "nivel": "mega" },
-      { "rank": 3, "nombre": "BUNKER", "dorsal": 3, "carrera": "C13 V6", "hora": "6:00 PM", "pts": 16.5, "nivel": "mega" },
-      { "rank": 4, "nombre": "EKATI KING (USA)", "dorsal": 4, "carrera": "C7", "hora": "3:30 PM", "pts": 16.5, "nivel": "mega" },
-      { "rank": 5, "nombre": "MAGICSHADOW (USA)", "dorsal": 1, "carrera": "C7", "hora": "3:30 PM", "pts": 15.8, "nivel": "mega" },
-      { "rank": 6, "nombre": "PONTEVECCHIO", "dorsal": 4, "carrera": "C13 V6", "hora": "6:00 PM", "pts": 15.2, "nivel": "normal" },
-      { "rank": 7, "nombre": "GRAN FERONIA", "dorsal": 7, "carrera": "C11 V4", "hora": "5:10 PM", "pts": 14.5, "nivel": "normal" }
+      {
+        "rank": 1,
+        "nombre": "HAYES BAY (USA)",
+        "dorsal": 5,
+        "carrera": "C10 V3",
+        "hora": "4:45 PM",
+        "pts": 16.8,
+        "nivel": "mega"
+      },
+      {
+        "rank": 2,
+        "nombre": "ASTUTO",
+        "dorsal": 1,
+        "carrera": "C8 V1",
+        "hora": "3:55 PM",
+        "pts": 16.2,
+        "nivel": "mega"
+      },
+      {
+        "rank": 3,
+        "nombre": "BUNKER",
+        "dorsal": 3,
+        "carrera": "C13 V6",
+        "hora": "6:00 PM",
+        "pts": 16.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 4,
+        "nombre": "EKATI KING (USA)",
+        "dorsal": 4,
+        "carrera": "C7",
+        "hora": "3:30 PM",
+        "pts": 16.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 5,
+        "nombre": "MAGICSHADOW (USA)",
+        "dorsal": 1,
+        "carrera": "C7",
+        "hora": "3:30 PM",
+        "pts": 15.8,
+        "nivel": "mega"
+      },
+      {
+        "rank": 6,
+        "nombre": "PONTEVECCHIO",
+        "dorsal": 4,
+        "carrera": "C13 V6",
+        "hora": "6:00 PM",
+        "pts": 15.2,
+        "nivel": "normal"
+      },
+      {
+        "rank": 7,
+        "nombre": "GRAN FERONIA",
+        "dorsal": 7,
+        "carrera": "C11 V4",
+        "hora": "5:10 PM",
+        "pts": 14.5,
+        "nivel": "normal"
+      }
     ],
-    "stats": { "carreras": 13, "bombas": 5, "efectividad_con_trabajos": "67%", "efectividad_sin_trabajos": "9.1%" },
+    "stats": {
+      "carreras": 13,
+      "bombas": 5,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": "9.1%"
+    },
     "efectividad": "67%",
     "recaudacion": {
       "monto": "Bs. 390.367",
@@ -135,12 +597,30 @@
       "dividendo_5": "Bs. 2.398,97"
     },
     "ganadores": [
-      {"carrera": "C5 V1", "ganador": "#7 BAHÍA DEPERICANTAR"},
-      {"carrera": "C6 V2", "ganador": "#2 WILLIEHORTON"},
-      {"carrera": "C7 V3", "ganador": "#1 OPORTO"},
-      {"carrera": "C8 V4", "ganador": "#5 STRENGTHJERUSALEMA"},
-      {"carrera": "C9 V5", "ganador": "#2 EL DE FROIX"},
-      {"carrera": "C10 V6", "ganador": "#5 BITCOIN"}
+      {
+        "carrera": "C5 V1",
+        "ganador": "#7 BAHÍA DEPERICANTAR"
+      },
+      {
+        "carrera": "C6 V2",
+        "ganador": "#2 WILLIEHORTON"
+      },
+      {
+        "carrera": "C7 V3",
+        "ganador": "#1 OPORTO"
+      },
+      {
+        "carrera": "C8 V4",
+        "ganador": "#5 STRENGTHJERUSALEMA"
+      },
+      {
+        "carrera": "C9 V5",
+        "ganador": "#2 EL DE FROIX"
+      },
+      {
+        "carrera": "C10 V6",
+        "ganador": "#5 BITCOIN"
+      }
     ],
     "reunion": "Reunión N° 30"
   },
@@ -156,63 +636,274 @@
     "efectividad_sin_trabajos": "30-50%",
     "lineas_fijas": [
       {
-        "numero": "C1", "hora": "1:05 PM", "distancia": "1300m",
+        "numero": "C1",
+        "hora": "1:05 PM",
+        "distancia": "1300m",
         "categoria": "Yeguas 3+ sin ganar 3 meses",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 4, "nombre": "MAGICAL SONG", "pts": 13.5, "icono": "🔥" },
-          { "pos": 2, "dorsal": 3, "nombre": "LA DE NINO", "pts": 11.5, "icono": "🔥" },
-          { "pos": 3, "dorsal": 1, "nombre": "MONEY ON TIME", "pts": 0, "icono": "💰" }
+          {
+            "pos": 1,
+            "dorsal": 4,
+            "nombre": "MAGICAL SONG",
+            "pts": 13.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 3,
+            "nombre": "LA DE NINO",
+            "pts": 11.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 3,
+            "dorsal": 1,
+            "nombre": "MONEY ON TIME",
+            "pts": 0,
+            "icono": "💰"
+          }
         ],
         "clave": "Magical Song #4: Ganó feb/1300m, 2° mayo, consistente — LÍNEA FIJA"
       },
       {
-        "numero": "C2", "hora": "1:30 PM", "distancia": "1200m",
+        "numero": "C2",
+        "hora": "1:30 PM",
+        "distancia": "1200m",
         "categoria": "Reclamación hasta 6 victorias",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 5, "nombre": "UNSTOPPABLE", "pts": 13.5, "icono": "🔥" },
-          { "pos": 2, "dorsal": 4, "nombre": "PARTY PRINCE", "pts": 11.5, "icono": "🔥" },
-          { "pos": 3, "dorsal": 3, "nombre": "RODDRICK", "pts": 0, "icono": "💰" }
+          {
+            "pos": 1,
+            "dorsal": 5,
+            "nombre": "UNSTOPPABLE",
+            "pts": 13.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 4,
+            "nombre": "PARTY PRINCE",
+            "pts": 11.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 3,
+            "dorsal": 3,
+            "nombre": "RODDRICK",
+            "pts": 0,
+            "icono": "💰"
+          }
         ],
         "clave": "Unstoppable #5: 1ª marca, ganó V60/marzo, constante top3 — LÍNEA FIJA"
       },
       {
-        "numero": "C3", "hora": "1:55 PM", "distancia": "1300m",
+        "numero": "C3",
+        "hora": "1:55 PM",
+        "distancia": "1300m",
         "categoria": "Caballos 7+ años, 3-4 victorias",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 5, "nombre": "THE ISAAC", "pts": 13.0, "icono": "🔥" },
-          { "pos": 2, "dorsal": 1, "nombre": "KING OF SUCCESS", "pts": 11.0, "icono": "" },
-          { "pos": 3, "dorsal": 4, "nombre": "MY TOWERING MATE", "pts": 0, "icono": "💰" }
+          {
+            "pos": 1,
+            "dorsal": 5,
+            "nombre": "THE ISAAC",
+            "pts": 13.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "KING OF SUCCESS",
+            "pts": 11.0,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 4,
+            "nombre": "MY TOWERING MATE",
+            "pts": 0,
+            "icono": "💰"
+          }
         ],
         "clave": "The Isaac #5: Ganó hace 7 días C121/junio, en racha ganadora — LÍNEA FIJA"
       }
     ],
     "validas": [
-      { "v": "V1", "carrera": "C4", "distancia": "1100m", "hora": "2:50 PM", "top": { "nombre": "CHATEAU LAFITE", "dorsal": 4, "pts": 12.5, "bomba": false }, "alt": { "nombre": "ROBERTO ERRE", "dorsal": 8, "pts": 11.0, "bomba": false }, "color": "v1" },
-      { "v": "V2", "carrera": "C5", "distancia": "1200m", "hora": "3:15 PM", "top": { "nombre": "LA SUPREMA", "dorsal": 8, "pts": 14.0, "bomba": true }, "alt": { "nombre": "MONEY CLEANER", "dorsal": 5, "pts": 10.5, "bomba": false }, "color": "v2" },
-      { "v": "V3", "carrera": "C6", "distancia": "1100m", "hora": "3:40 PM", "top": { "nombre": "PRECIOSA DOLORES", "dorsal": 7, "pts": 13.5, "bomba": false }, "alt": { "nombre": "LUZ DEL VALLE", "dorsal": 3, "pts": 11.5, "bomba": false }, "color": "v3" },
-      { "v": "V4", "carrera": "C7", "distancia": "1300m", "hora": "4:05 PM", "top": { "nombre": "VERMELHO", "dorsal": 7, "pts": 14.5, "bomba": true }, "alt": { "nombre": "FORZESCO", "dorsal": 1, "pts": 12.0, "bomba": false }, "color": "v4" },
-      { "v": "V5", "carrera": "C8", "distancia": "2000m", "hora": "4:30 PM", "top": { "nombre": "TEMPLARIO", "dorsal": 6, "pts": 14.0, "bomba": true }, "alt": { "nombre": "ANIMAL JUNGLE", "dorsal": 7, "pts": 12.5, "bomba": false }, "color": "v5", "copa": true, "featured": true },
-      { "v": "V6", "carrera": "C9", "distancia": "1400m", "hora": "4:55 PM", "top": { "nombre": "ENDORA", "dorsal": 5, "pts": 12.5, "bomba": false }, "alt": { "nombre": "MARRAKECH", "dorsal": 8, "pts": 11.0, "bomba": false }, "color": "v6" }
+      {
+        "v": "V1",
+        "carrera": "C4",
+        "distancia": "1100m",
+        "hora": "2:50 PM",
+        "top": {
+          "nombre": "CHATEAU LAFITE",
+          "dorsal": 4,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "ROBERTO ERRE",
+          "dorsal": 8,
+          "pts": 11.0,
+          "bomba": false
+        },
+        "color": "v1"
+      },
+      {
+        "v": "V2",
+        "carrera": "C5",
+        "distancia": "1200m",
+        "hora": "3:15 PM",
+        "top": {
+          "nombre": "LA SUPREMA",
+          "dorsal": 8,
+          "pts": 14.0,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "MONEY CLEANER",
+          "dorsal": 5,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "color": "v2"
+      },
+      {
+        "v": "V3",
+        "carrera": "C6",
+        "distancia": "1100m",
+        "hora": "3:40 PM",
+        "top": {
+          "nombre": "PRECIOSA DOLORES",
+          "dorsal": 7,
+          "pts": 13.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "LUZ DEL VALLE",
+          "dorsal": 3,
+          "pts": 11.5,
+          "bomba": false
+        },
+        "color": "v3"
+      },
+      {
+        "v": "V4",
+        "carrera": "C7",
+        "distancia": "1300m",
+        "hora": "4:05 PM",
+        "top": {
+          "nombre": "VERMELHO",
+          "dorsal": 7,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "FORZESCO",
+          "dorsal": 1,
+          "pts": 12.0,
+          "bomba": false
+        },
+        "color": "v4"
+      },
+      {
+        "v": "V5",
+        "carrera": "C8",
+        "distancia": "2000m",
+        "hora": "4:30 PM",
+        "top": {
+          "nombre": "TEMPLARIO",
+          "dorsal": 6,
+          "pts": 14.0,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "ANIMAL JUNGLE",
+          "dorsal": 7,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "color": "v5",
+        "copa": true,
+        "featured": true
+      },
+      {
+        "v": "V6",
+        "carrera": "C9",
+        "distancia": "1400m",
+        "hora": "4:55 PM",
+        "top": {
+          "nombre": "ENDORA",
+          "dorsal": 5,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "MARRAKECH",
+          "dorsal": 8,
+          "pts": 11.0,
+          "bomba": false
+        },
+        "color": "v6"
+      }
     ],
     "jugada_oficial": "4/8 - 8/5 - 7/3 - 7/1 - 6/7 - 5/8",
-    "jugada_combos": ["4/8", "8/5", "7/3", "7/1", "6/7", "5/8"],
+    "jugada_combos": [
+      "4/8",
+      "8/5",
+      "7/3",
+      "7/1",
+      "6/7",
+      "5/8"
+    ],
     "jugada_info": "64 combinaciones · 3 bombas: La Suprema, Vermelho, Templario",
     "bombas": [
-      { "rank": 1, "nombre": "VERMELHO", "dorsal": 7, "carrera": "C7 V4", "hora": "4:05 PM", "pts": 14.5, "nivel": "mega" },
-      { "rank": 2, "nombre": "LA SUPREMA", "dorsal": 8, "carrera": "C5 V2", "hora": "3:15 PM", "pts": 14.0, "nivel": "alta" },
-      { "rank": 3, "nombre": "TEMPLARIO", "dorsal": 6, "carrera": "C8 V5", "hora": "4:30 PM", "pts": 14.0, "nivel": "alta" }
+      {
+        "rank": 1,
+        "nombre": "VERMELHO",
+        "dorsal": 7,
+        "carrera": "C7 V4",
+        "hora": "4:05 PM",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 2,
+        "nombre": "LA SUPREMA",
+        "dorsal": 8,
+        "carrera": "C5 V2",
+        "hora": "3:15 PM",
+        "pts": 14.0,
+        "nivel": "alta"
+      },
+      {
+        "rank": 3,
+        "nombre": "TEMPLARIO",
+        "dorsal": 6,
+        "carrera": "C8 V5",
+        "hora": "4:30 PM",
+        "pts": 14.0,
+        "nivel": "alta"
+      }
     ],
-    "stats": { "carreras": 9, "bombas": 3, "efectividad_con_trabajos": "67%", "efectividad_sin_trabajos": "30-50%" },
+    "stats": {
+      "carreras": 9,
+      "bombas": 3,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": "30-50%"
+    },
     "efectividad": "30-50%",
     "recaudacion": {
       "monto": "—",
       "carreras": "9",
       "validas": "6"
     },
-    "ganadores": []
+    "ganadores": [
+      {
+        "carrera": "C2",
+        "ganador": "#5 UNSTOPPABLE ✅ [LÍNEA FIJA]"
+      }
+    ]
   },
   {
     "id": "rinconada-21-06-2026",
@@ -226,91 +917,354 @@
     "efectividad_sin_trabajos": "20-30%",
     "reunion": "Reunión N° 35",
     "retirados": [
-      { "carrera": "C281", "dorsales": [3, 6], "nombres": ["ARCANO", "SUANFONSON"], "motivo": "Claudicación miembros anteriores" },
-      { "carrera": "C290", "dorsales": [9], "nombres": ["EL GRAN MARIO"], "motivo": "Claudicación miembro posterior izquierdo" }
+      {
+        "carrera": "C281",
+        "dorsales": [
+          3,
+          6
+        ],
+        "nombres": [
+          "ARCANO",
+          "SUANFONSON"
+        ],
+        "motivo": "Claudicación miembros anteriores"
+      },
+      {
+        "carrera": "C290",
+        "dorsales": [
+          9
+        ],
+        "nombres": [
+          "EL GRAN MARIO"
+        ],
+        "motivo": "Claudicación miembro posterior izquierdo"
+      }
     ],
     "lineas_fijas": [
       {
-        "numero": "C281", "hora": "1:00 PM", "distancia": "1800m",
+        "numero": "C281",
+        "hora": "1:00 PM",
+        "distancia": "1800m",
         "categoria": "Ejemplares 4+ años, debutantes o no",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 7, "nombre": "TUSCAN GOLD", "pts": 13.2, "icono": "🔥" },
-          { "pos": 2, "dorsal": 1, "nombre": "GRAN YACO", "pts": 12.1, "icono": "🔥" }
+          {
+            "pos": 1,
+            "dorsal": 7,
+            "nombre": "TUSCAN GOLD",
+            "pts": 13.2,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "GRAN YACO",
+            "pts": 12.1,
+            "icono": "🔥"
+          }
         ],
         "clave": "Tuscan Gold #7: Ganador 14/jun 1800m, dorsal ideal, descanso 7 días — LÍNEA FIJA | ⚠️ RETIRADOS: #3 Arcano, #6 Suanfonson"
       },
       {
-        "numero": "C282", "hora": "1:25 PM", "distancia": "1100m",
+        "numero": "C282",
+        "hora": "1:25 PM",
+        "distancia": "1100m",
         "categoria": "IX Clásico El Corsario (GIII)",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 4, "nombre": "GRAN MANUEL", "pts": 13.8, "icono": "🔥" },
-          { "pos": 2, "dorsal": 5, "nombre": "FUROR NOBLE", "pts": 12.4, "icono": "🔥" },
-          { "pos": 3, "dorsal": 3, "nombre": "GRAN TORRENTE", "pts": 10.2, "icono": "" }
+          {
+            "pos": 1,
+            "dorsal": 4,
+            "nombre": "GRAN MANUEL",
+            "pts": 13.8,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 5,
+            "nombre": "FUROR NOBLE",
+            "pts": 12.4,
+            "icono": "🔥"
+          },
+          {
+            "pos": 3,
+            "dorsal": 3,
+            "nombre": "GRAN TORRENTE",
+            "pts": 10.2,
+            "icono": ""
+          }
         ],
         "clave": "Gran Manuel #4: Ganador 17/may 1100m, dorsal 4 ideal — LÍNEA FIJA"
       },
       {
-        "numero": "C283", "hora": "1:50 PM", "distancia": "1100m",
+        "numero": "C283",
+        "hora": "1:50 PM",
+        "distancia": "1100m",
         "categoria": "Caballos 4 años, debutantes o no",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 6, "nombre": "COMANDANTE CAMILO", "pts": 13.9, "icono": "🔥" },
-          { "pos": 2, "dorsal": 8, "nombre": "EROS", "pts": 12.0, "icono": "" },
-          { "pos": 3, "dorsal": 5, "nombre": "LIGHTNING SPIRIT", "pts": 11.7, "icono": "" }
+          {
+            "pos": 1,
+            "dorsal": 6,
+            "nombre": "COMANDANTE CAMILO",
+            "pts": 13.9,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 8,
+            "nombre": "EROS",
+            "pts": 12.0,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 5,
+            "nombre": "LIGHTNING SPIRIT",
+            "pts": 11.7,
+            "icono": ""
+          }
         ],
         "clave": "Comandante Camilo #6: Ganador 07/jun, 2° 31/may, TOP3 24/may — CONFIANZA MÁXIMA"
       },
       {
-        "numero": "C284", "hora": "2:15 PM", "distancia": "1100m",
+        "numero": "C284",
+        "hora": "2:15 PM",
+        "distancia": "1100m",
         "categoria": "Reclamo $(10-8K) — Yeguas 6+ años",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 2, "nombre": "DIOSA DEL SON", "pts": 13.2, "icono": "🔥" },
-          { "pos": 2, "dorsal": 8, "nombre": "MANCHEGA", "pts": 11.8, "icono": "" },
-          { "pos": 3, "dorsal": 6, "nombre": "MOSTAZA", "pts": 11.5, "icono": "" }
+          {
+            "pos": 1,
+            "dorsal": 2,
+            "nombre": "DIOSA DEL SON",
+            "pts": 13.2,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 8,
+            "nombre": "MANCHEGA",
+            "pts": 11.8,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 6,
+            "nombre": "MOSTAZA",
+            "pts": 11.5,
+            "icono": ""
+          }
         ],
         "clave": "Diosa del Son #2: 2° 29/mar, 2° 25/ene, dorsal 2 excelente — LÍNEA FIJA"
       },
       {
-        "numero": "C285", "hora": "2:40 PM", "distancia": "1800m",
+        "numero": "C285",
+        "hora": "2:40 PM",
+        "distancia": "1800m",
         "categoria": "VI Clásico Bambera (GII) — Pesos Efectivos",
         "bomb_tag": "💣 BOMBA DEL DÍA",
         "top3": [
-          { "pos": 1, "dorsal": 7, "nombre": "PRINCESA FINA", "pts": 14.6, "icono": "💣" },
-          { "pos": 2, "dorsal": 4, "nombre": "MARAKOVITS", "pts": 12.8, "icono": "🔥" },
-          { "pos": 3, "dorsal": 6, "nombre": "QUALITY PRINCESS", "pts": 12.1, "icono": "" }
+          {
+            "pos": 1,
+            "dorsal": 7,
+            "nombre": "PRINCESA FINA",
+            "pts": 14.6,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 4,
+            "nombre": "MARAKOVITS",
+            "pts": 12.8,
+            "icono": "🔥"
+          },
+          {
+            "pos": 3,
+            "dorsal": 6,
+            "nombre": "QUALITY PRINCESS",
+            "pts": 12.1,
+            "icono": ""
+          }
         ],
         "clave": "Princesa Fina #7: Ganadora 26/abr, 17/may 1800m, jockey R. Capriles élite — MÁXIMA CONFIANZA"
       },
       {
-        "numero": "C286", "hora": "3:05 PM", "distancia": "1300m",
+        "numero": "C286",
+        "hora": "3:05 PM",
+        "distancia": "1300m",
         "categoria": "Caballos 4 años, ganadores de 1",
         "bomb_tag": null,
         "top3": [
-          { "pos": 1, "dorsal": 7, "nombre": "ONLY IN AMERICA", "pts": 12.9, "icono": "🔥" },
-          { "pos": 2, "dorsal": 5, "nombre": "THE NOTORIOU", "pts": 12.1, "icono": "" },
-          { "pos": 3, "dorsal": 2, "nombre": "JUAN ANDRES", "pts": 11.7, "icono": "" }
+          {
+            "pos": 1,
+            "dorsal": 7,
+            "nombre": "ONLY IN AMERICA",
+            "pts": 12.9,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 5,
+            "nombre": "THE NOTORIOU",
+            "pts": 12.1,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 2,
+            "nombre": "JUAN ANDRES",
+            "pts": 11.7,
+            "icono": ""
+          }
         ],
         "clave": "Only In America #7: TOP3 consistente, dorsal 7 bueno — LÍNEA FIJA"
       }
     ],
     "validas": [
-      { "v": "V1", "carrera": "C287", "distancia": "1200m", "hora": "3:30 PM", "top": { "nombre": "VALERIA TIME", "dorsal": 9, "pts": 12.8, "bomba": false }, "alt": { "nombre": "CANELA", "dorsal": 2, "pts": 11.4, "bomba": false }, "color": "v1" },
-      { "v": "V2", "carrera": "C288", "distancia": "1100m", "hora": "3:55 PM", "top": { "nombre": "SEÑORA ISABEL", "dorsal": 5, "pts": 10.2, "bomba": false }, "alt": { "nombre": "DONOSTIA", "dorsal": 6, "pts": 9.8, "bomba": false }, "color": "v2", "warning": "Todas debutantes — riesgo máximo" },
-      { "v": "V3", "carrera": "C289", "distancia": "1300m", "hora": "4:20 PM", "top": { "nombre": "CANCILLER", "dorsal": 3, "pts": 13.1, "bomba": false }, "alt": { "nombre": "ONLINE", "dorsal": 5, "pts": 12.3, "bomba": false }, "color": "v3" },
-      { "v": "V4", "carrera": "C290", "distancia": "1200m", "hora": "4:45 PM", "top": { "nombre": "EL TRUENO", "dorsal": 2, "pts": 13.4, "bomba": false }, "alt": { "nombre": "MAD MAX", "dorsal": 7, "pts": 12.6, "bomba": false }, "color": "v4" },
-      { "v": "V5", "carrera": "C291", "distancia": "1300m", "hora": "5:10 PM", "top": { "nombre": "HONEY TIME", "dorsal": 9, "pts": 12.7, "bomba": false }, "alt": { "nombre": "CRAIGH NA DUN", "dorsal": 2, "pts": 11.5, "bomba": false }, "color": "v5" },
-      { "v": "V6", "carrera": "C292", "distancia": "1300m", "hora": "5:35 PM", "top": { "nombre": "CHOSEN FACTOR", "dorsal": 10, "pts": 13.2, "bomba": false }, "alt": { "nombre": "PITTALUGA", "dorsal": 6, "pts": 12.1, "bomba": false }, "color": "v6" }
+      {
+        "v": "V1",
+        "carrera": "C287",
+        "distancia": "1200m",
+        "hora": "3:30 PM",
+        "top": {
+          "nombre": "VALERIA TIME",
+          "dorsal": 9,
+          "pts": 12.8,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "CANELA",
+          "dorsal": 2,
+          "pts": 11.4,
+          "bomba": false
+        },
+        "color": "v1"
+      },
+      {
+        "v": "V2",
+        "carrera": "C288",
+        "distancia": "1100m",
+        "hora": "3:55 PM",
+        "top": {
+          "nombre": "SEÑORA ISABEL",
+          "dorsal": 5,
+          "pts": 10.2,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "DONOSTIA",
+          "dorsal": 6,
+          "pts": 9.8,
+          "bomba": false
+        },
+        "color": "v2",
+        "warning": "Todas debutantes — riesgo máximo"
+      },
+      {
+        "v": "V3",
+        "carrera": "C289",
+        "distancia": "1300m",
+        "hora": "4:20 PM",
+        "top": {
+          "nombre": "CANCILLER",
+          "dorsal": 3,
+          "pts": 13.1,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "ONLINE",
+          "dorsal": 5,
+          "pts": 12.3,
+          "bomba": false
+        },
+        "color": "v3"
+      },
+      {
+        "v": "V4",
+        "carrera": "C290",
+        "distancia": "1200m",
+        "hora": "4:45 PM",
+        "top": {
+          "nombre": "EL TRUENO",
+          "dorsal": 2,
+          "pts": 13.4,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "MAD MAX",
+          "dorsal": 7,
+          "pts": 12.6,
+          "bomba": false
+        },
+        "color": "v4"
+      },
+      {
+        "v": "V5",
+        "carrera": "C291",
+        "distancia": "1300m",
+        "hora": "5:10 PM",
+        "top": {
+          "nombre": "HONEY TIME",
+          "dorsal": 9,
+          "pts": 12.7,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "CRAIGH NA DUN",
+          "dorsal": 2,
+          "pts": 11.5,
+          "bomba": false
+        },
+        "color": "v5"
+      },
+      {
+        "v": "V6",
+        "carrera": "C292",
+        "distancia": "1300m",
+        "hora": "5:35 PM",
+        "top": {
+          "nombre": "CHOSEN FACTOR",
+          "dorsal": 10,
+          "pts": 13.2,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "PITTALUGA",
+          "dorsal": 6,
+          "pts": 12.1,
+          "bomba": false
+        },
+        "color": "v6"
+      }
     ],
     "jugada_oficial": "9-5-3-2-9-10 / 2-6-5-7-2-6",
-    "jugada_combos": ["9/2", "5/6", "3/5", "2/7", "9/2", "10/6"],
+    "jugada_combos": [
+      "9/2",
+      "5/6",
+      "3/5",
+      "2/7",
+      "9/2",
+      "10/6"
+    ],
     "jugada_info": "64 combinaciones · 1 bomba: Princesa Fina",
     "bombas": [
-      { "rank": 1, "nombre": "PRINCESA FINA", "dorsal": 7, "carrera": "C285 C5", "hora": "2:40 PM", "pts": 14.6, "nivel": "mega" }
+      {
+        "rank": 1,
+        "nombre": "PRINCESA FINA",
+        "dorsal": 7,
+        "carrera": "C285 C5",
+        "hora": "2:40 PM",
+        "pts": 14.6,
+        "nivel": "mega"
+      }
     ],
-    "stats": { "carreras": 12, "bombas": 1, "efectividad_con_trabajos": "67%", "efectividad_sin_trabajos": "20-30%" },
+    "stats": {
+      "carreras": 12,
+      "bombas": 1,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": "20-30%"
+    },
     "efectividad": "20-30%",
     "recaudacion": {
       "monto": "—",
