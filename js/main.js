@@ -328,9 +328,36 @@ document.addEventListener('DOMContentLoaded', () => {
         let html = '';
         jornadas.forEach(j => {
             const ganadores = j.ganadores || [];
-            const picks = j.validas ? j.validas.map(v => {
-                return { carrera: v.carrera, nombre: v.top.nombre, dorsal: v.top.dorsal, pts: v.top.pts, bomba: v.top.bomba };
-            }) : [];
+            
+            // Recopilar todos nuestros picks (tanto de líneas fijas como de válidas)
+            const picks = [];
+            if (j.lineas_fijas) {
+                j.lineas_fijas.forEach(lf => {
+                    const top = lf.top3.find(h => h.pos === 1) || lf.top3[0];
+                    const alts = lf.top3.filter(h => h.pos !== 1);
+                    picks.push({
+                        carrera: lf.numero,
+                        nombre: top ? top.nombre : '—',
+                        dorsal: top ? top.dorsal : '',
+                        pts: top ? top.pts : 0,
+                        isBomba: false,
+                        alts: alts
+                    });
+                });
+            }
+            if (j.validas) {
+                j.validas.forEach(v => {
+                    picks.push({
+                        carrera: v.carrera,
+                        nombre: v.top.nombre,
+                        dorsal: v.top.dorsal,
+                        pts: v.top.pts,
+                        isBomba: !!v.top.bomba,
+                        alts: v.alt ? [v.alt] : []
+                    });
+                });
+            }
+
             html += `
             <div class="results-jornada">
                 <h3 class="results-hipodromo">📍 ${j.hipodromo} — ${j.fecha} ${j.reunion ? '· ' + j.reunion : ''}</h3>
@@ -338,19 +365,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="results-table-wrapper">
                     <table class="results-table">
                         <thead>
-                            <tr><th>Válida</th><th>Nuestro Pick</th><th>Ganador Real</th><th>Estado</th></tr>
+                            <tr><th>Carrera/Válida</th><th>Nuestro Pick</th><th>Ganador Real</th><th>Estado</th></tr>
                         </thead>
                         <tbody>
                             ${ganadores.map(g => {
                                 const pick = picks.find(p => g.carrera.includes(p.carrera));
-                                const acerto = pick && (g.ganador.toLowerCase().includes(pick.nombre.toLowerCase()));
-                                return `
-                                <tr class="${acerto ? 'hit' : 'miss'}">
-                                    <td class="race-cell">${g.carrera}</td>
-                                    <td class="pick-cell">${pick ? `${pick.nombre} #${pick.dorsal} (${pick.pts}pts)` : '—'}</td>
-                                    <td class="winner-cell">${g.ganador}</td>
-                                    <td class="status-cell">${acerto ? '✅' : '❌'}</td>
-                                </tr>`;
+                                if (!pick) {
+                                    return `
+                                    <tr class="miss">
+                                        <td class="race-cell">${g.carrera}</td>
+                                        <td class="pick-cell">—</td>
+                                        <td class="winner-cell">${g.ganador}</td>
+                                        <td class="status-cell">❌</td>
+                                    </tr>`;
+                                }
+
+                                const gGanadorNormalized = g.ganador.toLowerCase();
+                                const acertoTop = gGanadorNormalized.includes(pick.nombre.toLowerCase());
+                                const altAcertada = pick.alts.find(alt => gGanadorNormalized.includes(alt.nombre.toLowerCase()));
+                                const acerto = acertoTop || !!altAcertada;
+
+                                let pickText = `${pick.nombre} #${pick.dorsal}`;
+                                if (pick.pts) pickText += ` (${pick.pts}pts)`;
+                                if (pick.isBomba) pickText += ` 💣`;
+
+                                if (altAcertada) {
+                                    return `
+                                    <tr class="hit">
+                                        <td class="race-cell">${g.carrera}</td>
+                                        <td class="pick-cell">${pickText} <span style="font-size:0.8rem;color:var(--text-muted)">[Alt: ${altAcertada.nombre} #${altAcertada.dorsal}]</span></td>
+                                        <td class="winner-cell">${g.ganador}</td>
+                                        <td class="status-cell">✅</td>
+                                    </tr>`;
+                                } else {
+                                    return `
+                                    <tr class="${acerto ? 'hit' : 'miss'}">
+                                        <td class="race-cell">${g.carrera}</td>
+                                        <td class="pick-cell">${pickText}</td>
+                                        <td class="winner-cell">${g.ganador}</td>
+                                        <td class="status-cell">${acerto ? '✅' : '❌'}</td>
+                                    </tr>`;
+                                }
                             }).join('')}
                         </tbody>
                     </table>
@@ -361,12 +416,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="dividendo-card">
                                 <span class="dividendo-label">6 Aciertos</span>
                                 <span class="dividendo-value">${j.recaudacion.dividendo_6}</span>
-                                <span class="dividendo-count">16 ganadores</span>
+                                <span class="dividendo-count">${j.recaudacion.ganadores_6 || '—'} ganadores</span>
                             </div>
                             <div class="dividendo-card">
                                 <span class="dividendo-label">5 Aciertos</span>
                                 <span class="dividendo-value">${j.recaudacion.dividendo_5}</span>
-                                <span class="dividendo-count">675 ganadores</span>
+                                <span class="dividendo-count">${j.recaudacion.ganadores_5 || '—'} ganadores</span>
                             </div>
                         </div>
                     </div>` : ''}

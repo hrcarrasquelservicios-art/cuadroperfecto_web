@@ -594,7 +594,9 @@
       "carreras": "10",
       "validas": "6",
       "dividendo_6": "Bs. 390.367,76",
-      "dividendo_5": "Bs. 2.398,97"
+      "dividendo_5": "Bs. 2.398,97",
+      "ganadores_6": 16,
+      "ganadores_5": 675
     },
     "ganadores": [
       {
@@ -898,7 +900,9 @@
       "carreras": "9",
       "validas": "6",
       "dividendo_6": "Bs. 198.203,06",
-      "dividendo_5": "Bs. 3.759,28"
+      "dividendo_5": "Bs. 3.759,28",
+      "ganadores_6": 305,
+      "ganadores_5": 4169
     },
     "ganadores": [
       {
