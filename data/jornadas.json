@@ -1303,12 +1303,65 @@
       "efectividad_con_trabajos": "67%",
       "efectividad_sin_trabajos": "20-30%"
     },
-    "efectividad": "20-30%",
+    "efectividad": "50.0%",
     "recaudacion": {
-      "monto": "—",
+      "monto": "Bs. 589.773.725,00",
       "carreras": "12",
-      "validas": "6"
+      "validas": "6",
+      "dividendo_6": "Bs. 906.115,98",
+      "dividendo_5": "Bs. 6.653,46",
+      "ganadores_6": 351,
+      "ganadores_5": 12393
     },
-    "ganadores": []
+    "ganadores": [
+      {
+        "carrera": "C281",
+        "ganador": "#7 TUSCAN GOLD ✅ [LÍNEA FIJA]"
+      },
+      {
+        "carrera": "C282",
+        "ganador": "#4 GRAN MANUEL ✅ [LÍNEA FIJA]"
+      },
+      {
+        "carrera": "C283",
+        "ganador": "#6 COMANDANTE CAMILO ✅ [LÍNEA FIJA]"
+      },
+      {
+        "carrera": "C284",
+        "ganador": "#8 MANCHEGA ✅ [2do Favorito]"
+      },
+      {
+        "carrera": "C285",
+        "ganador": "#4 MARAKOVITS ✅ [2do Favorito]"
+      },
+      {
+        "carrera": "C286",
+        "ganador": "#7 ONLY IN AMERICA ✅ [LÍNEA FIJA]"
+      },
+      {
+        "carrera": "C287 V1",
+        "ganador": "#3 PAULA DEL CARMEN"
+      },
+      {
+        "carrera": "C288 V2",
+        "ganador": "#5 SEÑORA ISABEL ✅ [TOP PICK]"
+      },
+      {
+        "carrera": "C289 V3",
+        "ganador": "#3 CANCILLER ✅ [TOP PICK]"
+      },
+      {
+        "carrera": "C290 V4",
+        "ganador": "#7 MAD MAX ✅ [Alternativa]"
+      },
+      {
+        "carrera": "C291 V5",
+        "ganador": "#1 ALANA"
+      },
+      {
+        "carrera": "C292 V6",
+        "ganador": "#1 HATSHEPSUT"
+      }
+    ]
   }
 ]
