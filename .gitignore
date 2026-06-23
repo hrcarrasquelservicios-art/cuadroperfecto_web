@@ -15,3 +15,11 @@ __pycache__/
 
 # Netlify
 .netlify/
+
+# Imágenes originales PNG (reemplazadas por WebP — ~26 MB ahorrados)
+# Descomenta si quieres excluirlas del repo para ahorrar espacio en GitHub Pages:
+# assets/infografia_*.png
+# assets/rinconada_*.png
+
+# Script de conversión (one-shot, no hace falta en producción)
+convert_webp.mjs

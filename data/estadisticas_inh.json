@@ -1,0 +1,172 @@
+{
+  "fuente": "Instituto Nacional de Hipódromos — @OficialINH · @HinavaOficial",
+  "url": "https://apuestas.inh.gob.ve/estadisticas",
+  "temporada": "2026",
+  "actualizado": "2026-06-22",
+  "rinconada": {
+    "nombre": "Hipódromo Internacional La Rinconada",
+    "meetings": [
+      {
+        "id": "1er_meeting_2026",
+        "nombre": "1er Meeting 2026",
+        "jinetes": [
+          { "pos": 1, "nombre": "O. Medina",    "victorias": 22 },
+          { "pos": 2, "nombre": "R. Capriles",  "victorias": 19 },
+          { "pos": 3, "nombre": "J. Aray",      "victorias": 17 },
+          { "pos": 4, "nombre": "Y. González",  "victorias": 15 },
+          { "pos": 5, "nombre": "F. Márquez",   "victorias": 11 },
+          { "pos": 6, "nombre": "F. Quevedo",   "victorias": 11 },
+          { "pos": 7, "nombre": "J. Aranguren", "victorias": 11 },
+          { "pos": 8, "nombre": "W. Véliz",     "victorias": 8  },
+          { "pos": 9, "nombre": "J.P. Paoloni", "victorias": 8  },
+          { "pos": 10,"nombre": "A. Ybarra",    "victorias": 6  }
+        ],
+        "entrenadores": [
+          { "pos": 1, "nombre": "R. D'Angelo",      "victorias": 18 },
+          { "pos": 2, "nombre": "H. Correia",        "victorias": 17 },
+          { "pos": 3, "nombre": "C.L. Uzcategui",   "victorias": 13 },
+          { "pos": 4, "nombre": "F. Parilli Jr",     "victorias": 13 },
+          { "pos": 5, "nombre": "G. Márquez",        "victorias": 12 },
+          { "pos": 6, "nombre": "F. Parilli",        "victorias": 7  },
+          { "pos": 7, "nombre": "J. Salvador",       "victorias": 6  },
+          { "pos": 8, "nombre": "L. Peraza",         "victorias": 6  },
+          { "pos": 9, "nombre": "G. Rojas",          "victorias": 6  },
+          { "pos": 10,"nombre": "R. García M.",      "victorias": 6  }
+        ],
+        "haras": [
+          { "pos": 1, "nombre": "La Orlyana",    "victorias": 20 },
+          { "pos": 2, "nombre": "La Primavera",  "victorias": 15 },
+          { "pos": 3, "nombre": "Los Samanes",   "victorias": 13 },
+          { "pos": 4, "nombre": "Los Caracaros", "victorias": 13 },
+          { "pos": 5, "nombre": "Paumar",        "victorias": 9  },
+          { "pos": 6, "nombre": "Oropal",        "victorias": 8  },
+          { "pos": 7, "nombre": "Luisiana",      "victorias": 7  },
+          { "pos": 8, "nombre": "La Alameda",    "victorias": 7  },
+          { "pos": 9, "nombre": "Alegría",       "victorias": 7  },
+          { "pos": 10,"nombre": "Urama",         "victorias": 6  }
+        ],
+        "studs": [
+          { "pos": 1, "nombre": "Los Audaces",   "victorias": 17 },
+          { "pos": 2, "nombre": "ZM",            "victorias": 15 },
+          { "pos": 3, "nombre": "Don Rafael V",  "victorias": 13 },
+          { "pos": 4, "nombre": "Yellowstone",   "victorias": 10 },
+          { "pos": 5, "nombre": "Excelso",       "victorias": 7  },
+          { "pos": 6, "nombre": "Bou Stable",    "victorias": 5  },
+          { "pos": 7, "nombre": "Marco Antonio", "victorias": 4  },
+          { "pos": 8, "nombre": "Los Samanes",   "victorias": 4  },
+          { "pos": 9, "nombre": "Madagascar",    "victorias": 4  },
+          { "pos": 10,"nombre": "San Manuelito", "victorias": 4  }
+        ]
+      },
+      {
+        "id": "2do_meeting_2026",
+        "nombre": "2do Meeting 2026",
+        "jinetes": [
+          { "pos": 1, "nombre": "J. Aray",          "victorias": 8 },
+          { "pos": 2, "nombre": "J. Lugo",           "victorias": 7 },
+          { "pos": 3, "nombre": "J. Lugo Jr.",       "victorias": 7 },
+          { "pos": 4, "nombre": "Y. González",       "victorias": 6 },
+          { "pos": 5, "nombre": "Fel. Velásquez",    "victorias": 5 },
+          { "pos": 6, "nombre": "S. Yanez",          "victorias": 5 },
+          { "pos": 7, "nombre": "H. Medina",         "victorias": 4 },
+          { "pos": 8, "nombre": "R. Capriles",       "victorias": 4 },
+          { "pos": 9, "nombre": "J. Aranguren",      "victorias": 3 },
+          { "pos": 10,"nombre": "A. Ybarra",         "victorias": 3 }
+        ],
+        "entrenadores": [
+          { "pos": 1, "nombre": "F. Parilli Jr.",  "victorias": 9 },
+          { "pos": 2, "nombre": "G. Márquez",      "victorias": 8 },
+          { "pos": 3, "nombre": "R. D'Angelo",     "victorias": 7 },
+          { "pos": 4, "nombre": "C.L. Uzcátegui", "victorias": 5 },
+          { "pos": 5, "nombre": "O.M. González",  "victorias": 5 },
+          { "pos": 6, "nombre": "R. Lanz",         "victorias": 4 },
+          { "pos": 7, "nombre": "J. Salvador",     "victorias": 3 },
+          { "pos": 8, "nombre": "A. Traversa",     "victorias": 2 },
+          { "pos": 9, "nombre": "F. Petit",        "victorias": 2 },
+          { "pos": 10,"nombre": "I. Martínez",     "victorias": 2 }
+        ],
+        "haras": [
+          { "pos": 1, "nombre": "La Primavera",  "victorias": 10 },
+          { "pos": 2, "nombre": "Alegría",       "victorias": 8  },
+          { "pos": 3, "nombre": "Los Caracaros", "victorias": 5  },
+          { "pos": 4, "nombre": "Oropal",        "victorias": 5  },
+          { "pos": 5, "nombre": "Urama",         "victorias": 4  },
+          { "pos": 6, "nombre": "Luisiana",      "victorias": 4  },
+          { "pos": 7, "nombre": "La Orlyana",    "victorias": 3  },
+          { "pos": 8, "nombre": "Los Samanes",   "victorias": 3  },
+          { "pos": 9, "nombre": "La Alameda",    "victorias": 2  },
+          { "pos": 10,"nombre": "Paumar",        "victorias": 2  }
+        ],
+        "studs": [
+          { "pos": 1, "nombre": "ZM",            "victorias": 8 },
+          { "pos": 2, "nombre": "Don Rafael V",  "victorias": 6 },
+          { "pos": 3, "nombre": "Excelso",       "victorias": 3 },
+          { "pos": 4, "nombre": "M&J",           "victorias": 3 },
+          { "pos": 5, "nombre": "Perseverancia", "victorias": 3 },
+          { "pos": 6, "nombre": "Los Samanes",   "victorias": 2 },
+          { "pos": 7, "nombre": "Yellowstone",   "victorias": 2 },
+          { "pos": 8, "nombre": "G&G",           "victorias": 2 },
+          { "pos": 9, "nombre": "Azatlan",       "victorias": 2 },
+          { "pos": 10,"nombre": "Los Audaces",   "victorias": 2 }
+        ]
+      }
+    ]
+  },
+  "valencia": {
+    "nombre": "Hipódromo de Valencia",
+    "meetings": [
+      {
+        "id": "temporada_2026",
+        "nombre": "Temporada 2026",
+        "jinetes": [
+          { "pos": 1, "nombre": "F. Quevedo",      "victorias": 17 },
+          { "pos": 2, "nombre": "O. Medina",       "victorias": 11 },
+          { "pos": 3, "nombre": "F.J. García",     "victorias": 10 },
+          { "pos": 4, "nombre": "J.D. Calicho",    "victorias": 10 },
+          { "pos": 5, "nombre": "H. Medina",       "victorias": 9  },
+          { "pos": 6, "nombre": "Ale. Briceño",    "victorias": 9  },
+          { "pos": 7, "nombre": "Os. Martínez",    "victorias": 7  },
+          { "pos": 8, "nombre": "J.G. Hernández",  "victorias": 6  },
+          { "pos": 9, "nombre": "J. Lugo Jr",      "victorias": 4  },
+          { "pos": 10,"nombre": "L. Mejías",       "victorias": 3  }
+        ],
+        "entrenadores": [
+          { "pos": 1, "nombre": "J. Carfunjol A.", "victorias": 22 },
+          { "pos": 2, "nombre": "H. Alayón G.",    "victorias": 16 },
+          { "pos": 3, "nombre": "A. Ortíz",        "victorias": 11 },
+          { "pos": 4, "nombre": "R. Verastegui",   "victorias": 10 },
+          { "pos": 5, "nombre": "J.C. Pérez P",    "victorias": 10 },
+          { "pos": 6, "nombre": "J. Jaramillo",    "victorias": 8  },
+          { "pos": 7, "nombre": "J. Dilascio F.",  "victorias": 6  },
+          { "pos": 8, "nombre": "J. Carfunjol. M", "victorias": 5  },
+          { "pos": 9, "nombre": "E. Pimentel",     "victorias": 4  },
+          { "pos": 10,"nombre": "A. Benítez",      "victorias": 4  }
+        ],
+        "haras": [
+          { "pos": 1, "nombre": "Alegría",       "victorias": 13 },
+          { "pos": 2, "nombre": "La Primavera",  "victorias": 12 },
+          { "pos": 3, "nombre": "La Orlyana",    "victorias": 12 },
+          { "pos": 4, "nombre": "Paumar",        "victorias": 11 },
+          { "pos": 5, "nombre": "Urama",         "victorias": 11 },
+          { "pos": 6, "nombre": "Los Caracaros", "victorias": 8  },
+          { "pos": 7, "nombre": "Los Samanes",   "victorias": 8  },
+          { "pos": 8, "nombre": "Oropal",        "victorias": 5  },
+          { "pos": 9, "nombre": "La Alameda",    "victorias": 5  },
+          { "pos": 10,"nombre": "San Remo",      "victorias": 5  }
+        ],
+        "studs": [
+          { "pos": 1, "nombre": "Excelso",                   "victorias": 28 },
+          { "pos": 2, "nombre": "Renaissance Racing",        "victorias": 16 },
+          { "pos": 3, "nombre": "Pacific",                   "victorias": 9  },
+          { "pos": 4, "nombre": "La R",                      "victorias": 5  },
+          { "pos": 5, "nombre": "AA",                        "victorias": 4  },
+          { "pos": 6, "nombre": "Nueva Cua Racing Stable",   "victorias": 3  },
+          { "pos": 7, "nombre": "RenaissanceRacing-Sanremo", "victorias": 3  },
+          { "pos": 8, "nombre": "A",                        "victorias": 3  },
+          { "pos": 9, "nombre": "WY-Tita",                  "victorias": 2  },
+          { "pos": 10,"nombre": "Nañaña/AR",                "victorias": 2  }
+        ]
+      }
+    ]
+  }
+}

@@ -10,6 +10,40 @@
     <meta property="og:title" content="Cuadro Perfecto — Sistema 3.3">
     <meta property="og:description" content="Análisis hípico profesional con Sistema 3.3">
     <style>
+    /* ── Rankings INH Section ── */
+    .inh-section { padding: 70px 0; background: linear-gradient(180deg, #0a0a1a 0%, #0d1a0d 50%, #0a0a1a 100%); }
+    .inh-header { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+    .inh-badge-oficial { background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(255,152,0,0.15)); border: 1px solid rgba(255,193,7,0.4); color: #ffd700; padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; }
+    .inh-tabs { display: flex; gap: 10px; margin: 28px 0 20px; flex-wrap: wrap; }
+    .inh-tab { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #9ca3af; padding: 9px 20px; border-radius: 10px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all .2s; }
+    .inh-tab:hover { background: rgba(255,215,0,0.1); border-color: rgba(255,215,0,0.3); color: #fcd34d; }
+    .inh-tab.active { background: rgba(255,215,0,0.15); border-color: rgba(255,215,0,0.5); color: #ffd700; }
+    .inh-panel { display: none; }
+    .inh-panel.active { display: block; }
+    .inh-subtabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .inh-subtab { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: #6b7280; padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all .2s; }
+    .inh-subtab:hover { border-color: rgba(74,222,128,0.3); color: #86efac; }
+    .inh-subtab.active { background: rgba(34,197,94,0.12); border-color: rgba(34,197,94,0.4); color: #4ade80; }
+    .inh-category-panel { display: none; }
+    .inh-category-panel.active { display: block; }
+    .inh-ranking-table { width: 100%; border-collapse: collapse; }
+    .inh-ranking-table thead tr { background: rgba(255,215,0,0.07); }
+    .inh-ranking-table th { padding: 11px 14px; text-align: left; font-size: 0.78rem; font-weight: 700; color: #fcd34d; letter-spacing: 0.5px; text-transform: uppercase; border-bottom: 1px solid rgba(255,215,0,0.2); }
+    .inh-ranking-table td { padding: 10px 14px; font-size: 0.88rem; color: #e2e8f0; border-bottom: 1px solid rgba(255,255,255,0.05); transition: background .15s; }
+    .inh-ranking-table tbody tr:hover td { background: rgba(255,255,255,0.04); }
+    .inh-pos { font-weight: 800; color: #6b7280; font-size: 0.85rem; }
+    .inh-pos.gold { color: #ffd700; font-size: 1rem; }
+    .inh-pos.silver { color: #d1d5db; font-size: 0.95rem; }
+    .inh-pos.bronze { color: #cd7f32; font-size: 0.92rem; }
+    .inh-name { font-weight: 600; }
+    .inh-bar-wrap { display: flex; align-items: center; gap: 10px; }
+    .inh-bar { height: 8px; border-radius: 4px; background: linear-gradient(90deg, #ffd700, #f59e0b); min-width: 4px; transition: width .6s ease; }
+    .inh-vic { font-weight: 700; color: #fbbf24; min-width: 28px; text-align: right; }
+    .inh-source { display: flex; align-items: center; gap: 8px; margin-top: 20px; color: #4b5563; font-size: 0.75rem; }
+    .inh-source a { color: #60a5fa; text-decoration: none; }
+    .inh-source a:hover { text-decoration: underline; }
+    .inh-grid-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 16px; }
+    .inh-update-tag { font-size: 0.75rem; color: #4b5563; }
     /* ── Belmont Park Section ── */
     .belmont-section { padding: 60px 0; background: linear-gradient(135deg, #0a0a1a 0%, #0d1f3c 100%); }
     .belmont-header-row { display: flex; justify-content: space-between; align-items: center; margin: 16px 0 24px; }
@@ -44,6 +78,7 @@
                 <li><a href="/stream">🎥 En Vivo</a></li>
                 <li><a href="/resultados">📊 Resultados</a></li>
                 <li><a href="/aprendizaje">🧠 IA Aprendizaje</a></li>
+                <li><a href="#estadisticas">📈 Rankings INH</a></li>
                 <li><a href="#belmont">🇺🇸 Belmont</a></li>
                 <li><a href="/recaudacion">💰 Recaudación</a></li>
             </ul>
@@ -214,6 +249,84 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════
+         SECCIÓN RANKINGS OFICIALES INH
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="inh-section" id="estadisticas">
+        <div class="container">
+            <div class="inh-header">
+                <h2 class="section-title" style="margin:0">📈 RANKINGS <span class="gold">OFICIALES INH</span></h2>
+                <span class="inh-badge-oficial">⭐ FUENTE OFICIAL</span>
+            </div>
+            <p class="section-sub">Temporada 2026 · La Rinconada &amp; Valencia · Instituto Nacional de Hipódromos</p>
+
+            <!-- Tabs por hipódromo -->
+            <div class="inh-tabs">
+                <button class="inh-tab active" onclick="inhSelectHipo('rinconada', this)">🏇 La Rinconada</button>
+                <button class="inh-tab" onclick="inhSelectHipo('valencia', this)">🐎 Valencia</button>
+            </div>
+
+            <!-- RINCONADA -->
+            <div class="inh-panel active" id="inh-rinconada">
+                <div class="inh-tabs" style="margin-top:0">
+                    <button class="inh-tab active" onclick="inhSelectMeeting('rinconada','m1',this)">1er Meeting</button>
+                    <button class="inh-tab" onclick="inhSelectMeeting('rinconada','m2',this)">2do Meeting</button>
+                </div>
+                <!-- Meeting 1 -->
+                <div class="inh-panel active" id="inh-rinconada-m1">
+                    <div class="inh-subtabs">
+                        <button class="inh-subtab active" onclick="inhSelectCat('rinconada-m1','jin',this)">🏇 Jinetes</button>
+                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m1','ent',this)">🎩 Entrenadores</button>
+                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m1','har',this)">🌿 Haras</button>
+                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m1','stu',this)">🏆 Studs</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <div class="inh-category-panel active" id="inh-rinconada-m1-jin"></div>
+                        <div class="inh-category-panel" id="inh-rinconada-m1-ent"></div>
+                        <div class="inh-category-panel" id="inh-rinconada-m1-har"></div>
+                        <div class="inh-category-panel" id="inh-rinconada-m1-stu"></div>
+                    </div>
+                </div>
+                <!-- Meeting 2 -->
+                <div class="inh-panel" id="inh-rinconada-m2">
+                    <div class="inh-subtabs">
+                        <button class="inh-subtab active" onclick="inhSelectCat('rinconada-m2','jin',this)">🏇 Jinetes</button>
+                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m2','ent',this)">🎩 Entrenadores</button>
+                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m2','har',this)">🌿 Haras</button>
+                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m2','stu',this)">🏆 Studs</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <div class="inh-category-panel active" id="inh-rinconada-m2-jin"></div>
+                        <div class="inh-category-panel" id="inh-rinconada-m2-ent"></div>
+                        <div class="inh-category-panel" id="inh-rinconada-m2-har"></div>
+                        <div class="inh-category-panel" id="inh-rinconada-m2-stu"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VALENCIA -->
+            <div class="inh-panel" id="inh-valencia">
+                <div class="inh-subtabs">
+                    <button class="inh-subtab active" onclick="inhSelectCat('valencia-t1','jin',this)">🏇 Jinetes</button>
+                    <button class="inh-subtab" onclick="inhSelectCat('valencia-t1','ent',this)">🎩 Entrenadores</button>
+                    <button class="inh-subtab" onclick="inhSelectCat('valencia-t1','har',this)">🌿 Haras</button>
+                    <button class="inh-subtab" onclick="inhSelectCat('valencia-t1','stu',this)">🏆 Studs</button>
+                </div>
+                <div class="table-wrapper">
+                    <div class="inh-category-panel active" id="inh-valencia-t1-jin"></div>
+                    <div class="inh-category-panel" id="inh-valencia-t1-ent"></div>
+                    <div class="inh-category-panel" id="inh-valencia-t1-har"></div>
+                    <div class="inh-category-panel" id="inh-valencia-t1-stu"></div>
+                </div>
+            </div>
+
+            <div class="inh-source">
+                📊 Fuente: <a href="https://apuestas.inh.gob.ve/estadisticas" target="_blank" rel="noopener">Instituto Nacional de Hipódromos</a>
+                · @OficialINH · @HinavaOficial · Temporada 2026
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
          SECCIÓN BELMONT PARK — Noticias en Tiempo Real
     ═══════════════════════════════════════════════════════════ -->
     <section class="belmont-section" id="belmont">
@@ -274,15 +387,24 @@
             <p class="section-sub">Análisis visual generado por IA — Sistema 3.3</p>
             <div class="infografia-grid">
                 <div class="infografia-card">
-                    <img src="assets/infografia_1.png" alt="Líneas Fijas" loading="lazy">
+                    <picture>
+                        <source srcset="assets/infografia_1.webp" type="image/webp">
+                        <img src="assets/infografia_1.png" alt="Líneas Fijas" loading="lazy" decoding="async">
+                    </picture>
                     <div class="infografia-label">Líneas Fijas</div>
                 </div>
                 <div class="infografia-card">
-                    <img src="assets/infografia_2.png" alt="Cuadro Perfecto 5Y6" loading="lazy">
+                    <picture>
+                        <source srcset="assets/infografia_2.webp" type="image/webp">
+                        <img src="assets/infografia_2.png" alt="Cuadro Perfecto 5Y6" loading="lazy" decoding="async">
+                    </picture>
                     <div class="infografia-label">Cuadro Perfecto 5Y6</div>
                 </div>
                 <div class="infografia-card">
-                    <img src="assets/infografia_3.png" alt="Bombas del Día" loading="lazy">
+                    <picture>
+                        <source srcset="assets/infografia_3.webp" type="image/webp">
+                        <img src="assets/infografia_3.png" alt="Bombas del Día" loading="lazy" decoding="async">
+                    </picture>
                     <div class="infografia-label">Bombas del Día</div>
                 </div>
             </div>
@@ -290,15 +412,24 @@
             <p class="section-sub">Análisis visual generado por IA — La Rinconada</p>
             <div class="infografia-grid">
                 <div class="infografia-card">
-                    <img src="assets/rinconada_1.png" alt="Líneas Fijas Rinconada" loading="lazy">
+                    <picture>
+                        <source srcset="assets/rinconada_1.webp" type="image/webp">
+                        <img src="assets/rinconada_1.png" alt="Líneas Fijas Rinconada" loading="lazy" decoding="async">
+                    </picture>
                     <div class="infografia-label">Líneas Fijas</div>
                 </div>
                 <div class="infografia-card">
-                    <img src="assets/rinconada_2.png" alt="Cuadro Perfecto 5Y6 Rinconada" loading="lazy">
+                    <picture>
+                        <source srcset="assets/rinconada_2.webp" type="image/webp">
+                        <img src="assets/rinconada_2.png" alt="Cuadro Perfecto 5Y6 Rinconada" loading="lazy" decoding="async">
+                    </picture>
                     <div class="infografia-label">Cuadro Perfecto 5Y6</div>
                 </div>
                 <div class="infografia-card">
-                    <img src="assets/rinconada_3.png" alt="Bombas Rinconada" loading="lazy">
+                    <picture>
+                        <source srcset="assets/rinconada_3.webp" type="image/webp">
+                        <img src="assets/rinconada_3.png" alt="Bombas Rinconada" loading="lazy" decoding="async">
+                    </picture>
                     <div class="infografia-label">Bombas del Día</div>
                 </div>
             </div>
@@ -416,5 +547,106 @@
     })();
     </script>
     <script src="js/main.js"></script>
+    <script>
+    // ──────────────────────────────────────────────
+    // Rankings INH — Cargador de estadísticas
+    // ──────────────────────────────────────────────
+    (function loadINHStats() {
+        const medalPos = (pos) => {
+            if (pos === 1) return 'gold';   // 🥇
+            if (pos === 2) return 'silver'; // 🥈
+            if (pos === 3) return 'bronze'; // 🥉
+            return '';
+        };
+        const medalEmoji = (pos) => {
+            if (pos === 1) return '🥇';
+            if (pos === 2) return '🥈';
+            if (pos === 3) return '🥉';
+            return pos;
+        };
+
+        function renderTable(containerId, data, maxVic) {
+            const el = document.getElementById(containerId);
+            if (!el || !data) return;
+            el.innerHTML = `<table class="inh-ranking-table">
+                <thead><tr>
+                    <th style="width:44px">#</th>
+                    <th>Nombre</th>
+                    <th style="width:160px">Victorias</th>
+                </tr></thead>
+                <tbody>
+                ${ data.map(d => `
+                    <tr>
+                        <td class="inh-pos ${medalPos(d.pos)}">${medalEmoji(d.pos)}</td>
+                        <td class="inh-name">${d.nombre}</td>
+                        <td>
+                            <div class="inh-bar-wrap">
+                                <div class="inh-bar" style="width:${Math.round((d.victorias/maxVic)*120)}px"></div>
+                                <span class="inh-vic">${d.victorias}</span>
+                            </div>
+                        </td>
+                    </tr>`).join('')}
+                </tbody>
+            </table>`;
+        }
+
+        function maxVic(arr) { return arr[0] ? arr[0].victorias : 1; }
+
+        fetch('data/estadisticas_inh.json')
+            .then(r => r.json())
+            .then(data => {
+                // Rinconada Meeting 1
+                const m1 = data.rinconada.meetings[0];
+                renderTable('inh-rinconada-m1-jin', m1.jinetes,    maxVic(m1.jinetes));
+                renderTable('inh-rinconada-m1-ent', m1.entrenadores, maxVic(m1.entrenadores));
+                renderTable('inh-rinconada-m1-har', m1.haras,      maxVic(m1.haras));
+                renderTable('inh-rinconada-m1-stu', m1.studs,      maxVic(m1.studs));
+                // Rinconada Meeting 2
+                const m2 = data.rinconada.meetings[1];
+                renderTable('inh-rinconada-m2-jin', m2.jinetes,    maxVic(m2.jinetes));
+                renderTable('inh-rinconada-m2-ent', m2.entrenadores, maxVic(m2.entrenadores));
+                renderTable('inh-rinconada-m2-har', m2.haras,      maxVic(m2.haras));
+                renderTable('inh-rinconada-m2-stu', m2.studs,      maxVic(m2.studs));
+                // Valencia
+                const v1 = data.valencia.meetings[0];
+                renderTable('inh-valencia-t1-jin', v1.jinetes,    maxVic(v1.jinetes));
+                renderTable('inh-valencia-t1-ent', v1.entrenadores, maxVic(v1.entrenadores));
+                renderTable('inh-valencia-t1-har', v1.haras,      maxVic(v1.haras));
+                renderTable('inh-valencia-t1-stu', v1.studs,      maxVic(v1.studs));
+            })
+            .catch(e => console.warn('INH stats error:', e));
+
+        // Tab switching — Hipódromo
+        window.inhSelectHipo = function(hipo, btn) {
+            document.querySelectorAll('.inh-section > .container > .inh-tabs > .inh-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('[id^="inh-rinconada"]:not([id*="m"]), [id^="inh-valencia"]:not([id*="t"])').forEach(p => p.classList.remove('active'));
+            // Show top-level panels
+            const allTop = document.querySelectorAll('.inh-section .inh-panel');
+            allTop.forEach(p => {
+                if (p.id === 'inh-' + hipo) p.classList.add('active');
+                else if (p.id === 'inh-rinconada' || p.id === 'inh-valencia') p.classList.remove('active');
+            });
+        };
+        // Tab switching — Meeting
+        window.inhSelectMeeting = function(hipo, meeting, btn) {
+            const parent = btn.closest('.inh-panel');
+            parent.querySelectorAll(':scope > .inh-tabs > .inh-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            parent.querySelectorAll(':scope > .inh-panel').forEach(p => p.classList.remove('active'));
+            const target = document.getElementById('inh-' + hipo + '-' + meeting);
+            if (target) target.classList.add('active');
+        };
+        // Tab switching — Categoria
+        window.inhSelectCat = function(panel, cat, btn) {
+            const parent = btn.closest('.inh-panel');
+            parent.querySelectorAll('.inh-subtab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            parent.querySelectorAll('.inh-category-panel').forEach(p => p.classList.remove('active'));
+            const target = document.getElementById('inh-' + panel + '-' + cat);
+            if (target) target.classList.add('active');
+        };
+    })();
+    </script>
 </body>
 </html>
