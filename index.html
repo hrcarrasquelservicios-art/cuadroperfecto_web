@@ -43,6 +43,7 @@
                 <li><a href="/" class="active">Análisis</a></li>
                 <li><a href="/stream">🎥 En Vivo</a></li>
                 <li><a href="/resultados">📊 Resultados</a></li>
+                <li><a href="/aprendizaje">🧠 IA Aprendizaje</a></li>
                 <li><a href="#belmont">🇺🇸 Belmont</a></li>
                 <li><a href="/recaudacion">💰 Recaudación</a></li>
             </ul>
@@ -78,6 +79,77 @@
     </header>
 
     <div id="app"></div>
+
+    <div id="aprendizaje-page" style="display:none;">
+        <section class="learning-hero">
+            <div class="container">
+                <h1 class="section-title">🧠 <span class="gold">IA LEARNING</span> ENGINE</h1>
+                <p class="section-sub">Análisis histórico, efectividad de actores y aprendizaje de desviaciones del Sistema 3.3</p>
+            </div>
+        </section>
+        <section class="learning-dashboard">
+            <div class="container">
+                <!-- KPI Grid -->
+                <div class="learning-kpis">
+                    <div class="kpi-card">
+                        <span class="kpi-value gold" id="accuracyTop">—</span>
+                        <span class="kpi-label">Acierto Primera Marca</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-value" id="accuracyGlobal">—</span>
+                        <span class="kpi-label">Efectividad Global (Top + Alt)</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-value" id="averageDeviation">—</span>
+                        <span class="kpi-label">Desviación Promedio (pts)</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="kpi-value gold" id="totalEvaluations">—</span>
+                        <span class="kpi-label">Carreras Evaluadas</span>
+                    </div>
+                </div>
+                
+                <!-- Actors Tables -->
+                <div class="actors-grid">
+                    <div class="actors-box">
+                        <h3>🏇 Jinetes más Efectivos</h3>
+                        <div class="table-wrapper">
+                           <table class="actors-table" id="jockeysTable">
+                               <thead>
+                                   <tr><th>Jinete</th><th>Victorias</th><th>Derrotas</th><th>ROI</th><th>Tendencia (30d)</th></tr>
+                               </thead>
+                               <tbody></tbody>
+                           </table>
+                        </div>
+                    </div>
+                    <div class="actors-box">
+                        <h3>🔧 Preparadores más Efectivos</h3>
+                        <div class="table-wrapper">
+                           <table class="actors-table" id="trainersTable">
+                               <thead>
+                                   <tr><th>Preparador</th><th>Victorias</th><th>Derrotas</th><th>ROI</th><th>Tendencia (30d)</th></tr>
+                               </thead>
+                               <tbody></tbody>
+                           </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Log -->
+                <div class="logs-box">
+                    <h3>📜 Learning Logs — Desviación de la IA</h3>
+                    <div class="table-wrapper">
+                        <table class="logs-table" id="logsTable">
+                            <thead>
+                                <tr><th>Fecha/Carrera</th><th>Ganador Real</th><th>Jinete/Prep</th><th>Nuestro Pick (Score)</th><th>Acierto</th><th>Desviación</th></tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <div id="stream-page" style="display:none;">
         <section class="stream-hero">

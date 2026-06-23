@@ -49,9 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const resultados = document.getElementById('resultados');
         const recaudacion = document.getElementById('recaudacion');
         const publicidad = document.getElementById('publicidad');
+        const aprendizaje = document.getElementById('aprendizaje-page');
         const navLinks = document.querySelectorAll('.nav-menu a');
 
-        [app, stream, resultados, recaudacion, publicidad].forEach(el => { if (el) el.style.display = 'none'; });
+        [app, stream, resultados, recaudacion, publicidad, aprendizaje].forEach(el => { if (el) el.style.display = 'none'; });
 
         if (page === '/stream') {
             stream.style.display = 'block';
@@ -60,6 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
             resultados.style.display = 'block';
         } else if (page === '/recaudacion') {
             recaudacion.style.display = 'block';
+        } else if (page === '/aprendizaje') {
+            if (aprendizaje) aprendizaje.style.display = 'block';
+            loadAprendizajePage();
         } else {
             app.style.display = 'block';
             publicidad.style.display = 'block';
@@ -131,6 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
             jornadasData = data;
             renderResultados(data);
             renderRecaudacion(data);
+            // Cargar base de datos de actores tempranamente para renderizar rachas
+            fetch('data/learning/actors_db.json')
+                .then(res => res.json())
+                .then(act => { actorsDbData = act; })
+                .catch(() => {});
+
             const nav = document.getElementById('navMenu');
             nav.innerHTML = `
                 <li><a href="/" class="active">Análisis</a></li>
@@ -138,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><a href="/rinconada">🐎 La Rinconada</a></li>
                 <li><a href="/stream">🎥 En Vivo</a></li>
                 <li><a href="/resultados">📊 Resultados</a></li>
+                <li><a href="/aprendizaje">🧠 IA Aprendizaje</a></li>
                 <li><a href="/recaudacion">💰 Recaudación</a></li>
             `;
             showPage(location.pathname || '/');
@@ -207,14 +218,21 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="card-category">${c.categoria}</div>
             ${c.bomb_tag ? `<div class="card-bombs"><span class="bomb-tag">${c.bomb_tag}</span></div>` : ''}
             <div class="card-top">
-                ${c.top3.map(h => `
-                <div class="horse ${h.pos === 1 ? 'first' : h.pos === 2 ? 'second' : 'third'}">
-                    <span class="pos">${h.pos}°</span>
-                    <span class="number">#${h.dorsal}</span>
-                    <span class="name">${h.nombre}</span>
-                    <span class="pts">${h.pts} pts</span>
-                    ${h.icono ? `<span class="icon">${h.icono}</span>` : ''}
-                </div>`).join('')}
+                ${c.top3.map(h => {
+                    const racha = getActorBadgeHtml(h.jinete, h.preparador);
+                    const details = h.jinete ? `<br><span style="font-size:0.75rem;color:var(--text-muted)">Jinete: ${h.jinete} ${racha}</span>` : '';
+                    return `
+                    <div class="horse ${h.pos === 1 ? 'first' : h.pos === 2 ? 'second' : 'third'}">
+                        <div style="flex: 1;">
+                            <span class="pos">${h.pos}°</span>
+                            <span class="number">#${h.dorsal}</span>
+                            <span class="name">${h.nombre}</span>
+                            ${details}
+                        </div>
+                        <span class="pts">${h.pts} pts</span>
+                        ${h.icono ? `<span class="icon">${h.icono}</span>` : ''}
+                    </div>`;
+                }).join('')}
             </div>
             <div class="card-key">🔑 ${c.clave}</div>
         </div>`;
@@ -246,6 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const featuredClass = v.featured ? 'featured' : '';
         const copaBadge = v.copa ? '<span class="copa-badge">🏆 COPA</span>' : '';
         const topPts = v.top.bomba === 'mega' ? `${v.top.pts} pts 💣💣` : v.top.bomba ? `${v.top.pts} pts 💣` : `${v.top.pts} pts`;
+        
+        const topRacha = getActorBadgeHtml(v.top.jinete, v.top.preparador);
+        const altRacha = getActorBadgeHtml(v.alt.jinete, v.alt.preparador);
+        
+        const topDetails = v.top.jinete ? `<span style="font-size:0.75rem;color:var(--text-muted);display:block;margin-top:2px;">Jinete: ${v.top.jinete} ${topRacha}</span>` : '';
+        const altDetails = v.alt.jinete ? `<span style="font-size:0.75rem;color:var(--text-muted);display:block;margin-top:2px;">Jinete: ${v.alt.jinete} ${altRacha}</span>` : '';
+
         return `
         <div class="valida-card ${featuredClass}">
             <div class="valida-header ${v.color}">
@@ -254,8 +279,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${copaBadge}
             </div>
             <div class="valida-body">
-                <div class="valida-pick top ${bombaClass}">${v.top.nombre} <span class="dorsal">#${v.top.dorsal}</span> <span class="pts">${topPts}</span></div>
-                <div class="valida-pick alt">${v.alt.nombre} <span class="dorsal">#${v.alt.dorsal}</span> <span class="pts">${v.alt.pts} pts</span></div>
+                <div class="valida-pick top ${bombaClass}">
+                    <div>
+                        ${v.top.nombre} <span class="dorsal">#${v.top.dorsal}</span>
+                        ${topDetails}
+                    </div>
+                    <span class="pts">${topPts}</span>
+                </div>
+                <div class="valida-pick alt" style="margin-top: 8px;">
+                    <div>
+                        ${v.alt.nombre} <span class="dorsal">#${v.alt.dorsal}</span>
+                        ${altDetails}
+                    </div>
+                    <span class="pts">${v.alt.pts} pts</span>
+                </div>
             </div>
         </div>`;
     }
@@ -455,32 +492,79 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Live status
+    function toggleTickerStream(youtubeId) {
+        const dropdown = document.getElementById('tickerStreamDropdown');
+        const iframe = document.getElementById('tickerIframe');
+        if (!dropdown || !iframe) return;
+        
+        const isOpen = dropdown.classList.toggle('open');
+        if (isOpen && youtubeId) {
+            if (youtubeId.startsWith('live_stream')) {
+                iframe.src = `https://www.youtube.com/embed/live_stream?channel=UCR0C0QitI9WGwLPv5t2Mjxw&autoplay=1&rel=0`;
+            } else {
+                iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+            }
+        } else {
+            iframe.src = '';
+        }
+    }
+    window.toggleTickerStream = toggleTickerStream;
+
     function showLiveBanner(j) {
-        if (document.querySelector('.live-banner')) return;
+        const existing = document.querySelector('.live-banner');
+        if (existing) existing.remove();
+        
         const hero = document.querySelector('.hero');
         if (!hero) return;
+        
+        const statusVal = (j.status || (j.activa ? 'EN_CURSO' : 'PREVIA')).toLowerCase();
+        const statusLabel = j.status === 'PREVIA' ? 'Próxima Carrera' 
+                          : j.status === 'FINALIZADA' ? 'Jornada Finalizada' 
+                          : 'En Curso';
+        
+        const youtubeId = j.youtube_id || (j.hipodromo === 'Valencia' ? 'sGpTROPlIc8' : 'live_stream');
+        
         const html = `
         <section class="live-banner">
             <div class="container">
-                <div class="live-header">
-                    <span class="live-dot"></span>
-                    <span class="live-label">EN VIVO</span>
-                    <span class="live-hipodromo">📍 ${j.hipodromo}</span>
-                </div>
-                <div class="live-body">
-                    <div class="live-race">🏇 ${j.carrera_actual}</div>
-                    <div class="live-time">⏱ ${j.hora}</div>
-                    ${j.tipo ? `<div class="live-type">${j.tipo}</div>` : ''}
-                    ${j.favorito ? `<div class="live-fav">🔥 Favorito: ${j.favorito}</div>` : ''}
-                    <div class="live-progress">${j.progreso}</div>
-                    ${j.siguiente ? `<div class="live-next">⏳ Siguiente: ${j.siguiente} ${j.siguiente_hora ? '(' + j.siguiente_hora + ')' : ''}</div>` : ''}
+                <div class="live-ticker-container">
+                    <div class="live-ticker-header">
+                        <div class="live-ticker-main">
+                            <span class="live-status-pill ${statusVal}">
+                                <span class="live-dot"></span>
+                                ${statusLabel}
+                            </span>
+                            <span class="live-hipodromo" style="font-weight: 700;">📍 ${j.hipodromo}</span>
+                            <div class="live-ticker-info">
+                                ${j.carrera_actual ? `<span class="live-race">🏇 ${j.carrera_actual}</span>` : ''}
+                                ${j.hora ? `<span class="live-time">⏱ ${j.hora}</span>` : ''}
+                                ${j.favorito ? `<span class="live-fav">🔥 Favorito: <span class="fav">${j.favorito}</span></span>` : ''}
+                                ${j.progreso ? `<span class="live-progress">${j.progreso}</span>` : ''}
+                                ${j.siguiente ? `<span class="live-next">⏳ Siguiente: ${j.siguiente} ${j.siguiente_hora ? '(' + j.siguiente_hora + ')' : ''}</span>` : ''}
+                            </div>
+                        </div>
+                        <div class="live-ticker-controls">
+                            <button class="btn-ticker-stream" onclick="window.toggleTickerStream('${youtubeId}')">
+                                🎥 Ver Carrera
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="live-ticker-dropdown" id="tickerStreamDropdown">
+                        <div class="live-ticker-embed">
+                            <iframe id="tickerIframe" src="" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>`;
         hero.insertAdjacentHTML('afterend', html);
     }
     function processLiveStatus(status) {
-        (status.jornadas || []).forEach(j => { if (j.activa) showLiveBanner(j); });
+        (status.jornadas || []).forEach(j => { if (j.activa || j.status) showLiveBanner(j); });
     }
     function pollLiveStatus() {
         fetch('https://mibot-n8n-auto.duckdns.org/race-status/live_status.json?_=' + Date.now())
@@ -497,4 +581,147 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(r => r.json())
         .then(data => { document.getElementById('visitorCount').textContent = (data.value || 0).toLocaleString('es'); })
         .catch(() => {});
+
+    // ── LOGICA DE APRENDIZAJE ──
+    let learningLogData = [];
+    let actorsDbData = { jockeys: {}, trainers: {} };
+
+    function loadAprendizajePage() {
+        Promise.all([
+            fetch('data/learning/learning_log.json?_=' + Date.now()).then(r => r.json()).catch(() => []),
+            fetch('data/learning/actors_db.json?_=' + Date.now()).then(r => r.json()).catch(() => ({ jockeys: {}, trainers: {} }))
+        ]).then(([logs, actors]) => {
+            learningLogData = logs;
+            actorsDbData = actors;
+            renderLearningKPIs();
+            renderActorsTables();
+            renderLearningLogs();
+        });
+    }
+
+    function renderLearningKPIs() {
+        const logs = learningLogData;
+        if (!logs.length) return;
+        const total = logs.length;
+        const topHits = logs.filter(l => l.acierto && l.top_pick && normalizeName(l.ganador).includes(normalizeName(l.top_pick))).length;
+        const globalHits = logs.filter(l => l.acierto).length;
+        const totalDeviation = logs.reduce((sum, l) => sum + (l.desviacion || 0), 0);
+        
+        document.getElementById('accuracyTop').textContent = `${round((topHits / total) * 100, 1)}%`;
+        document.getElementById('accuracyGlobal').textContent = `${round((globalHits / total) * 100, 1)}%`;
+        document.getElementById('averageDeviation').textContent = round(totalDeviation / total, 2);
+        document.getElementById('totalEvaluations').textContent = total;
+    }
+
+    function renderActorsTables() {
+        const jockeysBody = document.querySelector('#jockeysTable tbody');
+        const trainersBody = document.querySelector('#trainersTable tbody');
+        if (!jockeysBody || !trainersBody) return;
+        
+        const jockeys = Object.entries(actorsDbData.jockeys || {}).sort((a, b) => b[1].wins - a[1].wins);
+        jockeysBody.innerHTML = jockeys.map(([name, data]) => {
+            const roiClass = data.roi >= 1.0 ? 'roi-good' : 'roi-bad';
+            const trendSvg = renderSparkline(data.trend);
+            return `
+                <tr>
+                    <td><strong>${name}</strong></td>
+                    <td>${data.wins}</td>
+                    <td>${data.losses}</td>
+                    <td class="roi-value ${roiClass}">${data.roi}</td>
+                    <td class="trend-td">${trendSvg}</td>
+                </tr>
+            `;
+        }).join('') || '<tr><td colspan="5" style="text-align:center">Sin datos de jinetes</td></tr>';
+        
+        const trainers = Object.entries(actorsDbData.trainers || {}).sort((a, b) => b[1].wins - a[1].wins);
+        trainersBody.innerHTML = trainers.map(([name, data]) => {
+            const roiClass = data.roi >= 1.0 ? 'roi-good' : 'roi-bad';
+            const trendSvg = renderSparkline(data.trend);
+            return `
+                <tr>
+                    <td><strong>${name}</strong></td>
+                    <td>${data.wins}</td>
+                    <td>${data.losses}</td>
+                    <td class="roi-value ${roiClass}">${data.roi}</td>
+                    <td class="trend-td">${trendSvg}</td>
+                </tr>
+            `;
+        }).join('') || '<tr><td colspan="5" style="text-align:center">Sin datos de preparadores</td></tr>';
+    }
+
+    function renderSparkline(trend) {
+        if (!trend || !trend.length) return '—';
+        const width = 80;
+        const height = 20;
+        const padding = 2;
+        
+        if (trend.length === 1) {
+            return `<svg width="${width}" height="${height}"><circle cx="${width/2}" cy="${height/2}" r="3" fill="var(--gold)"/></svg>`;
+        }
+        
+        const maxVal = Math.max(...trend, 0.1);
+        const minVal = Math.min(...trend, 0);
+        const range = maxVal - minVal || 1;
+        
+        const points = trend.map((val, index) => {
+            const x = (index / (trend.length - 1)) * (width - padding * 2) + padding;
+            const y = height - ((val - minVal) / range) * (height - padding * 2) - padding;
+            return { x, y };
+        });
+        
+        const pathData = `M ${points.map(p => `${p.x} ${p.y}`).join(' L ')}`;
+        const lastPoint = points[points.length - 1];
+        
+        return `
+            <svg width="${width}" height="${height}">
+                <path d="${pathData}" class="sparkline" />
+                <circle cx="${lastPoint.x}" cy="${lastPoint.y}" r="2" class="sparkline-dot" />
+            </svg>
+        `;
+    }
+
+    function renderLearningLogs() {
+        const body = document.querySelector('#logsTable tbody');
+        if (!body) return;
+        
+        const sortedLogs = learningLogData.slice().reverse();
+        body.innerHTML = sortedLogs.map(l => {
+            const badgeClass = l.acierto ? 'hit' : 'miss';
+            const badgeText = l.acierto ? 'ÉXITO' : 'FALLO';
+            const scoreText = l.top_pts ? ` (${l.top_pts} pts)` : '';
+            return `
+                <tr class="${badgeClass}">
+                    <td><strong>${l.hipodromo}</strong><br><span style="font-size:0.75rem;color:var(--text-muted)">${l.carrera} · ${l.date}</span></td>
+                    <td><strong>${l.ganador}</strong></td>
+                    <td>${l.jinete || '—'}<br><span class="actor-info">${l.preparador || '—'}</span></td>
+                    <td>${l.top_pick || '—'}${scoreText}</td>
+                    <td><span class="status-badge ${badgeClass}">${badgeText}</span></td>
+                    <td class="dev-cell">${l.desviacion || 0}</td>
+                </tr>
+            `;
+        }).join('') || '<tr><td colspan="6" style="text-align:center">Sin registros de aprendizaje</td></tr>';
+    }
+
+    function round(value, decimals) {
+        return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
+    }
+
+    function normalizeName(name) {
+        if (!name) return "";
+        return name.toLowerCase().trim();
+    }
+
+    function getActorBadgeHtml(jinete, preparador) {
+        let html = '';
+        if (jinete && actorsDbData.jockeys && actorsDbData.jockeys[jinete]) {
+            const j = actorsDbData.jockeys[jinete];
+            const rate = j.wins / (j.wins + j.losses || 1);
+            if (rate >= 0.6 || j.roi >= 1.2) {
+                html += `<span class="badge-racha caliente" title="Racha caliente: ${round(rate*100,0)}% wins, ROI ${j.roi}">🔥 Caliente</span>`;
+            } else if (rate <= 0.3 && j.roi <= 0.7) {
+                html += `<span class="badge-racha frio" title="Racha fría: ${round(rate*100,0)}% wins, ROI ${j.roi}">⚠️ Enfríado</span>`;
+            }
+        }
+        return html;
+    }
 });

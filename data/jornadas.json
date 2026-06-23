@@ -1139,7 +1139,9 @@
             "dorsal": 7,
             "nombre": "ONLY IN AMERICA",
             "pts": 12.9,
-            "icono": "🔥"
+            "icono": "🔥",
+            "jinete": "F. Quevedo",
+            "preparador": "R. Garcia"
           },
           {
             "pos": 2,
@@ -1169,7 +1171,9 @@
           "nombre": "VALERIA TIME",
           "dorsal": 9,
           "pts": 12.8,
-          "bomba": false
+          "bomba": false,
+          "jinete": "H. Medina",
+          "preparador": "R. D'Angelo"
         },
         "alt": {
           "nombre": "CANELA",
@@ -1188,7 +1192,9 @@
           "nombre": "SEÑORA ISABEL",
           "dorsal": 5,
           "pts": 10.2,
-          "bomba": false
+          "bomba": false,
+          "jinete": "F. Quevedo",
+          "preparador": "R. Garcia"
         },
         "alt": {
           "nombre": "DONOSTIA",
