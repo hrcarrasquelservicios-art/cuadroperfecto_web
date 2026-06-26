@@ -713,3 +713,19 @@ footer { padding: 30px 0; text-align: center; border-top: 1px solid var(--card-b
 @media (max-width: 768px) {
     .live-ticker-controls { width: 100%; justify-content: flex-end; }
 }
+
+/* Emergency Alert Banner */
+.emergency-alert-banner {
+    background: #c8102e;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 3px solid #ffcc00;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    z-index: 10000;
+    position: relative;
+    margin-top: 56px; /* Offset for the fixed top navbar */
+}
+
