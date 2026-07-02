@@ -714,14 +714,14 @@ footer { padding: 30px 0; text-align: center; border-top: 1px solid var(--card-b
     .live-ticker-controls { width: 100%; justify-content: flex-end; }
 }
 
-/* Emergency Alert Banner */
+/* Emergency Alert Banner - Duelo Nacional */
 .emergency-alert-banner {
-    background: #c8102e;
-    color: #fff;
+    background: #000000;
+    color: #ffffff;
     padding: 15px 20px;
     text-align: center;
     font-weight: bold;
-    border-bottom: 3px solid #ffcc00;
+    border-bottom: 3px solid #333333;
     font-size: 1.1rem;
     line-height: 1.5;
     z-index: 10000;
