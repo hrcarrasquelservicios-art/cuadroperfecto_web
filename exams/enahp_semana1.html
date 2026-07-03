@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENAHP-IUT - Evaluación Semana 1: Estadística I</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="family">
+  <!-- Telegram WebApp SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #090d16, #111827);
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      margin-top: 10px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #10b981;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    .question-card {
+      background: rgba(31, 41, 55, 0.4);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.2s;
+    }
+    .question-card:hover {
+      transform: translateY(-2px);
+    }
+    .question-text {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #f3f4f6;
+      line-height: 1.4;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .option:hover {
+      background: rgba(16, 185, 129, 0.08);
+      border-color: #10b981;
+    }
+    .option input[type="radio"] {
+      margin-right: 12px;
+      accent-color: #10b981;
+      width: 18px;
+      height: 18px;
+    }
+    .option span {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+    .option.selected {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: #10b981;
+    }
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      border: none;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+      transition: all 0.2s;
+      margin-top: 10px;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+    }
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+    /* Results screen */
+    .results-screen {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .score-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 6px solid #10b981;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 24px;
+      background: rgba(16, 185, 129, 0.1);
+    }
+    .score-value {
+      font-size: 36px;
+      font-weight: 700;
+      color: #10b981;
+    }
+    .score-label {
+      font-size: 12px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .results-screen h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #10b981;
+    }
+    .results-screen p {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="quizContainer">
+    <div class="header">
+      <h1>ENAHP - IUT</h1>
+      <p>Estadística I — Evaluación Semana 1</p>
+    </div>
+
+    <form id="quizForm">
+      <!-- Q1 -->
+      <div class="question-card">
+        <div class="question-text">1. El SENIAT publica un informe con el total recaudado por concepto de IVA en enero de 2026. ¿Qué tipo de estadística se aplicó?</div>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q1" value="Estadística Descriptiva" required>
+            <span>Estadística Descriptiva</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="Estadística Inferencial">
+            <span>Estadística Inferencial</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question-card">
+        <div class="question-text">2. Un estudio técnico utiliza una muestra de contribuyentes para pronosticar el comportamiento de la recaudación fiscal nacional en 2027. ¿Qué tipo de estadística es?</div>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q2" value="Estadística Descriptiva" required>
+            <span>Estadística Descriptiva</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="Estadística Inferencial">
+            <span>Estadística Inferencial</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question-card">
+        <div class="question-text">3. Si calculamos el promedio de notas de los estudiantes de este curso de Estadística I de la ENAHP, estamos haciendo:</div>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q3" value="Estadística Descriptiva" required>
+            <span>Estadística Descriptiva</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q3" value="Estadística Inferencial">
+            <span>Estadística Inferencial</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar Calificación</button>
+    </form>
+  </div>
+
+  <div class="container results-screen" id="resultsContainer">
+    <div class="score-circle">
+      <span class="score-value" id="scoreDisplay">0.0</span>
+      <span class="score-label">Puntos</span>
+    </div>
+    <h2 id="resultTitle">¡Examen Completado!</h2>
+    <p id="resultText">Tu calificación ha sido enviada al bot y registrada en el sistema de la ENAHP. Puedes cerrar esta ventana.</p>
+  </div>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+
+    document.querySelectorAll('.option').forEach(card => {
+      card.addEventListener('click', function() {
+        const input = this.querySelector('input');
+        input.checked = true;
+        
+        const name = input.getAttribute('name');
+        document.querySelectorAll(`input[name="${name}"]`).forEach(sibling => {
+          sibling.closest('.option').classList.remove('selected');
+        });
+        
+        this.classList.add('selected');
+      });
+    });
+
+    const correctAnswers = {
+      q1: 'Estadística Descriptiva',
+      q2: 'Estadística Inferencial',
+      q3: 'Estadística Descriptiva'
+    };
+
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let correct = 0;
+      const formData = new FormData(this);
+      const studentAnswers = {};
+
+      for (let [question, answer] of formData.entries()) {
+        studentAnswers[question] = answer;
+        if (answer === correctAnswers[question]) {
+          correct += 1;
+        }
+      }
+
+      // Final grade is calculated on 5% (5 pts max scale)
+      const maxScore = 5.0;
+      const score = (correct / 3.0) * maxScore;
+
+      document.getElementById('scoreDisplay').textContent = score.toFixed(2);
+      
+      if (score < 2.5) {
+        document.querySelector('.score-circle').style.borderColor = '#ef4444';
+        document.querySelector('.score-circle').style.background = 'rgba(239, 68, 68, 0.1)';
+        document.getElementById('scoreDisplay').style.color = '#ef4444';
+        document.getElementById('resultTitle').textContent = 'Debe Recuperar';
+      }
+
+      document.getElementById('quizContainer').style.display = 'none';
+      document.getElementById('resultsContainer').style.display = 'block';
+
+      tg.sendData(JSON.stringify({
+        semana: 1,
+        nota: parseFloat(score.toFixed(2)),
+        max_nota: maxScore,
+        respuestas: studentAnswers
+      }));
+    });
+  </script>
+</body>
+</html>
