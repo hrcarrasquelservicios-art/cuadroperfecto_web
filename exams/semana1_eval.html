@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCS - Evaluación Semana 1: Medicina de Desastres</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="family">
+  <!-- Telegram WebApp SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e1b4b);
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      margin-top: 10px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .question-card {
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.2s;
+    }
+    .question-card:hover {
+      transform: translateY(-2px);
+    }
+    .question-text {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #f1f5f9;
+      line-height: 1.4;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .option:hover {
+      background: rgba(56, 189, 248, 0.08);
+      border-color: #38bdf8;
+    }
+    .option input[type="radio"] {
+      margin-right: 12px;
+      accent-color: #38bdf8;
+      width: 18px;
+      height: 18px;
+    }
+    .option span {
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+    .option.selected {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: #38bdf8;
+    }
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      color: white;
+      border: none;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      transition: all 0.2s;
+      margin-top: 10px;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+    }
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+    /* Results screen */
+    .results-screen {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .score-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 6px solid #22c55e;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 24px;
+      background: rgba(34, 197, 94, 0.1);
+    }
+    .score-value {
+      font-size: 36px;
+      font-weight: 700;
+      color: #22c55e;
+    }
+    .score-label {
+      font-size: 12px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .results-screen h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #38bdf8;
+    }
+    .results-screen p {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="quizContainer">
+    <div class="header">
+      <h1>UCS "Hugo Chávez Frías"</h1>
+      <p>Medicina de Desastres — Evaluación Semana 1</p>
+    </div>
+
+    <form id="quizForm">
+      <!-- Q1 -->
+      <div class="question-card">
+        <div class="question-text">1. ¿Cómo se define correctamente el término "Desastre" según el programa oficial de la UCS?</div>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q1" value="a" required>
+            <span>a) Cualquier evento natural fuerte como un terremoto en zonas deshabitadas.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="b">
+            <span>b) La situación creada por el impacto de un evento adverso que excede la capacidad resolutiva de la comunidad afectada.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q1" value="c">
+            <span>c) Una emergencia local que puede controlarse sin ayuda de recursos externos.</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question-card">
+        <div class="question-text">2. Si un terremoto de gran magnitud ocurre en una zona completamente desierta sin causar daños humanos ni estructurales, se considera:</div>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q2" value="a" required>
+            <span>a) Una catástrofe pero no un desastre.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="b">
+            <span>b) Un desastre tecnológico.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q2" value="c">
+            <span>c) Una emergencia de salud comunitaria.</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question-card">
+        <div class="question-text">3. El factor interno de riesgo que representa la predisposición intrínseca de una comunidad a ser afectada por un evento adverso es:</div>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q3" value="a" required>
+            <span>a) El peligro o la amenaza.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q3" value="b">
+            <span>b) La capacidad resolutiva.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q3" value="c">
+            <span>c) La vulnerabilidad.</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question-card">
+        <div class="question-text">4. Los desastres provocados directamente por la actividad humana (ej. fugas químicas, radiación o violencia social) pertenecen a la categoría de:</div>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q4" value="a" required>
+            <span>a) Antropogénicos.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q4" value="b">
+            <span>b) Topológicos.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q4" value="c">
+            <span>c) Biológicos.</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question-card">
+        <div class="question-text">5. ¿Cuál es el papel fundamental del médico comunitario egresado de la UCS ante situaciones de desastre?</div>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="q5" value="a" required>
+            <span>a) Esperar que la ayuda internacional resuelva todos los problemas de salud.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q5" value="b">
+            <span>b) Ejecutar acciones integrales de salud, organización y resiliencia comunitaria.</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="q5" value="c">
+            <span>c) Limitarse a las clínicas privadas sin vinculación con el ASIC.</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar Calificación</button>
+    </form>
+  </div>
+
+  <div class="container results-screen" id="resultsContainer">
+    <div class="score-circle">
+      <span class="score-value" id="scoreDisplay">0.0</span>
+      <span class="score-label">Puntos</span>
+    </div>
+    <h2 id="resultTitle">¡Examen Completado!</h2>
+    <p id="resultText">Tu calificación ha sido enviada al bot y registrada en el sistema de hemovigilancia y desastres de la UCS. Puedes cerrar esta ventana.</p>
+  </div>
+
+  <script>
+    // Initialize Telegram WebApp
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+
+    // Style option cards on click
+    document.querySelectorAll('.option').forEach(card => {
+      card.addEventListener('click', function() {
+        const input = this.querySelector('input');
+        input.checked = true;
+        
+        // Remove selected class from sibling options
+        const name = input.getAttribute('name');
+        document.querySelectorAll(`input[name="${name}"]`).forEach(sibling => {
+          sibling.closest('.option').classList.remove('selected');
+        });
+        
+        this.classList.add('selected');
+      });
+    });
+
+    // Correct Answers Map
+    const correctAnswers = {
+      q1: 'b',
+      q2: 'a',
+      q3: 'c',
+      q4: 'a',
+      q5: 'b'
+    };
+
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let score = 0;
+      const formData = new FormData(this);
+      const studentAnswers = {};
+
+      for (let [question, answer] of formData.entries()) {
+        studentAnswers[question] = answer;
+        if (answer === correctAnswers[question]) {
+          score += 4.0; // 5 questions * 4.0 pts = 20.0 pts max
+        }
+      }
+
+      // Display score
+      document.getElementById('scoreDisplay').textContent = score.toFixed(1);
+      
+      // Update UI color if failed or passed
+      if (score < 10) {
+        document.querySelector('.score-circle').style.borderColor = '#ef4444';
+        document.querySelector('.score-circle').style.background = 'rgba(239, 68, 68, 0.1)';
+        document.getElementById('scoreDisplay').style.color = '#ef4444';
+        document.getElementById('resultTitle').textContent = 'Debe Recuperar';
+      }
+
+      // Hide quiz and show results
+      document.getElementById('quizContainer').style.display = 'none';
+      document.getElementById('resultsContainer').style.display = 'block';
+
+      // Send data back to Telegram bot
+      const dataToSend = {
+        semana: 1,
+        nota: score,
+        respuestas: studentAnswers
+      };
+
+      tg.sendData(JSON.stringify(dataToSend));
+    });
+  </script>
+</body>
+</html>
