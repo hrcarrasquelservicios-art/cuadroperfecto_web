@@ -1,73 +1,377 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.countapi.xyz https://api.rss2json.com; frame-src 'self' https://www.youtube.com; object-src 'none';">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuadro Perfecto — Sistema 3.3 "La Vencida"</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <meta name="description" content="Análisis hípico profesional con Sistema 3.3. Predicciones, bombas y cuadro perfecto. Belmont Park, La Rinconada, Valencia.">
+    <meta name="description"
+        content="Análisis hípico profesional con Sistema 3.3. Predicciones, bombas y cuadro perfecto. Belmont Park, La Rinconada, Valencia.">
     <meta property="og:title" content="Cuadro Perfecto — Sistema 3.3">
     <meta property="og:description" content="Análisis hípico profesional con Sistema 3.3">
     <style>
-    /* ── Rankings INH Section ── */
-    .inh-section { padding: 70px 0; background: linear-gradient(180deg, #0a0a1a 0%, #0d1a0d 50%, #0a0a1a 100%); }
-    .inh-header { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
-    .inh-badge-oficial { background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(255,152,0,0.15)); border: 1px solid rgba(255,193,7,0.4); color: #ffd700; padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; }
-    .inh-tabs { display: flex; gap: 10px; margin: 28px 0 20px; flex-wrap: wrap; }
-    .inh-tab { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #9ca3af; padding: 9px 20px; border-radius: 10px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all .2s; }
-    .inh-tab:hover { background: rgba(255,215,0,0.1); border-color: rgba(255,215,0,0.3); color: #fcd34d; }
-    .inh-tab.active { background: rgba(255,215,0,0.15); border-color: rgba(255,215,0,0.5); color: #ffd700; }
-    .inh-panel { display: none; }
-    .inh-panel.active { display: block; }
-    .inh-subtabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
-    .inh-subtab { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: #6b7280; padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: all .2s; }
-    .inh-subtab:hover { border-color: rgba(74,222,128,0.3); color: #86efac; }
-    .inh-subtab.active { background: rgba(34,197,94,0.12); border-color: rgba(34,197,94,0.4); color: #4ade80; }
-    .inh-category-panel { display: none; }
-    .inh-category-panel.active { display: block; }
-    .inh-ranking-table { width: 100%; border-collapse: collapse; }
-    .inh-ranking-table thead tr { background: rgba(255,215,0,0.07); }
-    .inh-ranking-table th { padding: 11px 14px; text-align: left; font-size: 0.78rem; font-weight: 700; color: #fcd34d; letter-spacing: 0.5px; text-transform: uppercase; border-bottom: 1px solid rgba(255,215,0,0.2); }
-    .inh-ranking-table td { padding: 10px 14px; font-size: 0.88rem; color: #e2e8f0; border-bottom: 1px solid rgba(255,255,255,0.05); transition: background .15s; }
-    .inh-ranking-table tbody tr:hover td { background: rgba(255,255,255,0.04); }
-    .inh-pos { font-weight: 800; color: #6b7280; font-size: 0.85rem; }
-    .inh-pos.gold { color: #ffd700; font-size: 1rem; }
-    .inh-pos.silver { color: #d1d5db; font-size: 0.95rem; }
-    .inh-pos.bronze { color: #cd7f32; font-size: 0.92rem; }
-    .inh-name { font-weight: 600; }
-    .inh-bar-wrap { display: flex; align-items: center; gap: 10px; }
-    .inh-bar { height: 8px; border-radius: 4px; background: linear-gradient(90deg, #ffd700, #f59e0b); min-width: 4px; transition: width .6s ease; }
-    .inh-vic { font-weight: 700; color: #fbbf24; min-width: 28px; text-align: right; }
-    .inh-source { display: flex; align-items: center; gap: 8px; margin-top: 20px; color: #4b5563; font-size: 0.75rem; }
-    .inh-source a { color: #60a5fa; text-decoration: none; }
-    .inh-source a:hover { text-decoration: underline; }
-    .inh-grid-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 16px; }
-    .inh-update-tag { font-size: 0.75rem; color: #4b5563; }
-    /* ── Belmont Park Section ── */
-    .belmont-section { padding: 60px 0; background: linear-gradient(135deg, #0a0a1a 0%, #0d1f3c 100%); }
-    .belmont-header-row { display: flex; justify-content: space-between; align-items: center; margin: 16px 0 24px; }
-    .belmont-badge { background: rgba(30,80,160,0.5); border: 1px solid #2563eb; color: #93c5fd; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
-    .belmont-update { color: #6b7280; font-size: 0.8rem; }
-    .belmont-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 8px; }
-    .belmont-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; transition: transform .2s, border-color .2s; }
-    .belmont-card:hover { transform: translateY(-3px); border-color: rgba(37,99,235,0.5); }
-    .belmont-card-flag { font-size: 1.4rem; margin-bottom: 8px; }
-    .belmont-card-title { font-size: 0.95rem; font-weight: 600; color: #e2e8f0; margin: 0 0 8px; line-height: 1.4; }
-    .belmont-card-meta { font-size: 0.75rem; color: #6b7280; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-    .belmont-card-source { color: #93c5fd; }
-    .belmont-card-link { display: inline-block; margin-top: 10px; color: #60a5fa; font-size: 0.8rem; text-decoration: none; }
-    .belmont-card-link:hover { color: #93c5fd; text-decoration: underline; }
-    .belmont-footer { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
-    .tg-btn-small { background: #229ED9; color: #fff; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: opacity .2s; }
-    .tg-btn-small:hover { opacity: 0.85; }
-    .nyra-btn { background: rgba(255,255,255,0.08); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.15); padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; transition: background .2s; }
-    .nyra-btn:hover { background: rgba(255,255,255,0.15); }
-    .belmont-loading { text-align: center; color: #6b7280; padding: 40px; grid-column: 1/-1; }
-    .loading-spinner { width: 36px; height: 36px; border: 3px solid rgba(255,255,255,0.1); border-top-color: #2563eb; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 12px; }
-    @keyframes spin { to { transform: rotate(360deg); } }
+        /* ── Rankings INH Section ── */
+        .inh-section {
+            padding: 70px 0;
+            background: linear-gradient(180deg, #0a0a1a 0%, #0d1a0d 50%, #0a0a1a 100%);
+        }
+
+        .inh-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 10px;
+        }
+
+        .inh-badge-oficial {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 152, 0, 0.15));
+            border: 1px solid rgba(255, 193, 7, 0.4);
+            color: #ffd700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .inh-tabs {
+            display: flex;
+            gap: 10px;
+            margin: 28px 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .inh-tab {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #9ca3af;
+            padding: 9px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all .2s;
+        }
+
+        .inh-tab:hover {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: rgba(255, 215, 0, 0.3);
+            color: #fcd34d;
+        }
+
+        .inh-tab.active {
+            background: rgba(255, 215, 0, 0.15);
+            border-color: rgba(255, 215, 0, 0.5);
+            color: #ffd700;
+        }
+
+        .inh-panel {
+            display: none;
+        }
+
+        .inh-panel.active {
+            display: block;
+        }
+
+        .inh-subtabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .inh-subtab {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #6b7280;
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all .2s;
+        }
+
+        .inh-subtab:hover {
+            border-color: rgba(74, 222, 128, 0.3);
+            color: #86efac;
+        }
+
+        .inh-subtab.active {
+            background: rgba(34, 197, 94, 0.12);
+            border-color: rgba(34, 197, 94, 0.4);
+            color: #4ade80;
+        }
+
+        .inh-category-panel {
+            display: none;
+        }
+
+        .inh-category-panel.active {
+            display: block;
+        }
+
+        .inh-ranking-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .inh-ranking-table thead tr {
+            background: rgba(255, 215, 0, 0.07);
+        }
+
+        .inh-ranking-table th {
+            padding: 11px 14px;
+            text-align: left;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #fcd34d;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .inh-ranking-table td {
+            padding: 10px 14px;
+            font-size: 0.88rem;
+            color: #e2e8f0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background .15s;
+        }
+
+        .inh-ranking-table tbody tr:hover td {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .inh-pos {
+            font-weight: 800;
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+
+        .inh-pos.gold {
+            color: #ffd700;
+            font-size: 1rem;
+        }
+
+        .inh-pos.silver {
+            color: #d1d5db;
+            font-size: 0.95rem;
+        }
+
+        .inh-pos.bronze {
+            color: #cd7f32;
+            font-size: 0.92rem;
+        }
+
+        .inh-name {
+            font-weight: 600;
+        }
+
+        .inh-bar-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .inh-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #ffd700, #f59e0b);
+            min-width: 4px;
+            transition: width .6s ease;
+        }
+
+        .inh-vic {
+            font-weight: 700;
+            color: #fbbf24;
+            min-width: 28px;
+            text-align: right;
+        }
+
+        .inh-source {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            color: #4b5563;
+            font-size: 0.75rem;
+        }
+
+        .inh-source a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        .inh-source a:hover {
+            text-decoration: underline;
+        }
+
+        .inh-grid-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 16px;
+        }
+
+        .inh-update-tag {
+            font-size: 0.75rem;
+            color: #4b5563;
+        }
+
+        /* ── Belmont Park Section ── */
+        .belmont-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #0a0a1a 0%, #0d1f3c 100%);
+        }
+
+        .belmont-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 16px 0 24px;
+        }
+
+        .belmont-badge {
+            background: rgba(30, 80, 160, 0.5);
+            border: 1px solid #2563eb;
+            color: #93c5fd;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .belmont-update {
+            color: #6b7280;
+            font-size: 0.8rem;
+        }
+
+        .belmont-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .belmont-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 18px;
+            transition: transform .2s, border-color .2s;
+        }
+
+        .belmont-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(37, 99, 235, 0.5);
+        }
+
+        .belmont-card-flag {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .belmont-card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin: 0 0 8px;
+            line-height: 1.4;
+        }
+
+        .belmont-card-meta {
+            font-size: 0.75rem;
+            color: #6b7280;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .belmont-card-source {
+            color: #93c5fd;
+        }
+
+        .belmont-card-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #60a5fa;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        .belmont-card-link:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+
+        .belmont-footer {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tg-btn-small {
+            background: #229ED9;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: opacity .2s;
+        }
+
+        .tg-btn-small:hover {
+            opacity: 0.85;
+        }
+
+        .nyra-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: background .2s;
+        }
+
+        .nyra-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .belmont-loading {
+            text-align: center;
+            color: #6b7280;
+            padding: 40px;
+            grid-column: 1/-1;
+        }
+
+        .loading-spinner {
+            width: 36px;
+            height: 36px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #2563eb;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 12px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -85,8 +389,8 @@
         </div>
     </nav>
 
-    <div class="emergency-alert-banner">
-        🖤 DUELO NACIONAL 🇻🇪 | En memoria de las víctimas del sismo del 24 de junio, se decretan 7 días de duelo nacional. Quedan SUSPENDIDAS todas las actividades hípicas y de juego en La Rinconada y Valencia hasta nuevo aviso.
+    <div class="emergency-alert-banner" style="background: rgba(34, 158, 217, 0.2); border-color: #229ED9; color: #93c5fd;">
+        🔥 <strong>¡ÚLTIMA HORA!</strong> CARRERAS EN LA RINCONADA LA PRÓXIMA SEMANA. Mantente atento a nuestros pronósticos con el Sistema 3.3.
     </div>
 
     <header class="hero">
@@ -123,7 +427,8 @@
         <section class="learning-hero">
             <div class="container">
                 <h1 class="section-title">🧠 <span class="gold">IA LEARNING</span> ENGINE</h1>
-                <p class="section-sub">Análisis histórico, efectividad de actores y aprendizaje de desviaciones del Sistema 3.3</p>
+                <p class="section-sub">Análisis histórico, efectividad de actores y aprendizaje de desviaciones del
+                    Sistema 3.3</p>
             </div>
         </section>
         <section class="learning-dashboard">
@@ -147,29 +452,41 @@
                         <span class="kpi-label">Carreras Evaluadas</span>
                     </div>
                 </div>
-                
+
                 <!-- Actors Tables -->
                 <div class="actors-grid">
                     <div class="actors-box">
                         <h3>🏇 Jinetes más Efectivos</h3>
                         <div class="table-wrapper">
-                           <table class="actors-table" id="jockeysTable">
-                               <thead>
-                                   <tr><th>Jinete</th><th>Victorias</th><th>Derrotas</th><th>ROI</th><th>Tendencia (30d)</th></tr>
-                               </thead>
-                               <tbody></tbody>
-                           </table>
+                            <table class="actors-table" id="jockeysTable">
+                                <thead>
+                                    <tr>
+                                        <th>Jinete</th>
+                                        <th>Victorias</th>
+                                        <th>Derrotas</th>
+                                        <th>ROI</th>
+                                        <th>Tendencia (30d)</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
                         </div>
                     </div>
                     <div class="actors-box">
                         <h3>🔧 Preparadores más Efectivos</h3>
                         <div class="table-wrapper">
-                           <table class="actors-table" id="trainersTable">
-                               <thead>
-                                   <tr><th>Preparador</th><th>Victorias</th><th>Derrotas</th><th>ROI</th><th>Tendencia (30d)</th></tr>
-                               </thead>
-                               <tbody></tbody>
-                           </table>
+                            <table class="actors-table" id="trainersTable">
+                                <thead>
+                                    <tr>
+                                        <th>Preparador</th>
+                                        <th>Victorias</th>
+                                        <th>Derrotas</th>
+                                        <th>ROI</th>
+                                        <th>Tendencia (30d)</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -180,7 +497,14 @@
                     <div class="table-wrapper">
                         <table class="logs-table" id="logsTable">
                             <thead>
-                                <tr><th>Fecha/Carrera</th><th>Ganador Real</th><th>Jinete/Prep</th><th>Nuestro Pick (Score)</th><th>Acierto</th><th>Desviación</th></tr>
+                                <tr>
+                                    <th>Fecha/Carrera</th>
+                                    <th>Ganador Real</th>
+                                    <th>Jinete/Prep</th>
+                                    <th>Nuestro Pick (Score)</th>
+                                    <th>Acierto</th>
+                                    <th>Desviación</th>
+                                </tr>
                             </thead>
                             <tbody></tbody>
                         </table>
@@ -200,8 +524,10 @@
         <section class="stream-embed">
             <div class="container">
                 <div class="channel-selector">
-                    <button class="channel-btn active" data-channel="inh" onclick="loadStream('inh')">🏇 La Rinconada</button>
-                    <button class="channel-btn" data-channel="hinava" onclick="loadStream('hinava')">🐎 Valencia</button>
+                    <button class="channel-btn active" data-channel="inh" onclick="loadStream('inh')">🏇 La
+                        Rinconada</button>
+                    <button class="channel-btn" data-channel="hinava" onclick="loadStream('hinava')">🐎
+                        Valencia</button>
                 </div>
                 <div class="stream-wrapper">
                     <iframe id="streamIframe" src="" frameborder="0"
@@ -213,7 +539,8 @@
                     <div class="stream-status">
                         <span class="status-dot"></span> Transmisión en vivo
                     </div>
-                    <p class="stream-desc">Señal oficial del hipódromo vía YouTube. Cambia entre La Rinconada y Valencia con los botones de arriba.</p>
+                    <p class="stream-desc">Señal oficial del hipódromo vía YouTube. Cambia entre La Rinconada y Valencia
+                        con los botones de arriba.</p>
                 </div>
                 <div class="stream-schedule">
                     <h3>📅 Próximas Jornadas</h3>
@@ -272,14 +599,17 @@
             <!-- RINCONADA -->
             <div class="inh-panel active" id="inh-rinconada">
                 <div class="inh-tabs" style="margin-top:0">
-                    <button class="inh-tab active" onclick="inhSelectMeeting('rinconada','m1',this)">1er Meeting</button>
+                    <button class="inh-tab active" onclick="inhSelectMeeting('rinconada','m1',this)">1er
+                        Meeting</button>
                     <button class="inh-tab" onclick="inhSelectMeeting('rinconada','m2',this)">2do Meeting</button>
                 </div>
                 <!-- Meeting 1 -->
                 <div class="inh-panel active" id="inh-rinconada-m1">
                     <div class="inh-subtabs">
-                        <button class="inh-subtab active" onclick="inhSelectCat('rinconada-m1','jin',this)">🏇 Jinetes</button>
-                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m1','ent',this)">🎩 Entrenadores</button>
+                        <button class="inh-subtab active" onclick="inhSelectCat('rinconada-m1','jin',this)">🏇
+                            Jinetes</button>
+                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m1','ent',this)">🎩
+                            Entrenadores</button>
                         <button class="inh-subtab" onclick="inhSelectCat('rinconada-m1','har',this)">🌿 Haras</button>
                         <button class="inh-subtab" onclick="inhSelectCat('rinconada-m1','stu',this)">🏆 Studs</button>
                     </div>
@@ -293,8 +623,10 @@
                 <!-- Meeting 2 -->
                 <div class="inh-panel" id="inh-rinconada-m2">
                     <div class="inh-subtabs">
-                        <button class="inh-subtab active" onclick="inhSelectCat('rinconada-m2','jin',this)">🏇 Jinetes</button>
-                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m2','ent',this)">🎩 Entrenadores</button>
+                        <button class="inh-subtab active" onclick="inhSelectCat('rinconada-m2','jin',this)">🏇
+                            Jinetes</button>
+                        <button class="inh-subtab" onclick="inhSelectCat('rinconada-m2','ent',this)">🎩
+                            Entrenadores</button>
                         <button class="inh-subtab" onclick="inhSelectCat('rinconada-m2','har',this)">🌿 Haras</button>
                         <button class="inh-subtab" onclick="inhSelectCat('rinconada-m2','stu',this)">🏆 Studs</button>
                     </div>
@@ -310,7 +642,8 @@
             <!-- VALENCIA -->
             <div class="inh-panel" id="inh-valencia">
                 <div class="inh-subtabs">
-                    <button class="inh-subtab active" onclick="inhSelectCat('valencia-t1','jin',this)">🏇 Jinetes</button>
+                    <button class="inh-subtab active" onclick="inhSelectCat('valencia-t1','jin',this)">🏇
+                        Jinetes</button>
                     <button class="inh-subtab" onclick="inhSelectCat('valencia-t1','ent',this)">🎩 Entrenadores</button>
                     <button class="inh-subtab" onclick="inhSelectCat('valencia-t1','har',this)">🌿 Haras</button>
                     <button class="inh-subtab" onclick="inhSelectCat('valencia-t1','stu',this)">🏆 Studs</button>
@@ -324,7 +657,8 @@
             </div>
 
             <div class="inh-source">
-                📊 Fuente: <a href="https://apuestas.inh.gob.ve/estadisticas" target="_blank" rel="noopener">Instituto Nacional de Hipódromos</a>
+                📊 Fuente: <a href="https://apuestas.inh.gob.ve/estadisticas" target="_blank" rel="noopener">Instituto
+                    Nacional de Hipódromos</a>
                 · @OficialINH · @HinavaOficial · Temporada 2026
             </div>
         </div>
@@ -336,7 +670,8 @@
     <section class="belmont-section" id="belmont">
         <div class="container">
             <h2 class="section-title">🇺🇸 <span class="gold">BELMONT PARK</span> — Noticias</h2>
-            <p class="section-sub">Resultados y noticias del hipódromo más histórico de EE.UU. · Actualizado automáticamente</p>
+            <p class="section-sub">Resultados y noticias del hipódromo más histórico de EE.UU. · Actualizado
+                automáticamente</p>
 
             <div class="belmont-header-row">
                 <div class="belmont-badge">🏇 NYRA · Nueva York</div>
@@ -412,7 +747,8 @@
                     <div class="infografia-label">Bombas del Día</div>
                 </div>
             </div>
-            <h2 class="section-title" style="margin-top:40px">🎨 <span class="gold">INFOGRAFÍAS</span> — LA RINCONADA 21/JUN</h2>
+            <h2 class="section-title" style="margin-top:40px">🎨 <span class="gold">INFOGRAFÍAS</span> — LA RINCONADA
+                21/JUN</h2>
             <p class="section-sub">Análisis visual generado por IA — La Rinconada</p>
             <div class="infografia-grid">
                 <div class="infografia-card">
@@ -425,7 +761,8 @@
                 <div class="infografia-card">
                     <picture>
                         <source srcset="assets/rinconada_2.webp" type="image/webp">
-                        <img src="assets/rinconada_2.png" alt="Cuadro Perfecto 5Y6 Rinconada" loading="lazy" decoding="async">
+                        <img src="assets/rinconada_2.png" alt="Cuadro Perfecto 5Y6 Rinconada" loading="lazy"
+                            decoding="async">
                     </picture>
                     <div class="infografia-label">Cuadro Perfecto 5Y6</div>
                 </div>
@@ -445,8 +782,10 @@
             <div class="telegram-box">
                 <h3>📱 SÍGUENOS EN TELEGRAM</h3>
                 <p>Análisis en vivo, resultados y alertas de bombas</p>
-                <a href="https://t.me/LaRectaCaliente" target="_blank" rel="noopener" class="tg-btn">@LaRectaCaliente</a>
-                <a href="https://whatsapp.com/channel/0029Vb7FGL74IBhBg53SQ33J" target="_blank" rel="noopener" class="wa-btn">WhatsApp Channel</a>
+                <a href="https://t.me/LaRectaCaliente" target="_blank" rel="noopener"
+                    class="tg-btn">@LaRectaCaliente</a>
+                <a href="https://whatsapp.com/channel/0029Vb7FGL74IBhBg53SQ33J" target="_blank" rel="noopener"
+                    class="wa-btn">WhatsApp Channel</a>
             </div>
         </div>
     </section>
@@ -454,54 +793,56 @@
     <footer>
         <div class="container">
             <p class="footer-brand">🏇 <strong>Cuadro Perfecto</strong> — Sistema 3.3 "La Vencida"</p>
-            <p class="footer-disclaimer">⚠️ Juega responsablemente. Este análisis es orientativo, no garantía de resultados.</p>
-            <p class="footer-copy">© 2026 Cuadro Perfecto · <a href="https://t.me/LaRectaCaliente">@LaRectaCaliente</a> · 👁️ <span id="visitorCount">—</span> visitantes</p>
+            <p class="footer-disclaimer">⚠️ Juega responsablemente. Este análisis es orientativo, no garantía de
+                resultados.</p>
+            <p class="footer-copy">© 2026 Cuadro Perfecto · <a href="https://t.me/LaRectaCaliente">@LaRectaCaliente</a>
+                · 👁️ <span id="visitorCount">—</span> visitantes</p>
         </div>
     </footer>
 
     <script>
-    // Hero video slider - rotar cada 8 segundos
-    (function() {
-        const videos = document.querySelectorAll('.hero-video');
-        if (videos.length < 2) return;
-        let current = 0;
-        setInterval(() => {
-            videos[current].classList.remove('active');
-            current = (current + 1) % videos.length;
-            videos[current].classList.add('active');
-            videos[current].play();
-        }, 8000);
-    })();
+        // Hero video slider - rotar cada 8 segundos
+        (function () {
+            const videos = document.querySelectorAll('.hero-video');
+            if (videos.length < 2) return;
+            let current = 0;
+            setInterval(() => {
+                videos[current].classList.remove('active');
+                current = (current + 1) % videos.length;
+                videos[current].classList.add('active');
+                videos[current].play();
+            }, 8000);
+        })();
     </script>
     <script>
-    // ──────────────────────────────────────────────
-    // Belmont Park — Cargador de noticias RSS
-    // ──────────────────────────────────────────────
-    (function loadBelmontNews() {
-        const grid = document.getElementById('belmontGrid');
-        const updateEl = document.getElementById('belmontUpdateTime');
-        const RSS_URL = encodeURIComponent('https://news.google.com/rss/search?q=Belmont+Park+horse+racing+results&hl=en-US&gl=US&ceid=US:en');
-        const API = `https://api.rss2json.com/v1/api.json?rss_url=${RSS_URL}&count=4`;
+        // ──────────────────────────────────────────────
+        // Belmont Park — Cargador de noticias RSS
+        // ──────────────────────────────────────────────
+        (function loadBelmontNews() {
+            const grid = document.getElementById('belmontGrid');
+            const updateEl = document.getElementById('belmontUpdateTime');
+            const RSS_URL = encodeURIComponent('https://news.google.com/rss/search?q=Belmont+Park+horse+racing+results&hl=en-US&gl=US&ceid=US:en');
+            const API = `https://api.rss2json.com/v1/api.json?rss_url=${RSS_URL}&count=4`;
 
-        function timeAgo(dateStr) {
-            const diff = Date.now() - new Date(dateStr).getTime();
-            const h = Math.floor(diff / 3600000);
-            if (h < 1) return 'hace menos de 1h';
-            if (h < 24) return `hace ${h}h`;
-            return `hace ${Math.floor(h/24)}d`;
-        }
-
-        function renderCards(items) {
-            if (!items || items.length === 0) {
-                grid.innerHTML = '<p style="color:#6b7280;grid-column:1/-1;text-align:center">Sin noticias disponibles. <a href="https://www.nyra.com/belmont" target="_blank" style="color:#60a5fa">Ver NYRA.com</a></p>';
-                return;
+            function timeAgo(dateStr) {
+                const diff = Date.now() - new Date(dateStr).getTime();
+                const h = Math.floor(diff / 3600000);
+                if (h < 1) return 'hace menos de 1h';
+                if (h < 24) return `hace ${h}h`;
+                return `hace ${Math.floor(h / 24)}d`;
             }
-            grid.innerHTML = items.slice(0, 4).map(item => {
-                const title = item.title.replace(/\s*-\s*[^-]+$/, ''); // Quitar fuente del título
-                const source = item.author || 'Google News';
-                const ago = timeAgo(item.pubDate);
-                const link = item.link;
-                return `
+
+            function renderCards(items) {
+                if (!items || items.length === 0) {
+                    grid.innerHTML = '<p style="color:#6b7280;grid-column:1/-1;text-align:center">Sin noticias disponibles. <a href="https://www.nyra.com/belmont" target="_blank" style="color:#60a5fa">Ver NYRA.com</a></p>';
+                    return;
+                }
+                grid.innerHTML = items.slice(0, 4).map(item => {
+                    const title = item.title.replace(/\s*-\s*[^-]+$/, ''); // Quitar fuente del título
+                    const source = item.author || 'Google News';
+                    const ago = timeAgo(item.pubDate);
+                    const link = item.link;
+                    return `
                 <div class="belmont-card">
                     <div class="belmont-card-flag">🇺🇸🏇</div>
                     <p class="belmont-card-title">${title}</p>
@@ -511,24 +852,24 @@
                     </div>
                     <a class="belmont-card-link" href="${link}" target="_blank" rel="noopener">Ver noticia →</a>
                 </div>`;
-            }).join('');
-        }
+                }).join('');
+            }
 
-        function fetchNews() {
-            fetch(API)
-                .then(r => r.json())
-                .then(data => {
-                    if (data.status === 'ok') {
-                        renderCards(data.items);
-                        const now = new Date().toLocaleTimeString('es-VE', { hour: '2-digit', minute: '2-digit' });
-                        updateEl.textContent = `Actualizado a las ${now}`;
-                    } else {
-                        throw new Error('API error');
-                    }
-                })
-                .catch(() => {
-                    // Fallback con cards de ejemplo
-                    grid.innerHTML = `
+            function fetchNews() {
+                fetch(API)
+                    .then(r => r.json())
+                    .then(data => {
+                        if (data.status === 'ok') {
+                            renderCards(data.items);
+                            const now = new Date().toLocaleTimeString('es-VE', { hour: '2-digit', minute: '2-digit' });
+                            updateEl.textContent = `Actualizado a las ${now}`;
+                        } else {
+                            throw new Error('API error');
+                        }
+                    })
+                    .catch(() => {
+                        // Fallback con cards de ejemplo
+                        grid.innerHTML = `
                     <div class="belmont-card">
                         <div class="belmont-card-flag">🇺🇸🏇</div>
                         <p class="belmont-card-title">Belmont Park — Programa completo de carreras</p>
@@ -541,116 +882,117 @@
                         <div class="belmont-card-meta"><span class="belmont-card-source">@LaRectaCaliente</span></div>
                         <a class="belmont-card-link" href="https://t.me/LaRectaCaliente" target="_blank" rel="noopener">Ver en Telegram →</a>
                     </div>`;
-                    updateEl.textContent = 'Modo offline';
-                });
-        }
+                        updateEl.textContent = 'Modo offline';
+                    });
+            }
 
-        fetchNews();
-        // Auto-refrescar cada 30 minutos
-        setInterval(fetchNews, 30 * 60 * 1000);
-    })();
+            fetchNews();
+            // Auto-refrescar cada 30 minutos
+            setInterval(fetchNews, 30 * 60 * 1000);
+        })();
     </script>
     <script src="js/main.js"></script>
     <script>
-    // ──────────────────────────────────────────────
-    // Rankings INH — Cargador de estadísticas
-    // ──────────────────────────────────────────────
-    (function loadINHStats() {
-        const medalPos = (pos) => {
-            if (pos === 1) return 'gold';   // 🥇
-            if (pos === 2) return 'silver'; // 🥈
-            if (pos === 3) return 'bronze'; // 🥉
-            return '';
-        };
-        const medalEmoji = (pos) => {
-            if (pos === 1) return '🥇';
-            if (pos === 2) return '🥈';
-            if (pos === 3) return '🥉';
-            return pos;
-        };
+        // ──────────────────────────────────────────────
+        // Rankings INH — Cargador de estadísticas
+        // ──────────────────────────────────────────────
+        (function loadINHStats() {
+            const medalPos = (pos) => {
+                if (pos === 1) return 'gold';   // 🥇
+                if (pos === 2) return 'silver'; // 🥈
+                if (pos === 3) return 'bronze'; // 🥉
+                return '';
+            };
+            const medalEmoji = (pos) => {
+                if (pos === 1) return '🥇';
+                if (pos === 2) return '🥈';
+                if (pos === 3) return '🥉';
+                return pos;
+            };
 
-        function renderTable(containerId, data, maxVic) {
-            const el = document.getElementById(containerId);
-            if (!el || !data) return;
-            el.innerHTML = `<table class="inh-ranking-table">
+            function renderTable(containerId, data, maxVic) {
+                const el = document.getElementById(containerId);
+                if (!el || !data) return;
+                el.innerHTML = `<table class="inh-ranking-table">
                 <thead><tr>
                     <th style="width:44px">#</th>
                     <th>Nombre</th>
                     <th style="width:160px">Victorias</th>
                 </tr></thead>
                 <tbody>
-                ${ data.map(d => `
+                ${data.map(d => `
                     <tr>
                         <td class="inh-pos ${medalPos(d.pos)}">${medalEmoji(d.pos)}</td>
                         <td class="inh-name">${d.nombre}</td>
                         <td>
                             <div class="inh-bar-wrap">
-                                <div class="inh-bar" style="width:${Math.round((d.victorias/maxVic)*120)}px"></div>
+                                <div class="inh-bar" style="width:${Math.round((d.victorias / maxVic) * 120)}px"></div>
                                 <span class="inh-vic">${d.victorias}</span>
                             </div>
                         </td>
                     </tr>`).join('')}
                 </tbody>
             </table>`;
-        }
+            }
 
-        function maxVic(arr) { return arr[0] ? arr[0].victorias : 1; }
+            function maxVic(arr) { return arr[0] ? arr[0].victorias : 1; }
 
-        fetch('data/estadisticas_inh.json')
-            .then(r => r.json())
-            .then(data => {
-                // Rinconada Meeting 1
-                const m1 = data.rinconada.meetings[0];
-                renderTable('inh-rinconada-m1-jin', m1.jinetes,    maxVic(m1.jinetes));
-                renderTable('inh-rinconada-m1-ent', m1.entrenadores, maxVic(m1.entrenadores));
-                renderTable('inh-rinconada-m1-har', m1.haras,      maxVic(m1.haras));
-                renderTable('inh-rinconada-m1-stu', m1.studs,      maxVic(m1.studs));
-                // Rinconada Meeting 2
-                const m2 = data.rinconada.meetings[1];
-                renderTable('inh-rinconada-m2-jin', m2.jinetes,    maxVic(m2.jinetes));
-                renderTable('inh-rinconada-m2-ent', m2.entrenadores, maxVic(m2.entrenadores));
-                renderTable('inh-rinconada-m2-har', m2.haras,      maxVic(m2.haras));
-                renderTable('inh-rinconada-m2-stu', m2.studs,      maxVic(m2.studs));
-                // Valencia
-                const v1 = data.valencia.meetings[0];
-                renderTable('inh-valencia-t1-jin', v1.jinetes,    maxVic(v1.jinetes));
-                renderTable('inh-valencia-t1-ent', v1.entrenadores, maxVic(v1.entrenadores));
-                renderTable('inh-valencia-t1-har', v1.haras,      maxVic(v1.haras));
-                renderTable('inh-valencia-t1-stu', v1.studs,      maxVic(v1.studs));
-            })
-            .catch(e => console.warn('INH stats error:', e));
+            fetch('data/estadisticas_inh.json')
+                .then(r => r.json())
+                .then(data => {
+                    // Rinconada Meeting 1
+                    const m1 = data.rinconada.meetings[0];
+                    renderTable('inh-rinconada-m1-jin', m1.jinetes, maxVic(m1.jinetes));
+                    renderTable('inh-rinconada-m1-ent', m1.entrenadores, maxVic(m1.entrenadores));
+                    renderTable('inh-rinconada-m1-har', m1.haras, maxVic(m1.haras));
+                    renderTable('inh-rinconada-m1-stu', m1.studs, maxVic(m1.studs));
+                    // Rinconada Meeting 2
+                    const m2 = data.rinconada.meetings[1];
+                    renderTable('inh-rinconada-m2-jin', m2.jinetes, maxVic(m2.jinetes));
+                    renderTable('inh-rinconada-m2-ent', m2.entrenadores, maxVic(m2.entrenadores));
+                    renderTable('inh-rinconada-m2-har', m2.haras, maxVic(m2.haras));
+                    renderTable('inh-rinconada-m2-stu', m2.studs, maxVic(m2.studs));
+                    // Valencia
+                    const v1 = data.valencia.meetings[0];
+                    renderTable('inh-valencia-t1-jin', v1.jinetes, maxVic(v1.jinetes));
+                    renderTable('inh-valencia-t1-ent', v1.entrenadores, maxVic(v1.entrenadores));
+                    renderTable('inh-valencia-t1-har', v1.haras, maxVic(v1.haras));
+                    renderTable('inh-valencia-t1-stu', v1.studs, maxVic(v1.studs));
+                })
+                .catch(e => console.warn('INH stats error:', e));
 
-        // Tab switching — Hipódromo
-        window.inhSelectHipo = function(hipo, btn) {
-            document.querySelectorAll('.inh-section > .container > .inh-tabs > .inh-tab').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            document.querySelectorAll('[id^="inh-rinconada"]:not([id*="m"]), [id^="inh-valencia"]:not([id*="t"])').forEach(p => p.classList.remove('active'));
-            // Show top-level panels
-            const allTop = document.querySelectorAll('.inh-section .inh-panel');
-            allTop.forEach(p => {
-                if (p.id === 'inh-' + hipo) p.classList.add('active');
-                else if (p.id === 'inh-rinconada' || p.id === 'inh-valencia') p.classList.remove('active');
-            });
-        };
-        // Tab switching — Meeting
-        window.inhSelectMeeting = function(hipo, meeting, btn) {
-            const parent = btn.closest('.inh-panel');
-            parent.querySelectorAll(':scope > .inh-tabs > .inh-tab').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            parent.querySelectorAll(':scope > .inh-panel').forEach(p => p.classList.remove('active'));
-            const target = document.getElementById('inh-' + hipo + '-' + meeting);
-            if (target) target.classList.add('active');
-        };
-        // Tab switching — Categoria
-        window.inhSelectCat = function(panel, cat, btn) {
-            const parent = btn.closest('.inh-panel');
-            parent.querySelectorAll('.inh-subtab').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            parent.querySelectorAll('.inh-category-panel').forEach(p => p.classList.remove('active'));
-            const target = document.getElementById('inh-' + panel + '-' + cat);
-            if (target) target.classList.add('active');
-        };
-    })();
+            // Tab switching — Hipódromo
+            window.inhSelectHipo = function (hipo, btn) {
+                document.querySelectorAll('.inh-section > .container > .inh-tabs > .inh-tab').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.querySelectorAll('[id^="inh-rinconada"]:not([id*="m"]), [id^="inh-valencia"]:not([id*="t"])').forEach(p => p.classList.remove('active'));
+                // Show top-level panels
+                const allTop = document.querySelectorAll('.inh-section .inh-panel');
+                allTop.forEach(p => {
+                    if (p.id === 'inh-' + hipo) p.classList.add('active');
+                    else if (p.id === 'inh-rinconada' || p.id === 'inh-valencia') p.classList.remove('active');
+                });
+            };
+            // Tab switching — Meeting
+            window.inhSelectMeeting = function (hipo, meeting, btn) {
+                const parent = btn.closest('.inh-panel');
+                parent.querySelectorAll(':scope > .inh-tabs > .inh-tab').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                parent.querySelectorAll(':scope > .inh-panel').forEach(p => p.classList.remove('active'));
+                const target = document.getElementById('inh-' + hipo + '-' + meeting);
+                if (target) target.classList.add('active');
+            };
+            // Tab switching — Categoria
+            window.inhSelectCat = function (panel, cat, btn) {
+                const parent = btn.closest('.inh-panel');
+                parent.querySelectorAll('.inh-subtab').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                parent.querySelectorAll('.inh-category-panel').forEach(p => p.classList.remove('active'));
+                const target = document.getElementById('inh-' + panel + '-' + cat);
+                if (target) target.classList.add('active');
+            };
+        })();
     </script>
 </body>
+
 </html>
