@@ -1369,5 +1369,780 @@
         "ganador": "#1 HATSHEPSUT"
       }
     ]
+  },
+  {
+    "id": "valencia-18-07-2026",
+    "hipodromo": "Valencia",
+    "fecha": "18 de Julio 2026",
+    "slug": "valencia-18jul",
+    "condiciones": "optimas",
+    "trabajos": "completos",
+    "expectativa": "60-70%",
+    "efectividad_con_trabajos": "67%",
+    "efectividad_sin_trabajos": "9.1%",
+    "pdf_free_url": "assets/pdf/valencia-18jul_free.pdf",
+    "pdf_vip_url": "assets/pdf/valencia-18jul_vip.pdf",
+    "lineas_fijas": [
+      {
+        "numero": "C1",
+        "hora": "1:05pm",
+        "distancia": "1200m",
+        "categoria": "Handicap Libre - Hembras",
+        "bomb_tag": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 4,
+            "nombre": "LA BATALLADORA",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 6,
+            "nombre": "EXPLOSIVA",
+            "pts": 12.5,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 3,
+            "nombre": "DEEP LOVE",
+            "pts": 9.5,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Briceño jockey top de la reunión, viene de 2° consecutivos, trabajos muy cómoda repetidos"
+      },
+      {
+        "numero": "C2",
+        "hora": "1:30pm",
+        "distancia": "1200m",
+        "categoria": "Handicap Libre - Hembras",
+        "bomb_tag": "LÍNEA FIJA",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 1,
+            "nombre": "BELLA ANTONELLA",
+            "pts": 14.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 7,
+            "nombre": "LEGIONARIA",
+            "pts": 12.5,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 6,
+            "nombre": "ENIGMA",
+            "pts": 9.5,
+            "icono": "💰"
+          }
+        ],
+        "clave": "3 victorias en sus últimas 6 salidas, trabajos livianos y cómodos todo el ciclo — línea fija fuerte"
+      },
+      {
+        "numero": "C3",
+        "hora": "1:55pm",
+        "distancia": "1400m",
+        "categoria": "Handicap Libre - Machos",
+        "bomb_tag": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 3,
+            "nombre": "MOSCABADO",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 5,
+            "nombre": "EL GRAN BRICELIO",
+            "pts": 10.5,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 8,
+            "nombre": "COMBINATION",
+            "pts": 9.5,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Ganó 21-jun, trabajos consistentes en el aire (síntoma de forma alta)"
+      }
+    ],
+    "validas": [
+      {
+        "v": "V1",
+        "carrera": "C4",
+        "distancia": "1300m",
+        "hora": "2:50pm",
+        "color": "v1",
+        "top": {
+          "nombre": "NORTH MUSIC",
+          "dorsal": 5,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "CASSIUSCLAY",
+          "dorsal": 4,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": false
+      },
+      {
+        "v": "V2",
+        "carrera": "C5",
+        "distancia": "1300m",
+        "hora": "3:15pm",
+        "color": "v2",
+        "top": {
+          "nombre": "NÉSTOR JULIÁN",
+          "dorsal": 8,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "ROBERTO ERRE",
+          "dorsal": 9,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": false
+      },
+      {
+        "v": "V3",
+        "carrera": "C6",
+        "distancia": "1300m",
+        "hora": "3:40pm",
+        "color": "v3",
+        "top": {
+          "nombre": "SKYDIVE",
+          "dorsal": 7,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "COMPADRE TOBY",
+          "dorsal": 6,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": true
+      },
+      {
+        "v": "V4",
+        "carrera": "C7",
+        "distancia": "1100m",
+        "hora": "4:05pm",
+        "color": "v4",
+        "top": {
+          "nombre": "FRIDA",
+          "dorsal": 4,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "NICE TIME",
+          "dorsal": 1,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": false
+      },
+      {
+        "v": "V5",
+        "carrera": "C8",
+        "distancia": "1200m",
+        "hora": "4:30pm",
+        "color": "v5",
+        "top": {
+          "nombre": "SÚPER MATHIAS",
+          "dorsal": 6,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "KING BULBS",
+          "dorsal": 5,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "copa": true,
+        "featured": true
+      },
+      {
+        "v": "V6",
+        "carrera": "C9",
+        "distancia": "1100m",
+        "hora": "4:55pm",
+        "color": "v6",
+        "top": {
+          "nombre": "TAPITAL",
+          "dorsal": 10,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "THE ORPHAN",
+          "dorsal": 13,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": false
+      }
+    ],
+    "jugada_oficial": "6/4 - 8/3 - 7/6 - 4/1 - 6/5 - 10/13",
+    "jugada_combos": [
+      "5",
+      "8",
+      "7",
+      "4",
+      "6",
+      "10"
+    ],
+    "jugada_info": "Cobertura moderada — 64 combinaciones. 2das: 4-9-6-1-5-13",
+    "bombas": [
+      {
+        "rank": 1,
+        "nombre": "BELLA ANTONELLA",
+        "dorsal": 1,
+        "carrera": "C2",
+        "hora": "1:30pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 2,
+        "nombre": "SKYDIVE",
+        "dorsal": 7,
+        "carrera": "C6",
+        "hora": "3:40pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 3,
+        "nombre": "SÚPER MATHIAS",
+        "dorsal": 6,
+        "carrera": "C8",
+        "hora": "4:30pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      }
+    ],
+    "stats": {
+      "carreras": 9,
+      "bombas": 3,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": "9.1%"
+    }
+  },
+  {
+    "id": "rinconada-19-07-2026",
+    "hipodromo": "La Rinconada",
+    "fecha": "19 de Julio 2026",
+    "slug": "rinconada-19jul",
+    "condiciones": "medias",
+    "trabajos": "parciales (fuente Al Galope con parte ilegible)",
+    "expectativa": "moderada",
+    "efectividad_con_trabajos": "69%",
+    "efectividad_sin_trabajos": "-",
+    "pdf_free_url": "assets/pdf/rinconada-19jul_free.pdf",
+    "pdf_vip_url": "assets/pdf/rinconada-19jul_vip.pdf",
+    "lineas_fijas": [
+      {
+        "numero": "C1",
+        "hora": "1:00pm",
+        "distancia": "1300m",
+        "categoria": "Reclamo caballos nac./import. 7+ años",
+        "bomb_tag": "LÍNEA FIJA",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 9,
+            "nombre": "MAD MAX",
+            "pts": 14.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 2,
+            "nombre": "MACUTO",
+            "pts": 10,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 8,
+            "nombre": "EL TRUENO",
+            "pts": 9,
+            "icono": "💰"
+          }
+        ],
+        "clave": "30 votos consenso, coincide 100% con pick oficial Al Galope"
+      },
+      {
+        "numero": "C2",
+        "hora": "1:25pm",
+        "distancia": "1200m",
+        "categoria": "Reclamo 6+ años",
+        "bomb_tag": "LÍNEA FIJA",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 1,
+            "nombre": "REGAL HOLIDAY",
+            "pts": 14.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 2,
+            "nombre": "ZARACEÑO",
+            "pts": 10,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 4,
+            "nombre": "GRAN HACEDION",
+            "pts": 9,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Convergencia total consenso/pick oficial, 30 votos"
+      },
+      {
+        "numero": "C3",
+        "hora": "1:50pm",
+        "distancia": "1200m",
+        "categoria": "Reclamo yeguas 6+ años",
+        "bomb_tag": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 4,
+            "nombre": "BOILED MILK",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 8,
+            "nombre": "QUEEN VISION",
+            "pts": 12,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 9,
+            "nombre": "MOSTAZA",
+            "pts": 9,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Carrera pareja, 27 vs 26 votos, diferencia mínima"
+      },
+      {
+        "numero": "C4",
+        "hora": "2:15pm",
+        "distancia": "1400m",
+        "categoria": "4 años debutantes/no ganadores",
+        "bomb_tag": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 4,
+            "nombre": "PAPA STEFANO",
+            "pts": 10.5,
+            "icono": ""
+          },
+          {
+            "pos": 2,
+            "dorsal": 7,
+            "nombre": "CHARLIE",
+            "pts": 9,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 6,
+            "nombre": "STRAIKER",
+            "pts": 8,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Debutantes = mayor incertidumbre estructural del sistema"
+      },
+      {
+        "numero": "C5",
+        "hora": "2:40pm",
+        "distancia": "1800m",
+        "categoria": "Clásico G1 — Prensa Hípica Nacional (Hembras)",
+        "bomb_tag": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 1,
+            "nombre": "MORA LINDA",
+            "pts": 12.5,
+            "icono": "⚠️"
+          },
+          {
+            "pos": 2,
+            "dorsal": 3,
+            "nombre": "MADAME KARINA",
+            "pts": 11,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 4,
+            "nombre": "ARANTZA VICTORIA",
+            "pts": 9,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Clásico Grado I: penalización v3.4 por imprevisibilidad, baja un nivel pese a consenso fuerte"
+      },
+      {
+        "numero": "C6",
+        "hora": "3:05pm",
+        "distancia": "1100m",
+        "categoria": "3 años debutantes/no ganadores",
+        "bomb_tag": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 3,
+            "nombre": "ALMENDARES",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 6,
+            "nombre": "CIRO",
+            "pts": 10.5,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 8,
+            "nombre": "WADI AL KOUF (USA)",
+            "pts": 11.5,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Batacazo Wadi Al Kouf: trabajo Fenómeno y SHN, el mejor código posible del sistema"
+      },
+      {
+        "numero": "C7",
+        "hora": "3:30pm",
+        "distancia": "3200m",
+        "categoria": "Clásico G1 — Fuerza Armada Nacional Bolivariana",
+        "bomb_tag": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 5,
+            "nombre": "TUSCAN GOLD (USA)",
+            "pts": 12.5,
+            "icono": "⚠️"
+          },
+          {
+            "pos": 2,
+            "dorsal": 8,
+            "nombre": "SILK EYES (ARG)",
+            "pts": 11,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 2,
+            "nombre": "ASTUTO",
+            "pts": 9,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Clásico G1 + distancia extrema (3200m resistencia): penalización v3.4"
+      },
+      {
+        "numero": "C8",
+        "hora": "3:55pm",
+        "distancia": "1300m",
+        "categoria": "Reclamo yeguas 7+ años",
+        "bomb_tag": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 7,
+            "nombre": "WAYA WAYA",
+            "pts": 10.5,
+            "icono": ""
+          },
+          {
+            "pos": 2,
+            "dorsal": 2,
+            "nombre": "NAMEKUN",
+            "pts": 9.5,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 9,
+            "nombre": "VICTORIA DE ORO",
+            "pts": 8.5,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Voto muy repartido (25-18-17-16), carrera pareja, poco margen de error"
+      },
+      {
+        "numero": "C9",
+        "hora": "4:20pm",
+        "distancia": "1400m",
+        "categoria": "5 años ganadores 2-3 carreras",
+        "bomb_tag": "LÍNEA FIJA",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 9,
+            "nombre": "SAN BENITO (USA)",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 10,
+            "nombre": "LEMON WHITE",
+            "pts": 9.5,
+            "icono": ""
+          },
+          {
+            "pos": 3,
+            "dorsal": 7,
+            "nombre": "THE FIELDHER JR",
+            "pts": 8,
+            "icono": "💰"
+          }
+        ],
+        "clave": "Líder cómodo sobre el resto, 26 votos vs 17"
+      }
+    ],
+    "validas": [
+      {
+        "v": "V1",
+        "carrera": "C10",
+        "distancia": "1100m",
+        "hora": "4:45pm",
+        "color": "v1",
+        "top": {
+          "nombre": "CARORA'S DREAM (USA)",
+          "dorsal": 2,
+          "pts": 12.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "GRAND GALA (USA)",
+          "dorsal": 5,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": true
+      },
+      {
+        "v": "V2",
+        "carrera": "C11",
+        "distancia": "1100m",
+        "hora": "5:10pm",
+        "color": "v2",
+        "top": {
+          "nombre": "CATIROTE",
+          "dorsal": 1,
+          "pts": 12.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "WHITE COMMANDER (USA)",
+          "dorsal": 10,
+          "pts": 9.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": false
+      },
+      {
+        "v": "V3",
+        "carrera": "C12",
+        "distancia": "1400m",
+        "hora": "5:35pm",
+        "color": "v3",
+        "top": {
+          "nombre": "BULMA",
+          "dorsal": 9,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "MUSCLE MAIDEN (USA)",
+          "dorsal": 3,
+          "pts": 9.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": false
+      },
+      {
+        "v": "V4",
+        "carrera": "C13",
+        "distancia": "1400m",
+        "hora": "6:00pm",
+        "color": "v4",
+        "top": {
+          "nombre": "COACH SESSA (USA)",
+          "dorsal": 2,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "FIDANZATA",
+          "dorsal": 3,
+          "pts": 9,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": false
+      },
+      {
+        "v": "V5",
+        "carrera": "C14",
+        "distancia": "1100m",
+        "hora": "6:25pm",
+        "color": "v5",
+        "top": {
+          "nombre": "THE NOTORIOU",
+          "dorsal": 9,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "GERMAN CHAMPION",
+          "dorsal": 10,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": false
+      },
+      {
+        "v": "V6",
+        "carrera": "C15",
+        "distancia": "1100m",
+        "hora": "6:50pm",
+        "color": "v6",
+        "top": {
+          "nombre": "CHOSEN FACTOR (USA)",
+          "dorsal": 11,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "BELLEZZE",
+          "dorsal": 6,
+          "pts": 9.5,
+          "bomba": false
+        },
+        "copa": false,
+        "featured": false
+      }
+    ],
+    "jugada_oficial": "2/5 - 1/10 - 9/3 - 2/3 - 9/10 - 11/6",
+    "jugada_combos": [
+      "2-5",
+      "1-10",
+      "9-3",
+      "2-3",
+      "9-10",
+      "11-6"
+    ],
+    "jugada_info": "Cobertura moderada — 64 combinaciones. Cuadro amplio con 3 batacazos: 216 combinaciones",
+    "bombas": [
+      {
+        "rank": 1,
+        "nombre": "MAD MAX",
+        "dorsal": 9,
+        "carrera": "C1",
+        "hora": "1:00pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 2,
+        "nombre": "REGAL HOLIDAY",
+        "dorsal": 1,
+        "carrera": "C2",
+        "hora": "1:25pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 3,
+        "nombre": "ALMENDARES",
+        "dorsal": 3,
+        "carrera": "C6",
+        "hora": "3:05pm",
+        "pts": 12.5,
+        "nivel": "normal"
+      },
+      {
+        "rank": 4,
+        "nombre": "SAN BENITO (USA)",
+        "dorsal": 9,
+        "carrera": "C9",
+        "hora": "4:20pm",
+        "pts": 12.5,
+        "nivel": "normal"
+      },
+      {
+        "rank": 5,
+        "nombre": "CARORA'S DREAM (USA)",
+        "dorsal": 2,
+        "carrera": "V1/C10",
+        "hora": "4:45pm",
+        "pts": 12.5,
+        "nivel": "normal"
+      },
+      {
+        "rank": 6,
+        "nombre": "CATIROTE",
+        "dorsal": 1,
+        "carrera": "V2/C11",
+        "hora": "5:10pm",
+        "pts": 12.5,
+        "nivel": "normal"
+      }
+    ],
+    "stats": {
+      "carreras": 15,
+      "bombas": 6,
+      "efectividad_con_trabajos": "69%",
+      "efectividad_sin_trabajos": "-"
+    }
   }
 ]
