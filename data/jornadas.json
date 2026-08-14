@@ -2144,5 +2144,648 @@
       "efectividad_con_trabajos": "69%",
       "efectividad_sin_trabajos": "-"
     }
+  },
+  {
+    "id": "valencia-15-08-2026",
+    "hipodromo": "Valencia",
+    "fecha": "15 de Agosto 2026",
+    "slug": "valencia-15ago",
+    "condiciones": "optimas",
+    "trabajos": "completos",
+    "expectativa": "alta",
+    "efectividad_con_trabajos": "67%",
+    "efectividad_sin_trabajos": "-",
+    "lineas_fijas": [
+      {
+        "numero": "C1",
+        "hora": "1:30pm",
+        "distancia": "1400m",
+        "categoria": "Handicap Libre, Gan. 4 y 5 carreras",
+        "bomb_tag": "LÍNEA FIJA",
+        "clave": "Ganó su última (SR 91) tras un 3° con SR 91 idéntico. Peso más alto del lote.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 6,
+            "nombre": "COMPADRE TOBY",
+            "pts": 18.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 4,
+            "nombre": "UNSTOPPABLE",
+            "pts": 16.0,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C2",
+        "hora": "1:55pm",
+        "distancia": "1200m",
+        "categoria": "Handicap Libre, Gan. 1 carrera, excl. jinetes Valencia",
+        "bomb_tag": null,
+        "clave": "3° y 2° en sus últimas 2, muy consistente. Coincide con el 36% del público.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 3,
+            "nombre": "CLOVER TIME",
+            "pts": 11.0,
+            "icono": "🔥"
+          }
+        ]
+      },
+      {
+        "numero": "C3",
+        "hora": "2:20pm",
+        "distancia": "1400m",
+        "categoria": "Copa Tintoreto, Handicap a Criterio",
+        "bomb_tag": "LÍNEA FIJA",
+        "clave": "Ganó sus dos últimas venciendo al mismo rival, SR 98 y 94 — nivel élite.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 4,
+            "nombre": "MASTTERY",
+            "pts": 19.0,
+            "icono": "💣"
+          }
+        ]
+      }
+    ],
+    "validas": [
+      {
+        "v": "V1",
+        "carrera": "C4",
+        "distancia": "1200m",
+        "hora": "2:55pm",
+        "color": "v1",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "LA SUPREMA",
+          "dorsal": 8,
+          "pts": 13.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "BALBI MOON",
+          "dorsal": 2,
+          "pts": 9.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V2",
+        "carrera": "C5",
+        "distancia": "1200m",
+        "hora": "3:20pm",
+        "color": "v2",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "DIVERGENTE",
+          "dorsal": 2,
+          "pts": 12.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "GRAN CANELO",
+          "dorsal": 4,
+          "pts": 10.0,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V3",
+        "carrera": "C6",
+        "distancia": "1400m",
+        "hora": "3:45pm",
+        "color": "v3",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "FLECHA MONTON",
+          "dorsal": 3,
+          "pts": 9.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "LA DE NINO",
+          "dorsal": 7,
+          "pts": 9.0,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V4",
+        "carrera": "C7",
+        "distancia": "1400m",
+        "hora": "4:10pm",
+        "color": "v4",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "MARRAKECH",
+          "dorsal": 2,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "VOLADORA",
+          "dorsal": 1,
+          "pts": 9.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V5",
+        "carrera": "C8",
+        "distancia": "1400m",
+        "hora": "4:35pm",
+        "color": "v5",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "RODDRICK",
+          "dorsal": 6,
+          "pts": 12.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "WORK TIME",
+          "dorsal": 3,
+          "pts": 7.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V6",
+        "carrera": "C9",
+        "distancia": "1200m",
+        "hora": "5:00pm",
+        "color": "v6",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "CORREDORA CE",
+          "dorsal": 2,
+          "pts": 18.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "BELLA ANTONELLA",
+          "dorsal": 7,
+          "pts": 10.0,
+          "bomba": false
+        }
+      }
+    ],
+    "jugada_oficial": "8/2 - 2/4 - 3/7 - 2/1 - 6/3 - 2/7",
+    "jugada_combos": [
+      "8-2",
+      "2-4",
+      "3-7",
+      "2-1",
+      "6-3",
+      "2-7"
+    ],
+    "jugada_info": "Cobertura moderada — 64 combinaciones",
+    "bombas": [
+      {
+        "rank": 1,
+        "nombre": "CORREDORA CE",
+        "dorsal": 2,
+        "carrera": "C9",
+        "hora": "5:00pm",
+        "pts": 18.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 2,
+        "nombre": "MASTTERY",
+        "dorsal": 4,
+        "carrera": "C3",
+        "hora": "2:20pm",
+        "pts": 19.0,
+        "nivel": "mega"
+      },
+      {
+        "rank": 3,
+        "nombre": "COMPADRE TOBY",
+        "dorsal": 6,
+        "carrera": "C1",
+        "hora": "1:30pm",
+        "pts": 18.5,
+        "nivel": "mega"
+      }
+    ],
+    "stats": {
+      "carreras": 9,
+      "bombas": 3,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": "-"
+    }
+  },
+  {
+    "id": "rinconada-16-08-2026",
+    "hipodromo": "La Rinconada",
+    "fecha": "16 de Agosto 2026",
+    "slug": "rinconada-16ago",
+    "condiciones": "optimas",
+    "trabajos": "completos",
+    "expectativa": "alta",
+    "efectividad_con_trabajos": "67%",
+    "efectividad_sin_trabajos": "17%",
+    "lineas_fijas": [
+      {
+        "numero": "C1",
+        "hora": "1:00pm",
+        "distancia": "1100m",
+        "categoria": "Cab. Nac./Imp. 4 años, debutantes o no ganadores",
+        "bomb_tag": "LÍNEA FIJA",
+        "clave": "Coincidencia total de las 3 fuentes: mejor puntaje, mejor velocidad y pick #1 Al Galope.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 7,
+            "nombre": "MAGNUM",
+            "pts": 14.2,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 6,
+            "nombre": "THUNDER WHITE",
+            "pts": 11.5,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C2",
+        "hora": "1:25pm",
+        "distancia": "1100m",
+        "categoria": "Yeguas Nac./Imp. 4 años, debutantes o no ganadoras",
+        "bomb_tag": null,
+        "clave": "1ª en puntuación Matemático, 2do pick de Al Galope.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 2,
+            "nombre": "MUSCLE MAIDEN (USA)",
+            "pts": 12.8,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "BULMA",
+            "pts": 11.0,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C3",
+        "hora": "1:50pm",
+        "distancia": "1300m",
+        "categoria": "Reclamo H3, ganadores hasta 3 carreras",
+        "bomb_tag": null,
+        "clave": "Mejor velocidad de la carrera, pick #1 Al Galope.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 10,
+            "nombre": "BROTHER WILL",
+            "pts": 13.3,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "PRINCE OF SUCCESS",
+            "pts": 12.5,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C4",
+        "hora": "2:15pm",
+        "distancia": "1300m",
+        "categoria": "Cab. Nac./Imp. 5 años, ganadores 1 o 2 carreras",
+        "bomb_tag": "LÍNEA FIJA",
+        "clave": "1° en puntuación (el más alto de la carrera), pick #1 Al Galope.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 7,
+            "nombre": "CANCILLER",
+            "pts": 14.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 9,
+            "nombre": "THE FIELDHER JR",
+            "pts": 12.5,
+            "icono": "⚠️"
+          }
+        ]
+      },
+      {
+        "numero": "C5",
+        "hora": "2:40pm",
+        "distancia": "1300m",
+        "categoria": "Yeguas Nac./Imp. 5 años, ganadoras 1 o 2 carreras",
+        "bomb_tag": "LÍNEA FIJA",
+        "clave": "1° en puntos y velocidad, pick #1 Al Galope. Difícil de contener en su avance final.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 8,
+            "nombre": "ROSE SENSATIONS",
+            "pts": 14.0,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 5,
+            "nombre": "STAR PLUS",
+            "pts": 11.5,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C6",
+        "hora": "3:05pm",
+        "distancia": "1100m",
+        "categoria": "Yeguas Nac./Imp. 3 y 4 años, ganadoras 1 carrera",
+        "bomb_tag": null,
+        "clave": "Carrera DIVIDIDA: Matemático favorece a Celestia, Al Galope marca a Bellsonhershoes 'DEBE GANAR'.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 5,
+            "nombre": "CELESTIA",
+            "pts": 12.5,
+            "icono": "⚠️"
+          },
+          {
+            "pos": 2,
+            "dorsal": 7,
+            "nombre": "BELLSONHERSHOES (USA)",
+            "pts": 12.0,
+            "icono": "⚠️"
+          }
+        ]
+      },
+      {
+        "numero": "C7",
+        "hora": "3:30pm",
+        "distancia": "2000m",
+        "categoria": "LXXI Clásico República Bolivariana de Venezuela (GI)",
+        "bomb_tag": "LÍNEA FIJA",
+        "clave": "1° en puntuación de toda la jornada en no válidas, peleará toda la carrera.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 2,
+            "nombre": "BIG VALDI",
+            "pts": 14.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 6,
+            "nombre": "PONTEVECCHIO",
+            "pts": 12.5,
+            "icono": ""
+          }
+        ]
+      }
+    ],
+    "validas": [
+      {
+        "v": "V1",
+        "carrera": "C8",
+        "distancia": "1100m",
+        "hora": "4:05pm",
+        "color": "v1",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "AVILA (USA)",
+          "dorsal": 7,
+          "pts": 14.0,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "SPRING CLEAN",
+          "dorsal": 2,
+          "pts": 11.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V2",
+        "carrera": "C9",
+        "distancia": "1400m",
+        "hora": "4:35pm",
+        "color": "v2",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "INVENCIBLE",
+          "dorsal": 6,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "TIME REPORT",
+          "dorsal": 4,
+          "pts": 13.0,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V3",
+        "carrera": "C10",
+        "distancia": "1300m",
+        "hora": "5:05pm",
+        "color": "v3",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "TODA UNA RUBIA",
+          "dorsal": 1,
+          "pts": 15.0,
+          "bomba": "mega"
+        },
+        "alt": {
+          "nombre": "MITOLOGIA",
+          "dorsal": 3,
+          "pts": 11.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V4",
+        "carrera": "C11",
+        "distancia": "1100m",
+        "hora": "5:35pm",
+        "color": "v4",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "MISTER WILL",
+          "dorsal": 3,
+          "pts": 14.0,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "NIÑO DEL CIELO",
+          "dorsal": 1,
+          "pts": 12.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V5",
+        "carrera": "C12",
+        "distancia": "1400m",
+        "hora": "6:05pm",
+        "color": "v5",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "GYPSY QUEEN",
+          "dorsal": 7,
+          "pts": 13.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "ASLAUG",
+          "dorsal": 6,
+          "pts": 11.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V6",
+        "carrera": "C13",
+        "distancia": "1400m",
+        "hora": "6:35pm",
+        "color": "v6",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "SR GATO PARDO",
+          "dorsal": 13,
+          "pts": 13.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "CHARLIE",
+          "dorsal": 9,
+          "pts": 12.5,
+          "bomba": false
+        }
+      }
+    ],
+    "jugada_oficial": "7/2 - 6/4 - 1/3 - 3/1 - 7/6 - 13/9",
+    "jugada_combos": [
+      "7-2",
+      "6-4",
+      "1-3",
+      "3-1",
+      "7-6",
+      "13-9"
+    ],
+    "jugada_info": "Cobertura moderada — 64 combinaciones. Conservadora (solo bombas): 7-6-1-3-7-13",
+    "bombas": [
+      {
+        "rank": 1,
+        "nombre": "TODA UNA RUBIA",
+        "dorsal": 1,
+        "carrera": "V3/C10",
+        "hora": "5:05pm",
+        "pts": 15.0,
+        "nivel": "mega"
+      },
+      {
+        "rank": 2,
+        "nombre": "CANCILLER",
+        "dorsal": 7,
+        "carrera": "C4",
+        "hora": "2:15pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 3,
+        "nombre": "INVENCIBLE",
+        "dorsal": 6,
+        "carrera": "V2/C9",
+        "hora": "4:35pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 4,
+        "nombre": "BIG VALDI",
+        "dorsal": 2,
+        "carrera": "C7 (GI)",
+        "hora": "3:30pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 5,
+        "nombre": "MAGNUM",
+        "dorsal": 7,
+        "carrera": "C1",
+        "hora": "1:00pm",
+        "pts": 14.2,
+        "nivel": "normal"
+      },
+      {
+        "rank": 6,
+        "nombre": "ROSE SENSATIONS",
+        "dorsal": 8,
+        "carrera": "C5",
+        "hora": "2:40pm",
+        "pts": 14.0,
+        "nivel": "normal"
+      },
+      {
+        "rank": 7,
+        "nombre": "AVILA (USA)",
+        "dorsal": 7,
+        "carrera": "V1/C8",
+        "hora": "4:05pm",
+        "pts": 14.0,
+        "nivel": "normal"
+      },
+      {
+        "rank": 8,
+        "nombre": "MISTER WILL",
+        "dorsal": 3,
+        "carrera": "V4/C11",
+        "hora": "5:35pm",
+        "pts": 14.0,
+        "nivel": "normal"
+      }
+    ],
+    "stats": {
+      "carreras": 13,
+      "bombas": 8,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": "17%"
+    }
   }
 ]
