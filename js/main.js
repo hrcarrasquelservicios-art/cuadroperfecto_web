@@ -98,8 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
         html += `<a href="/valencia" class="hipo-tab" onclick="event.preventDefault();history.pushState(null,'','/valencia');showPage('/valencia')">🏇 Valencia</a>`;
         html += `<a href="/rinconada" class="hipo-tab" onclick="event.preventDefault();history.pushState(null,'','/rinconada');showPage('/rinconada')">🐎 La Rinconada</a>`;
         html += '</div>';
-        if (ultimaV) html += renderJornadaCompleta(ultimaV, jornadasData.indexOf(ultimaV));
-        if (ultimaR) html += renderJornadaCompleta(ultimaR, jornadasData.indexOf(ultimaR));
+        // Orden por fecha real, no por hipodromo fijo -- jornadasData esta en
+        // orden cronologico ascendente, asi que el indice mas alto es el mas
+        // reciente de verdad (antes Valencia iba siempre primero aunque su
+        // ultimo analisis fuera mas viejo que el de La Rinconada).
+        const ultimas = [ultimaV, ultimaR].filter(Boolean)
+            .sort((a, b) => jornadasData.indexOf(b) - jornadasData.indexOf(a));
+        ultimas.forEach(j => { html += renderJornadaCompleta(j, jornadasData.indexOf(j)); });
         return html;
     }
 
