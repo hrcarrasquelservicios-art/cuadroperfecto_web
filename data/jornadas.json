@@ -2787,5 +2787,378 @@
       "efectividad_con_trabajos": "67%",
       "efectividad_sin_trabajos": "17%"
     }
+  },
+  {
+    "id": "rinconada-23-08-2026",
+    "hipodromo": "La Rinconada",
+    "fecha": "23 de Agosto 2026",
+    "slug": "rinconada-23ago",
+    "reunion": "Reunión N° 33",
+    "condiciones": "optimas",
+    "trabajos": "completos",
+    "expectativa": "55-70%",
+    "efectividad_con_trabajos": "67%",
+    "efectividad_sin_trabajos": "17%",
+    "lineas_fijas": [
+      {
+        "numero": "C1",
+        "hora": "1:00pm",
+        "distancia": "1200m",
+        "categoria": "Handicap Libre, Cab. 5+ años, debutantes o no ganadores",
+        "bomb_tag": null,
+        "clave": "Trabajo con breeze \"muy cómodo\" (20-feb), trainer con patrón consistente de galopes.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 1,
+            "nombre": "SEVEN TIME",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 2,
+            "nombre": "MIDNIGHT CHAMPION",
+            "pts": 11.0,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C2",
+        "hora": "1:25pm",
+        "distancia": "1400m",
+        "categoria": "Handicap Libre, Yeguas 4+ años, ganadoras 2-3 carreras",
+        "bomb_tag": "LÍNEA FIJA",
+        "clave": "Pick editorial \"Abran Fuego\" de Revista Digital + sus dos últimas carreras ganadas.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 6,
+            "nombre": "DANCE TO REMEMBER (USA)",
+            "pts": 14.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 7,
+            "nombre": "SARASARITA",
+            "pts": 12.0,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C3",
+        "hora": "1:50pm",
+        "distancia": "1400m",
+        "categoria": "Handicap Libre, Yeguas 3 años, debutantes o no ganadoras",
+        "bomb_tag": null,
+        "clave": "Trabajo \"animado al final y muy bien\" en su ejercicio más reciente.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 3,
+            "nombre": "EMMAWATSON",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "MY THREE LOVES (USA)",
+            "pts": 11.5,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C4",
+        "hora": "2:15pm",
+        "distancia": "1200m",
+        "categoria": "Handicap Libre, Cab. 3-4 años, ganadores 1 carrera",
+        "bomb_tag": "LÍNEA FIJA",
+        "clave": "Pick editorial \"Lo Más Fijo No Válidas\" de Revista Digital — máxima confianza del día en esta franja.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 3,
+            "nombre": "PHARAOH'S DYNASTY (USA)",
+            "pts": 14.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 4,
+            "nombre": "SEÑOR THANOS",
+            "pts": 11.5,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C5",
+        "hora": "2:40pm",
+        "distancia": "1200m",
+        "categoria": "Handicap Libre, Yeguas 5+ años, debutantes o no ganadoras",
+        "bomb_tag": null,
+        "clave": "⚠️ Canela #6 retirada (claudicación), Wyoming Girl #4 sin trabajos registrados. Varios trabajos recientes consistentes, trainer activo.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 8,
+            "nombre": "NICOLE",
+            "pts": 12.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "VALERIA TIME",
+            "pts": 11.5,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C6",
+        "hora": "3:05pm",
+        "distancia": "1100m",
+        "categoria": "Handicap Libre, Cab. 7+ años, ganadores 5+ carreras",
+        "bomb_tag": null,
+        "clave": "Victoria reciente confirmada, dorsal bajo, trainer consistente (V&V).",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 3,
+            "nombre": "COLOSSUS",
+            "pts": 13.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "BRAVUCÓN",
+            "pts": 12.5,
+            "icono": ""
+          }
+        ]
+      },
+      {
+        "numero": "C7",
+        "hora": "3:30pm",
+        "distancia": "1600m",
+        "categoria": "Handicap Libre, Cab. 3+ años, ganadores 1-2 carreras",
+        "bomb_tag": null,
+        "clave": "⚠️ El Gran Tucán #6 retirado (cólico). Trabajos con comentarios de \"fenómeno\"/\"extraordinario\" en jornadas previas, consistente.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 8,
+            "nombre": "VINICIUS JR.",
+            "pts": 13.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 3,
+            "nombre": "KING JULIEN",
+            "pts": 12.0,
+            "icono": ""
+          }
+        ]
+      }
+    ],
+    "validas": [
+      {
+        "v": "V1",
+        "carrera": "C8",
+        "distancia": "1100m",
+        "hora": "4:05pm",
+        "color": "v1",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "SEÑORA ISABEL",
+          "dorsal": 1,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "DAMA DE FUEGO",
+          "dorsal": 6,
+          "pts": 11.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V2",
+        "carrera": "C9",
+        "distancia": "1100m",
+        "hora": "4:35pm",
+        "color": "v2",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "MAJESTIC SHOT",
+          "dorsal": 3,
+          "pts": 13.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "UNIVERSAL JOY (USA)",
+          "dorsal": 6,
+          "pts": 12.0,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V3",
+        "carrera": "C10",
+        "distancia": "1400m",
+        "hora": "5:05pm",
+        "color": "v3",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "ARCANO",
+          "dorsal": 1,
+          "pts": 13.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "TÍO HORACIO",
+          "dorsal": 4,
+          "pts": 12.0,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V4",
+        "carrera": "C11",
+        "distancia": "1100m",
+        "hora": "5:35pm",
+        "color": "v4",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "GRAN MANUEL (USA)",
+          "dorsal": 8,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "GRAN TORRENTE",
+          "dorsal": 5,
+          "pts": 12.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V5",
+        "carrera": "C12",
+        "distancia": "1100m",
+        "hora": "6:05pm",
+        "color": "v5",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "QUIRIQUIREÑO",
+          "dorsal": 9,
+          "pts": 14.0,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "REY DEL CASTILLO",
+          "dorsal": 3,
+          "pts": 11.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V6",
+        "carrera": "C13",
+        "distancia": "1400m",
+        "hora": "6:35pm",
+        "color": "v6",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "MR. BÁRBARO",
+          "dorsal": 3,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "EL GRAN JHOSUE",
+          "dorsal": 4,
+          "pts": 11.5,
+          "bomba": false
+        }
+      }
+    ],
+    "jugada_oficial": "1/6 - 3/6 - 1/4 - 8/5 - 9/3 - 3/4/2",
+    "jugada_combos": [
+      "1-6",
+      "3-6",
+      "1-4",
+      "8-5",
+      "9-3",
+      "3-4-2"
+    ],
+    "jugada_info": "Cobertura moderada -- 96 combinaciones (V6 ampliada a 3 caballos por regla v3.4: se suma WADI AL KOUF (USA) #2, baja de categoría tras terminar 4° la semana pasada en una válida más exigente). Conservadora (solo bombas): 1-6-1-8-9-3 (V2 y V3 sin bomba clara esta semana, se usa la 1ª opción).",
+    "bombas": [
+      {
+        "rank": 1,
+        "nombre": "DANCE TO REMEMBER (USA)",
+        "dorsal": 6,
+        "carrera": "C2",
+        "hora": "1:25pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 2,
+        "nombre": "PHARAOH'S DYNASTY (USA)",
+        "dorsal": 3,
+        "carrera": "C4",
+        "hora": "2:15pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 3,
+        "nombre": "SEÑORA ISABEL",
+        "dorsal": 1,
+        "carrera": "V1/C8",
+        "hora": "4:05pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 4,
+        "nombre": "GRAN MANUEL (USA)",
+        "dorsal": 8,
+        "carrera": "V4/C11",
+        "hora": "5:35pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 5,
+        "nombre": "QUIRIQUIREÑO",
+        "dorsal": 9,
+        "carrera": "V5/C12",
+        "hora": "6:05pm",
+        "pts": 14.0,
+        "nivel": "normal"
+      }
+    ],
+    "stats": {
+      "carreras": 13,
+      "bombas": 5,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": "17%"
+    }
   }
 ]
