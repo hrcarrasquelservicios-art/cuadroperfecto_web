@@ -89,6 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function parseFechaJornada(fecha) {
+        // "29 de Agosto 2026" -> Date real, para comparar por fecha de carrera,
+        // no por orden de publicacion en el array.
+        const meses = {
+            enero: 0, febrero: 1, marzo: 2, abril: 3, mayo: 4, junio: 5,
+            julio: 6, agosto: 7, septiembre: 8, octubre: 9, noviembre: 10, diciembre: 11
+        };
+        const m = fecha.match(/(\d{1,2}) de (\w+) (\d{4})/i);
+        if (!m) return new Date(0);
+        const mes = meses[m[2].toLowerCase()];
+        return new Date(parseInt(m[3], 10), mes !== undefined ? mes : 0, parseInt(m[1], 10));
+    }
+
     function renderHome() {
         const valencia = jornadasData.filter(j => j.hipodromo === 'Valencia');
         const rinconada = jornadasData.filter(j => j.hipodromo === 'La Rinconada');
@@ -98,12 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
         html += `<a href="/valencia" class="hipo-tab" onclick="event.preventDefault();history.pushState(null,'','/valencia');showPage('/valencia')">🏇 Valencia</a>`;
         html += `<a href="/rinconada" class="hipo-tab" onclick="event.preventDefault();history.pushState(null,'','/rinconada');showPage('/rinconada')">🐎 La Rinconada</a>`;
         html += '</div>';
-        // Orden por fecha real, no por hipodromo fijo -- jornadasData esta en
-        // orden cronologico ascendente, asi que el indice mas alto es el mas
-        // reciente de verdad (antes Valencia iba siempre primero aunque su
-        // ultimo analisis fuera mas viejo que el de La Rinconada).
+        // Orden por fecha de carrera real (ascendente) -- el que corre primero
+        // en el calendario va primero, sin importar el orden de publicacion
+        // (antes usaba el indice del array, lo que ponia la jornada publicada
+        // mas tarde arriba aunque corriera despues -- ej. Rinconada domingo
+        // arriba de Valencia sabado del mismo fin de semana).
         const ultimas = [ultimaV, ultimaR].filter(Boolean)
-            .sort((a, b) => jornadasData.indexOf(b) - jornadasData.indexOf(a));
+            .sort((a, b) => parseFechaJornada(a.fecha) - parseFechaJornada(b.fecha));
         ultimas.forEach(j => { html += renderJornadaCompleta(j, jornadasData.indexOf(j)); });
         return html;
     }
