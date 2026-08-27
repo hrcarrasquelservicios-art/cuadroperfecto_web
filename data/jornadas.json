@@ -3169,9 +3169,9 @@
     "reunion": "Reunión N° 21",
     "condiciones": "optimas",
     "trabajos": "completos",
-    "expectativa": "67% exactos / 100% top 3 (histórico con trabajos completos)",
+    "expectativa": "67% exactos / 100% top 3 (histórico Sistema 3.3 en Valencia, con trabajos completos)",
     "efectividad_con_trabajos": "67%",
-    "efectividad_sin_trabajos": "N/D",
+    "efectividad_sin_trabajos": null,
     "lineas_fijas": [
       {
         "numero": "C1",
@@ -3179,7 +3179,7 @@
         "distancia": "1200m",
         "categoria": "Yeguas 3+ años, ganadoras de 3 carreras",
         "bomb_tag": "BOMBA",
-        "clave": "Trabajo top 10% de su lote, ganó a esta distancia en Valencia (27% de triunfos).",
+        "clave": "Trabajo top 10% de su lote (\"extraordinaria y trono al final\"). Ganó 2 de sus últimas 4 salidas, incl. a esta distancia en Valencia. Actividad 27% de triunfos.",
         "top3": [
           {
             "pos": 1,
@@ -3187,6 +3187,13 @@
             "nombre": "ENIGMA",
             "pts": 14.5,
             "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 4,
+            "nombre": "ANOTHER LEGACY",
+            "pts": 12.5,
+            "icono": "🔥"
           }
         ]
       },
@@ -3196,14 +3203,21 @@
         "distancia": "1100m",
         "categoria": "Caballos 7+ años, ganadores de 3 carreras",
         "bomb_tag": null,
-        "clave": "Trabajo top 25% — luciendo muy bien y parejo al final.",
+        "clave": "Trabajo top 25% (\"luciendo muy bien y parejito al final\"), descanso 35 días.",
         "top3": [
           {
             "pos": 1,
             "dorsal": 7,
             "nombre": "EL DE PEDRO",
-            "pts": "N/D",
+            "pts": 12.5,
             "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 3,
+            "nombre": "MI GUERRERO",
+            "pts": 10.5,
+            "icono": "✅"
           }
         ]
       },
@@ -3211,9 +3225,9 @@
         "numero": "C3",
         "hora": "2:20pm",
         "distancia": "1800m",
-        "categoria": "Clásico Ciudad de Valencia",
+        "categoria": "Clásico Ciudad de Valencia, Yeguas 3+ años",
         "bomb_tag": "BOMBA",
-        "clave": "Mejor % de triunfo de la jornada (37%). Venció directamente a Lady Rossy en su último cruce.",
+        "clave": "Mejor tasa de triunfo de la jornada (37%, 11 en 30 carreras). Venció directamente a Lady Rossy en su cruce más reciente (8 ago).",
         "top3": [
           {
             "pos": 1,
@@ -3221,6 +3235,13 @@
             "nombre": "STELLA CADENTE",
             "pts": 14.5,
             "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "LADY ROSSY",
+            "pts": 12.5,
+            "icono": "🔥"
           }
         ]
       }
@@ -3237,13 +3258,13 @@
         "top": {
           "nombre": "COPACABANA",
           "dorsal": 5,
-          "pts": "N/D",
+          "pts": 12.5,
           "bomba": false
         },
         "alt": {
           "nombre": "LUZ DEL VALLE",
           "dorsal": 9,
-          "pts": "N/D",
+          "pts": 10.5,
           "bomba": false
         }
       },
@@ -3258,13 +3279,13 @@
         "top": {
           "nombre": "CASSIUSCLAY",
           "dorsal": 3,
-          "pts": "N/D",
+          "pts": 12.5,
           "bomba": false
         },
         "alt": {
           "nombre": "NORTH MUSIC",
           "dorsal": 7,
-          "pts": "N/D",
+          "pts": 12.5,
           "bomba": false
         }
       },
@@ -3279,13 +3300,13 @@
         "top": {
           "nombre": "EL HACHA",
           "dorsal": 2,
-          "pts": "N/D",
+          "pts": 12.5,
           "bomba": false
         },
         "alt": {
           "nombre": "TAPITAL",
           "dorsal": 3,
-          "pts": "N/D",
+          "pts": 10.5,
           "bomba": false
         }
       },
@@ -3300,13 +3321,13 @@
         "top": {
           "nombre": "DIVERGENTE",
           "dorsal": 6,
-          "pts": 14.0,
+          "pts": 14.5,
           "bomba": true
         },
         "alt": {
           "nombre": "MY TOWERING MATE",
           "dorsal": 5,
-          "pts": "N/D",
+          "pts": 12.5,
           "bomba": false
         }
       },
@@ -3321,13 +3342,13 @@
         "top": {
           "nombre": "SKULL TROOPER",
           "dorsal": 2,
-          "pts": "N/D",
+          "pts": 12.5,
           "bomba": false
         },
         "alt": {
           "nombre": "MY TRUSTING MATE",
           "dorsal": 6,
-          "pts": "N/D",
+          "pts": 10.5,
           "bomba": false
         }
       },
@@ -3348,7 +3369,7 @@
         "alt": {
           "nombre": "FOLKLORE",
           "dorsal": 3,
-          "pts": "N/D",
+          "pts": 10.5,
           "bomba": false
         }
       }
@@ -3362,28 +3383,10 @@
       "2-6",
       "2-3"
     ],
-    "jugada_info": "Cobertura moderada -- 64 combinaciones. Cobertura ampliada (486 combinaciones, opcional): V1 +1 Kindness, V2 +1 Caribbean Gold, V3 +4 Asturiano (divergencia real entre fuentes), V4 sin cambio, V5 +7 Susurro, V6 +7 Stockton.",
+    "jugada_info": "Cobertura moderada -- 64 combinaciones. Cobertura ampliada (486 combinaciones, opcional): V1 +1 Kindness, V2 +1 Caribbean Gold, V3 +4 Asturiano (retiro histórico, solo cobertura amplia), V4 sin cambio (favorito claro), V5 +7 Susurro, V6 +7 Stockton.",
     "bombas": [
       {
         "rank": 1,
-        "nombre": "RALFCRISTOPHER",
-        "dorsal": 2,
-        "carrera": "V6/C9",
-        "hora": "5:00pm",
-        "pts": 14.5,
-        "nivel": "mega"
-      },
-      {
-        "rank": 2,
-        "nombre": "STELLA CADENTE",
-        "dorsal": 3,
-        "carrera": "C3",
-        "hora": "2:20pm",
-        "pts": 14.5,
-        "nivel": "mega"
-      },
-      {
-        "rank": 3,
         "nombre": "ENIGMA",
         "dorsal": 1,
         "carrera": "C1",
@@ -3392,20 +3395,38 @@
         "nivel": "mega"
       },
       {
-        "rank": 4,
+        "rank": 1,
+        "nombre": "STELLA CADENTE",
+        "dorsal": 3,
+        "carrera": "C3",
+        "hora": "2:20pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 1,
         "nombre": "DIVERGENTE",
         "dorsal": 6,
         "carrera": "V4/C7",
         "hora": "4:10pm",
-        "pts": 14.0,
-        "nivel": "normal"
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 1,
+        "nombre": "RALFCRISTOPHER",
+        "dorsal": 2,
+        "carrera": "V6/C9",
+        "hora": "5:00pm",
+        "pts": 14.5,
+        "nivel": "mega"
       }
     ],
     "stats": {
       "carreras": 9,
       "bombas": 4,
       "efectividad_con_trabajos": "67%",
-      "efectividad_sin_trabajos": "N/D"
+      "efectividad_sin_trabajos": null
     }
   },
   {
@@ -3417,22 +3438,29 @@
     "condiciones": "optimas",
     "trabajos": "completos",
     "expectativa": "Puntaje propio verificado caballo por caballo + 4 fuentes cruzadas (Sistema 3.3 v3.6)",
-    "efectividad_con_trabajos": "N/D",
-    "efectividad_sin_trabajos": "N/D",
+    "efectividad_con_trabajos": null,
+    "efectividad_sin_trabajos": null,
     "lineas_fijas": [
       {
         "numero": "C1",
         "hora": "1:00pm",
         "distancia": "1200m",
-        "categoria": "Reclamo Yeguas 4-5 años",
+        "categoria": "Reclamo Yeguas 4-5 años, debutantes o no ganadoras",
         "bomb_tag": null,
-        "clave": "Trabajo consistente, sin marcador de bomba esta jornada.",
+        "clave": "Top pick de MisMarcas (35%), 2° en puntos de Al Galope. \"Tercera marca\", mejorando posición a posición.",
         "top3": [
           {
             "pos": 1,
             "dorsal": 6,
             "nombre": "ASLAUG",
             "pts": 13.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 5,
+            "nombre": "MONEGASCA",
+            "pts": 12.5,
             "icono": "🔥"
           }
         ]
@@ -3441,9 +3469,9 @@
         "numero": "C2",
         "hora": "1:25pm",
         "distancia": "1300m",
-        "categoria": "Reclamo Yeguas 7+ años",
+        "categoria": "Reclamo Yeguas 7+ años, ganadoras hasta 3 carreras",
         "bomb_tag": "BOMBA",
-        "clave": "Triple convergencia entre fuentes + pick editorial \"Abran Fuego\" de Revista Digital.",
+        "clave": "Triple convergencia: 1ª por puntos en Al Galope, 1ª por % en MisMarcas, y \"Abran Fuego\" de Revista Digital -- patrón ya validado 2/2 semanas.",
         "top3": [
           {
             "pos": 1,
@@ -3451,6 +3479,13 @@
             "nombre": "LA DAMA",
             "pts": 15.5,
             "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 4,
+            "nombre": "PAULA DEL CARMEN",
+            "pts": 12.0,
+            "icono": "🔥"
           }
         ]
       },
@@ -3458,15 +3493,22 @@
         "numero": "C3",
         "hora": "1:50pm",
         "distancia": "1200m",
-        "categoria": "Handicap Libre 6+ años",
+        "categoria": "Handicap Libre, Caballos 6+ años, ganadores 3-4 carreras",
         "bomb_tag": null,
-        "clave": "3 victorias en sus últimas 4-5 salidas.",
+        "clave": "3 victorias en sus últimas 4-5 salidas. 1° en puntos de Al Galope.",
         "top3": [
           {
             "pos": 1,
             "dorsal": 1,
             "nombre": "EL PEQUEÑO JOSE",
             "pts": 14.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 5,
+            "nombre": "DON THIAGO",
+            "pts": 12.5,
             "icono": "🔥"
           }
         ]
@@ -3475,16 +3517,23 @@
         "numero": "C4",
         "hora": "2:15pm",
         "distancia": "1100m",
-        "categoria": "Handicap Libre Yeguas 7+ años",
-        "bomb_tag": null,
-        "clave": "Trabajo consistente, sin marcador de bomba esta jornada.",
+        "categoria": "Handicap Libre, Yeguas 7+ años, ganadoras 5+ carreras",
+        "bomb_tag": "BOMBA",
+        "clave": "Convergencia total: 1ª por puntos en Al Galope Y 1ª por % en MisMarcas -- la carrera menos dividida del día.",
         "top3": [
           {
             "pos": 1,
             "dorsal": 4,
             "nombre": "YAQUI DESINGS",
             "pts": 14.0,
-            "icono": "🔥"
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 6,
+            "nombre": "LA SUPER KAT",
+            "pts": 11.5,
+            "icono": "✅"
           }
         ]
       },
@@ -3492,15 +3541,22 @@
         "numero": "C5",
         "hora": "2:40pm",
         "distancia": "1100m",
-        "categoria": "Handicap Libre 5+ años",
+        "categoria": "Handicap Libre, Caballos 5+ años, ganadores 3-4 carreras",
         "bomb_tag": null,
-        "clave": "Trabajo consistente, sin marcador de bomba esta jornada.",
+        "clave": "Top pick por puntos de Al Galope, ganó su última salida (26/07).",
         "top3": [
           {
             "pos": 1,
             "dorsal": 2,
             "nombre": "REY DE COPAS",
             "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 3,
+            "nombre": "INVADER",
+            "pts": 12.0,
             "icono": "🔥"
           }
         ]
@@ -3509,9 +3565,9 @@
         "numero": "C6",
         "hora": "3:05pm",
         "distancia": "1200m",
-        "categoria": "Handicap Libre Yeguas 6+ años",
+        "categoria": "Handicap Libre, Yeguas 6+ años, ganadoras 3-4 carreras",
         "bomb_tag": "BOMBA",
-        "clave": "Triple convergencia entre fuentes + pick editorial \"Debe Ganar\" de Al Galope.",
+        "clave": "Triple convergencia + \"DEBE GANAR\" de Al Galope, la etiqueta más fuerte de su formato.",
         "top3": [
           {
             "pos": 1,
@@ -3519,6 +3575,13 @@
             "nombre": "REINA AMADA",
             "pts": 15.0,
             "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 8,
+            "nombre": "MADAME WALKER",
+            "pts": 12.0,
+            "icono": "🔥"
           }
         ]
       }
@@ -3660,7 +3723,7 @@
       "2-4",
       "9-4-1-10"
     ],
-    "jugada_info": "Cobertura ampliada donde el puntaje quedó parejo o hay señal de riesgo por receso -- 192 combinaciones. Versión conservadora (solo mayor puntaje por válida, asumiendo un ganador en los empates de V1/V3): 4 / 8 / 9 / 3 / 2 / 9 (1 combinación). V1 ampliada con Violence And Peace (USA) #10 -- 18.0 pts. V6 ampliada con Princesa Susej #1 y Queen Of Dragons #10 (Clásico de campo abierto, 11 ejemplares).",
+    "jugada_info": "192 combinaciones -- V1 ampliada por puntaje real (los 3 dentro de 1.5 pts entre sí): +Violence And Peace (USA) #10, 18.0 pts. V6 ampliada (última válida, patrón de fallo 2 semanas seguidas + campo abierto de 11): +Princesa Susej #1 y Queen Of Dragons #10 (~9-10 pts cada una).",
     "bombas": [
       {
         "rank": 1,
@@ -3682,6 +3745,15 @@
       },
       {
         "rank": 3,
+        "nombre": "VIOLENCE AND PEACE (USA)",
+        "dorsal": 10,
+        "carrera": "V1/C7",
+        "hora": "3:40pm",
+        "pts": 18.0,
+        "nivel": "mega"
+      },
+      {
+        "rank": 4,
         "nombre": "ZARACEÑO",
         "dorsal": 8,
         "carrera": "V2/C8",
@@ -3690,7 +3762,7 @@
         "nivel": "mega"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "nombre": "CALGARY",
         "dorsal": 9,
         "carrera": "V3/C9",
@@ -3699,7 +3771,7 @@
         "nivel": "mega"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "nombre": "MAXIMUS FORTUNE",
         "dorsal": 4,
         "carrera": "V3/C9",
@@ -3708,7 +3780,7 @@
         "nivel": "mega"
       },
       {
-        "rank": 6,
+        "rank": 7,
         "nombre": "LA DAMA",
         "dorsal": 8,
         "carrera": "C2",
@@ -3717,7 +3789,7 @@
         "nivel": "mega"
       },
       {
-        "rank": 7,
+        "rank": 8,
         "nombre": "REINA AMADA",
         "dorsal": 5,
         "carrera": "C6",
@@ -3726,7 +3798,7 @@
         "nivel": "mega"
       },
       {
-        "rank": 8,
+        "rank": 9,
         "nombre": "EL PEQUEÑO JOSE",
         "dorsal": 1,
         "carrera": "C3",
@@ -3735,7 +3807,16 @@
         "nivel": "normal"
       },
       {
-        "rank": 9,
+        "rank": 10,
+        "nombre": "YAQUI DESINGS",
+        "dorsal": 4,
+        "carrera": "C4",
+        "hora": "2:15pm",
+        "pts": 14.0,
+        "nivel": "normal"
+      },
+      {
+        "rank": 10,
         "nombre": "RAPHAELLA",
         "dorsal": 9,
         "carrera": "V6/C12",
@@ -3746,9 +3827,9 @@
     ],
     "stats": {
       "carreras": 12,
-      "bombas": 9,
-      "efectividad_con_trabajos": "N/D",
-      "efectividad_sin_trabajos": "N/D"
+      "bombas": 11,
+      "efectividad_con_trabajos": null,
+      "efectividad_sin_trabajos": null
     }
   }
 ]

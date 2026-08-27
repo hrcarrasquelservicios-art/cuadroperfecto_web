@@ -341,18 +341,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderStats(j) {
         if (!j.stats) return '';
         const s = j.stats;
+        const conTrabajosCard = (s.efectividad_con_trabajos && s.efectividad_con_trabajos !== 'N/D') ? `
+                    <div class="stat-card big">
+                        <span class="stat-value gold">${s.efectividad_con_trabajos}</span>
+                        <span class="stat-label">Efectividad con trabajos</span>
+                    </div>` : '';
+        const sinTrabajosCard = (s.efectividad_sin_trabajos && s.efectividad_sin_trabajos !== 'N/D') ? `
+                    <div class="stat-card bad">
+                        <span class="stat-value">${s.efectividad_sin_trabajos}</span>
+                        <span class="stat-label">Sin trabajos</span>
+                    </div>` : '';
         return `
         <section class="stats-section">
             <div class="container">
                 <h2 class="section-title">📊 SISTEMA 3.3 — ESTADÍSTICAS</h2>
                 <div class="stats-grid">
-                    <div class="stat-card big">
-                        <span class="stat-value gold">${s.efectividad_con_trabajos}</span>
-                        <span class="stat-label">Efectividad con trabajos</span>
-                    </div>
-                    <div class="stat-card bad">
-                        <span class="stat-value">${s.efectividad_sin_trabajos}</span>
-                        <span class="stat-label">Sin trabajos</span>
+                    ${conTrabajosCard}
+                    ${sinTrabajosCard}
                     </div>
                     <div class="stat-card">
                         <span class="stat-value">${s.carreras}</span>
