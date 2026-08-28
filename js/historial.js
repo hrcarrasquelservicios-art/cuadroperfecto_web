@@ -33,8 +33,15 @@ async function cargarJornadas() {
         const pago = j.pago === null || j.pago === undefined
           ? '<span class="hist-pago pendiente">Pago pendiente de cargar</span>'
           : `<span class="hist-pago si">Pagó Bs ${escapeHtml(j.pago)}</span>`;
+        // Requisito legal del usuario (28 ago 2026): todo cuadro 5y6 publicado
+        // debe enlazar a la plataforma oficial del INH -- Zona Caliente Pro es
+        // analisis, no la casa de apuestas. Se habia documentado en
+        // REQUISITOS_LEGALES.md pero no se implemento en esta pagina hasta
+        // esta revision -- encontrado en auto-revision, no por el usuario.
         const jugada = j.jugada_texto
-          ? `<div class="hist-jugada">${escapeHtml(j.jugada_texto)} (${escapeHtml(j.combinaciones)} combinaciones)</div>`
+          ? `<div class="hist-jugada">${escapeHtml(j.jugada_texto)} (${escapeHtml(j.combinaciones)} combinaciones)
+              <a href="https://apuestas.inh.gob.ve/apuestas/5y6" target="_blank" rel="noopener" class="hist-inh-link">🎫 Sellar en el INH (oficial)</a>
+             </div>`
           : '';
         return `<div class="hist-card">
           <div class="hist-card-head">
