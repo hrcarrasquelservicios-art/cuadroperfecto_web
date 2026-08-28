@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://zona-caliente-worker.nfd-dynamics.workers.dev; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial &amp; Estadísticas — Sistema 3.3 "La Vencida"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="description"
+        content="Historial completo de jornadas, fichas de caballos y ranking de jinetes del Sistema 3.3 -- Zona Caliente Pro.">
+    <style>
+        .hist-section { padding: 110px 0 70px; }
+        .hist-title { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+        .hist-sub { color: var(--text-muted); margin-bottom: 36px; font-size: 0.95rem; }
+
+        .hist-tabs { display: flex; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
+        .hist-tab {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-muted); padding: 9px 20px; border-radius: 10px;
+            cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all .2s;
+        }
+        .hist-tab.active { background: linear-gradient(135deg, rgba(255,215,0,0.18), rgba(255,107,0,0.12)); border-color: rgba(255,215,0,0.4); color: var(--gold); }
+        .hist-panel { display: none; }
+        .hist-panel.active { display: block; }
+
+        .hist-card {
+            background: var(--card-bg); border: 1px solid var(--card-border);
+            border-radius: 14px; padding: 20px 22px; margin-bottom: 14px;
+        }
+        .hist-card-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+        .hist-card-head b { font-size: 1.05rem; }
+        .hist-tag { font-family: monospace; font-size: 0.78rem; color: var(--text-muted); }
+        .hist-jugada { margin-top: 10px; font-family: monospace; font-size: 0.9rem; color: var(--gold); word-break: break-word; }
+        .hist-pago { display: inline-block; margin-top: 8px; font-size: 0.8rem; padding: 3px 10px; border-radius: 20px; }
+        .hist-pago.si { background: rgba(76,175,80,0.15); color: #66bb6a; }
+        .hist-pago.pendiente { background: rgba(255,255,255,0.06); color: var(--text-muted); }
+
+        table.hist-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+        table.hist-table th { text-align: left; color: var(--text-muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: .04em; padding: 8px 10px; border-bottom: 1px solid var(--card-border); }
+        table.hist-table td { padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        table.hist-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+        .hist-empty { color: var(--text-muted); font-style: italic; padding: 30px 0; text-align: center; }
+        .hist-loading { color: var(--text-muted); padding: 20px 0; }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">🏇 CP<span class="gold">3.3</span></a>
+            <ul class="nav-menu">
+                <li><a href="/">Análisis</a></li>
+                <li><a href="historial.html" class="active">📜 Historial</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hist-section">
+        <div class="container">
+            <h1 class="hist-title">📜 Historial &amp; Estadísticas</h1>
+            <p class="hist-sub">Jornadas reales del Sistema 3.3 "La Vencida" — datos verificables, aciertos y fallos incluidos.</p>
+
+            <div class="hist-tabs">
+                <div class="hist-tab active" data-panel="jornadas">Jornadas</div>
+                <div class="hist-tab" data-panel="jinetes">Ranking de jinetes</div>
+                <div class="hist-tab" data-panel="stats">Efectividad del sistema</div>
+            </div>
+
+            <div class="hist-panel active" id="panel-jornadas">
+                <div class="hist-loading">Cargando jornadas reales…</div>
+            </div>
+
+            <div class="hist-panel" id="panel-jinetes">
+                <div class="hist-loading">Cargando ranking…</div>
+            </div>
+
+            <div class="hist-panel" id="panel-stats">
+                <div class="hist-loading">Cargando estadísticas…</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/historial.js"></script>
+</body>
+
+</html>
