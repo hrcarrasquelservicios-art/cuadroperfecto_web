@@ -4090,6 +4090,473 @@
       "bombas": 3,
       "efectividad_con_trabajos": "67%",
       "efectividad_sin_trabajos": null
-    }
+    },
+    "efectividad": "56%",
+    "ganadores": [
+      {
+        "carrera": "C1",
+        "ganador": "#2 INDIAN WELLS"
+      },
+      {
+        "carrera": "C2",
+        "ganador": "#1 THE ORPHAN"
+      },
+      {
+        "carrera": "C3",
+        "ganador": "#5 PETEROSE ✅ [TOP PICK — Exacta 1-2 con El Gran Bricelio]"
+      },
+      {
+        "carrera": "C4 V1",
+        "ganador": "#3 PROVENZA 💣 [BOMBA GANADORA]"
+      },
+      {
+        "carrera": "C5 V2",
+        "ganador": "#2 FORUM JET"
+      },
+      {
+        "carrera": "C6 V3",
+        "ganador": "#1 SABANA ✅ [Batacazo, debut]"
+      },
+      {
+        "carrera": "C7 V4",
+        "ganador": "#3 KING BULBS ✅ [Alternativa]"
+      },
+      {
+        "carrera": "C8 V5",
+        "ganador": "#7 QUEEN OF SOUTH ✅ [Batacazo]"
+      },
+      {
+        "carrera": "C9 V6",
+        "ganador": "#9 SRA FLORENCIA"
+      }
+    ]
+  },
+  {
+    "id": "rinconada-06-09-2026",
+    "hipodromo": "La Rinconada",
+    "fecha": "06 de Septiembre 2026",
+    "slug": "rinconada-06sep",
+    "condiciones": "optimas",
+    "trabajos": "completos",
+    "expectativa": "MEDIA-ALTA — Sistema 3.3 \"La Vencida\" v3.8: batacazos con respaldo fuerte ahora entran dentro del boleto oficial (regla nueva tras el post-mortem de Valencia 05/09); trabajos matinales completos.",
+    "efectividad_con_trabajos": "67%",
+    "efectividad_sin_trabajos": null,
+    "lineas_fijas": [
+      {
+        "numero": "C1",
+        "hora": "1:00pm",
+        "distancia": "1300m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 1,
+            "nombre": "GOLDEN BROS",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 8,
+            "nombre": "MY BLUE SKY",
+            "pts": 10.5,
+            "icono": "✅"
+          }
+        ]
+      },
+      {
+        "numero": "C2",
+        "hora": "1:25pm",
+        "distancia": "1200m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 8,
+            "nombre": "PAPA STEFANO",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 3,
+            "nombre": "MAGNUM",
+            "pts": 10.5,
+            "icono": "✅"
+          }
+        ]
+      },
+      {
+        "numero": "C3",
+        "hora": "1:50pm",
+        "distancia": "1400m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 6,
+            "nombre": "PITTALUGA",
+            "pts": 12.5,
+            "icono": "🔥"
+          }
+        ]
+      },
+      {
+        "numero": "C4",
+        "hora": "2:15pm",
+        "distancia": "1400m",
+        "categoria": null,
+        "bomb_tag": "BOMBA",
+        "clave": "Mayor diferencial de puntos de su carrera.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 6,
+            "nombre": "GOLDEN SWAP",
+            "pts": 14.5,
+            "icono": "💣"
+          }
+        ]
+      },
+      {
+        "numero": "C5",
+        "hora": "2:40pm",
+        "distancia": "1200m",
+        "categoria": null,
+        "bomb_tag": "BOMBA",
+        "clave": "Mayor diferencial de puntos de su carrera.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 5,
+            "nombre": "ANDREINA D",
+            "pts": 14.5,
+            "icono": "💣"
+          }
+        ]
+      },
+      {
+        "numero": "C6",
+        "hora": "3:05pm",
+        "distancia": "1800m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 2,
+            "nombre": "GUN BOLT",
+            "pts": 12.5,
+            "icono": "🔥"
+          }
+        ]
+      },
+      {
+        "numero": "C7",
+        "hora": "3:30pm",
+        "distancia": "1200m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 7,
+            "nombre": "PRINCE OF SUCCESS",
+            "pts": 12.5,
+            "icono": "🔥"
+          }
+        ]
+      },
+      {
+        "numero": "C8",
+        "hora": "4:05pm",
+        "distancia": "2000m",
+        "categoria": "Clásico G-I",
+        "bomb_tag": "BOMBA",
+        "clave": "\"Debe ganar\" — máxima confianza del día.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 5,
+            "nombre": "TUSCAN GOLD",
+            "pts": 14.5,
+            "icono": "💣"
+          }
+        ]
+      }
+    ],
+    "validas": [
+      {
+        "v": "V1",
+        "carrera": "C9",
+        "distancia": "1300m",
+        "hora": "4:40pm",
+        "color": "v1",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "K'S FREEDOM",
+          "dorsal": 9,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "MORE THAN GALILEO",
+          "dorsal": 8,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "warning": "Ampliada a 3 por batacazo con respaldo: King Fray #6 (debut)."
+      },
+      {
+        "v": "V2",
+        "carrera": "C10",
+        "distancia": "1200m",
+        "hora": "5:10pm",
+        "color": "v2",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "GRAND GALA",
+          "dorsal": 1,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "ZEPHINA",
+          "dorsal": 7,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "warning": "Ampliada a 3: + Sra Soraya #5."
+      },
+      {
+        "v": "V3",
+        "carrera": "C11",
+        "distancia": "1900m",
+        "hora": "5:40pm",
+        "color": "v3",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "DANCE TO REMEMBER",
+          "dorsal": 9,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "STAR OF GOD",
+          "dorsal": 5,
+          "pts": 10.0,
+          "bomba": false
+        },
+        "warning": "Batacazo a vigilar: Marakovits #1."
+      },
+      {
+        "v": "V4",
+        "carrera": "C12",
+        "distancia": "1200m",
+        "hora": "6:10pm",
+        "color": "v4",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "EL ABUSADOR",
+          "dorsal": 4,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "MAGNETO",
+          "dorsal": 3,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "warning": "Batacazo a vigilar: The Notoriou #5."
+      },
+      {
+        "v": "V5",
+        "carrera": "C13",
+        "distancia": "1600m",
+        "hora": "6:40pm",
+        "color": "v5",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "SEÑOR SOÑADOR",
+          "dorsal": 1,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "COLOSSUS",
+          "dorsal": 3,
+          "pts": 10.0,
+          "bomba": false
+        },
+        "warning": "Ampliada a 3: + Time Report #4."
+      },
+      {
+        "v": "V6",
+        "carrera": "C14",
+        "distancia": "1300m",
+        "hora": "7:10pm",
+        "color": "v6",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "TEN CLASSIC",
+          "dorsal": 1,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "ALL ABOUT YOU",
+          "dorsal": 3,
+          "pts": 10.0,
+          "bomba": false
+        },
+        "warning": "Última válida ampliada a 4 por regla del sistema: + Gran Amelia #2, Barbara Guadalupe #5."
+      }
+    ],
+    "jugada_oficial": "9-8-6 / 1-7-5 / 9-5-1 / 4-3-5 / 1-3-4 / 1-3-2-5",
+    "jugada_combos": [
+      "9-8-6",
+      "1-7-5",
+      "9-5-1",
+      "4-3-5",
+      "1-3-4",
+      "1-3-2-5"
+    ],
+    "jugada_info": "972 combinaciones. V1 ampliada a 3 (King Fray #6, debut), V2 ampliada a 3 (Sra Soraya #5), V5 ampliada a 3 (Time Report #4), V6 (última válida) ampliada a 4 (Gran Amelia #2, Barbara Guadalupe #5). Batacazos a vigilar: Gran Hacedion #2 (C1), Isocorico #1 (C2), Neigh Sayer #2 (C4), King Fray #6 (C9, debut), Marakovits #1 (C11), The Notoriou #5 (C12).",
+    "bombas": [
+      {
+        "rank": 1,
+        "nombre": "GOLDEN SWAP",
+        "dorsal": 6,
+        "carrera": "C4",
+        "hora": "2:15pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 1,
+        "nombre": "ANDREINA D",
+        "dorsal": 5,
+        "carrera": "C5",
+        "hora": "2:40pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 1,
+        "nombre": "TUSCAN GOLD",
+        "dorsal": 5,
+        "carrera": "C8",
+        "hora": "4:05pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 1,
+        "nombre": "K'S FREEDOM",
+        "dorsal": 9,
+        "carrera": "V1/C9",
+        "hora": "4:40pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 1,
+        "nombre": "GRAND GALA",
+        "dorsal": 1,
+        "carrera": "V2/C10",
+        "hora": "5:10pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 1,
+        "nombre": "EL ABUSADOR",
+        "dorsal": 4,
+        "carrera": "V4/C12",
+        "hora": "6:10pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      }
+    ],
+    "stats": {
+      "carreras": 14,
+      "bombas": 6,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": null
+    },
+    "efectividad": "64%",
+    "ganadores": [
+      {
+        "carrera": "C1",
+        "ganador": "#8 MY BLUE SKY (Div. 259,28 Bs) ✅ [Alternativa]"
+      },
+      {
+        "carrera": "C2",
+        "ganador": "#3 MAGNUM (Div. 211,39 Bs) ✅ [Alternativa]"
+      },
+      {
+        "carrera": "C3",
+        "ganador": "#6 PITTALUGA (Div. 298,11 Bs) ✅ [TOP PICK — Exacto]"
+      },
+      {
+        "carrera": "C4",
+        "ganador": "#6 GOLDEN SWAP (Div. 110,00 Bs) 💣 [BOMBA GANADORA]"
+      },
+      {
+        "carrera": "C5",
+        "ganador": "#5 ANDREINA D (Div. 110,00 Bs) 💣 [BOMBA GANADORA]"
+      },
+      {
+        "carrera": "C6",
+        "ganador": "#2 GUN BOLT (Div. 232,48 Bs) ✅ [TOP PICK — Exacto]"
+      },
+      {
+        "carrera": "C7",
+        "ganador": "#4 REY ENIGMA (Div. 183,74 Bs) — fuera de cobertura"
+      },
+      {
+        "carrera": "C8",
+        "ganador": "#1 LURED AWAY (Div. 143,04 Bs) — bomba editorial fallo (Tuscan Gold no gano)"
+      },
+      {
+        "carrera": "V1/C9",
+        "ganador": "#5 LINO EL ADIVINO (Div. 802,92 Bs) — fallo total, fuera de cobertura"
+      },
+      {
+        "carrera": "V2/C10",
+        "ganador": "#4 SOLANA (Div. 3.121,92 Bs) — fallo total, fuera de cobertura"
+      },
+      {
+        "carrera": "V3/C11",
+        "ganador": "#1 MARAKOVITS (Div. 235,64 Bs) ✅ [Batacazo — cubierto por la regla v3.8]"
+      },
+      {
+        "carrera": "V4/C12",
+        "ganador": "#4 EL ABUSADOR (Div. 184,94 Bs) 💣 [BOMBA GANADORA — Exacto]"
+      },
+      {
+        "carrera": "V5/C13",
+        "ganador": "#2 ASTUTO (Div. 532,81 Bs) — fallo total, fuera de cobertura"
+      },
+      {
+        "carrera": "V6/C14",
+        "ganador": "#3 ALL ABOUT YOU (Div. 272,76 Bs) ✅ [Alternativa]"
+      }
+    ]
   }
 ]
