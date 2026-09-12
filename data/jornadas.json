@@ -3831,5 +3831,265 @@
       "efectividad_con_trabajos": null,
       "efectividad_sin_trabajos": null
     }
+  },
+  {
+    "id": "valencia-05-09-2026",
+    "hipodromo": "Valencia",
+    "fecha": "05 de Septiembre 2026",
+    "slug": "valencia-05sep",
+    "condiciones": "optimas",
+    "trabajos": "completos",
+    "expectativa": "MEDIA-ALTA — cruce completo (trabajos matinales Revista Digital MiaMarcas + programa oficial + rating MiaMarcas); en 3 carreras el Por Rating de MiaMarcas y el Speed Rating oficial no coincidieron, resuelto priorizando forma reciente, trabajos y pesos.",
+    "efectividad_con_trabajos": "67%",
+    "efectividad_sin_trabajos": null,
+    "lineas_fijas": [
+      {
+        "numero": "C1",
+        "hora": "1:30pm",
+        "distancia": "1400m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": "Trabajo \"animado los 400 finales y trono\", mejor Speed Rating oficial de la carrera.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 1,
+            "nombre": "EL GRAN ROCKY",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 4,
+            "nombre": "AMBASCIATORE",
+            "pts": 10.5,
+            "icono": "✅"
+          }
+        ]
+      },
+      {
+        "numero": "C2",
+        "hora": "1:55pm",
+        "distancia": "1300m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": "Converge en ambas fuentes (trabajos y rating); forma perfecta 2-2-2-2; MiaMarcas la marca como pick de portada (\"Abran Fuego\"). Línea fija/máxima confianza de la jornada.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 6,
+            "nombre": "CLOVER TIME",
+            "pts": 14.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 2,
+            "nombre": "CONVERSION",
+            "pts": 10.5,
+            "icono": "✅"
+          }
+        ]
+      },
+      {
+        "numero": "C3",
+        "hora": "2:20pm",
+        "distancia": "2000m",
+        "categoria": "Clásico",
+        "bomb_tag": null,
+        "clave": "4 carreras seguidas con Speed Rating 88-92, patrón de menos a más (cierra fuerte). Cuidado con El Gran Bricelio: abandono reciente.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 5,
+            "nombre": "PETEROSE",
+            "pts": 12.5,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 4,
+            "nombre": "EL GRAN BRICELIO",
+            "pts": 9.5,
+            "icono": "⚠️"
+          }
+        ]
+      }
+    ],
+    "validas": [
+      {
+        "v": "V1",
+        "carrera": "C4",
+        "distancia": "1200m",
+        "hora": "2:55pm",
+        "color": "v1",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "PROVENZA",
+          "dorsal": 3,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "VALLE DEL MAR",
+          "dorsal": 2,
+          "pts": 10.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V2",
+        "carrera": "C5",
+        "distancia": "1300m",
+        "hora": "3:20pm",
+        "color": "v2",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "TITAN TIME",
+          "dorsal": 7,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "ROBERTO ERRE",
+          "dorsal": 5,
+          "pts": 10.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V3",
+        "carrera": "C6",
+        "distancia": "1200m",
+        "hora": "3:45pm",
+        "color": "v3",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "LA SUPREMA",
+          "dorsal": 4,
+          "pts": 12.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "GRAN SUSEH",
+          "dorsal": 2,
+          "pts": 10.0,
+          "bomba": false
+        },
+        "warning": "Batacazo a vigilar: Sabana #1 (debut, trabajo \"a voluntad\") — riesgo por falta de historial."
+      },
+      {
+        "v": "V4",
+        "carrera": "C7",
+        "distancia": "1200m",
+        "hora": "4:10pm",
+        "color": "v4",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "MASTTERY",
+          "dorsal": 1,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "KING BULBS",
+          "dorsal": 3,
+          "pts": 10.5,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V5",
+        "carrera": "C8",
+        "distancia": "1200m",
+        "hora": "4:35pm",
+        "color": "v5",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "FLECHA MONTON",
+          "dorsal": 1,
+          "pts": 12.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "AMOR AMOR",
+          "dorsal": 5,
+          "pts": 10.0,
+          "bomba": false
+        }
+      },
+      {
+        "v": "V6",
+        "carrera": "C9",
+        "distancia": "1300m",
+        "hora": "5:00pm",
+        "color": "v6",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "SNOW SENSATIONS",
+          "dorsal": 3,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "EXPLOSIVA",
+          "dorsal": 2,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "warning": "Última válida ampliada a 3 por regla del sistema (patrón histórico de fallo en el cierre): + #7 La Batalladora."
+      }
+    ],
+    "jugada_oficial": "3-2 / 7-5 / 4-2 / 1-3 / 1-5 / 3-2-7",
+    "jugada_combos": [
+      "3-2",
+      "7-5",
+      "4-2",
+      "1-3",
+      "1-5",
+      "3-2-7"
+    ],
+    "jugada_info": "96 combinaciones (última válida ampliada a 3 por regla del sistema). Batacazos a vigilar: Hector El Father #6 (C1), Honor and Glory #6 (C3), Manoepiedra #8 (C5), Sabana #1 (C6, debut), Compadre Toby #2 (C7), Queen of South #7 (C8).",
+    "bombas": [
+      {
+        "rank": 1,
+        "nombre": "PROVENZA",
+        "dorsal": 3,
+        "carrera": "V1/C4",
+        "hora": "2:55pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 1,
+        "nombre": "MASTTERY",
+        "dorsal": 1,
+        "carrera": "V4/C7",
+        "hora": "4:10pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      },
+      {
+        "rank": 1,
+        "nombre": "SNOW SENSATIONS",
+        "dorsal": 3,
+        "carrera": "V6/C9",
+        "hora": "5:00pm",
+        "pts": 14.5,
+        "nivel": "mega"
+      }
+    ],
+    "stats": {
+      "carreras": 9,
+      "bombas": 3,
+      "efectividad_con_trabajos": "67%",
+      "efectividad_sin_trabajos": null
+    }
   }
 ]
