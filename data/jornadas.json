@@ -4558,5 +4558,440 @@
         "ganador": "#3 ALL ABOUT YOU (Div. 272,76 Bs) ✅ [Alternativa]"
       }
     ]
+  },
+  {
+    "id": "rinconada-13-09-2026",
+    "hipodromo": "La Rinconada",
+    "fecha": "13 de Septiembre 2026",
+    "slug": "rinconada-13sep",
+    "reunion": "Reunión N° 36",
+    "condiciones": "pendiente",
+    "trabajos": "completos",
+    "expectativa": "PROVISIONAL — pronóstico previo a la carrera, sujeto a confirmar la condición de pista del domingo y posibles cambios posteriores. El 67% histórico del sistema no se ha comprobado para esta jornada; los puntos no equivalen a probabilidades.",
+    "efectividad_con_trabajos": null,
+    "efectividad_sin_trabajos": null,
+    "retirados": [
+      {
+        "carrera": "C5",
+        "dorsales": [
+          3
+        ],
+        "nombres": [
+          "MY CHAMPION MATE"
+        ],
+        "motivo": "Reportado por el INH (via Meridiano, 11-sep-2026)"
+      },
+      {
+        "carrera": "C9",
+        "dorsales": [
+          4
+        ],
+        "nombres": [
+          "MY FLYING MATE"
+        ],
+        "motivo": "Reportado por el INH (via Meridiano, 11-sep-2026)"
+      },
+      {
+        "carrera": "C10",
+        "dorsales": [
+          3
+        ],
+        "nombres": [
+          "ANASTACIO AGAIN"
+        ],
+        "motivo": "Reportado por el INH (via Meridiano, 11-sep-2026)"
+      },
+      {
+        "carrera": "C14",
+        "dorsales": [
+          6
+        ],
+        "nombres": [
+          "EROS"
+        ],
+        "motivo": "Reportado por el INH (via Meridiano, 11-sep-2026)"
+      }
+    ],
+    "lineas_fijas": [
+      {
+        "numero": "C1",
+        "hora": "1:00pm",
+        "distancia": "1200m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 2,
+            "nombre": "MISS MORGAN",
+            "pts": 12.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 6,
+            "nombre": "TINTA FINA",
+            "pts": 10.0,
+            "icono": "✅"
+          }
+        ],
+        "warning": "Cobertura adicional (batacazo especulativo): Toda Una Rubia #9, Bulma #4."
+      },
+      {
+        "numero": "C2",
+        "hora": "1:25pm",
+        "distancia": "1200m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 6,
+            "nombre": "AGUAMARINA",
+            "pts": 12.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "GRAN AMELIA",
+            "pts": 10.0,
+            "icono": "✅"
+          }
+        ],
+        "warning": "Cobertura adicional (batacazo especulativo): Grand Sensation #7, La Ñe Ñe #10 (muy especulativa)."
+      },
+      {
+        "numero": "C3",
+        "hora": "1:50pm",
+        "distancia": "1100m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": "Zagal trabajó 800m en 48\"1, aventaja a Ávila; receso de 161 días y retiro histórico impiden tratarlo como fijo.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 3,
+            "nombre": "CIRO",
+            "pts": 12.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "WICKED GAME",
+            "pts": 10.0,
+            "icono": "✅"
+          }
+        ],
+        "warning": "Cobertura adicional (batacazo especulativo): Zagal #8, David Great Rock #5."
+      },
+      {
+        "numero": "C4",
+        "hora": "2:15pm",
+        "distancia": "1100m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": "Donostia reaparece tras 84 días; Srta Bulería debuta con preparación interesante.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 5,
+            "nombre": "DONOSTIA",
+            "pts": 12.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 3,
+            "nombre": "SRTA BULERIA",
+            "pts": 10.0,
+            "icono": "✅"
+          }
+        ],
+        "warning": "Cobertura adicional (batacazo especulativo): Pekas #7, Latina Fina #4."
+      },
+      {
+        "numero": "C5",
+        "hora": "2:40pm",
+        "distancia": "1100m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 2,
+            "nombre": "GRAN TORRENTE",
+            "pts": 12.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 1,
+            "nombre": "REBUJITO",
+            "pts": 10.0,
+            "icono": "✅"
+          }
+        ],
+        "warning": "Retirado #3 My Champion Mate. Cobertura adicional: Chokolate #5, Kupido #4."
+      },
+      {
+        "numero": "C6",
+        "hora": "3:05pm",
+        "distancia": "1100m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": "The Exquisite Girl acumula 273 días sin correr pese a sus antecedentes clásicos — carrera que necesita cobertura.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 6,
+            "nombre": "THE EXQUISITE GIRL",
+            "pts": 11.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 7,
+            "nombre": "DE GALA",
+            "pts": 10.0,
+            "icono": "✅"
+          }
+        ],
+        "warning": "Cobertura adicional (batacazo especulativo): Divina Providencia #5, Reina Helena #4."
+      },
+      {
+        "numero": "C7",
+        "hora": "3:30pm",
+        "distancia": "1200m",
+        "categoria": null,
+        "bomb_tag": null,
+        "clave": null,
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 7,
+            "nombre": "PHAROAH'S DYNASTY",
+            "pts": 12.0,
+            "icono": "🔥"
+          },
+          {
+            "pos": 2,
+            "dorsal": 6,
+            "nombre": "QUANTUM LEAP",
+            "pts": 10.0,
+            "icono": "✅"
+          }
+        ],
+        "warning": "Cobertura adicional (batacazo especulativo): El Gran Olimpo #8, Gran Andrés #9."
+      },
+      {
+        "numero": "C8",
+        "hora": "3:55pm",
+        "distancia": "1400m",
+        "categoria": null,
+        "bomb_tag": "BOMBA TECNICA",
+        "clave": "Fátima Blush ganó sus dos actuaciones locales, trabajo SHN y \"fenómena\" — bomba técnica de las no válidas.",
+        "top3": [
+          {
+            "pos": 1,
+            "dorsal": 8,
+            "nombre": "FATIMA BLUSH",
+            "pts": 14.5,
+            "icono": "💣"
+          },
+          {
+            "pos": 2,
+            "dorsal": 2,
+            "nombre": "MORA LINDA",
+            "pts": 10.0,
+            "icono": "✅"
+          }
+        ],
+        "warning": "Cobertura adicional (batacazo especulativo): Latina Parts #4, Farolera #1."
+      }
+    ],
+    "validas": [
+      {
+        "v": "V1",
+        "carrera": "C9",
+        "distancia": null,
+        "hora": null,
+        "color": "v1",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "BROTHER WILL",
+          "dorsal": 2,
+          "pts": 12.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "MY ROBBING MATE",
+          "dorsal": 1,
+          "pts": 10.0,
+          "bomba": false
+        },
+        "warning": "Retirado #4 My Flying Mate. Base por forma y peso (2°-2°-1°, baja a 50kg efectivos). Ampliar con Bendito #10, Base Armador #8."
+      },
+      {
+        "v": "V2",
+        "carrera": "C10",
+        "distancia": null,
+        "hora": null,
+        "color": "v2",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "ATHLETIC TIME",
+          "dorsal": 9,
+          "pts": 12.0,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "BELIEVE ANDREW",
+          "dorsal": 4,
+          "pts": 9.5,
+          "bomba": false
+        },
+        "warning": "Retirado #3 Anastacio Again. Válida dividida — ampliar con Theo #8, Online #1, Ancelotti #10, Zucchero #2."
+      },
+      {
+        "v": "V3",
+        "carrera": "C11",
+        "distancia": null,
+        "hora": null,
+        "color": "v3",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "EKATI KING",
+          "dorsal": 7,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "LE REVELE",
+          "dorsal": 5,
+          "pts": 10.0,
+          "bomba": false
+        },
+        "warning": "Base técnica: 2 triunfos recientes en 1600m, trabajo SHN. Ampliar con Magicshadow #4."
+      },
+      {
+        "v": "V4",
+        "carrera": "C12",
+        "distancia": null,
+        "hora": null,
+        "color": "v4",
+        "copa": false,
+        "featured": true,
+        "top": {
+          "nombre": "CHOSEN FACTOR",
+          "dorsal": 6,
+          "pts": 14.5,
+          "bomba": true
+        },
+        "alt": {
+          "nombre": "EASYASYOUPLEASE",
+          "dorsal": 2,
+          "pts": 10.0,
+          "bomba": false
+        },
+        "warning": "Segunda línea técnica; su última actuación aparece marcada \"Invalidado\" en la revista (no se afirma validez de esa ficha). Ampliar con Mama Bella #1, Winter Wonderland #7."
+      },
+      {
+        "v": "V5",
+        "carrera": "C13",
+        "distancia": null,
+        "hora": null,
+        "color": "v5",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "ZORRO VIEJO",
+          "dorsal": 2,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "EL IRLANDES",
+          "dorsal": 4,
+          "pts": 9.5,
+          "bomba": false
+        },
+        "warning": "⚠️ Válida muy abierta, sin líneas fijas — Pontevecchio #1, Bunker #9 y Ponsigue #3 tienen clase suficiente para desarmar un cuadro de 2 marcas. Black Stone #5 reaparece con buen trabajo."
+      },
+      {
+        "v": "V6",
+        "carrera": "C14",
+        "distancia": null,
+        "hora": null,
+        "color": "v6",
+        "copa": false,
+        "featured": false,
+        "top": {
+          "nombre": "CHAMUEL",
+          "dorsal": 2,
+          "pts": 10.5,
+          "bomba": false
+        },
+        "alt": {
+          "nombre": "SUPER LUISSIANO",
+          "dorsal": 9,
+          "pts": 9.5,
+          "bomba": false
+        },
+        "warning": "Retirado #6 Eros. Chamuel lleva 16 salidas sin ganar; Sr Gato Pardo #1 entra como tercera marca del cierre ampliado, Raycharles #11 como cuarta si se amplía más."
+      }
+    ],
+    "jugada_oficial": "2-1 / 9-4 / 7-5 / 6-2 / 2-4 / 2-9-1",
+    "jugada_combos": [
+      "2-1",
+      "9-4",
+      "7-5",
+      "6-2",
+      "2-4",
+      "2-9-1"
+    ],
+    "jugada_info": "Cuadro reducido con cierre ampliado: 96 combinaciones (versión recomendada). Alternativas analizadas: dos marcas por válida (2-1/9-4/7-5/6-2/2-4/2-9, 64 combinaciones, con omisiones importantes en C10 y C13) y matriz ampliada (2-1-10-8/9-4-8-1-10-2/7-5-4/6-2-1-7/2-4-1-9-3-5/2-9-1-11, 6912 combinaciones, más protecciones pero costosa). Costo no calculado sin verificar la unidad vigente del INH.",
+    "bombas": [
+      {
+        "rank": 1,
+        "nombre": "FATIMA BLUSH",
+        "dorsal": 8,
+        "carrera": "C8",
+        "hora": "3:55pm",
+        "pts": 14.5,
+        "nivel": "tecnica"
+      },
+      {
+        "rank": 1,
+        "nombre": "EKATI KING",
+        "dorsal": 7,
+        "carrera": "V3/C11",
+        "hora": null,
+        "pts": 14.5,
+        "nivel": "tecnica"
+      },
+      {
+        "rank": 1,
+        "nombre": "CHOSEN FACTOR",
+        "dorsal": 6,
+        "carrera": "V4/C12",
+        "hora": null,
+        "pts": 14.5,
+        "nivel": "tecnica"
+      }
+    ],
+    "stats": {
+      "carreras": 14,
+      "bombas": 3,
+      "efectividad_con_trabajos": null,
+      "efectividad_sin_trabajos": null
+    }
   }
 ]
