@@ -1,8 +1,10 @@
 {
   "scripts": {
     "generate:legacy": "node scripts/migrate-legacy.cjs",
-    "syntax-check": "node --check js/main.js && node --check js/meeting-selection.js && node --check scripts/migrate-legacy.cjs && node --check scripts/snapshot-integrity.cjs && node --check tests/meeting-model.test.js",
-    "build": "npm run generate:legacy && npm run syntax-check",
+    "syntax-check": "node --check js/main.js && node --check js/meeting-selection.js && node --check scripts/migrate-legacy.cjs && node --check scripts/snapshot-integrity.cjs && node --check scripts/seed-september-content.cjs && node --check scripts/freeze-current-snapshots.cjs && node --check tests/meeting-model.test.js",
+    "seed:september": "node scripts/seed-september-content.cjs",
+    "freeze:current": "node scripts/freeze-current-snapshots.cjs",
+    "build": "npm run generate:legacy && npm run freeze:current && npm run syntax-check",
     "lint": "eslint js tests",
     "test": "npm run generate:legacy && node tests/meeting-model.test.js"
   },

@@ -5741,6 +5741,963 @@
         }
       },
       "sha256": "96dbcb031339f337c5dd147dc07f5124480e27957a9690657290edde1b8bc12d"
+    },
+    {
+      "id": "snapshot-valencia-2026-09-19-r23",
+      "meeting_id": "valencia-2026-09-19-r23",
+      "kind": "PRE_CARRERA",
+      "frozen_at": "2026-09-17T00:00:00Z",
+      "source": "authorized-2026-09-content",
+      "analysis": {
+        "races": [
+          {
+            "id": "r23-c1",
+            "public_label": "1C",
+            "inh_code": "V185",
+            "kind": "NO_VALIDA",
+            "distance": "1200m",
+            "time": "1:30",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Unstoppable",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 6,
+                "name": "Bombazo",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 3,
+                "name": "Susurro",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 2,
+                "name": "King of Success",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r23-c2",
+            "public_label": "2C",
+            "inh_code": "V186",
+            "kind": "NO_VALIDA",
+            "distance": "1200m",
+            "time": "2:00",
+            "horses": [
+              {
+                "number": 2,
+                "name": "Another Legacy",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 5,
+                "name": "Sweet Genesis",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 3,
+                "name": "Miss Friend",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 6,
+                "name": "Metamorphosis",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r23-c3",
+            "public_label": "3C",
+            "inh_code": "V187",
+            "kind": "NO_VALIDA",
+            "distance": "2000m",
+            "time": "2:20",
+            "horses": [
+              {
+                "number": 4,
+                "name": "Stella Cadente",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 1,
+                "name": "Lady Rossy",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 2,
+                "name": "Provenza",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 3,
+                "name": "La Batalladora",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              }
+            ],
+            "analysis": null
+          }
+        ],
+        "intelligence": {
+          "bases": [
+            "V190 #6 Divergente"
+          ],
+          "bombas": [
+            {
+              "race": "V188",
+              "number": 6,
+              "name": "Skull Trooper"
+            },
+            {
+              "race": "V189",
+              "number": 3,
+              "name": "Work Time"
+            },
+            {
+              "race": "V191",
+              "number": 7,
+              "name": "Lady Pianist"
+            },
+            {
+              "race": "V192",
+              "number": 1,
+              "name": "Emmyarantza"
+            },
+            {
+              "race": "V193",
+              "number": 9,
+              "name": "Seven Time"
+            }
+          ],
+          "carrera_trampa": null,
+          "alertas": [
+            "Factor Caracas→Valencia: V192 #7 Catira Mercedes (USA)."
+          ],
+          "cambios_ultima_hora": [],
+          "retirados": []
+        },
+        "tickets": [
+          {
+            "tier": "PRESENTADO",
+            "legs": {
+              "1V": [
+                2,
+                8
+              ],
+              "2V": [
+                8,
+                6
+              ],
+              "3V": [
+                6
+              ],
+              "4V": [
+                5,
+                2
+              ],
+              "5V": [
+                7,
+                6
+              ],
+              "6V": [
+                6,
+                2
+              ]
+            },
+            "editorial_total": 32,
+            "validation_error": null
+          },
+          {
+            "tier": "RECOMENDADO",
+            "legs": {
+              "1V": [
+                2,
+                8,
+                6
+              ],
+              "2V": [
+                8,
+                6
+              ],
+              "3V": [
+                6
+              ],
+              "4V": [
+                5,
+                2
+              ],
+              "5V": [
+                7,
+                6,
+                5
+              ],
+              "6V": [
+                6,
+                2,
+                7
+              ]
+            },
+            "editorial_total": 108,
+            "validation_error": null
+          },
+          {
+            "tier": "PREMIUM",
+            "legs": {
+              "1V": [
+                2,
+                8,
+                6
+              ],
+              "2V": [
+                8,
+                6,
+                3
+              ],
+              "3V": [
+                6,
+                3
+              ],
+              "4V": [
+                5,
+                2,
+                3
+              ],
+              "5V": [
+                7,
+                6,
+                5,
+                1
+              ],
+              "6V": [
+                6,
+                2,
+                7
+              ]
+            },
+            "editorial_total": 648,
+            "validation_error": null
+          }
+        ],
+        "gate": {
+          "retirados": null,
+          "cambios_monta": null,
+          "pesos_descargos": null,
+          "implementos": null,
+          "condicion_pista": null,
+          "cambios_ultima_hora": null,
+          "valor_unidad": null
+        }
+      },
+      "sha256": "efc3ab7f3587d3fb1a919e5638758a1973099b667cc1c637b5cd532ecac1f18c"
+    },
+    {
+      "id": "snapshot-rinconada-2026-09-20-r37",
+      "meeting_id": "rinconada-2026-09-20-r37",
+      "kind": "PRE_CARRERA",
+      "frozen_at": "2026-09-17T00:00:00Z",
+      "source": "authorized-2026-09-content",
+      "analysis": {
+        "races": [
+          {
+            "id": "r37-c1",
+            "public_label": "1C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": null,
+            "time": "1:00",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Xtal",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 4,
+                "name": "Believe Andrew",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-c2",
+            "public_label": "2C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": null,
+            "time": "1:25",
+            "horses": [
+              {
+                "number": 5,
+                "name": "Boiled Milk",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 7,
+                "name": "Salome",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-c3",
+            "public_label": "3C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": null,
+            "time": "1:50",
+            "horses": [
+              {
+                "number": 4,
+                "name": "Abu Pepe",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 7,
+                "name": "Mahomes",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-c4",
+            "public_label": "4C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": null,
+            "time": "2:15",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Rue du Bac",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 7,
+                "name": "Gran Feronia",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-c5",
+            "public_label": "5C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": null,
+            "time": "2:40",
+            "horses": [
+              {
+                "number": 5,
+                "name": "El Gran Eladio",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 7,
+                "name": "Bravucon",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-c6",
+            "public_label": "6C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": null,
+            "time": "3:05",
+            "horses": [
+              {
+                "number": 3,
+                "name": "Way Too Much",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 7,
+                "name": "Alana",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": "487 días sin correr."
+          },
+          {
+            "id": "r37-c7",
+            "public_label": "7C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": null,
+            "time": "3:30",
+            "horses": [
+              {
+                "number": 2,
+                "name": "Abuelo (USA)",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 7,
+                "name": "Silk Eyes",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-c8",
+            "public_label": "8C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": null,
+            "time": "3:55",
+            "horses": [
+              {
+                "number": 4,
+                "name": "Kilimanjaro",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 1,
+                "name": "Kosho",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": "Clásico Victoreado GIII."
+          },
+          {
+            "id": "r37-v1",
+            "public_label": "1V",
+            "inh_code": "C9",
+            "kind": "5Y6",
+            "distance": null,
+            "time": "4:30",
+            "horses": [
+              {
+                "number": 7,
+                "name": "Eros",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 11,
+                "name": "Louis the Duke",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 6,
+                "name": "Gran Warrior",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": "Pata frágil; Gran Warrior queda en cobertura."
+          },
+          {
+            "id": "r37-v2",
+            "public_label": "2V",
+            "inh_code": "C10",
+            "kind": "5Y6",
+            "distance": null,
+            "time": "5:00",
+            "horses": [
+              {
+                "number": 1,
+                "name": "King Julien",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 2,
+                "name": "Neigh Sayer",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 8,
+                "name": "Huracan Luis",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-v3",
+            "public_label": "3V",
+            "inh_code": "C11",
+            "kind": "5Y6",
+            "distance": null,
+            "time": "5:30",
+            "horses": [
+              {
+                "number": 8,
+                "name": "Aitana Princess",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 5,
+                "name": "Meheble",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 3,
+                "name": "Rybakina",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 1,
+                "name": "Altiva",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-v4",
+            "public_label": "4V",
+            "inh_code": "C12",
+            "kind": "5Y6",
+            "distance": null,
+            "time": "6:00",
+            "horses": [
+              {
+                "number": 3,
+                "name": "Rey Joaquin",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 1,
+                "name": "Invader",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 5,
+                "name": "The Fieldher Jr",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 8,
+                "name": "Toro Salvaje",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-v5",
+            "public_label": "5V",
+            "inh_code": "C13",
+            "kind": "5Y6",
+            "distance": null,
+            "time": "6:30",
+            "horses": [
+              {
+                "number": 3,
+                "name": "Employeeofthemonth",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 10,
+                "name": "Above the Sky",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 7,
+                "name": "Sizzle",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": null
+          },
+          {
+            "id": "r37-v6",
+            "public_label": "6V",
+            "inh_code": "C14",
+            "kind": "5Y6",
+            "distance": null,
+            "time": "7:00",
+            "horses": [
+              {
+                "number": 6,
+                "name": "Truly You",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 2,
+                "name": "Spring Clean",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 9,
+                "name": "Barbara Guadalupe",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 10,
+                "name": "Beyonce Champ",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": "Pata frágil."
+          }
+        ],
+        "intelligence": {
+          "bases": [],
+          "bombas": [
+            {
+              "race": "C3",
+              "number": 4,
+              "name": "Abu Pepe"
+            },
+            {
+              "race": "C4",
+              "number": 1,
+              "name": "Rue du Bac"
+            },
+            {
+              "race": "C5",
+              "number": 5,
+              "name": "El Gran Eladio"
+            },
+            {
+              "race": "C8",
+              "number": 4,
+              "name": "Kilimanjaro"
+            },
+            {
+              "race": "V5/C13",
+              "number": 3,
+              "name": "Employeeofthemonth"
+            }
+          ],
+          "carrera_trampa": null,
+          "alertas": [
+            "C6 Way Too Much: 487 días sin correr.",
+            "C5 Time Report: retirado 06/09, bandera amarilla.",
+            "C9 y C14: patas frágiles.",
+            "V1 Gran Warrior #6: cobertura, no fija."
+          ],
+          "cambios_ultima_hora": [],
+          "retirados": []
+        },
+        "tickets": [
+          {
+            "tier": "PREMIUM",
+            "legs": {
+              "1V": [
+                7,
+                11,
+                6
+              ],
+              "2V": [
+                1,
+                2,
+                8
+              ],
+              "3V": [
+                8,
+                5,
+                3,
+                1
+              ],
+              "4V": [
+                3,
+                1,
+                5,
+                8
+              ],
+              "5V": [
+                3,
+                10,
+                7
+              ],
+              "6V": [
+                6,
+                2,
+                9,
+                10
+              ]
+            },
+            "editorial_total": 1728,
+            "validation_error": null
+          },
+          {
+            "tier": "RECOMENDADO",
+            "legs": {
+              "1V": [
+                7,
+                11
+              ],
+              "2V": [
+                1,
+                2
+              ],
+              "3V": [
+                8,
+                5,
+                1
+              ],
+              "4V": [
+                3,
+                1,
+                8
+              ],
+              "5V": [
+                3,
+                10
+              ],
+              "6V": [
+                6,
+                2,
+                9,
+                10
+              ]
+            },
+            "editorial_total": 192,
+            "validation_error": "El total editorial no coincide con las selecciones autorizadas."
+          },
+          {
+            "tier": "PRESENTADO",
+            "legs": {
+              "1V": [
+                7,
+                11
+              ],
+              "2V": [
+                1,
+                2
+              ],
+              "3V": [
+                8,
+                5
+              ],
+              "4V": [
+                3,
+                1
+              ],
+              "5V": [
+                3
+              ],
+              "6V": [
+                6,
+                2,
+                9
+              ]
+            },
+            "editorial_total": 48,
+            "validation_error": null
+          }
+        ],
+        "gate": {
+          "retirados": null,
+          "cambios_monta": null,
+          "pesos_descargos": null,
+          "implementos": null,
+          "condicion_pista": null,
+          "cambios_ultima_hora": null,
+          "valor_unidad": null
+        }
+      },
+      "sha256": "28d2f7685fc6793e5dfaa91aa9ba0bc7832b725fdbea5fefd350cef03af34a94"
     }
   ]
 }

@@ -26,6 +26,7 @@ const snapshots = records.map(record => {
   const frozen = existing.find(snapshot => snapshot.id === candidate.id);
   return frozen ? validateFrozenSnapshot(candidate, frozen) : candidate;
 });
+const preservedSnapshots = existing.filter(snapshot => !records.some(record => record.analysis_snapshot_id === snapshot.id));
 records.forEach(x => delete x._snapshot);
 fs.writeFileSync('data/legacy-meetings.json', JSON.stringify({schema_version:'1.0',meetings:records}, null, 2)+'\n');
-fs.writeFileSync(snapshotFile, JSON.stringify({schema_version:'1.0',snapshots}, null, 2)+'\n');
+fs.writeFileSync(snapshotFile, JSON.stringify({schema_version:'1.0',snapshots:[...snapshots,...preservedSnapshots]}, null, 2)+'\n');
