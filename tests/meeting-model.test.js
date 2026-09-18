@@ -30,7 +30,7 @@ const r37 = current.meetings.find(m => m.id === 'rinconada-2026-09-20-r37');
 assert.equal(r37.races.filter(r => r.kind === 'NO_VALIDA').length, 8);
 assert.equal(r37.races.filter(r => r.kind === '5Y6').length, 6);
 assert.equal(combinations(r37.tickets.find(t=>t.tier==='PREMIUM').legs), 1728);
-const media = r37.tickets.find(t=>t.tier==='RECOMENDADO'); assert.equal(combinations(media.legs), 288); assert.equal(media.editorial_total, 192); assert.ok(media.validation_error);
+const media = r37.tickets.find(t=>t.tier==='RECOMENDADO'); assert.equal(combinations(media.legs), 288); assert.equal(media.editorial_total, 288); assert.equal(media.validation_error, null);
 assert.equal(combinations(r37.tickets.find(t=>t.tier==='PRESENTADO').legs), 48);
 const valencia = current.meetings.find(m => m.id === 'valencia-2026-09-19-r23');
 assert.deepEqual(valencia.tickets.map(t=>combinations(t.legs)), [32,108,648]);

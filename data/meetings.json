@@ -312,7 +312,7 @@
       "date": "2026-09-20",
       "status": "ANÁLISIS CERRADO",
       "unit_value": null,
-      "analysis_snapshot_id": "snapshot-rinconada-2026-09-20-r37",
+      "analysis_snapshot_id": "snapshot-rinconada-2026-09-20-r37-v2",
       "gate": {
         "retirados": null,
         "cambios_monta": null,
@@ -923,8 +923,8 @@
               10
             ]
           },
-          "editorial_total": 192,
-          "validation_error": "El total editorial no coincide con las selecciones autorizadas."
+          "editorial_total": 288,
+          "validation_error": null
         },
         {
           "tier": "PRESENTADO",
