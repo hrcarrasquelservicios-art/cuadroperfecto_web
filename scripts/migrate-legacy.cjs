@@ -17,6 +17,15 @@ const canonical = j => {
   snapshot.sha256 = crypto.createHash('sha256').update(JSON.stringify(analysis)).digest('hex');
   return {id:j.id,slug:`historial-${j.slug || j.id}`,track:j.hipodromo,meeting_number:j.reunion ?? null,date:isoDate(j.fecha),status:winners.length?'FINALIZADA':j.id.includes('13-09')?'PRELIMINAR':'ANÁLISIS CERRADO',unit_value:null,analysis_snapshot_id:snapshot.id,gate:analysis.gate,intelligence:analysis.intelligence,races,tickets:ticket?[ticket]:[],results:result,_snapshot:snapshot};
 };
-const records = legacy.map(canonical); const snapshots = records.map(x => x._snapshot); records.forEach(x => delete x._snapshot);
+const records = legacy.map(canonical);
+const snapshotFile = 'data/analysis-snapshots.json';
+const existing = fs.existsSync(snapshotFile) ? JSON.parse(fs.readFileSync(snapshotFile, 'utf8')).snapshots : [];
+const snapshots = records.map(record => {
+  const candidate = record._snapshot;
+  const frozen = existing.find(snapshot => snapshot.id === candidate.id);
+  if (frozen && frozen.sha256 !== candidate.sha256) throw new Error(`immutable snapshot changed: ${candidate.id}; create a new snapshot id instead`);
+  return frozen || candidate;
+});
+records.forEach(x => delete x._snapshot);
 fs.writeFileSync('data/legacy-meetings.json', JSON.stringify({schema_version:'1.0',meetings:records}, null, 2)+'\n');
-fs.writeFileSync('data/analysis-snapshots.json', JSON.stringify({schema_version:'1.0',snapshots}, null, 2)+'\n');
+fs.writeFileSync(snapshotFile, JSON.stringify({schema_version:'1.0',snapshots}, null, 2)+'\n');

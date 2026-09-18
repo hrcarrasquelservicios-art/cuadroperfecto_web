@@ -17,6 +17,8 @@ for (const snapshot of snapshots) {
   const changed = structuredClone(snapshot.analysis); changed.races[0].analysis = 'mutación posterior';
   assert.notEqual(crypto.createHash('sha256').update(JSON.stringify(changed)).digest('hex'), snapshot.sha256);
 }
+const migrationSource = fs.readFileSync('scripts/migrate-legacy.cjs', 'utf8');
+assert.match(migrationSource, /immutable snapshot changed/);
 const r37 = current.meetings.find(m => m.id === 'rinconada-2026-09-20-r37');
 assert.equal(r37.races.filter(r => r.kind === 'NO_VALIDA').length, 8);
 assert.equal(r37.races.filter(r => r.kind === '5Y6').length, 6);
