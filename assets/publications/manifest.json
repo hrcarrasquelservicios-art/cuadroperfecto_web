@@ -1,1 +1,4 @@
-{"version":1,"assets":[]}
+{
+  "version": 1,
+  "assets": [{"id":"zcp-brand-preview-v1","meeting_id":null,"path":"/assets/publications/2026-09-17/zcp-brand-preview-v1.webp","mime":"image/webp","sha256":"6231b78767631fc61dc32c926f451630b5c4ca3c8e1decb4a4ab2d27b2c6d54a","cache_control":"public, max-age=31536000, immutable"}]
+}

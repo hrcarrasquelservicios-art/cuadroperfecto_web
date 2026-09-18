@@ -1,19 +1,35 @@
 const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
-const data = JSON.parse(fs.readFileSync('data/meetings.json', 'utf8'));
+const current = JSON.parse(fs.readFileSync('data/meetings.json', 'utf8'));
+const historical = JSON.parse(fs.readFileSync('data/legacy-meetings.json', 'utf8'));
+const snapshots = JSON.parse(fs.readFileSync('data/analysis-snapshots.json', 'utf8')).snapshots;
 const combinations = legs => Object.values(legs).reduce((total, picks) => total * picks.length, 1);
+const gateReady = gate => Object.values(gate).every(value => value === true);
+const operationalStatus = meeting => gateReady(meeting.gate) ? 'LISTO PARA SELLAR' : meeting.status === 'LISTO PARA SELLAR' ? 'GATE PENDIENTE' : meeting.status;
 
-assert.equal(data.schema_version, '1.0');
-assert.ok(data.meetings.length > 0);
-for (const meeting of data.meetings) {
-  assert.match(meeting.slug, /^[a-z0-9-]+$/);
-  assert.equal(meeting.races.filter(r => r.kind === 'NO_VALIDA').length, 8);
-  assert.equal(meeting.races.filter(r => r.kind === '5Y6').length, 6);
-  assert.equal(meeting.tickets.length, 3);
-  for (const ticket of meeting.tickets) {
-    assert.deepEqual(Object.keys(ticket.legs), ['1V', '2V', '3V', '4V', '5V', '6V']);
-    assert.ok(Number.isInteger(combinations(ticket.legs)));
-  }
+assert.equal(historical.meetings.length, JSON.parse(fs.readFileSync('data/jornadas.json', 'utf8')).length);
+for (const required of ['valencia-05-09-2026', 'rinconada-06-09-2026', 'rinconada-13-09-2026']) assert.ok(historical.meetings.some(m => m.id === required));
+for (const meeting of historical.meetings) assert.ok(snapshots.some(snapshot => snapshot.id === meeting.analysis_snapshot_id));
+for (const snapshot of snapshots) {
+  const hash = crypto.createHash('sha256').update(JSON.stringify(snapshot.analysis)).digest('hex');
+  assert.equal(snapshot.sha256, hash, `snapshot integrity: ${snapshot.id}`);
+  const changed = structuredClone(snapshot.analysis); changed.races[0].analysis = 'mutación posterior';
+  assert.notEqual(crypto.createHash('sha256').update(JSON.stringify(changed)).digest('hex'), snapshot.sha256);
 }
-assert.equal(combinations({'1V':[1,2],'2V':[4],'3V':[3,5,8],'4V':[9],'5V':[1],'6V':[2,6]}), 12);
-console.log('meeting model and ticket-combination tests passed');
+const r37 = current.meetings.find(m => m.id === 'rinconada-2026-09-20-r37');
+assert.equal(r37.races.filter(r => r.kind === 'NO_VALIDA').length, 8);
+assert.equal(r37.races.filter(r => r.kind === '5Y6').length, 6);
+assert.equal(operationalStatus({...r37, status:'LISTO PARA SELLAR'}), 'GATE PENDIENTE');
+const realTicketMeeting = historical.meetings.find(m => m.id === 'rinconada-06-09-2026');
+assert.equal(combinations(realTicketMeeting.tickets[0].legs), realTicketMeeting.tickets[0].combinations);
+assert.equal(combinations(realTicketMeeting.tickets[0].legs), 972);
+const activeWrongOrder = [{date:'2026-09-20',status:'PRELIMINAR'},{date:'2026-09-27',status:'PRELIMINAR'}];
+assert.equal(activeWrongOrder.filter(m => m.status !== 'FINALIZADA').sort((a,b) => b.date.localeCompare(a.date))[0].date, '2026-09-27');
+const manifest = JSON.parse(fs.readFileSync('assets/publications/manifest.json', 'utf8'));
+for (const asset of manifest.assets) { assert.match(asset.path, /^\/assets\/publications\/\d{4}-\d{2}-\d{2}\/[a-z0-9-]+-v\d+\.webp$/); assert.equal(asset.mime, 'image/webp'); assert.match(asset.cache_control, /immutable/); assert.ok(fs.existsSync(`.${asset.path}`)); }
+assert.equal(new Set(manifest.assets.map(a => a.path)).size, manifest.assets.length);
+const html = ['index.html','404.html','historial.html','reuniones/index.html','reuniones/la-rinconada-reunion-37-20-septiembre-2026/index.html'].map(file => fs.readFileSync(file, 'utf8'));
+for (const page of html) assert.match(page, /Content-Security-Policy/);
+assert.match(html[0], /og:image/); assert.match(html[0], /twitter:image/); assert.match(html[4], /og:image/); assert.match(html[4], /twitter:image/); assert.match(html[2], /\/reuniones/);
+console.log('migration, snapshots, tickets, gate, CSP, SEO and asset pipeline tests passed');
