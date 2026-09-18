@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "build": "node --check js/main.js && node --check tests/meeting-model.test.js",
+    "typecheck": "node --check js/main.js",
+    "lint": "node --check js/main.js",
+    "test": "node tests/meeting-model.test.js"
+  },
   "devDependencies": {
     "sharp": "^0.35.2"
   }

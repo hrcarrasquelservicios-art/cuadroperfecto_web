@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "meetings": [{
+    "id":"rinconada-2026-09-20-r37", "slug":"la-rinconada-reunion-37-20-septiembre-2026", "track":"La Rinconada", "meeting_number":37, "date":"2026-09-20", "status":"PRELIMINAR", "unit_value":null, "published_snapshot_at":null,
+    "gate":{"retirados":false,"cambios_monta":false,"pesos_descargos":false,"implementos":false,"condicion_pista":false,"cambios_ultima_hora":false,"valor_unidad":false},
+    "intelligence":{"bases":[],"bombas":[],"carrera_trampa":null,"alertas":[],"cambios_ultima_hora":[],"retirados":[]},
+    "races":[
+      {"id":"r37-c1","public_label":"1C","kind":"NO_VALIDA","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-c2","public_label":"2C","kind":"NO_VALIDA","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-c3","public_label":"3C","kind":"NO_VALIDA","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-c4","public_label":"4C","kind":"NO_VALIDA","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-c5","public_label":"5C","kind":"NO_VALIDA","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-c6","public_label":"6C","kind":"NO_VALIDA","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-c7","public_label":"7C","kind":"NO_VALIDA","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-c8","public_label":"8C","kind":"NO_VALIDA","distance":null,"time":null,"horses":[],"analysis":null},
+      {"id":"r37-v1","public_label":"1V","kind":"5Y6","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-v2","public_label":"2V","kind":"5Y6","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-v3","public_label":"3V","kind":"5Y6","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-v4","public_label":"4V","kind":"5Y6","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-v5","public_label":"5V","kind":"5Y6","distance":null,"time":null,"horses":[],"analysis":null},{"id":"r37-v6","public_label":"6V","kind":"5Y6","distance":null,"time":null,"horses":[],"analysis":null}],
+    "tickets":[{"tier":"PRESENTADO","legs":{"1V":[],"2V":[],"3V":[],"4V":[],"5V":[],"6V":[]}},{"tier":"RECOMENDADO","legs":{"1V":[],"2V":[],"3V":[],"4V":[],"5V":[],"6V":[]}},{"tier":"PREMIUM","legs":{"1V":[],"2V":[],"3V":[],"4V":[],"5V":[],"6V":[]}}], "results":null
+  }]
+}
