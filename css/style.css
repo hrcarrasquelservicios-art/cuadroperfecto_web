@@ -752,63 +752,6 @@ footer { padding: 30px 0; text-align: center; border-top: 1px solid var(--card-b
 .zcp-gallery-card.pending .zcp-pending-inner { text-align: center; color: var(--text-muted); padding: 20px; }
 .zcp-gallery-card.pending .zcp-pending-num { display: block; font-size: 1.8rem; font-weight: 900; color: var(--card-border); margin-bottom: 8px; }
 
-.zcp-block-title { font-size: 1.3rem; font-weight: 800; margin: 46px 0 16px; text-align: center; }
-
-/* No Válidas */
-.zcp-novalidas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.zcp-novalida-card { background: var(--card-bg); border: 1px solid rgba(255,8,68,0.25); border-radius: 12px; overflow: hidden; }
-.zcp-novalida-header { background: rgba(255,8,68,0.12); padding: 10px 14px; }
-.zcp-novalida-header .num { font-weight: 800; color: #ff5577; }
-.zcp-novalida-header .meta { display: block; font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
-.zcp-novalida-body { padding: 12px 14px; }
-.zcp-novalida-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.88rem; }
-.zcp-novalida-row:last-child { border-bottom: none; }
-.zcp-novalida-role { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; min-width: 76px; text-align: center; }
-.zcp-novalida-role.favorito { background: rgba(255,215,0,0.15); color: var(--gold); }
-.zcp-novalida-role.enemigo { background: rgba(255,107,0,0.15); color: var(--orange); }
-.zcp-novalida-role.tercero { background: rgba(0,136,204,0.15); color: #4db8ff; }
-.zcp-novalida-role.sorpresa { background: rgba(37,211,102,0.15); color: #3ddc84; }
-.zcp-novalida-dorsal { font-weight: 800; }
-
-/* Cuadros (Presentado / Recomendado / Premium) */
-.zcp-tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
-.zcp-tier-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; overflow: hidden; border-top: 4px solid var(--card-border); }
-.zcp-tier-card.tier-presentado { border-top-color: #3ddc84; }
-.zcp-tier-card.tier-recomendado { border-top-color: #4db8ff; }
-.zcp-tier-card.tier-premium { border-top-color: var(--gold); box-shadow: 0 0 24px rgba(255,215,0,0.08); }
-.zcp-tier-head { padding: 18px 18px 12px; text-align: center; }
-.zcp-tier-name { font-size: 1.1rem; font-weight: 800; }
-.zcp-tier-card.tier-presentado .zcp-tier-name { color: #3ddc84; }
-.zcp-tier-card.tier-recomendado .zcp-tier-name { color: #4db8ff; }
-.zcp-tier-card.tier-premium .zcp-tier-name { color: var(--gold); }
-.zcp-tier-tag { display: inline-block; margin-top: 6px; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; background: rgba(255,255,255,0.06); color: var(--text-muted); }
-.zcp-tier-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-.zcp-tier-table th { padding: 8px 10px; text-align: left; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; border-bottom: 1px solid var(--card-border); }
-.zcp-tier-table td { padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-.zcp-tier-table td.sel { font-weight: 800; }
-.zcp-tier-foot { padding: 14px 18px 18px; }
-.zcp-tier-combos { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px; }
-.zcp-tier-monto { font-size: 1.15rem; font-weight: 800; text-align: center; margin-bottom: 6px; }
-.zcp-tier-disclaimer { font-size: 0.68rem; color: var(--text-muted); text-align: center; line-height: 1.4; }
-
-/* Señales */
-.zcp-senales-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.zcp-senal-card { text-align: center; padding: 20px 14px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; }
-.zcp-senal-icon { font-size: 1.4rem; display: block; margin-bottom: 6px; }
-.zcp-senal-tag { display: block; font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-.zcp-senal-pick { font-weight: 800; font-size: 0.95rem; }
-
-/* Alertas y bombas */
-.zcp-alertas-list { display: flex; flex-direction: column; gap: 8px; max-width: 700px; margin: 0 auto; }
-.zcp-alerta-row { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; font-size: 0.9rem; }
-.zcp-alerta-carrera { font-weight: 800; min-width: 46px; }
-.zcp-alerta-nombre { flex: 1; }
-.zcp-alerta-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; padding: 3px 10px; border-radius: 12px; white-space: nowrap; }
-.zcp-alerta-tag.sorpresa { background: rgba(37,211,102,0.15); color: #3ddc84; }
-.zcp-alerta-tag.valor { background: rgba(77,184,255,0.15); color: #4db8ff; }
-.zcp-alerta-tag.alerta { background: rgba(255,68,68,0.15); color: #ff6b6b; }
-.zcp-alerta-tag.cobertura { background: rgba(255,215,0,0.15); color: var(--gold); }
-
 /* Aviso responsable + CTAs */
 .zcp-disclaimer { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 18px 22px; text-align: center; color: var(--text-muted); font-size: 0.85rem; max-width: 760px; margin: 34px auto 0; }
 .zcp-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 26px; }
@@ -818,13 +761,4 @@ footer { padding: 30px 0; text-align: center; border-top: 1px solid var(--card-b
     border: none; cursor: pointer; font-size: 0.95rem;
 }
 .zcp-share-btn:hover { background: #ffe14d; transform: translateY(-2px); }
-
-@media (max-width: 900px) {
-    .zcp-novalidas-grid { grid-template-columns: 1fr; }
-    .zcp-tiers-grid { grid-template-columns: 1fr; }
-    .zcp-senales-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 480px) {
-    .zcp-senales-grid { grid-template-columns: 1fr; }
-}
 
