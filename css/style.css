@@ -729,36 +729,3 @@ footer { padding: 30px 0; text-align: center; border-top: 1px solid var(--card-b
     margin-top: 56px; /* Offset for the fixed top navbar */
 }
 
-/* ── ZONA CALIENTE PRO — JORNADA VALENCIA (serie editorial 5y6) ── */
-.zcp-section {
-    padding: 60px 0;
-    background:
-        radial-gradient(ellipse at 15% 20%, rgba(255,107,0,0.08) 0%, transparent 55%),
-        radial-gradient(ellipse at 85% 80%, rgba(255,8,68,0.08) 0%, transparent 55%),
-        var(--dark);
-    border-top: 1px solid var(--card-border);
-    border-bottom: 1px solid var(--card-border);
-}
-.zcp-header { text-align: center; margin-bottom: 30px; }
-.zcp-brand { font-size: 0.95rem; font-weight: 800; letter-spacing: 2px; color: var(--orange); text-transform: uppercase; margin-bottom: 8px; }
-.zcp-title { font-size: clamp(1.6rem, 5vw, 2.4rem); font-weight: 900; margin-bottom: 6px; }
-.zcp-subtitle { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 16px; }
-.zcp-meta-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-.zcp-badge { padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(255,215,0,0.25); background: rgba(255,215,0,0.06); color: var(--gold); }
-.zcp-badge.red { border-color: rgba(255,8,68,0.3); background: rgba(255,8,68,0.08); color: #ff5577; }
-
-.zcp-gallery-note { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin: 18px 0 6px; }
-.zcp-gallery-card.pending { display: flex; align-items: center; justify-content: center; aspect-ratio: 941 / 1672; border: 2px dashed var(--card-border); border-radius: 12px; background: var(--card-bg); }
-.zcp-gallery-card.pending .zcp-pending-inner { text-align: center; color: var(--text-muted); padding: 20px; }
-.zcp-gallery-card.pending .zcp-pending-num { display: block; font-size: 1.8rem; font-weight: 900; color: var(--card-border); margin-bottom: 8px; }
-
-/* Aviso responsable + CTAs */
-.zcp-disclaimer { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 18px 22px; text-align: center; color: var(--text-muted); font-size: 0.85rem; max-width: 760px; margin: 34px auto 0; }
-.zcp-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 26px; }
-.zcp-share-btn {
-    display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; border-radius: 8px;
-    font-weight: 700; text-decoration: none; color: #0a0a12; background: var(--gold);
-    border: none; cursor: pointer; font-size: 0.95rem;
-}
-.zcp-share-btn:hover { background: #ffe14d; transform: translateY(-2px); }
-
