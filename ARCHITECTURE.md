@@ -4,4 +4,4 @@ El sitio es estático y no despliega ni modifica producción desde este reposito
 
 Antes de publicar una reunión, se completa el gate y se fija un `analysis_snapshot` completo con SHA-256. Una publicación posterior debe crear un nuevo registro o snapshot, nunca sustituir el pre-carrera. `scripts/migrate-legacy.cjs` crea snapshots independientes para las jornadas publicadas. `data/jornadas.json` y los assets existentes son legado preservado y no se eliminan.
 
-Los artes sociales viven en `assets/publications/` y se registran en su `manifest.json`; cada archivo recibe nombre inmutable y puede exponerse desde la URL HTTPS estática del sitio. La UI no depende de esos artes.
+Los artes sociales viven en `assets/publications/` y se registran en su `manifest.json`; cada archivo recibe nombre inmutable y puede exponerse desde la URL HTTPS estática del sitio. GitHub Pages controla la política real de caché; el repositorio no promete un encabezado de caché. La UI no depende de esos artes.

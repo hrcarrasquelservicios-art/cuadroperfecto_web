@@ -1,14 +1,13 @@
 {
   "scripts": {
     "generate:legacy": "node scripts/migrate-legacy.cjs",
-    "syntax-check": "node --check js/main.js && node --check scripts/migrate-legacy.cjs && node --check tests/meeting-model.test.js",
+    "syntax-check": "node --check js/main.js && node --check js/meeting-selection.js && node --check scripts/migrate-legacy.cjs && node --check scripts/snapshot-integrity.cjs && node --check tests/meeting-model.test.js",
     "build": "npm run generate:legacy && npm run syntax-check",
     "lint": "eslint js tests",
     "test": "npm run generate:legacy && node tests/meeting-model.test.js"
   },
   "devDependencies": {
     "eslint": "^10.10.0",
-    "eslint": "^9.35.0",
     "sharp": "^0.35.2"
   }
 }
