@@ -24,3 +24,7 @@ __pycache__/
 # Script de conversión (one-shot, no hace falta en producción)
 convert_webp.mjs
 .wrangler/
+
+work/
+.env
+.env.*

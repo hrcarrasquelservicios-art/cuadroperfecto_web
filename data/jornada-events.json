@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0",
+  "events": [
+    {
+      "id": "df5a77d03b61a842f25315794aec1deae630580c79ddde5bd331691b39e58856",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "C1",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        6
+      ],
+      "winner_name": "Tinta Fina",
+      "source_url": "https://t.me/INHOficial/24224",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T17:13:43+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.433Z",
+      "message": "La Rinconada · C1: ganó #6 Tinta Fina. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "9d951fd27c81decaaa18fa276bf006a633835c8f086ef04d07ec731b21905d60",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "C2",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        7
+      ],
+      "winner_name": "Grand Sensation",
+      "source_url": "https://t.me/INHOficial/24234",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T17:40:51+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.433Z",
+      "message": "La Rinconada · C2: ganó #7 Grand Sensation. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "6f786af2b86537d8172f4b147c77c5ccd9dfd5095f982e57758601b81950667a",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "C3",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        1
+      ],
+      "winner_name": "Wicked Game",
+      "source_url": "https://t.me/INHOficial/24244",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T18:06:15+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · C3: ganó #1 Wicked Game. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "959212859feaea9da1982541ad2616d43a56fe7c7467fcf50194b757178dbaf2",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "C4",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        1
+      ],
+      "winner_name": "My Amazing Mate",
+      "source_url": "https://t.me/INHOficial/24252",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T18:28:55+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · C4: ganó #1 My Amazing Mate. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "5c4313a906212cd7cd55c57e7abd00ef64bd71a2a075475578793d56bc99b1bc",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "C5",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        2
+      ],
+      "winner_name": "Gran Torrente",
+      "source_url": "https://t.me/INHOficial/24262",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T19:05:32+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · C5: ganó #2 Gran Torrente. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "1ad3b5a73f8b97fb066584471466b210906ef71344ea8f7751af25520d9b3929",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "C6",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        6
+      ],
+      "winner_name": "The Exquisite Girl",
+      "source_url": "https://t.me/INHOficial/24273",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T19:23:20+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · C6: ganó #6 The Exquisite Girl. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "e3924057882bcc03d2dba3e6d9207b5bdde046ad1fbf0e97d992a35fda6466b5",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "C7",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        9
+      ],
+      "winner_name": "Gran Andres",
+      "source_url": "https://t.me/INHOficial/24282",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T19:44:27+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · C7: ganó #9 Gran Andres. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "3c351c3eeba01557c60065d17cac2a4c87c5f2cb8a3a5910e81b4cffeb7d714e",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "C8",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        8
+      ],
+      "winner_name": "Fátima Blush",
+      "source_url": "https://t.me/INHOficial/24295",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T20:15:24+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · C8: ganó #8 Fátima Blush. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "001b3b465b9c7fedf91c1c09fa33ae69579c9a2d9bd2b946ebc2475a618ff718",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "V1",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        2
+      ],
+      "winner_name": "Brother Will",
+      "source_url": "https://t.me/INHOficial/24305",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T20:48:44+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · V1: ganó #2 Brother Will. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "abdaf82a22757e34121bdaacea0a60e8c13243a91c35919e4a4d6f3852ea1b5e",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "V2",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        2
+      ],
+      "winner_name": "Zucchero",
+      "source_url": "https://t.me/INHOficial/24315",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T21:15:27+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · V2: ganó #2 Zucchero. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "278838e982994a7f1a09bb4b1b5b12ab5350dccf07b290bf93f30df86ddc48d0",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "V3",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        7
+      ],
+      "winner_name": "Ekati King",
+      "source_url": "https://t.me/INHOficial/24326",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T21:49:44+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · V3: ganó #7 Ekati King. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "1ff06981550c485d78b222e84e87bc62cf7301935d0d5641c18406ccf1bbc162",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "V4",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        6
+      ],
+      "winner_name": "Chosen Factor",
+      "source_url": "https://t.me/INHOficial/24337",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T22:15:09+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · V4: ganó #6 Chosen Factor. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "bf26d72f12cdc4a755a724d007c7a2db8849a64ccec6b6f2e08b69bd155e9336",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "V5",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        5
+      ],
+      "winner_name": "Black Stone",
+      "source_url": "https://t.me/INHOficial/24346",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T22:48:23+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.431Z",
+      "message": "La Rinconada · V5: ganó #5 Black Stone. Resultado oficial del 13/09/2026."
+    },
+    {
+      "id": "954199f7b2a5de2f4031d5d1e338e8367cef225c662efe83bab26e2dc0965e8c",
+      "meeting_id": "rinconada-13-09-2026",
+      "race_id": "V6",
+      "type": "result",
+      "status": "official",
+      "winner_numbers": [
+        1
+      ],
+      "winner_name": "Sr. Gato Pardo",
+      "source_url": "https://t.me/INHOficial/24353",
+      "final_results_source": "https://t.me/INHOficial/24357",
+      "occurred_at": "2026-09-13T23:28:55+00:00",
+      "race_started_at": null,
+      "reviewed_by": "source-audit",
+      "reviewed_at": "2026-09-18T12:59:00.432Z",
+      "message": "La Rinconada · V6: ganó #1 Sr. Gato Pardo. Resultado oficial del 13/09/2026."
+    }
+  ]
+}
