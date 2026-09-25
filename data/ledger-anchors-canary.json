@@ -1,0 +1,12 @@
+{
+  "TEST_ONLY": "YES",
+  "note": "canary H0; no es un pronostico real; no certifica produccion",
+  "snapshots": [
+    {
+      "TEST_ONLY": "YES",
+      "snapshot_id": "6926b2310f1556c5f77a786b49491165cb93936ec68e9ee7d422e1b59aff7756",
+      "meeting_key": "VALENCIA|2026-09-25",
+      "payload_sha256": "c6af3386f913749e55ac1c8cb6c5c404d03918c2e4f9d90556d69c306af9599e"
+    }
+  ]
+}
