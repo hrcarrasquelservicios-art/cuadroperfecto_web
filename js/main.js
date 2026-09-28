@@ -1,5 +1,6 @@
 /* Progressive, static-first jornada interface. All remote content is escaped. */
 const root = document.getElementById('main');
+const homeMarkup = root.innerHTML;
 const model = window.ZCP;
 const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dateES = value => new Intl.DateTimeFormat('es-VE',{weekday:'long',day:'numeric',month:'long',timeZone:'America/Caracas'}).format(new Date(`${value}T12:00:00-04:00`));
@@ -90,7 +91,7 @@ function render() {
  const track=p==='/valencia'?'Valencia':['/rinconada','/la-rinconada'].includes(p)?'La Rinconada':null;
  const found=slug?store.meetings.find(m=>m.slug===slug):window.CuadroPerfectoModel.selectCurrentMeeting(track?store.meetings.filter(m=>m.track===track):store.meetings);
  document.title='Zona Caliente Pro | Cuadro Perfecto';
- if(p==='/estadisticas')statistics();else if(p==='/resultados')results();else if(p==='/reuniones')archive();else if((p==='/'||track||slug)&&found)meeting(found,p==='/');else root.innerHTML=section('Jornada no disponible',empty('No encontramos una reunión para esta dirección.')+link('/reuniones','Consultar calendario','btn'));
+ if(p==='/')root.innerHTML=homeMarkup;else if(p==='/estadisticas')statistics();else if(p==='/resultados')results();else if(p==='/reuniones')archive();else if((track||slug)&&found)meeting(found);else root.innerHTML=section('Jornada no disponible',empty('No encontramos una reunión para esta dirección.')+link('/reuniones','Consultar calendario','btn'));
  const canonical=document.querySelector('link[rel="canonical"]'); if(canonical)canonical.href='https://cuadroperfecto.com'+(found && (slug||track)?'/reuniones/'+found.slug:p);
  document.querySelectorAll('#nav a').forEach(a=>{if(a.getAttribute('href')===p)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  document.getElementById('load-status').textContent=warning||'Datos cargados';
