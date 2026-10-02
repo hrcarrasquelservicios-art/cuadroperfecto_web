@@ -142,3 +142,11 @@ Preparar un post-mortem separado con:
 - lecciones para la jornada siguiente.
 
 Un acierto no se debe presentar automáticamente como rentabilidad.
+
+## Regla permanente: PUBLIC_RACE_SELECTION_REQUIRED=YES (2026-10-02)
+
+Toda carrera publicada lleva selección. Si H2 emite favorito público, se publica como «FAVORITO H2». Si H2 queda en NO_SELECTION, la carrera se publica como «CARRERA ABIERTA — COBERTURA ZCP» con la selección editorial en `races[].zcp`. Nunca se modifica el resultado H2 para lograrlo: las dos capas quedan separadas para medir H2_ACCURACY, ZCP_EDITORIAL_ACCURACY y COMBINED_COVERAGE_ACCURACY.
+
+## Caché de `js/main.js`
+
+Cloudflare guarda `main.js?v=...` durante 4 h. Cuando cambie `js/main.js`, cambia también la versión `?v=` en todos los HTML (la plantilla es el `index.html` raíz) antes del build; si no, el público seguirá recibiendo el JS anterior.
