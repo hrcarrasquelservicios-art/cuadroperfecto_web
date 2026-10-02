@@ -968,7 +968,7 @@
       "date": "2026-10-04",
       "status": "FAVORITOS PUBLICADOS",
       "unit_value": null,
-      "analysis_snapshot_id": "snapshot-rinconada-2026-10-04-r39-h2v1-1",
+      "analysis_snapshot_id": "snapshot-rinconada-2026-10-04-r39-h2v1-1-zcp",
       "gate": {
         "retirados": null,
         "cambios_monta": null,
@@ -995,11 +995,13 @@
           "scope": "Factores activos: FORMA, CONSISTENCIA y DISTANCIA (retrospectos de Hipismo Virtual y Las Notas Hípicas). No es el Sistema 3.3 completo: TRABAJOS no forma parte del cálculo y no hay batacazos del motor.",
           "editorial": null,
           "five_six": "5Y6 EN ACTUALIZACIÓN: las válidas y el valor de la unidad aún no están verificados; no se publican cuadros ni costos.",
-          "disclaimer": "Los pronósticos hípicos son análisis de rendimiento y no garantizan resultados. Verifique retirados y condiciones oficiales antes de participar."
+          "disclaimer": "Los pronósticos hípicos son análisis de rendimiento y no garantizan resultados. Verifique retirados y condiciones oficiales antes de participar.",
+          "zcp_note": "H2 identifica el nivel de confianza estadística. Zona Caliente Pro complementa las carreras abiertas con análisis editorial para que ninguna carrera quede sin selección.",
+          "public_race_selection_required": true
         },
         "alertas": [
           "Fuentes de prensa: Revista Digital, Hipismo Virtual y Las Notas Hípicas. Sin programa oficial INH; verificación oficial pendiente.",
-          "C4, C10 y C12: NO_SELECTION (evidencia insuficiente para emitir favorito)."
+          "C4, C10 y C12: carrera abierta — H2 sin favorito de alta confianza; cobertura editorial ZCP."
         ],
         "cambios_ultima_hora": [],
         "retirados": [
@@ -1080,8 +1082,34 @@
           "distance": "1.100 m",
           "time": "2:15 PM",
           "horses": [],
-          "analysis": "NO_SELECTION: el motor no emite favorito público en esta carrera porque la evidencia no supera el mínimo de margen.",
-          "selection": "NO_SELECTION"
+          "analysis": "H2 sin favorito de alta confianza: el motor no emite favorito público en esta carrera porque la evidencia no supera el mínimo de margen.",
+          "selection": "NO_SELECTION",
+          "zcp": {
+            "label": "CARRERA ABIERTA — COBERTURA ZCP",
+            "h2": "sin favorito de alta confianza (no superó el gate de evidencia)",
+            "picks": [
+              {
+                "number": 8,
+                "name": "PAPA STEFANO"
+              },
+              {
+                "number": 1,
+                "name": "EMPEROR D'ORO"
+              },
+              {
+                "number": 5,
+                "name": "ANASTASIA QUEEN"
+              }
+            ],
+            "extras": [
+              {
+                "tag": "SORPRESA EDITORIAL",
+                "number": 3,
+                "name": "GUALBERTO"
+              }
+            ],
+            "layer": "SELECCION_EDITORIAL_ZCP (no es favorito H2; H2 interno = NO_SELECTION)"
+          }
         },
         {
           "id": "r39-c5",
@@ -1196,8 +1224,39 @@
           "distance": "1.200 m",
           "time": "5:15 PM",
           "horses": [],
-          "analysis": "NO_SELECTION: el motor no emite favorito público en esta carrera porque la evidencia no supera el mínimo de historial, puntaje, margen.",
-          "selection": "NO_SELECTION"
+          "analysis": "H2 sin favorito de alta confianza: el motor no emite favorito público en esta carrera porque la evidencia no supera el mínimo de historial, puntaje, margen.",
+          "selection": "NO_SELECTION",
+          "zcp": {
+            "label": "CARRERA ABIERTA — COBERTURA ZCP",
+            "h2": "sin favorito de alta confianza (no superó el gate de evidencia)",
+            "picks": [
+              {
+                "number": 9,
+                "name": "COLORADA"
+              },
+              {
+                "number": 4,
+                "name": "SRTA. BULERIA"
+              },
+              {
+                "number": 1,
+                "name": "MIYE"
+              }
+            ],
+            "extras": [
+              {
+                "tag": "COBERTURA ADICIONAL",
+                "number": 6,
+                "name": "DONOSTIA"
+              },
+              {
+                "tag": "ALTERNATIVA EDITORIAL",
+                "number": 8,
+                "name": "LA VALQUIRIA"
+              }
+            ],
+            "layer": "SELECCION_EDITORIAL_ZCP (no es favorito H2; H2 interno = NO_SELECTION)"
+          }
         },
         {
           "id": "r39-c11",
@@ -1228,8 +1287,41 @@
           "distance": "1.400 m",
           "time": "6:15 PM",
           "horses": [],
-          "analysis": "NO_SELECTION: el motor no emite favorito público en esta carrera porque la evidencia no supera el mínimo de margen.",
-          "selection": "NO_SELECTION"
+          "analysis": "H2 sin favorito de alta confianza: el motor no emite favorito público en esta carrera porque la evidencia no supera el mínimo de margen.",
+          "selection": "NO_SELECTION",
+          "zcp": {
+            "label": "CARRERA ABIERTA — COBERTURA ZCP",
+            "h2": "sin favorito de alta confianza (no superó el gate de evidencia)",
+            "picks": [
+              {
+                "number": 6,
+                "name": "CORONADA EN GLORIA"
+              },
+              {
+                "number": 4,
+                "name": "MY THREE LOVES"
+              },
+              {
+                "number": 2,
+                "name": "LULU MCJET"
+              },
+              {
+                "number": 8,
+                "name": "CATIRA ZETA"
+              },
+              {
+                "number": 3,
+                "name": "TOP WOMAN TWO"
+              }
+            ],
+            "extras": [],
+            "highlight": {
+              "tag": "BOMBA TÉCNICA EDITORIAL ZCP",
+              "number": 6,
+              "name": "CORONADA EN GLORIA"
+            },
+            "layer": "SELECCION_EDITORIAL_ZCP (no es favorito H2; H2 interno = NO_SELECTION)"
+          }
         },
         {
           "id": "r39-c13",
