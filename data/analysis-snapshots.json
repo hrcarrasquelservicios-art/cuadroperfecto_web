@@ -7353,6 +7353,301 @@
         }
       },
       "sha256": "eef6b91c55af6940ea37f34437136db912c25d47cff6a5a7b436f785e777c8ec"
+    },
+    {
+      "id": "snapshot-rinconada-2026-10-04-r39-h2v1-1",
+      "meeting_id": "rinconada-2026-10-04-r39",
+      "kind": "PRE_CARRERA",
+      "frozen_at": "2026-10-02T18:12:38Z",
+      "source": "h2-engine-s33-op-v1.1@8f3b782",
+      "analysis": {
+        "races": [
+          {
+            "id": "r39-c1",
+            "public_label": "1C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.500 m",
+            "time": "1:00 PM",
+            "horses": [
+              {
+                "number": 3,
+                "name": "ROSE SENSATIONS",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 4,875/10 (FORMA 1,875 · CONSISTENCIA 3 · DISTANCIA 0). Margen 3,375 sobre el segundo · 7 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          },
+          {
+            "id": "r39-c2",
+            "public_label": "2C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.200 m",
+            "time": "1:25 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "MAHOMES",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 9,325/10 (FORMA 2,325 · CONSISTENCIA 3 · DISTANCIA 4). Margen 3,1917 sobre el segundo · 7 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          },
+          {
+            "id": "r39-c3",
+            "public_label": "3C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.200 m",
+            "time": "1:50 PM",
+            "horses": [
+              {
+                "number": 2,
+                "name": "REY ENIGMA",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 7,85/10 (FORMA 2,1 · CONSISTENCIA 3 · DISTANCIA 2,75). Margen 2,875 sobre el segundo · 7 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          },
+          {
+            "id": "r39-c4",
+            "public_label": "4C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.100 m",
+            "time": "2:15 PM",
+            "horses": [],
+            "analysis": "NO_SELECTION: el motor no emite favorito público en esta carrera porque la evidencia no supera el mínimo de margen.",
+            "selection": "NO_SELECTION"
+          },
+          {
+            "id": "r39-c5",
+            "public_label": "5C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.800 m",
+            "time": "2:40 PM",
+            "horses": [
+              {
+                "number": 7,
+                "name": "FORREST GUMP",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 8,225/10 (FORMA 1,725 · CONSISTENCIA 3 · DISTANCIA 3,5). Margen 2,725 sobre el segundo · 7 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          },
+          {
+            "id": "r39-c6",
+            "public_label": "6C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.500 m",
+            "time": "3:05 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "SPECIAL ELEMENT (USA)",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 5,025/10 (FORMA 2,025 · CONSISTENCIA 3 · DISTANCIA 0). Margen 0,6 sobre el segundo · 7 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          },
+          {
+            "id": "r39-c7",
+            "public_label": "7C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.800 m",
+            "time": "3:40 PM",
+            "horses": [
+              {
+                "number": 5,
+                "name": "ASTUTO",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 7,25/10 (FORMA 2,25 · CONSISTENCIA 3 · DISTANCIA 2). Margen 1,85 sobre el segundo · 7 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          },
+          {
+            "id": "r39-c8",
+            "public_label": "8C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.200 m",
+            "time": "4:15 PM",
+            "horses": [
+              {
+                "number": 5,
+                "name": "AINHOA DEL VALLE",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 8,2/10 (FORMA 1,2 · CONSISTENCIA 3 · DISTANCIA 4). Margen 2,075 sobre el segundo · 4 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          },
+          {
+            "id": "r39-c9",
+            "public_label": "9C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.500 m",
+            "time": "4:45 PM",
+            "horses": [
+              {
+                "number": 2,
+                "name": "MR. THUNDER",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 4,725/10 (FORMA 1,725 · CONSISTENCIA 3 · DISTANCIA 0). Margen 3,825 sobre el segundo · 6 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          },
+          {
+            "id": "r39-c10",
+            "public_label": "10C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.200 m",
+            "time": "5:15 PM",
+            "horses": [],
+            "analysis": "NO_SELECTION: el motor no emite favorito público en esta carrera porque la evidencia no supera el mínimo de historial, puntaje, margen.",
+            "selection": "NO_SELECTION"
+          },
+          {
+            "id": "r39-c11",
+            "public_label": "11C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.500 m",
+            "time": "5:45 PM",
+            "horses": [
+              {
+                "number": 9,
+                "name": "CANCILLER",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 4,725/10 (FORMA 1,725 · CONSISTENCIA 3 · DISTANCIA 0). Margen 0,75 sobre el segundo · 6 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          },
+          {
+            "id": "r39-c12",
+            "public_label": "12C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.400 m",
+            "time": "6:15 PM",
+            "horses": [],
+            "analysis": "NO_SELECTION: el motor no emite favorito público en esta carrera porque la evidencia no supera el mínimo de margen.",
+            "selection": "NO_SELECTION"
+          },
+          {
+            "id": "r39-c13",
+            "public_label": "13C",
+            "inh_code": null,
+            "kind": "CARRERA",
+            "distance": "1.400 m",
+            "time": "6:45 PM",
+            "horses": [
+              {
+                "number": 14,
+                "name": "DON RUBEN",
+                "jockey": null,
+                "trainer": null,
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              }
+            ],
+            "analysis": "Motor H2 v1.1: 7,25/10 (FORMA 2,25 · CONSISTENCIA 3 · DISTANCIA 2). Margen 2 sobre el segundo · 4 carreras válidas en el historial.",
+            "selection": "PUBLIC_FAVORITE"
+          }
+        ],
+        "intelligence": {
+          "bases": [],
+          "bombas": [],
+          "carrera_trampa": null,
+          "engine": {
+            "label": "NUEVO MOTOR H2 v1.1 — FAVORITOS CON GATE DE EVIDENCIA",
+            "model": "s33-op-v1.1",
+            "model_version": "s33-operational-v1.1",
+            "commit": "8f3b782",
+            "run_output_sha256": "aad080e730a832454130efc1af6d3bfb1f4d00435870794739acef890a508e5e",
+            "dataset_manifest_sha256": "eb131d82baf8277017e5e3da1438366011f5477d9bc7ab2b7abb13560f8438b8",
+            "data_cutoff_utc": "2026-10-02T17:35:44.000Z",
+            "explanation": "El motor solo emite favorito público cuando supera los mínimos de historial, puntaje y margen. Cuando la evidencia no es suficiente, la carrera queda en NO_SELECTION.",
+            "gate": "historial ≥ 3 carreras válidas · puntaje ≥ 3,0 · margen ≥ 0,5 sobre el segundo",
+            "scope": "Factores activos: FORMA, CONSISTENCIA y DISTANCIA (retrospectos de Hipismo Virtual y Las Notas Hípicas). No es el Sistema 3.3 completo: TRABAJOS no forma parte del cálculo y no hay batacazos del motor.",
+            "editorial": null,
+            "five_six": "5Y6 EN ACTUALIZACIÓN: las válidas y el valor de la unidad aún no están verificados; no se publican cuadros ni costos.",
+            "disclaimer": "Los pronósticos hípicos son análisis de rendimiento y no garantizan resultados. Verifique retirados y condiciones oficiales antes de participar."
+          },
+          "alertas": [
+            "Fuentes de prensa: Revista Digital, Hipismo Virtual y Las Notas Hípicas. Sin programa oficial INH; verificación oficial pendiente.",
+            "C4, C10 y C12: NO_SELECTION (evidencia insuficiente para emitir favorito)."
+          ],
+          "cambios_ultima_hora": [],
+          "retirados": [
+            "5C #2 MAD MAX — RETIRADO oficial INH (publicado 01/10/2026)",
+            "8C #6 LUNA DULCE — RETIRADO oficial INH (publicado 01/10/2026)",
+            "11C #6 BIG FAMILY — RETIRADO oficial INH (publicado 01/10/2026)"
+          ]
+        },
+        "tickets": [],
+        "gate": {
+          "retirados": null,
+          "cambios_monta": null,
+          "pesos_descargos": null,
+          "implementos": null,
+          "condicion_pista": null,
+          "cambios_ultima_hora": null,
+          "valor_unidad": null
+        }
+      },
+      "sha256": "2b8671a803740732775eff5f20cff55857cd5db56d5b3dc9ed68bd82dc2792e1"
     }
   ]
 }
