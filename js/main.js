@@ -124,6 +124,7 @@ function horseHistory(track) {
 }
 function render() {
  if(!store)return;if(STATIC_PAGE){document.getElementById('load-status').textContent='Datos cargados';return;}visibleMeeting=null;
+ const ruta=new URLSearchParams(location.search).get('ruta');if(ruta&&STATIC_ROUTE.test(ruta)){location.replace(ruta);return;}
  const p=(new URLSearchParams(location.search).get('ruta')||location.pathname).replace(/\/$/,'')||'/';
  const slug=p.match(/^\/reuniones\/([^/]+)$/)?.[1];
  const track=p==='/valencia'?'Valencia':['/rinconada','/la-rinconada'].includes(p)?'La Rinconada':null;

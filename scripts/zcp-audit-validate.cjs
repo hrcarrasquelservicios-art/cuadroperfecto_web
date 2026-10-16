@@ -21,7 +21,8 @@ function validateAudit(D) {
   if (D.prerace.length !== 2) fail('expected 2 pre-race meetings');
   for (const p of D.prerace) {
     const E = EXPECTED_PRERACE[p.id]; if (!E) fail('unexpected pre-race ' + p.id);
-    if (p.status !== 'AWAITING_OFFICIAL_EVIDENCE') fail('pre-race status must be AWAITING_OFFICIAL_EVIDENCE');
+    if (p.status === 'VERIFIED') { if (!p.result_slug || !D.meetings.some(m => m.id === p.id && m.slug === p.result_slug && m.status === 'VERIFIED')) fail('VERIFIED pre-race needs its approved result record ' + p.id); }
+    else if (p.status !== 'AWAITING_OFFICIAL_EVIDENCE') fail('pre-race status must be AWAITING_OFFICIAL_EVIDENCE or VERIFIED');
     if (p.DATASET_SHA256 !== E.DATASET_SHA256 || p.SOURCE_SHA256 !== E.SOURCE_SHA256) fail('A hashes differ from frozen evidence ' + p.id);
     if (!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$/.test(p.SOURCE_PUBLISHED_AT) || Date.parse(p.SOURCE_PUBLISHED_AT) >= Date.parse(p.first_post_utc)) fail('publication must precede first race ' + p.id);
     for (const t of p.tickets) {
@@ -54,7 +55,10 @@ function validateAudit(D) {
   const R = D.race_metrics, T = D.metric_universe.totals;
   const s = k => R.reduce((n, r) => n + Number(r[k]), 0);
   if (R.length !== T.races || s('top3') !== T.top3 || s('first') !== T.first || s('expanded') !== T.expanded || s('bomba_w') !== T.bomba_w || s('bomba_n') !== T.bomba_n) fail('metric totals');
-  if (T.top3 !== 34 || T.races !== 58) fail('top-3 universe must be 34/58');
+  const BT = D.metric_universe.baseline_totals || T;
+  if (BT.top3 !== 34 || BT.races !== 58) fail('baseline top-3 universe must remain 34/58');
+  const base = R.filter(r => (D.metric_universe.baseline_meetings || D.metric_universe.meetings).includes(r.meeting_id));
+  if (base.length !== 58 || base.filter(r => r.top3).length !== 34) fail('baseline race rows changed');
   if (new Set(R.map(r => r.version)).size > 1 && D.metric_universe.label !== 'MULTI-VERSION HISTORICAL') fail('multi-version label');
   const ids = new Set(D.corrections.map(c => c.id));
   for (const id of ['C-2026-001', 'C-2026-002', 'C-2026-003', 'C-2026-004', 'C-2026-005']) if (!ids.has(id)) fail('missing correction ' + id);

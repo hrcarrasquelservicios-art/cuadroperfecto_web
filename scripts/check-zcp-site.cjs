@@ -18,10 +18,10 @@ for (const r of required) if (!fs.existsSync(r)) errors.push('missing page ' + r
 // pronósticos previos: estado, sello, cuadros y caballos
 for (const p of D.prerace) {
   const s = fs.readFileSync(`reuniones/${p.slug}/index.html`, 'utf8');
-  for (const must of ['PRONÓSTICO PREVIO', 'AWAITING_OFFICIAL_EVIDENCE', 'PUBLICADO ANTES DE LA JORNADA', 'VER EVIDENCIA', 'data-static="zcp"']) if (!s.includes(must)) errors.push(`${p.slug} lacks ${must}`);
+  for (const must of ['PRONÓSTICO PREVIO', p.status, 'PUBLICADO ANTES DE LA JORNADA', 'VER EVIDENCIA', 'data-static="zcp"']) if (!s.includes(must)) errors.push(`${p.slug} lacks ${must}`);
   for (const t of p.tickets) { const tot = String(t.current.combinations).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); const cost = 'Bs ' + String(t.current.cost_bs).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); if (!s.includes(`${tot} <span>combinaciones</span>`) || !s.includes(cost)) errors.push(`${p.slug} ${t.type} totals not rendered`); t.current.legs.forEach((l, i) => { if (!s.includes(`<span>V${i + 1}</span>${l.join(' - ')}</li>`)) errors.push(`${p.slug} ${t.type} V${i + 1} leg not rendered`); }); }
   for (const r of p.races) for (const h of r.horses) if (!s.includes(h.name.replace(/&/g, '&amp;').replace(/'/g, '&#39;'))) errors.push(`${p.slug} missing horse ${h.name}`);
-  if (/Ganador oficial|GANÓ|✓/.test(s.replace(/<header[\s\S]*?<\/header>/, ''))) errors.push(`${p.slug} shows a result before racing`);
+  if (p.status === 'AWAITING_OFFICIAL_EVIDENCE' && /Ganador oficial|GANÓ|✓/.test(s.replace(/<header[\s\S]*?<\/header>/, ''))) errors.push(`${p.slug} shows a result before racing`);
 }
 // datos privados, borradores y secretos
 const PRIVATE = [/COUNTERFACTUAL/i, /frozen\/b1/i, /REVISION_1/i, /B_SHA256/, /B privado/i, /797ffffcc943/, /0fe39dc10290/];
