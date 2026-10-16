@@ -1,0 +1,58 @@
+{
+ "routes": [
+  "/historico",
+  "/rendimiento",
+  "/metodologia",
+  "/resultados/valencia-reunion-22-5-septiembre-2026",
+  "/resultados/la-rinconada-reunion-35-6-septiembre-2026",
+  "/resultados/la-rinconada-reunion-37-20-septiembre-2026",
+  "/resultados/valencia-reunion-24-26-septiembre-2026",
+  "/resultados/la-rinconada-reunion-38-27-septiembre-2026",
+  "/resultados/la-rinconada-reunion-39-4-octubre-2026",
+  "/resultados/valencia-reunion-25-10-octubre-2026",
+  "/resultados/la-rinconada-reunion-40-11-octubre-2026",
+  "/reuniones/valencia-reunion-26-17-octubre-2026",
+  "/reuniones/la-rinconada-reunion-41-18-octubre-2026",
+  "/resultados"
+ ],
+ "expected_prerace": {
+  "VAL-R26-2026-10-17": {
+   "DATASET_SHA256": "894051ec0e4a52936ec6308d7379b95e46f45865b8dbb29ef9b216d688243633",
+   "SOURCE_SHA256": "da0be129d715c9e91d46b4f49bfc49c138ffdfc8559145e85d89fa31c7dacecc",
+   "ECONOMICA": [
+    16,
+    560,
+    "8-7 / 7 / 7-6 / 7 / 6-4 / 3-6"
+   ],
+   "EQUILIBRADA": [
+    216,
+    7560,
+    "8-7 / 7-8 / 7-6-2 / 7-4 / 6-4-5 / 3-6-7"
+   ],
+   "BLINDADA": [
+    576,
+    20160,
+    "8-7-3 / 7-8 / 7-6-2-4 / 7-4 / 6-4-5 / 3-6-7-5"
+   ]
+  },
+  "RIN-R41-2026-10-18": {
+   "DATASET_SHA256": "002f69e6c8cff3aaf20708040ad91eed5af1a096bff604178483773bb5b84e0c",
+   "SOURCE_SHA256": "2566b5c8250a15fa985734c2e1b3bd1f5e958f324787569e9cf4ce09863d1aa9",
+   "ECONOMICA": [
+    12,
+    420,
+    "1-6 / 10-1 / 3 / 7 / 2 / 9-6-12"
+   ],
+   "EQUILIBRADA": [
+    192,
+    6720,
+    "1-6 / 10-1-5 / 3-4 / 7-1 / 2-4 / 9-6-12-13"
+   ],
+   "BLINDADA": [
+    960,
+    33600,
+    "1-6-9-4 / 10-1-5-6 / 3-4 / 7-1 / 2-4-8 / 9-6-12-13-4"
+   ]
+  }
+ }
+}

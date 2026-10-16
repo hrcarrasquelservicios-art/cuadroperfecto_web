@@ -2,6 +2,10 @@
 const root = document.getElementById('main');
 const homeMarkup = root.innerHTML;
 const model = window.ZCP;
+/* Páginas estáticas del historial auditable: main.js no las re-renderiza ni intercepta su navegación. */
+const STATIC_PAGE = root.dataset.static === 'zcp';
+const STATIC_ROUTE = /^\/(historico|rendimiento|metodologia|resultados)(\/|$)|^\/reuniones\/(valencia-reunion-26-17-octubre-2026|la-rinconada-reunion-41-18-octubre-2026)\/?$/;
+let audit = null;
 const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dateES = value => new Intl.DateTimeFormat('es-VE',{weekday:'long',day:'numeric',month:'long',timeZone:'America/Caracas'}).format(new Date(`${value}T12:00:00-04:00`));
 const tierName = tier => ({PRESENTADO:'Económico',RECOMENDADO:'Recomendado',PREMIUM:'Completo'}[tier] || tier);
@@ -26,11 +30,11 @@ function legacyResult(m,r) {
 }
 function raceCard(m,r,index) {
  const {result,hit} = model.outcome(m,r,store.events,store.snapshots);
- const favorite = r.horses.find(h=>h.role==='FAVORITO_ZCP');
+ const favorite = r.horses.find(h=>h.role==='FAVORITO_ZCP') || r.horses.find(h=>h.role==='SORPRESA');
  const old = legacyResult(m,r);
  const status = result ? 'Resultado oficial' : old ? 'Resultado de archivo' : m.date<today()?'Resultado pendiente':'Por correr · horario por confirmar';
  const badges = r.horses.map(h=>`<tr><th scope="row"><b class="number">${esc(h.number)}</b> ${esc(h.name)}</th><td>${esc(roles[h.role] || h.role || 'Sin selección')}</td><td>${esc(h.jockey || 'Por confirmar')}</td><td>${esc(h.trainer || 'Por confirmar')}</td><td>${esc(h.speed_rating ?? h.sr ?? '—')}</td><td>${esc(Array.isArray(h.recent_form)?h.recent_form.join(' · '):h.recent_form || '—')}</td><td>${esc(typeof h.workouts==='string'?h.workouts:h.workouts?JSON.stringify(h.workouts):'—')}</td></tr>`).join('');
- return `<article class="race" id="carrera-${index+1}"><div class="race-top"><div class="race-index">${String(index+1).padStart(2,'0')}</div><div><div class="eyebrow">${esc(r.kind==='5Y6'?'5y6 Nacional':r.kind==='NO_VALIDA'?'No válida':'Carrera')} · ${esc(r.public_label)}</div><h3>${esc(r.time || 'Hora pendiente')} <small>· ${esc(r.distance || 'Distancia pendiente')}</small></h3></div><span class="pill">${status}</span></div><div class="race-body"><div class="selection"><span>NUESTRA SELECCIÓN</span><strong>${favorite?`<b class="number">${esc(favorite.number)}</b> ${esc(favorite.name)}`:r.zcp?zcpHtml(r):r.selection==='NO_SELECTION'?'NO_SELECTION — sin favorito público':'Favorito pendiente'}</strong><p>${esc(r.analysis || 'Argumento del sistema pendiente de publicación.')}</p></div>${result?`<div class="result"><strong>Ganador: ${result.winner_numbers.map(n=>'#'+esc(n)).join(' / ')} ${esc(result.winner_name||'')}</strong> · ${hit===null?'Acierto no verificable con evidencia pre-carrera':hit?'Acertó nuestro favorito':'No acertó nuestro favorito'} ${external(result.source_url,'Ver fuente oficial')}</div>`:old?`<p class="callout">${esc(old.official_result_raw)}<br><small>Registro heredado; sin fuente individual verificada. Excluido de aciertos verificados.</small></p>`:''}<details><summary>Ver ejemplares y datos disponibles (${r.horses.length})</summary><p class="muted">Selecciones registradas; no constituyen la nómina oficial completa. SR = Speed Rating. «—» indica un dato no disponible.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Ejemplares de ${esc(r.public_label)}"><table><thead><tr><th>Ejemplar</th><th>Selección</th><th>Jinete</th><th>Entrenador</th><th>SR</th><th>Forma</th><th>Trabajos</th></tr></thead><tbody>${badges}</tbody></table></div></details></div></article>`;
+ return `<article class="race" id="carrera-${index+1}"><div class="race-top"><div class="race-index">${String(index+1).padStart(2,'0')}</div><div><div class="eyebrow">${esc(r.kind==='5Y6'?'5y6 Nacional':r.kind==='NO_VALIDA'?'No válida':'Carrera')} · ${esc(r.public_label)}</div><h3>${esc(r.time || 'Hora pendiente')} <small>· ${esc(r.distance || 'Distancia pendiente')}</small></h3></div><span class="pill">${status}</span></div><div class="race-body"><div class="selection"><span>NUESTRA SELECCIÓN</span><strong>${favorite?`<b class="number">${esc(favorite.number)}</b> ${esc(favorite.name)}${favorite.role==='SORPRESA'?' <span class="pill">BOMBA</span>':''}`:r.zcp?zcpHtml(r):r.selection==='NO_SELECTION'?'NO_SELECTION — sin favorito público':'Favorito pendiente'}</strong><p>${esc(r.analysis || 'Argumento del sistema pendiente de publicación.')}</p></div>${result?`<div class="result"><strong>Ganador: ${result.winner_numbers.map(n=>'#'+esc(n)).join(' / ')} ${esc(result.winner_name||'')}</strong> · ${hit===null?'Acierto no verificable con evidencia pre-carrera':hit?'Acertó nuestro favorito':'No acertó nuestro favorito'} ${external(result.source_url,'Ver fuente oficial')}</div>`:old?`<p class="callout">${esc(old.official_result_raw)}<br><small>Registro heredado; sin fuente individual verificada. Excluido de aciertos verificados.</small></p>`:''}<details><summary>Ver ejemplares y datos disponibles (${r.horses.length})</summary><p class="muted">Selecciones registradas; no constituyen la nómina oficial completa. SR = Speed Rating. «—» indica un dato no disponible.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Ejemplares de ${esc(r.public_label)}"><table><thead><tr><th>Ejemplar</th><th>Selección</th><th>Jinete</th><th>Entrenador</th><th>SR</th><th>Forma</th><th>Trabajos</th></tr></thead><tbody>${badges}</tbody></table></div></details></div></article>`;
 }
 function ticketCard(m,t) {
  const total=model.combinations(t.legs);
@@ -69,12 +73,22 @@ function engineTail(m) {
  const e=m.intelligence.engine;
  return section('Contenido editorial Zona Caliente Pro',e.editorial?`<p class="eyebrow">SELECCIÓN EDITORIAL ZONA CALIENTE PRO</p><p>${esc(e.editorial)}</p>`:empty('Contenido editorial de esta jornada pendiente de publicación. Cuando se publique irá rotulado como «Selección editorial Zona Caliente Pro», separado de los favoritos del motor H2.'),'editorial')+section('Aviso',`<p class="callout">${esc(e.disclaimer)}</p>`,'aviso');
 }
+function auditNotice(slug) {
+ if(!audit)return '';
+ const page='/reuniones/'+slug;
+ const m=(audit.meetings||[]).find(x=>x.previous_web_page===page);
+ const n=(audit.needs_evidence||[]).find(x=>x.previous_web_page===page);
+ if(m){const c=(audit.corrections||[]).filter(x=>m.corrections.includes(x.id));return `<div class="zcp-correction-notice" role="note"><strong>Registro auditado · ${esc(m.status)}</strong><p>${m.id==='RIN-R39-2026-10-04'?'Esta ficha web no tiene fecha de publicación demostrable (UNTIMESTAMPED). El pronóstico canónico de esta reunión es el de Telegram 2669 (02/10/2026 18:25:09 UTC).':esc(m.scope||'')}${c.map(x=>`<br>Corrección <a href="/historico#${esc(x.id)}">${esc(x.id)}</a>: ${esc(x.title)}`).join('')}</p><a href="/resultados/${esc(m.slug)}">Ver el registro auditado →</a></div>`;}
+ if(n)return `<div class="zcp-correction-notice" role="note"><strong>NEEDS_EVIDENCE</strong><p>${esc(n.note)}</p><a href="/historico">Ver el histórico auditable →</a></div>`;
+ return '';
+}
 function meeting(m,home=false) {
  visibleMeeting=m;
  const races=model.orderedRaces(m);
  if(!races.some(r=>r.kind==='5Y6') && m.tickets.length)for(let leg=1;leg<=6;leg++)races.push({public_label:leg+'V',kind:'5Y6',horses:[],analysis:'Selecciones del cuadro recomendado: '+(m.tickets.find(t=>t.tier==='RECOMENDADO')?.legs[leg+'V']||[]).map(n=>'#'+n).join(', ')+'. Ficha oficial pendiente.'});
  root.innerHTML=`<div class="wrap">${agenda(store.meetings,m)}${banner(m)}<header class="meeting-header"><div><div class="eyebrow">${esc(dateES(m.date))} · VENEZUELA</div><h1>${title(m)}</h1><p>Análisis carrera por carrera. Pronósticos que quedan registrados.</p></div><span class="pill">${esc(meetingStatus(m))}</span></header><nav class="section-nav" aria-label="Secciones de la jornada"><a href="#carreras">Carreras</a><a href="#cuadro">Cuadros 5y6</a><a href="#en-vivo">En vivo</a>${link('/estadisticas','Estadísticas')}${link('/resultados','Historial')}</nav>${warning?`<p role="status" class="callout">${esc(warning)}</p>`:''}</div>${section('Programa de carreras',`<div class="program-heading"><p>Orden de la jornada · ${m.races.length} fichas publicadas · Horarios de Venezuela</p><a href="#cuadro">Ir a los tres cuadros ↓</a></div>${m.track==='Valencia' && m.races.filter(r=>r.kind==='5Y6').length<6?empty('El archivo de Valencia aún no contiene las fichas de las seis válidas. Puedes consultar los tres cuadros más abajo. Las fichas pendientes se publicarán al completar el programa.') : ''}<div class="race-list">${races.map((r,i)=>raceCard(m,r,i)).join('') || empty('Programa por confirmar.')}</div>`,'carreras')}${section('Cuadro Perfecto 5y6',`<p>Tres coberturas para la misma jornada. Las combinaciones se calculan a partir de cada selección.</p><div class="tickets">${m.tickets.slice().sort((a,b)=>['PRESENTADO','RECOMENDADO','PREMIUM'].indexOf(a.tier)-['PRESENTADO','RECOMENDADO','PREMIUM'].indexOf(b.tier)).map(t=>ticketCard(m,t)).join('')}</div>${officialCTA()}`,'cuadro')}${section('Señales del sistema',`<div class="archive-grid"><article class="card"><h3>Bases</h3><p>${(m.intelligence?.bases||[]).map(esc).join('<br>')||'Sin base publicada.'}</p></article><article class="card"><h3>Bombas y sorpresas</h3><p>${(m.intelligence?.bombas||[]).map(b=>typeof b==='string'?esc(b):esc(b.race)+' · #'+esc(b.number)+' '+esc(b.name)).join('<br>')||'Sin selección publicada.'}</p></article><article class="card"><h3>Alertas y retirados</h3><p>${[...(m.intelligence?.alertas||[]),...(m.intelligence?.retirados||[])].map(a=>esc(typeof a==='object'?JSON.stringify(a):a)).join('<br>')||'Pendiente de confirmación oficial.'}</p></article></div>`)}${live(m)}${section('Antes de jugar',`<p>Verifica retiros, cambios de monta, pista y valor oficial de la unidad. ${Object.values(m.gate||{}).every(v=>v===true)?'Revisión registrada.':'La validación final de esta jornada sigue pendiente.'}</p><details><summary>Consultar registro del pronóstico</summary><p>Referencia: ${esc(m.analysis_snapshot_id||'Pendiente')}.</p><p>Los resultados posteriores no sustituyen las selecciones previas.</p>${external('https://cuadroperfecto.com/data/analysis-snapshots.json','Archivo de pronósticos')}</details>`)}`;
  if(m.intelligence?.engine){const car=document.getElementById('carreras');if(car)car.insertAdjacentHTML('beforebegin',engineSections(m));const cu=document.getElementById('cuadro');if(cu&&!m.tickets.length)cu.querySelector('.wrap').innerHTML=`<h2>Cuadro Perfecto 5y6</h2><p class="callout">${esc(m.intelligence.engine.five_six)}</p>`;root.insertAdjacentHTML('beforeend',engineTail(m));}
+ const notice=auditNotice(m.slug);if(notice){const h=root.querySelector('.meeting-header');if(h)h.insertAdjacentHTML('afterend',notice);}
  document.getElementById('play-archive').addEventListener('click',()=>{document.getElementById('archive-player').innerHTML=streamPlayer({url:'https://youtu.be/T8xrWacjvsQ'});});
  document.getElementById('promo-choice').addEventListener('change',e=>{const media=document.getElementById('promo-media');media.innerHTML=e.target.value==='official-archive'?streamPlayer({url:'https://youtu.be/T8xrWacjvsQ'})+'<p>Archivo · La Rinconada, 13/09/2026 · C14. '+external('https://t.me/INHOficial/24359','Fuente oficial')+'</p>':'<video controls muted playsinline preload="none" poster="/assets/banner-poster.webp" aria-label="Video promocional de Zona Caliente Pro"><source src="/assets/'+esc(e.target.value)+'" type="video/mp4"></video>'; });
  document.title=`${home?'Zona Caliente Pro · ':''}${m.track} ${m.date} | Cuadro Perfecto`;
@@ -104,7 +118,7 @@ function horseHistory(track) {
  const map=new Map();store.meetings.filter(m=>m.track===(track==='valencia'?'Valencia':'La Rinconada')).forEach(m=>{new Set(m.races.flatMap(r=>r.horses.map(h=>h.name.toUpperCase()))).forEach(n=>map.set(n,(map.get(n)||0)+1));});return [...map].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
 }
 function render() {
- if(!store)return;visibleMeeting=null;
+ if(!store)return;if(STATIC_PAGE){document.getElementById('load-status').textContent='Datos cargados';return;}visibleMeeting=null;
  const p=(new URLSearchParams(location.search).get('ruta')||location.pathname).replace(/\/$/,'')||'/';
  const slug=p.match(/^\/reuniones\/([^/]+)$/)?.[1];
  const track=p==='/valencia'?'Valencia':['/rinconada','/la-rinconada'].includes(p)?'La Rinconada':null;
@@ -124,16 +138,19 @@ async function json(url) {
 async function load() {
  if(loading)return;loading=true;root.setAttribute('aria-busy','true');
  try {
+ const auditFile=json('/data/zcp-audit.json').catch(()=>null);
  const [current,...optional]=await Promise.all([json('/data/meetings.json'),...['legacy-meetings','analysis-snapshots','estadisticas_inh','jornada-events','channels'].map(name=>json('/data/'+name+'.json').catch(()=>null))]);
  if(!Array.isArray(current.meetings))throw new Error('Registro inválido');
  const [legacy,snapshots,stats,events,channels]=optional;
  warning=optional.some(x=>x===null)?'Algunos archivos complementarios no están disponibles. Los datos parciales no se cuentan como historial verificado.':'';
+ audit=await auditFile;
  store={meetings:[...current.meetings,...(legacy?.meetings||[])],snapshots:snapshots?.snapshots||[],stats,events:events?.events||[],channels:channels||{}};render();
  } catch {root.innerHTML=section('No pudimos cargar la jornada',`<p>La conexión o el archivo de jornadas no está disponible. No se han cambiado los pronósticos.</p><button class="btn" id="retry">Volver a intentar</button><p>${external('https://t.me/LaRectaCaliente','Consultar Telegram')}</p>`);document.getElementById('retry').addEventListener('click',load);document.getElementById('load-status').textContent='Error al cargar la jornada';}
  finally {loading=false;root.setAttribute('aria-busy','false');}
 }
 document.addEventListener('click',e=>{
  const a=e.target.closest('a[data-route], #nav a, a.brand');if(!a||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button!==0)return;
+ if(STATIC_PAGE||STATIC_ROUTE.test(a.getAttribute('href')))return;
  e.preventDefault();history.pushState({},'',a.getAttribute('href'));document.getElementById('nav').classList.remove('open');document.getElementById('menu').setAttribute('aria-expanded','false');render();if(!location.hash)window.scrollTo(0,0);root.focus({preventScroll:true});
 });
 document.getElementById('menu').addEventListener('click',()=>{const open=document.getElementById('nav').classList.toggle('open');document.getElementById('menu').setAttribute('aria-expanded',String(open));});
@@ -142,7 +159,7 @@ load();
 
 // Refresh result events without interrupting the banner or embedded live player.
 setInterval(async()=>{
- if(!store || document.hidden)return;
+ if(!store || document.hidden || STATIC_PAGE)return;
  try {
  const fresh=await json('/data/jornada-events.json');
  if(!Array.isArray(fresh.events)||JSON.stringify(fresh.events)===JSON.stringify(store.events))return;

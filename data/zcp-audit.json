@@ -1,0 +1,6351 @@
+{
+ "schema_version": "zcp-audit-1",
+ "generated_at": "2026-10-16",
+ "policy": {
+  "rule": "Nunca se reconstruyen pronósticos desde resultados oficiales.",
+  "public_prediction": "Solo se publica el pronóstico oficial A. La versión experimental privada no se publica.",
+  "metrics": "Toda métrica lleva numerador, denominador, versión del sistema (o aviso MULTI-VERSION) y alcance de evidencia."
+ },
+ "statuses": {
+  "VERIFIED": "Pronóstico con hora de publicación demostrable antes de la jornada y resultado oficial cotejado.",
+  "PARTIAL": "Pronóstico recuperado, pero sin hora de publicación demostrable o con partes no reconstruibles.",
+  "AWAITING_OFFICIAL_EVIDENCE": "Pronóstico publicado antes de la jornada; todavía no hay resultado oficial.",
+  "NEEDS_EVIDENCE": "Falta evidencia del pronóstico previo; no cuenta en ninguna métrica."
+ },
+ "metric_universe": {
+  "meetings": [
+   "VAL-R22-2026-09-05",
+   "RIN-R35-2026-09-06",
+   "RIN-R39-2026-10-04",
+   "VAL-R25-2026-10-10",
+   "RIN-R40-2026-10-11"
+  ],
+  "label": "MULTI-VERSION HISTORICAL",
+  "description": "5 reuniones con la lista completa de selecciones por carrera reconstruible: Valencia R22 (05/09, v3.7), La Rinconada R35 (06/09, v3.8), La Rinconada R39 (04/10, v3.9), Valencia R25 (10/10, v4.0) y La Rinconada R40 (11/10, v4.0). 3 VERIFIED + 2 PARTIAL. Excluye R37 (no válidas incompletas), R24 y R38 (solo cuadro), y las reuniones NEEDS_EVIDENCE.",
+  "totals": {
+   "races": 58,
+   "first": 18,
+   "top3": 34,
+   "expanded": 41,
+   "bomba_n": 28,
+   "bomba_w": 10,
+   "ancla_n": 6,
+   "ancla_w": 2,
+   "bat_n": 38,
+   "bat_w": 6
+  }
+ },
+ "metric_definitions": {
+  "first": "El ganador oficial fue nuestra 1ª selección.",
+  "top3": "El ganador oficial estuvo entre nuestras 3 primeras selecciones.",
+  "expanded": "El ganador oficial estuvo en nuestra lista publicada o entre los batacazos.",
+  "bombas": "Caballos marcados BOMBA que ganaron / bombas marcadas.",
+  "anclas": "Caballos marcados ANCLA que ganaron / anclas marcadas.",
+  "batacazos": "Batacazos publicados que ganaron / batacazos publicados.",
+  "fivesix": "Aciertos del cuadro 5y6: patas cuyo ganador estaba en el cuadro publicado."
+ },
+ "meetings": [
+  {
+   "id": "VAL-R22-2026-09-05",
+   "slug": "valencia-reunion-22-5-septiembre-2026",
+   "track": "Valencia",
+   "meeting": 22,
+   "date": "2026-09-05",
+   "system_version": "v3.7",
+   "system_version_label": "Sistema 3.3 v3.7",
+   "status": "PARTIAL",
+   "scope": "PARTIAL: el pronóstico existe pero sin hora de publicación demostrable (evidencia tier B).",
+   "in_race_metrics": true,
+   "pre_race": {
+    "evidence": "Chat de análisis (orden de los mensajes; sin hora visible)",
+    "published_at": null,
+    "published_note": null,
+    "tier": "B",
+    "telegram_url": null,
+    "text_sha256": null
+   },
+   "official_result_source": "https://meridiano.net/hipismo/asi-quedaron-los-resultados-del-sabado-en-valencia-05-09-2026-20269518410",
+   "official_result_source_name": "Meridiano (resultados oficiales publicados)",
+   "races_evaluated": 9,
+   "first_pick": {
+    "w": 2,
+    "n": 9
+   },
+   "top3": {
+    "w": 3,
+    "n": 9
+   },
+   "expanded": {
+    "w": 5,
+    "n": 9
+   },
+   "bombas": {
+    "n": 3,
+    "w": 1
+   },
+   "anclas": null,
+   "batacazos": {
+    "n": 6,
+    "w": 2
+   },
+   "dividends": {
+    "div5": 5913.22,
+    "div6": 257689.69
+   },
+   "unit_bs": null,
+   "tickets": [
+    {
+     "name": "Oficial",
+     "source_name": "Oficial",
+     "legs": [
+      [
+       3,
+       2
+      ],
+      [
+       7,
+       5
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       3,
+       2,
+       7
+      ]
+     ],
+     "leg_hits": [
+      true,
+      false,
+      false,
+      true,
+      false,
+      false
+     ],
+     "combinations": 96,
+     "published_combinations": 96,
+     "combinations_correction": false,
+     "cost_bs": null,
+     "hits": 2,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": null,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    }
+   ],
+   "races": [
+    {
+     "label": "C1",
+     "valid": false,
+     "selections": [
+      1,
+      4
+     ],
+     "batacazos": [
+      6
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 2,
+     "winner_name": "Indians Wells",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C2",
+     "valid": false,
+     "selections": [
+      6,
+      2
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "The Orphan",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C3",
+     "valid": false,
+     "selections": [
+      5,
+      4
+     ],
+     "batacazos": [
+      6
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 5,
+     "winner_name": "PeteRose",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V1",
+     "valid": true,
+     "selections": [
+      3,
+      2
+     ],
+     "batacazos": [],
+     "bombas": [
+      3
+     ],
+     "anclas": [],
+     "winner": 3,
+     "winner_name": "Provenza",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V2",
+     "valid": true,
+     "selections": [
+      7,
+      5
+     ],
+     "batacazos": [
+      8
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": null,
+     "winner_name": "Forum Jet",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V3",
+     "valid": true,
+     "selections": [
+      4,
+      2
+     ],
+     "batacazos": [
+      1
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Sabana",
+     "first": false,
+     "top3": false,
+     "expanded": true
+    },
+    {
+     "label": "V4",
+     "valid": true,
+     "selections": [
+      1,
+      3
+     ],
+     "batacazos": [
+      2
+     ],
+     "bombas": [
+      1
+     ],
+     "anclas": [],
+     "winner": 3,
+     "winner_name": "King Bulbs",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V5",
+     "valid": true,
+     "selections": [
+      1,
+      5
+     ],
+     "batacazos": [
+      7
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 7,
+     "winner_name": "Queen of South",
+     "first": false,
+     "top3": false,
+     "expanded": true
+    },
+    {
+     "label": "V6",
+     "valid": true,
+     "selections": [
+      3,
+      2,
+      7
+     ],
+     "batacazos": [],
+     "bombas": [
+      3
+     ],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Sra Florencia",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    }
+   ],
+   "partial": [],
+   "notes": [
+    "Meridiano da Sra Florencia como #1; el post-mortem la transcribió como #9 (no cambia el resultado).",
+    "Forum Jet: Meridiano no publica dorsal; el chat dice #2; no está en la lista 7-5-8 en ningún caso."
+   ],
+   "corrections": [],
+   "previous_web_page": "/reuniones/historial-valencia-05sep"
+  },
+  {
+   "id": "RIN-R35-2026-09-06",
+   "slug": "la-rinconada-reunion-35-6-septiembre-2026",
+   "track": "La Rinconada",
+   "meeting": 35,
+   "date": "2026-09-06",
+   "system_version": "v3.8",
+   "system_version_label": "Sistema 3.3 v3.8",
+   "status": "PARTIAL",
+   "scope": "PARTIAL: el pronóstico existe pero sin hora de publicación demostrable (evidencia tier B).",
+   "in_race_metrics": true,
+   "pre_race": {
+    "evidence": "Chat de análisis (orden de los mensajes; sin hora visible)",
+    "published_at": null,
+    "published_note": null,
+    "tier": "B",
+    "telegram_url": null,
+    "text_sha256": null
+   },
+   "official_result_source": "https://meridiano.net/hipismo/asi-quedaron-los-resultados-del-domingo-en-la-rinconada-6-9-2026-20269620500",
+   "official_result_source_name": "Meridiano (resultados oficiales publicados)",
+   "races_evaluated": 14,
+   "first_pick": {
+    "w": 5,
+    "n": 14
+   },
+   "top3": {
+    "w": 9,
+    "n": 14
+   },
+   "expanded": {
+    "w": 9,
+    "n": 14
+   },
+   "bombas": {
+    "n": 6,
+    "w": 3
+   },
+   "anclas": null,
+   "batacazos": {
+    "n": 8,
+    "w": 0
+   },
+   "dividends": {
+    "div5": 33364.72,
+    "div6": 3226316.91
+   },
+   "unit_bs": null,
+   "tickets": [
+    {
+     "name": "Oficial",
+     "source_name": "Oficial",
+     "legs": [
+      [
+       9,
+       8,
+       6
+      ],
+      [
+       1,
+       7,
+       5
+      ],
+      [
+       9,
+       5,
+       1
+      ],
+      [
+       4,
+       3,
+       5
+      ],
+      [
+       1,
+       3,
+       4
+      ],
+      [
+       1,
+       3,
+       2,
+       5
+      ]
+     ],
+     "leg_hits": [
+      false,
+      false,
+      true,
+      true,
+      false,
+      true
+     ],
+     "combinations": 972,
+     "published_combinations": 972,
+     "combinations_correction": false,
+     "cost_bs": null,
+     "hits": 3,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": null,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Conservadora",
+     "source_name": "Conservadora",
+     "legs": [
+      [
+       9,
+       8
+      ],
+      [
+       1,
+       7
+      ],
+      [
+       9,
+       5
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       3,
+       2
+      ]
+     ],
+     "leg_hits": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      true
+     ],
+     "combinations": 96,
+     "published_combinations": 96,
+     "combinations_correction": false,
+     "cost_bs": null,
+     "hits": 2,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": null,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    }
+   ],
+   "races": [
+    {
+     "label": "C1",
+     "valid": false,
+     "selections": [
+      1,
+      8
+     ],
+     "batacazos": [
+      2
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 8,
+     "winner_name": "My Blue Sky",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C2",
+     "valid": false,
+     "selections": [
+      8,
+      3
+     ],
+     "batacazos": [
+      1
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 3,
+     "winner_name": "Magnum",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C3",
+     "valid": false,
+     "selections": [
+      6,
+      8
+     ],
+     "batacazos": [
+      1
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 6,
+     "winner_name": "Pittaluga",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C4",
+     "valid": false,
+     "selections": [
+      6,
+      4
+     ],
+     "batacazos": [
+      2
+     ],
+     "bombas": [
+      6
+     ],
+     "anclas": [],
+     "winner": 6,
+     "winner_name": "Golden Swap",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C5",
+     "valid": false,
+     "selections": [
+      5,
+      3
+     ],
+     "batacazos": [
+      10
+     ],
+     "bombas": [
+      5
+     ],
+     "anclas": [],
+     "winner": 5,
+     "winner_name": "Andreina D",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C6",
+     "valid": false,
+     "selections": [
+      2,
+      3
+     ],
+     "batacazos": [
+      7
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 2,
+     "winner_name": "Gun Bolt",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C7",
+     "valid": false,
+     "selections": [
+      7,
+      1
+     ],
+     "batacazos": [
+      3
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 4,
+     "winner_name": "Rey Enigma",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C8",
+     "valid": false,
+     "selections": [
+      5,
+      4
+     ],
+     "batacazos": [
+      2
+     ],
+     "bombas": [
+      5
+     ],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Lured Away",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V1",
+     "valid": true,
+     "selections": [
+      9,
+      8,
+      6
+     ],
+     "batacazos": [],
+     "bombas": [
+      9
+     ],
+     "anclas": [],
+     "winner": null,
+     "winner_name": "Lino el Adivino",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V2",
+     "valid": true,
+     "selections": [
+      1,
+      7,
+      5
+     ],
+     "batacazos": [],
+     "bombas": [
+      1
+     ],
+     "anclas": [],
+     "winner": 4,
+     "winner_name": "Solana",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V3",
+     "valid": true,
+     "selections": [
+      9,
+      5,
+      1
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Marakovits",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V4",
+     "valid": true,
+     "selections": [
+      4,
+      3,
+      5
+     ],
+     "batacazos": [],
+     "bombas": [
+      4
+     ],
+     "anclas": [],
+     "winner": 4,
+     "winner_name": "El Abusador",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V5",
+     "valid": true,
+     "selections": [
+      1,
+      3,
+      4
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 2,
+     "winner_name": "Astuto",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V6",
+     "valid": true,
+     "selections": [
+      1,
+      3,
+      2,
+      5
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 3,
+     "winner_name": "All About You",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    }
+   ],
+   "partial": [],
+   "notes": [
+    "C8: Tuscan Gold #5 (nuestra bomba) cruzó primero y fue DESCALIFICADO; ganador oficial Lured Away #1. El post-mortem dijo 'falló'.",
+    "Lino el Adivino: Meridiano no publica dorsal; no figura en la lista 9-8-6 por nombre."
+   ],
+   "corrections": [
+    "C-2026-003"
+   ],
+   "previous_web_page": "/reuniones/historial-rinconada-06sep"
+  },
+  {
+   "id": "RIN-R37-2026-09-20",
+   "slug": "la-rinconada-reunion-37-20-septiembre-2026",
+   "track": "La Rinconada",
+   "meeting": 37,
+   "date": "2026-09-20",
+   "system_version": "v3.9",
+   "system_version_label": "Sistema 3.3 v3.9",
+   "status": "PARTIAL",
+   "scope": "PARTIAL: sin hora de publicación demostrable; de las no válidas solo se recuperó la 1ª opción. Excluida de las métricas por carrera.",
+   "in_race_metrics": false,
+   "pre_race": {
+    "evidence": "Chat de análisis (sin hora visible) + ficha web R37 (sin fecha)",
+    "published_at": null,
+    "published_note": null,
+    "tier": "B",
+    "telegram_url": null,
+    "text_sha256": null
+   },
+   "official_result_source": "https://meridiano.net/hipismo/asi-quedaron-los-resultados-del-domingo-en-la-rinconada-20-09-2026-202692019540",
+   "official_result_source_name": "Meridiano (resultados oficiales publicados)",
+   "races_evaluated": 14,
+   "first_pick": {
+    "w": 6,
+    "n": 14
+   },
+   "top3": {
+    "w": 8,
+    "n": 14
+   },
+   "expanded": {
+    "w": 8,
+    "n": 14
+   },
+   "bombas": {
+    "n": 5,
+    "w": 3
+   },
+   "anclas": null,
+   "batacazos": null,
+   "dividends": {
+    "div5": 27463.56,
+    "div6": 2206192.09
+   },
+   "unit_bs": null,
+   "tickets": [
+    {
+     "name": "Económica",
+     "source_name": "Economica",
+     "legs": [
+      [
+       7,
+       11
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       8,
+       5
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3
+      ],
+      [
+       6,
+       2,
+       9
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "combinations": 48,
+     "published_combinations": 48,
+     "combinations_correction": false,
+     "cost_bs": null,
+     "hits": 4,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": null,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Recomendada",
+     "source_name": "Recomendada",
+     "legs": [
+      [
+       7,
+       11
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       8,
+       5,
+       1
+      ],
+      [
+       3,
+       1,
+       8
+      ],
+      [
+       3,
+       10
+      ],
+      [
+       6,
+       2,
+       9,
+       10
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "combinations": 288,
+     "published_combinations": 192,
+     "combinations_correction": true,
+     "cost_bs": null,
+     "hits": 4,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": null,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Completa",
+     "source_name": "Completa",
+     "legs": [
+      [
+       7,
+       11,
+       6
+      ],
+      [
+       1,
+       2,
+       8
+      ],
+      [
+       8,
+       5,
+       3,
+       1
+      ],
+      [
+       3,
+       1,
+       5,
+       8
+      ],
+      [
+       3,
+       10,
+       7
+      ],
+      [
+       6,
+       2,
+       9,
+       10
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+     ],
+     "combinations": 1728,
+     "published_combinations": 1728,
+     "combinations_correction": false,
+     "cost_bs": null,
+     "hits": 5,
+     "tickets_with_5": 3,
+     "theoretical_return_bs": 82390.68,
+     "net_bs": null,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    }
+   ],
+   "races": [
+    {
+     "label": "C1",
+     "valid": false,
+     "selections": [
+      1
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": null,
+     "winner_name": "Talentoso",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C2",
+     "valid": false,
+     "selections": [
+      5
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": null,
+     "winner_name": "Manchega",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C3",
+     "valid": false,
+     "selections": [
+      4
+     ],
+     "batacazos": [],
+     "bombas": [
+      4
+     ],
+     "anclas": [],
+     "winner": null,
+     "winner_name": "Mahomes",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C4",
+     "valid": false,
+     "selections": [
+      1
+     ],
+     "batacazos": [],
+     "bombas": [
+      1
+     ],
+     "anclas": [],
+     "winner": null,
+     "winner_name": "Starship Gold",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C5",
+     "valid": false,
+     "selections": [
+      5
+     ],
+     "batacazos": [],
+     "bombas": [
+      5
+     ],
+     "anclas": [],
+     "winner": 5,
+     "winner_name": "El Gran Eladio",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C6",
+     "valid": false,
+     "selections": [
+      3
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": null,
+     "winner_name": "Universal Joy",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C7",
+     "valid": false,
+     "selections": [
+      2
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 2,
+     "winner_name": "Abuelo",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C8",
+     "valid": false,
+     "selections": [
+      4
+     ],
+     "batacazos": [],
+     "bombas": [
+      4
+     ],
+     "anclas": [],
+     "winner": 4,
+     "winner_name": "Kilimanjaro",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V1",
+     "valid": true,
+     "selections": [
+      7,
+      11,
+      6
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": null,
+     "winner_name": "El Gran Sech",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V2",
+     "valid": true,
+     "selections": [
+      1,
+      2,
+      8
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "King Julien",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V3",
+     "valid": true,
+     "selections": [
+      8,
+      5,
+      3,
+      1
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 5,
+     "winner_name": "Meheble",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V4",
+     "valid": true,
+     "selections": [
+      3,
+      1,
+      5,
+      8
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 5,
+     "winner_name": "The Fieldher Jr",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V5",
+     "valid": true,
+     "selections": [
+      3,
+      10,
+      7
+     ],
+     "batacazos": [],
+     "bombas": [
+      3
+     ],
+     "anclas": [],
+     "winner": 3,
+     "winner_name": "Employeeofthemonth",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V6",
+     "valid": true,
+     "selections": [
+      6,
+      2,
+      9,
+      10
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 6,
+     "winner_name": "Truly You",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    }
+   ],
+   "partial": [
+    "No válidas: solo se recuperó la 1ª opción; la cobertura ampliada de C1-C8 no es reconstruible."
+   ],
+   "notes": [
+    "Meridiano no publica dorsales; los ganadores se emparejan por nombre con nuestras listas.",
+    "Nunca se hizo post-mortem de esta jornada."
+   ],
+   "corrections": [
+    "C-2026-003",
+    "C-2026-004"
+   ],
+   "previous_web_page": "/reuniones/la-rinconada-reunion-37-20-septiembre-2026"
+  },
+  {
+   "id": "VAL-R24-2026-09-26",
+   "slug": "valencia-reunion-24-26-septiembre-2026",
+   "track": "Valencia",
+   "meeting": 24,
+   "date": "2026-09-26",
+   "system_version": "no declarada",
+   "system_version_label": "no declarado en el post",
+   "status": "VERIFIED",
+   "scope": "Alcance: solo el cuadro publicado (no hay pronóstico previo fechado de las no válidas).",
+   "in_race_metrics": false,
+   "pre_race": {
+    "evidence": "Telegram @LaRectaCaliente 2653",
+    "published_at": "2026-09-25T16:46:48Z",
+    "published_note": null,
+    "tier": "A",
+    "telegram_url": "https://t.me/LaRectaCaliente/2653",
+    "text_sha256": "db06e1850f9add29959e2e22cc4162685819beb34e087b67cb1b784937c158ac"
+   },
+   "official_result_source": "https://meridiano.net/hipismo/asi-quedaron-los-resultados-del-sabado-en-valencia-26-09-2026-202692617330",
+   "official_result_source_name": "Meridiano (resultados oficiales publicados)",
+   "races_evaluated": 0,
+   "first_pick": null,
+   "top3": null,
+   "expanded": null,
+   "bombas": null,
+   "anclas": null,
+   "batacazos": null,
+   "dividends": {
+    "div5": 4037.33,
+    "div6": 162303.18
+   },
+   "unit_bs": 35,
+   "tickets": [
+    {
+     "name": "Cuadro publicado",
+     "source_name": "Cuadro perfecto",
+     "legs": [
+      [
+       6,
+       8
+      ],
+      [
+       8,
+       3
+      ],
+      [
+       7,
+       2
+      ],
+      [
+       6
+      ],
+      [
+       5,
+       4
+      ],
+      [
+       3,
+       10
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      false,
+      true,
+      false
+     ],
+     "combinations": 32,
+     "published_combinations": 32,
+     "combinations_correction": false,
+     "cost_bs": 1120,
+     "hits": 3,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": -1120.0,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    }
+   ],
+   "races": [
+    {
+     "label": "V1",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 5,
+     "winner_name": "Luisacaceres",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V2",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 3,
+     "winner_name": "Mi Catira Emma",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V3",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 7,
+     "winner_name": "Alter Ego",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V4",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 8,
+     "winner_name": "Dexter Jr.",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V5",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 4,
+     "winner_name": "Money On Time",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V6",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Ambasciatore",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    }
+   ],
+   "partial": [
+    "Sin pronóstico previo de no válidas; tiers Recomendado (108) y Premium (648) publicados sin patas."
+   ],
+   "notes": [],
+   "corrections": [
+    "C-2026-001"
+   ],
+   "previous_web_page": "/#balance-title"
+  },
+  {
+   "id": "RIN-R38-2026-09-27",
+   "slug": "la-rinconada-reunion-38-27-septiembre-2026",
+   "track": "La Rinconada",
+   "meeting": 38,
+   "date": "2026-09-27",
+   "system_version": "no declarada",
+   "system_version_label": "no declarado en el post",
+   "status": "VERIFIED",
+   "scope": "Alcance: solo el cuadro publicado (no hay pronóstico previo fechado de las no válidas).",
+   "in_race_metrics": false,
+   "pre_race": {
+    "evidence": "Telegram @LaRectaCaliente 2658",
+    "published_at": "2026-09-25T17:04:43Z",
+    "published_note": null,
+    "tier": "A",
+    "telegram_url": "https://t.me/LaRectaCaliente/2658",
+    "text_sha256": "93ecb99f94a7618b7620490a1d015e4f8caebc145f6505168fc756c6b5fce903"
+   },
+   "official_result_source": "https://meridiano.net/hipismo/asi-quedaron-los-resultados-de-las-carreras-de-la-rinconada-27-09-2026-202692719230",
+   "official_result_source_name": "Meridiano (resultados oficiales publicados)",
+   "races_evaluated": 0,
+   "first_pick": null,
+   "top3": null,
+   "expanded": null,
+   "bombas": null,
+   "anclas": null,
+   "batacazos": null,
+   "dividends": {
+    "div5": 3158.18,
+    "div6": 70117.37
+   },
+   "unit_bs": 35,
+   "tickets": [
+    {
+     "name": "Cuadro publicado (16)",
+     "source_name": "Cuadro (16)",
+     "legs": [
+      [
+       4,
+       2
+      ],
+      [
+       7
+      ],
+      [
+       8,
+       5
+      ],
+      [
+       3
+      ],
+      [
+       8,
+       9
+      ],
+      [
+       7,
+       6
+      ]
+     ],
+     "leg_hits": [
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+     ],
+     "combinations": 16,
+     "published_combinations": 16,
+     "combinations_correction": false,
+     "cost_bs": 560,
+     "hits": 5,
+     "tickets_with_5": 2,
+     "theoretical_return_bs": 6316.36,
+     "net_bs": 5756.36,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    }
+   ],
+   "races": [
+    {
+     "label": "V1",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 2,
+     "winner_name": "Princesa Fina",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V2",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 7,
+     "winner_name": "Mister Will",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V3",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 6,
+     "winner_name": "Ten Classic",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V4",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 3,
+     "winner_name": "Linda Ilusión",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V5",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 8,
+     "winner_name": "Super Luissiano",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V6",
+     "valid": true,
+     "selections": [],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 7,
+     "winner_name": "Zaraceño",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    }
+   ],
+   "partial": [
+    "Tiers Recomendado (162 = Bs 5.670) y Premium (1.152) publicados sin patas."
+   ],
+   "notes": [
+    "La web dice 'R38 cuadro recomendado 1/6 (96 comb.)' y 'boleto personal 5/6 (162 comb.)'. Ninguna de las dos cifras coincide con lo publicado en Telegram el 25/09."
+   ],
+   "corrections": [
+    "C-2026-001"
+   ],
+   "previous_web_page": "/#balance-title"
+  },
+  {
+   "id": "RIN-R39-2026-10-04",
+   "slug": "la-rinconada-reunion-39-4-octubre-2026",
+   "track": "La Rinconada",
+   "meeting": 39,
+   "date": "2026-10-04",
+   "system_version": "v3.9",
+   "system_version_label": "Sistema 3.3 v3.9",
+   "status": "VERIFIED",
+   "scope": null,
+   "in_race_metrics": true,
+   "pre_race": {
+    "evidence": "Telegram @LaRectaCaliente 2669 (versión canónica)",
+    "published_at": "2026-10-02T18:25:09Z",
+    "published_note": null,
+    "tier": "A",
+    "telegram_url": "https://t.me/LaRectaCaliente/2669",
+    "text_sha256": "cdec803ca03b0607c1d2f0b2d152bd4f81a58490e8ee54bbcb43b71c1f658988"
+   },
+   "official_result_source": "https://meridiano.net/hipismo/asi-quedaron-los-resultados-del-domingo-en-la-rinconada-04-10-2026-202610419590/amp",
+   "official_result_source_name": "Meridiano (resultados oficiales publicados)",
+   "races_evaluated": 13,
+   "first_pick": {
+    "w": 3,
+    "n": 13
+   },
+   "top3": {
+    "w": 6,
+    "n": 13
+   },
+   "expanded": {
+    "w": 10,
+    "n": 13
+   },
+   "bombas": {
+    "n": 6,
+    "w": 0
+   },
+   "anclas": null,
+   "batacazos": {
+    "n": 10,
+    "w": 4
+   },
+   "dividends": {
+    "div5": 18766.84,
+    "div6": 1543968.19
+   },
+   "unit_bs": 35,
+   "tickets": [
+    {
+     "name": "Económica",
+     "source_name": "Economica",
+     "legs": [
+      [
+       2,
+       7
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       4,
+       9
+      ],
+      [
+       8,
+       9
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       7,
+       14,
+       9
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      false
+     ],
+     "combinations": 96,
+     "published_combinations": 96,
+     "combinations_correction": false,
+     "cost_bs": 3360,
+     "hits": 2,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": -3360.0,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Equilibrada",
+     "source_name": "Equilibrada",
+     "legs": [
+      [
+       2,
+       7
+      ],
+      [
+       1,
+       6,
+       9
+      ],
+      [
+       4,
+       9,
+       1
+      ],
+      [
+       8,
+       9
+      ],
+      [
+       4,
+       6,
+       2
+      ],
+      [
+       7,
+       14,
+       9,
+       11
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      false,
+      true,
+      false
+     ],
+     "combinations": 432,
+     "published_combinations": 432,
+     "combinations_correction": false,
+     "cost_bs": 15120,
+     "hits": 3,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": -15120.0,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Blindada",
+     "source_name": "Blindada",
+     "legs": [
+      [
+       2,
+       7,
+       4
+      ],
+      [
+       1,
+       6,
+       9
+      ],
+      [
+       4,
+       9,
+       1
+      ],
+      [
+       8,
+       9,
+       4
+      ],
+      [
+       4,
+       6,
+       2
+      ],
+      [
+       7,
+       14,
+       9,
+       11
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      false,
+      true,
+      false
+     ],
+     "combinations": 972,
+     "published_combinations": 972,
+     "combinations_correction": false,
+     "cost_bs": 34020,
+     "hits": 3,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": -34020.0,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Telegram 2663 · SUPERSEDED",
+     "source_name": "ALT Telegram 2663 (02/10 18:14)",
+     "legs": [
+      [
+       2,
+       7
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       4,
+       9
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       7
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      false
+     ],
+     "combinations": 32,
+     "published_combinations": 32,
+     "combinations_correction": false,
+     "cost_bs": 1120,
+     "hits": 2,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": -1120.0,
+     "superseded": true,
+     "kind": "SUPERSEDED_PRE_RACE · versión sustituida antes de correr; no cuenta en métricas"
+    }
+   ],
+   "races": [
+    {
+     "label": "C1",
+     "valid": false,
+     "selections": [
+      3,
+      5
+     ],
+     "batacazos": [
+      7
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 7,
+     "winner_name": "Tianshan",
+     "first": false,
+     "top3": false,
+     "expanded": true
+    },
+    {
+     "label": "C2",
+     "valid": false,
+     "selections": [
+      1,
+      2
+     ],
+     "batacazos": [
+      5,
+      6
+     ],
+     "bombas": [
+      1
+     ],
+     "anclas": [],
+     "winner": 5,
+     "winner_name": "Abu Pepe",
+     "first": false,
+     "top3": false,
+     "expanded": true
+    },
+    {
+     "label": "C3",
+     "valid": false,
+     "selections": [
+      2,
+      7
+     ],
+     "batacazos": [
+      1
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 2,
+     "winner_name": "Rey Enigma",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C4",
+     "valid": false,
+     "selections": [
+      8,
+      5
+     ],
+     "batacazos": [
+      1
+     ],
+     "bombas": [
+      8
+     ],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Emperor D'Oro",
+     "first": false,
+     "top3": false,
+     "expanded": true
+    },
+    {
+     "label": "C5",
+     "valid": false,
+     "selections": [
+      7,
+      1
+     ],
+     "batacazos": [
+      3
+     ],
+     "bombas": [
+      7
+     ],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Gun Bolt",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C6",
+     "valid": false,
+     "selections": [
+      6,
+      7
+     ],
+     "batacazos": [
+      8
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 4,
+     "winner_name": "One Thing",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C7",
+     "valid": false,
+     "selections": [
+      1,
+      5
+     ],
+     "batacazos": [
+      4
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Lured Away",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V1",
+     "valid": true,
+     "selections": [
+      2,
+      7,
+      4
+     ],
+     "batacazos": [
+      11
+     ],
+     "bombas": [
+      2
+     ],
+     "anclas": [],
+     "winner": 8,
+     "winner_name": "Lady Monique",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V2",
+     "valid": true,
+     "selections": [
+      1,
+      6,
+      9,
+      8
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 6,
+     "winner_name": "Qualitat",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V3",
+     "valid": true,
+     "selections": [
+      4,
+      9,
+      1,
+      6
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 4,
+     "winner_name": "Srta Buleria",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V4",
+     "valid": true,
+     "selections": [
+      8,
+      9,
+      4,
+      2
+     ],
+     "batacazos": [],
+     "bombas": [
+      8
+     ],
+     "anclas": [],
+     "winner": 3,
+     "winner_name": "Online",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V5",
+     "valid": true,
+     "selections": [
+      4,
+      6,
+      2,
+      3
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 2,
+     "winner_name": "Lulu McJet",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V6",
+     "valid": true,
+     "selections": [
+      7,
+      14,
+      9,
+      11
+     ],
+     "batacazos": [
+      1
+     ],
+     "bombas": [
+      7
+     ],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "King Fray",
+     "first": false,
+     "top3": false,
+     "expanded": true
+    }
+   ],
+   "partial": [],
+   "notes": [
+    "Las 6 bombas llegaron 2.º o 3.º (verificado en Meridiano).",
+    "King Fray #1 estaba en la lista publicada de batacazos; el post-mortem lo contó como fallo de cobertura (9/13). Con el mismo criterio que C1/C2/C4 el ganador cubierto es 10/13.",
+    "Hay TRES juegos de selecciones publicados para esta jornada: chat/Telegram 2669, Telegram 2663 (cuadro de 32) y la ficha web R39 (otra lista, p. ej. C8 Ainhoa del Valle, C13 Don Ruben)."
+   ],
+   "corrections": [
+    "C-2026-002"
+   ],
+   "previous_web_page": "/reuniones/la-rinconada-reunion-39-4-octubre-2026"
+  },
+  {
+   "id": "VAL-R25-2026-10-10",
+   "slug": "valencia-reunion-25-10-octubre-2026",
+   "track": "Valencia",
+   "meeting": 25,
+   "date": "2026-10-10",
+   "system_version": "v4.0",
+   "system_version_label": "Sistema 3.3 v4.0",
+   "status": "VERIFIED",
+   "scope": null,
+   "in_race_metrics": true,
+   "pre_race": {
+    "evidence": "Chat con hora + Telegram @LaRectaCaliente 2670 (parcial)",
+    "published_at": "2026-10-10T16:26:00Z",
+    "published_note": "Chat con hora: pedido 12:16 y cuadros entregados antes de las 12:26 (Caracas); Telegram 2670 a las 12:53, parcial (sin cuadro)",
+    "tier": "B+hora",
+    "telegram_url": "https://t.me/LaRectaCaliente/2670",
+    "text_sha256": "12c9f3fea8766d4104c61b593ac6f30353581c8720b82b7a6c2af3299ad97a20"
+   },
+   "official_result_source": "https://meridiano.net/hipismo/asi-quedaron-los-resultados-de-las-carreras-en-valencia-10-10-2026-2026101017210",
+   "official_result_source_name": "Meridiano (resultados oficiales publicados)",
+   "races_evaluated": 9,
+   "first_pick": {
+    "w": 3,
+    "n": 9
+   },
+   "top3": {
+    "w": 7,
+    "n": 9
+   },
+   "expanded": {
+    "w": 8,
+    "n": 9
+   },
+   "bombas": {
+    "n": 6,
+    "w": 1
+   },
+   "anclas": {
+    "n": 2,
+    "w": 2
+   },
+   "batacazos": {
+    "n": 7,
+    "w": 0
+   },
+   "dividends": {
+    "div5": 1453.52,
+    "div6": 26623.73
+   },
+   "unit_bs": 35,
+   "tickets": [
+    {
+     "name": "Económica",
+     "source_name": "Economica",
+     "legs": [
+      [
+       2,
+       9
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       7,
+       1
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       4,
+       3,
+       10
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      false
+     ],
+     "combinations": 96,
+     "published_combinations": 96,
+     "combinations_correction": false,
+     "cost_bs": 3360,
+     "hits": 4,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": -3360.0,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Equilibrada",
+     "source_name": "Equilibrada",
+     "legs": [
+      [
+       2,
+       9,
+       3
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       7,
+       1,
+       6
+      ],
+      [
+       7,
+       3
+      ],
+      [
+       4,
+       3,
+       10,
+       6
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+     ],
+     "combinations": 288,
+     "published_combinations": 288,
+     "combinations_correction": false,
+     "cost_bs": 10080,
+     "hits": 5,
+     "tickets_with_5": 3,
+     "theoretical_return_bs": 4360.56,
+     "net_bs": -5719.44,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Blindada",
+     "source_name": "Blindada",
+     "legs": [
+      [
+       2,
+       9,
+       3
+      ],
+      [
+       4,
+       8,
+       1
+      ],
+      [
+       1,
+       4,
+       8
+      ],
+      [
+       7,
+       1,
+       6
+      ],
+      [
+       7,
+       3,
+       2
+      ],
+      [
+       4,
+       3,
+       10,
+       6
+      ]
+     ],
+     "leg_hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+     ],
+     "combinations": 972,
+     "published_combinations": 972,
+     "combinations_correction": false,
+     "cost_bs": 34020,
+     "hits": 5,
+     "tickets_with_5": 3,
+     "theoretical_return_bs": 4360.56,
+     "net_bs": -29659.44,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    }
+   ],
+   "races": [
+    {
+     "label": "C1",
+     "valid": false,
+     "selections": [
+      1,
+      5
+     ],
+     "batacazos": [
+      6
+     ],
+     "bombas": [
+      1
+     ],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Gran Canelo",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C2",
+     "valid": false,
+     "selections": [
+      5,
+      4
+     ],
+     "batacazos": [
+      6
+     ],
+     "bombas": [],
+     "anclas": [
+      5
+     ],
+     "winner": 5,
+     "winner_name": "Catira Mercedes",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C3",
+     "valid": false,
+     "selections": [
+      7,
+      8
+     ],
+     "batacazos": [
+      5
+     ],
+     "bombas": [
+      7
+     ],
+     "anclas": [],
+     "winner": 8,
+     "winner_name": "Clover Time",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V1",
+     "valid": true,
+     "selections": [
+      2,
+      9,
+      3,
+      8
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 6,
+     "winner_name": "Charlie",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V2",
+     "valid": true,
+     "selections": [
+      4,
+      8,
+      1
+     ],
+     "batacazos": [
+      7
+     ],
+     "bombas": [
+      4
+     ],
+     "anclas": [],
+     "winner": 8,
+     "winner_name": "Cassiusclay",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V3",
+     "valid": true,
+     "selections": [
+      1,
+      4,
+      8
+     ],
+     "batacazos": [
+      5,
+      7
+     ],
+     "bombas": [
+      1
+     ],
+     "anclas": [],
+     "winner": 4,
+     "winner_name": "Skull Trooper",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V4",
+     "valid": true,
+     "selections": [
+      7,
+      1,
+      6
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [
+      7
+     ],
+     "winner": 7,
+     "winner_name": "Stella Cadente",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V5",
+     "valid": true,
+     "selections": [
+      7,
+      3,
+      2
+     ],
+     "batacazos": [
+      4
+     ],
+     "bombas": [
+      7
+     ],
+     "anclas": [],
+     "winner": 3,
+     "winner_name": "Strength Roma",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V6",
+     "valid": true,
+     "selections": [
+      4,
+      3,
+      10,
+      6
+     ],
+     "batacazos": [],
+     "bombas": [
+      4
+     ],
+     "anclas": [],
+     "winner": 6,
+     "winner_name": "Luisacaceres",
+     "first": false,
+     "top3": false,
+     "expanded": true
+    }
+   ],
+   "partial": [],
+   "notes": [
+    "'89% nuestro mejor registro histórico en Valencia' choca con el propio historial de la skill: 07/03/26 Valencia figura con 100% de cobertura (6 carreras)."
+   ],
+   "corrections": [
+    "C-2026-005"
+   ],
+   "previous_web_page": "/#valencia-r25"
+  },
+  {
+   "id": "RIN-R40-2026-10-11",
+   "slug": "la-rinconada-reunion-40-11-octubre-2026",
+   "track": "La Rinconada",
+   "meeting": 40,
+   "date": "2026-10-11",
+   "system_version": "v4.0",
+   "system_version_label": "Sistema 3.3 v4.0",
+   "status": "VERIFIED",
+   "scope": null,
+   "in_race_metrics": true,
+   "pre_race": {
+    "evidence": "Telegram @LaRectaCaliente 2680 / 2683 / 2686",
+    "published_at": "2026-10-11T01:29:38Z",
+    "published_note": null,
+    "tier": "A",
+    "telegram_url": "https://t.me/LaRectaCaliente/2680",
+    "text_sha256": "72dcbd02483210f6837019638d87b2ee3edb944d155cd13dad28622e69a5dbc2"
+   },
+   "official_result_source": "https://meridiano.net/hipismo/asi-quedaron-los-resultados-de-las-carreras-en-la-rinconada-11-10-2026-2026101118530",
+   "official_result_source_name": "Meridiano (resultados oficiales publicados)",
+   "races_evaluated": 13,
+   "first_pick": {
+    "w": 5,
+    "n": 13
+   },
+   "top3": {
+    "w": 9,
+    "n": 13
+   },
+   "expanded": {
+    "w": 9,
+    "n": 13
+   },
+   "bombas": {
+    "n": 7,
+    "w": 5
+   },
+   "anclas": {
+    "n": 4,
+    "w": 0
+   },
+   "batacazos": {
+    "n": 7,
+    "w": 0
+   },
+   "dividends": {
+    "div5": 4520.62,
+    "div6": 111863.72
+   },
+   "unit_bs": 35,
+   "tickets": [
+    {
+     "name": "Económica",
+     "source_name": "Economica",
+     "legs": [
+      [
+       11,
+       3
+      ],
+      [
+       3,
+       9
+      ],
+      [
+       9,
+       1
+      ],
+      [
+       6
+      ],
+      [
+       8,
+       5
+      ],
+      [
+       9,
+       7
+      ]
+     ],
+     "leg_hits": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true
+     ],
+     "combinations": 32,
+     "published_combinations": 32,
+     "combinations_correction": false,
+     "cost_bs": 1120,
+     "hits": 3,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": -1120.0,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Equilibrada",
+     "source_name": "Equilibrada",
+     "legs": [
+      [
+       11,
+       3,
+       10
+      ],
+      [
+       3,
+       9
+      ],
+      [
+       9,
+       1,
+       7
+      ],
+      [
+       6,
+       7
+      ],
+      [
+       8,
+       5
+      ],
+      [
+       9,
+       7,
+       6
+      ]
+     ],
+     "leg_hits": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true
+     ],
+     "combinations": 216,
+     "published_combinations": 216,
+     "combinations_correction": false,
+     "cost_bs": 7560,
+     "hits": 3,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": -7560.0,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    },
+    {
+     "name": "Blindada",
+     "source_name": "Blindada",
+     "legs": [
+      [
+       11,
+       3,
+       10
+      ],
+      [
+       3,
+       9,
+       6
+      ],
+      [
+       9,
+       1,
+       7
+      ],
+      [
+       6,
+       7
+      ],
+      [
+       8,
+       5,
+       7
+      ],
+      [
+       9,
+       7,
+       6,
+       2
+      ]
+     ],
+     "leg_hits": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true
+     ],
+     "combinations": 648,
+     "published_combinations": 648,
+     "combinations_correction": false,
+     "cost_bs": 22680,
+     "hits": 3,
+     "tickets_with_5": 0,
+     "theoretical_return_bs": 0.0,
+     "net_bs": -22680.0,
+     "superseded": false,
+     "kind": "CUADRO PUBLICADO ANTES DE LA JORNADA (no es un boleto sellado)"
+    }
+   ],
+   "races": [
+    {
+     "label": "C1",
+     "valid": false,
+     "selections": [
+      6,
+      7,
+      1
+     ],
+     "batacazos": [
+      4
+     ],
+     "bombas": [],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Muscle Maiden",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C2",
+     "valid": false,
+     "selections": [
+      9,
+      5,
+      4
+     ],
+     "batacazos": [
+      1
+     ],
+     "bombas": [],
+     "anclas": [
+      9
+     ],
+     "winner": 5,
+     "winner_name": "Prioritise",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C3",
+     "valid": false,
+     "selections": [
+      4,
+      8,
+      2
+     ],
+     "batacazos": [
+      7
+     ],
+     "bombas": [],
+     "anclas": [
+      4
+     ],
+     "winner": 2,
+     "winner_name": "Lelizamar",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C4",
+     "valid": false,
+     "selections": [
+      3,
+      5,
+      2
+     ],
+     "batacazos": [
+      8
+     ],
+     "bombas": [
+      3
+     ],
+     "anclas": [],
+     "winner": 1,
+     "winner_name": "Macuto",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "C5",
+     "valid": false,
+     "selections": [
+      5,
+      3,
+      1
+     ],
+     "batacazos": [
+      7
+     ],
+     "bombas": [
+      5
+     ],
+     "anclas": [],
+     "winner": 5,
+     "winner_name": "Ekati King",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C6",
+     "valid": false,
+     "selections": [
+      9,
+      5,
+      7
+     ],
+     "batacazos": [
+      3
+     ],
+     "bombas": [
+      9
+     ],
+     "anclas": [],
+     "winner": 9,
+     "winner_name": "Quantum Leap",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "C7",
+     "valid": false,
+     "selections": [
+      1,
+      6,
+      4
+     ],
+     "batacazos": [
+      3
+     ],
+     "bombas": [],
+     "anclas": [
+      1
+     ],
+     "winner": 4,
+     "winner_name": "Black Stone",
+     "first": false,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V1",
+     "valid": true,
+     "selections": [
+      11,
+      3,
+      10,
+      5
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 2,
+     "winner_name": "Spring Training",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V2",
+     "valid": true,
+     "selections": [
+      3,
+      9,
+      6
+     ],
+     "batacazos": [],
+     "bombas": [
+      3
+     ],
+     "anclas": [
+      9
+     ],
+     "winner": 7,
+     "winner_name": "Violence and Peace",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V3",
+     "valid": true,
+     "selections": [
+      9,
+      1,
+      7
+     ],
+     "batacazos": [],
+     "bombas": [],
+     "anclas": [],
+     "winner": 5,
+     "winner_name": "Gran Azabache",
+     "first": false,
+     "top3": false,
+     "expanded": false
+    },
+    {
+     "label": "V4",
+     "valid": true,
+     "selections": [
+      6,
+      7,
+      2
+     ],
+     "batacazos": [],
+     "bombas": [
+      6
+     ],
+     "anclas": [],
+     "winner": 6,
+     "winner_name": "El Abusador",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V5",
+     "valid": true,
+     "selections": [
+      8,
+      5,
+      7
+     ],
+     "batacazos": [],
+     "bombas": [
+      8
+     ],
+     "anclas": [],
+     "winner": 8,
+     "winner_name": "Solana",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    },
+    {
+     "label": "V6",
+     "valid": true,
+     "selections": [
+      9,
+      7,
+      6,
+      2
+     ],
+     "batacazos": [],
+     "bombas": [
+      9
+     ],
+     "anclas": [],
+     "winner": 9,
+     "winner_name": "El Irlandes",
+     "first": true,
+     "top3": true,
+     "expanded": true
+    }
+   ],
+   "partial": [],
+   "notes": [
+    "V2: error propio de dorsal (números del #7 Violence and Peace atribuidos al #9). Se cuenta como fallo, tal como se publicó.",
+    "Mother Carmen (bomba C7) retirada antes de correr; las bombas evaluables son 7.",
+    "Dividendo C1: Meridiano publica 155,76 en la tabla y 156,76 en el resumen."
+   ],
+   "corrections": [],
+   "previous_web_page": "/#rinconada-r40"
+  }
+ ],
+ "needs_evidence": [
+  {
+   "id": "RIN-R36-2026-09-13",
+   "track": "La Rinconada",
+   "meeting": 36,
+   "date": "2026-09-13",
+   "status": "NEEDS_EVIDENCE",
+   "system_version": "no declarada",
+   "note": "La ficha web tiene selecciones y resultados, pero no hay fecha demostrable de publicación del pronóstico. No cuenta en ninguna métrica.",
+   "previous_web_page": "/reuniones/historial-rinconada-13sep"
+  },
+  {
+   "id": "VAL-R23-2026-09-19",
+   "track": "Valencia",
+   "meeting": 23,
+   "date": "2026-09-19",
+   "status": "NEEDS_EVIDENCE",
+   "system_version": "no declarada",
+   "note": "La ficha web muestra cuadros de 32 / 108 / 648 combinaciones sin fecha; no aparecen en el chat ni en Telegram. No cuenta en ninguna métrica.",
+   "previous_web_page": "/reuniones/valencia-reunion-23-19-septiembre-2026"
+  }
+ ],
+ "prerace": [
+  {
+   "id": "VAL-R26-2026-10-17",
+   "slug": "valencia-reunion-26-17-octubre-2026",
+   "track": "Valencia",
+   "meeting": 26,
+   "date": "2026-10-17",
+   "system_version": "v4.1",
+   "status": "AWAITING_OFFICIAL_EVIDENCE",
+   "status_label": "PRONÓSTICO PREVIO",
+   "first_post_utc": "2026-10-17T17:30:00Z",
+   "SOURCE_PUBLISHED_AT": "2026-10-15T02:04:06Z",
+   "SOURCE_SHA256": "da0be129d715c9e91d46b4f49bfc49c138ffdfc8559145e85d89fa31c7dacecc",
+   "DATASET_SHA256": "894051ec0e4a52936ec6308d7379b95e46f45865b8dbb29ef9b216d688243633",
+   "SYSTEM_VERSION": "v4.1",
+   "PREDICTION_FROZEN_AT": "2026-10-16T16:21:56.449311+00:00",
+   "telegram": [
+    {
+     "msg": "2688",
+     "url": "https://t.me/LaRectaCaliente/2688",
+     "datetime": "2026-10-15T02:03:55Z",
+     "text_sha256": "8aeb5882650771f2c46a6086205add0f59cb96d7f8ea25b8eaf184539864b576"
+    },
+    {
+     "msg": "2690",
+     "url": "https://t.me/LaRectaCaliente/2690",
+     "datetime": "2026-10-15T02:04:06Z",
+     "text_sha256": "745b523a4365fb5334df22f889dcb2847cea75fd89f4182ff6c8ed4e67bbb978"
+    },
+    {
+     "msg": "2691",
+     "url": "https://t.me/LaRectaCaliente/2691",
+     "datetime": "2026-10-15T02:04:06Z",
+     "text_sha256": "e6e8d3b7d17c57e1da523efeb6d96c9bf60ce99f602a5ec99f03c2230072819a"
+    }
+   ],
+   "telegram_ticket_msg": "2690",
+   "withdrawals": [
+    {
+     "race": 7,
+     "number": 6,
+     "name": "Miss Billion",
+     "in_analysis": false,
+     "identity": "CONFIRMED"
+    },
+    {
+     "race": 8,
+     "number": 7,
+     "name": "Brianna",
+     "in_analysis": true,
+     "identity": "CONFIRMED"
+    }
+   ],
+   "withdrawals_as_of": "2026-10-16T16:30Z (12:30 Caracas)",
+   "races": [
+    {
+     "race": 1,
+     "valid_leg": null,
+     "distance": 1700,
+     "time": "13:30",
+     "note": null,
+     "horses": [
+      {
+       "number": 7,
+       "name": "Legionaria",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "Promedio 84,8, cinco puntos sobre el segundo, y R12,1 mejor remate. Al Galope también la encabeza.",
+       "rating_average": 84.8,
+       "closing_metric": 12.1
+      },
+      {
+       "number": 4,
+       "name": "Preciosa Dolores",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Sweet Genesis",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Nice Time",
+       "rank": null,
+       "classes": [
+        "BATACAZO",
+        "WARNING"
+       ],
+       "labels": [
+        "BATACAZO",
+        "ADVERTENCIA"
+       ],
+       "withdrawn": false,
+       "reasoning": "MiaMarcas: retirado en su última salida (26/09); se penaliza.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 2,
+     "valid_leg": null,
+     "distance": 1100,
+     "time": "13:55",
+     "note": null,
+     "horses": [
+      {
+       "number": 6,
+       "name": "Gran Morey",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "WARNING"
+       ],
+       "labels": [
+        "1ª selección",
+        "ADVERTENCIA"
+       ],
+       "withdrawn": false,
+       "reasoning": "Convergencia técnica (promedio 77,8 tope, R12,3 mejor remate) pero 258 días sin correr: 1ª opción con advertencia, no bomba.",
+       "rating_average": 77.8,
+       "closing_metric": 12.3
+      },
+      {
+       "number": 1,
+       "name": "Forum Jet",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Ancelotti",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "El Hacha",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 3,
+     "valid_leg": null,
+     "distance": 1700,
+     "time": "14:20",
+     "note": "Copa José Antonio Gubaira, seis machos",
+     "horses": [
+      {
+       "number": 2,
+       "name": "Peterose",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "Promedio 90,8 y R12 mejor remate de los seis; 24 salidas con 12 victorias (50%); defiende el título en la distancia exacta. La etiqueta 'DEBE GANAR' solo confirma.",
+       "rating_average": 90.8,
+       "closing_metric": 12.0
+      },
+      {
+       "number": 6,
+       "name": "Ralfcristopher",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "El Gran Bricelio",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "El de Valle",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": 12.3
+      }
+     ]
+    },
+    {
+     "race": 4,
+     "valid_leg": 1,
+     "distance": 1100,
+     "time": "14:55",
+     "note": null,
+     "horses": [
+      {
+       "number": 8,
+       "name": "Sra. Florencia",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [
+        "1ª selección"
+       ],
+       "withdrawn": false,
+       "reasoning": "Ascenso limpio 79→79→81→87 con su máximo en la última; Al Galope 'SUPER DATO'.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 7,
+       "name": "Francisky",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "La Batalladora",
+       "rank": 3,
+       "classes": [
+        "THIRD",
+        "WARNING"
+       ],
+       "labels": [
+        "3ª",
+        "ADVERTENCIA"
+       ],
+       "withdrawn": false,
+       "reasoning": "Promedio más alto (84,8) sostenido por actuaciones viejas: 90→87→85→77, descendente. Va 3ª.",
+       "rating_average": 84.8,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "Explosiva",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [
+        "4ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Magical Song",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 5,
+     "valid_leg": 2,
+     "distance": 1300,
+     "time": "15:20",
+     "note": "Reclamo, nueve corredores",
+     "horses": [
+      {
+       "number": 7,
+       "name": "Party Prince",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "80-87-82-83, promedio 83,0 el más alto de nueve, R12,2 mejor remate compartido; Al Galope lo encabeza.",
+       "rating_average": 83.0,
+       "closing_metric": 12.2
+      },
+      {
+       "number": 8,
+       "name": "Mr. Oli",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Work Time",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "El Gran Rocky",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": 12.2
+      }
+     ]
+    },
+    {
+     "race": 6,
+     "valid_leg": 3,
+     "distance": 1200,
+     "time": "15:45",
+     "note": "La carrera más pareja: seis ejemplares entre 86,2 y 92,0 de promedio",
+     "horses": [
+      {
+       "number": 7,
+       "name": "Bombazo",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA"
+       ],
+       "labels": [
+        "1ª selección",
+        "ANCLA"
+       ],
+       "withdrawn": false,
+       "reasoning": "Promedio 92,0 el más alto de la jornada, pero R14,2 (segundo peor) y solo 1,5 de ventaja sobre Forzesco: ancla con ventaja estrecha coloca, no gana (regla 04/10). Pata a cuatro.",
+       "rating_average": 92.0,
+       "closing_metric": 14.2
+      },
+      {
+       "number": 6,
+       "name": "Forzesco",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": "Al Galope lo pone #1; promedio 90,5.",
+       "rating_average": 90.5,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "Candoroso",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Divergente",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [
+        "4ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "New Rocket",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": "R12, mejor remate de esa carrera.",
+       "rating_average": null,
+       "closing_metric": 12.0
+      }
+     ]
+    },
+    {
+     "race": 7,
+     "valid_leg": 4,
+     "distance": 1200,
+     "time": "16:10",
+     "note": "No ganadoras, siete corredoras",
+     "horses": [
+      {
+       "number": 7,
+       "name": "Rosa Negra",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "67-75-65-80, promedio 71,8 el más alto y R12,4 mejor remate de las siete; Al Galope 'IMPERDIBLE' y #1.",
+       "rating_average": 71.8,
+       "closing_metric": 12.4
+      },
+      {
+       "number": 4,
+       "name": "Belaia",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "La Suprema",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "Picuadepericantar",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": "Ascenso 47→75→79.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 8,
+     "valid_leg": 5,
+     "distance": 1200,
+     "time": "16:35",
+     "note": null,
+     "horses": [
+      {
+       "number": 6,
+       "name": "Deep Love",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA",
+        "WARNING"
+       ],
+       "labels": [
+        "1ª selección",
+        "ANCLA",
+        "ADVERTENCIA"
+       ],
+       "withdrawn": false,
+       "reasoning": "Lidera con 81,5 pero R14 y 91 días de receso; ventaja de 1,5 sobre Pintada y Amor Amor. Pata abierta.",
+       "rating_average": 81.5,
+       "closing_metric": 14.0
+      },
+      {
+       "number": 4,
+       "name": "Amor Amor",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Metamorphosis",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 7,
+       "name": "Brianna",
+       "rank": 4,
+       "classes": [
+        "FOURTH",
+        "BATACAZO"
+       ],
+       "labels": [
+        "4ª",
+        "BATACAZO"
+       ],
+       "withdrawn": true,
+       "reasoning": "R12,3, mejor remate por amplio margen; 'entra al boleto por regla'.",
+       "rating_average": null,
+       "closing_metric": 12.3
+      },
+      {
+       "number": 3,
+       "name": "Pintada",
+       "rank": null,
+       "classes": [
+        "EXTERNAL_REFERENCE"
+       ],
+       "labels": [
+        "Referencia externa (no seleccionada)"
+       ],
+       "withdrawn": false,
+       "reasoning": "Pick #1 de Al Galope; descartada por R16,3, el peor remate del lote.",
+       "rating_average": null,
+       "closing_metric": 16.3
+      }
+     ]
+    },
+    {
+     "race": 9,
+     "valid_leg": 6,
+     "distance": 1300,
+     "time": "17:00",
+     "note": "Última válida",
+     "horses": [
+      {
+       "number": 3,
+       "name": "Stockton",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [
+        "1ª selección"
+       ],
+       "withdrawn": false,
+       "reasoning": "Combina promedio 84,0 con R12,4.",
+       "rating_average": 84.0,
+       "closing_metric": 12.4
+      },
+      {
+       "number": 6,
+       "name": "Home Real",
+       "rank": 2,
+       "classes": [
+        "SECOND",
+        "ANCLA"
+       ],
+       "labels": [
+        "2ª",
+        "ANCLA"
+       ],
+       "withdrawn": false,
+       "reasoning": "Mejor promedio por 0,8 (84,8) pero R14,3; Al Galope lo pone #1.",
+       "rating_average": 84.8,
+       "closing_metric": 14.3
+      },
+      {
+       "number": 7,
+       "name": "Alter Ego",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Rebelde del Valle",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [
+        "4ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Carupano Six",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": 12.3
+      }
+     ]
+    }
+   ],
+   "tickets": [
+    {
+     "type": "ECONOMICA",
+     "name": "Económica",
+     "recommended": false,
+     "unit_bs": 35,
+     "published": {
+      "legs": [
+       [
+        8,
+        7
+       ],
+       [
+        7
+       ],
+       [
+        7,
+        6
+       ],
+       [
+        7
+       ],
+       [
+        6,
+        4
+       ],
+       [
+        3,
+        6
+       ]
+      ],
+      "combinations": 16,
+      "cost_bs": 560,
+      "line": "8-7 / 7 / 7-6 / 7 / 6-4 / 3-6"
+     },
+     "current": {
+      "legs": [
+       [
+        8,
+        7
+       ],
+       [
+        7
+       ],
+       [
+        7,
+        6
+       ],
+       [
+        7
+       ],
+       [
+        6,
+        4
+       ],
+       [
+        3,
+        6
+       ]
+      ],
+      "combinations": 16,
+      "cost_bs": 560,
+      "line": "8-7 / 7 / 7-6 / 7 / 6-4 / 3-6"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    },
+    {
+     "type": "EQUILIBRADA",
+     "name": "Equilibrada",
+     "recommended": true,
+     "unit_bs": 35,
+     "published": {
+      "legs": [
+       [
+        8,
+        7
+       ],
+       [
+        7,
+        8
+       ],
+       [
+        7,
+        6,
+        2
+       ],
+       [
+        7,
+        4
+       ],
+       [
+        6,
+        4,
+        5
+       ],
+       [
+        3,
+        6,
+        7
+       ]
+      ],
+      "combinations": 216,
+      "cost_bs": 7560,
+      "line": "8-7 / 7-8 / 7-6-2 / 7-4 / 6-4-5 / 3-6-7"
+     },
+     "current": {
+      "legs": [
+       [
+        8,
+        7
+       ],
+       [
+        7,
+        8
+       ],
+       [
+        7,
+        6,
+        2
+       ],
+       [
+        7,
+        4
+       ],
+       [
+        6,
+        4,
+        5
+       ],
+       [
+        3,
+        6,
+        7
+       ]
+      ],
+      "combinations": 216,
+      "cost_bs": 7560,
+      "line": "8-7 / 7-8 / 7-6-2 / 7-4 / 6-4-5 / 3-6-7"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    },
+    {
+     "type": "BLINDADA",
+     "name": "Blindada",
+     "recommended": false,
+     "unit_bs": 35,
+     "published": {
+      "legs": [
+       [
+        8,
+        7,
+        3
+       ],
+       [
+        7,
+        8
+       ],
+       [
+        7,
+        6,
+        2,
+        4
+       ],
+       [
+        7,
+        4
+       ],
+       [
+        6,
+        4,
+        5,
+        7
+       ],
+       [
+        3,
+        6,
+        7,
+        5
+       ]
+      ],
+      "combinations": 768,
+      "cost_bs": 26880,
+      "line": "8-7-3 / 7-8 / 7-6-2-4 / 7-4 / 6-4-5-7 / 3-6-7-5"
+     },
+     "current": {
+      "legs": [
+       [
+        8,
+        7,
+        3
+       ],
+       [
+        7,
+        8
+       ],
+       [
+        7,
+        6,
+        2,
+        4
+       ],
+       [
+        7,
+        4
+       ],
+       [
+        6,
+        4,
+        5
+       ],
+       [
+        3,
+        6,
+        7,
+        5
+       ]
+      ],
+      "combinations": 576,
+      "cost_bs": 20160,
+      "line": "8-7-3 / 7-8 / 7-6-2-4 / 7-4 / 6-4-5 / 3-6-7-5"
+     },
+     "withdrawal_adjusted": true,
+     "adjustment": [
+      {
+       "type": "AJUSTE MECÁNICO POR RETIRO",
+       "event": "Brianna #7 (C8)",
+       "source": "Meridiano 15/10 12:12"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "RIN-R41-2026-10-18",
+   "slug": "la-rinconada-reunion-41-18-octubre-2026",
+   "track": "La Rinconada",
+   "meeting": 41,
+   "date": "2026-10-18",
+   "system_version": "v4.1",
+   "status": "AWAITING_OFFICIAL_EVIDENCE",
+   "status_label": "PRONÓSTICO PREVIO",
+   "first_post_utc": "2026-10-18T17:00:00Z",
+   "SOURCE_PUBLISHED_AT": "2026-10-15T03:50:24Z",
+   "SOURCE_SHA256": "2566b5c8250a15fa985734c2e1b3bd1f5e958f324787569e9cf4ce09863d1aa9",
+   "DATASET_SHA256": "002f69e6c8cff3aaf20708040ad91eed5af1a096bff604178483773bb5b84e0c",
+   "SYSTEM_VERSION": "v4.1",
+   "PREDICTION_FROZEN_AT": "2026-10-16T16:21:56.449311+00:00",
+   "telegram": [
+    {
+     "msg": "2696",
+     "url": "https://t.me/LaRectaCaliente/2696",
+     "datetime": "2026-10-15T03:50:24Z",
+     "text_sha256": "2608c9a21e61ecf5212566e8b8ce82ce0a7045585f17a6e24802d19688853ccc"
+    },
+    {
+     "msg": "2697",
+     "url": "https://t.me/LaRectaCaliente/2697",
+     "datetime": "2026-10-15T03:50:24Z",
+     "text_sha256": "0dd220ababe68ad6fc72f6b512b0cb7d81fc5d8052b39196e6ee0df5ae34b60c"
+    }
+   ],
+   "telegram_ticket_msg": "2696",
+   "withdrawals": [
+    {
+     "race": 2,
+     "number": 9,
+     "name": "Leo Alessandro",
+     "in_analysis": true,
+     "identity": "CONFIRMED"
+    },
+    {
+     "race": 4,
+     "number": 3,
+     "name": null,
+     "reported_name": "Roma",
+     "in_analysis": false,
+     "identity": "UNRESOLVED",
+     "note": "Meridiano informa el retiro del #3 de la C4 como «Roma». No figura en nuestras selecciones, por lo que no modifica ningún cuadro. La identidad Roma / Romay no está resuelta y no se fusiona."
+    }
+   ],
+   "withdrawals_as_of": "2026-10-16T16:30Z (12:30 Caracas)",
+   "races": [
+    {
+     "race": 1,
+     "valid_leg": null,
+     "distance": 1200,
+     "time": "13:00",
+     "note": null,
+     "horses": [
+      {
+       "number": 9,
+       "name": "Miketyson",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [
+        "1ª selección"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "My Funny Nonno",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 7,
+       "name": "My Flying Mate",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Bendito",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": 12.2
+      }
+     ]
+    },
+    {
+     "race": 2,
+     "valid_leg": null,
+     "distance": 1100,
+     "time": "13:25",
+     "note": null,
+     "horses": [
+      {
+       "number": 1,
+       "name": "El Gran Solinero",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [
+        "1ª selección"
+       ],
+       "withdrawn": false,
+       "reasoning": "Ascenso 61→63→68→76.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "My Blue Sky",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Quiriquireño",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Lord Ingles",
+       "rank": null,
+       "classes": [
+        "BATACAZO",
+        "WARNING"
+       ],
+       "labels": [
+        "BATACAZO",
+        "ADVERTENCIA"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": 12.2
+      },
+      {
+       "number": 9,
+       "name": "Leo Alessandro",
+       "rank": null,
+       "classes": [
+        "WITHDRAWN"
+       ],
+       "labels": [
+        "RETIRADO"
+       ],
+       "withdrawn": true,
+       "reasoning": "Retirado por estado febril (INH vía Meridiano).",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 3,
+     "valid_leg": null,
+     "distance": 1200,
+     "time": "13:50",
+     "note": "Ocho corredoras",
+     "horses": [
+      {
+       "number": 6,
+       "name": "Raphaella",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "80-85-95-89, promedio 87,2 ocho puntos sobre el segundo, R11,4 mejor remate de las ocho; Al Galope 'DEBE GANAR' y #1.",
+       "rating_average": 87.2,
+       "closing_metric": 11.4
+      },
+      {
+       "number": 1,
+       "name": "La Super Kat",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Etna's Napper",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Piemontesa",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 4,
+     "valid_leg": null,
+     "distance": 1100,
+     "time": "14:15",
+     "note": null,
+     "horses": [
+      {
+       "number": 1,
+       "name": "The Exquisite Girl",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "74→76→80→80, ascenso limpio, promedio 77,5, R12,1 mejor remate compartido; Al Galope #1.",
+       "rating_average": 77.5,
+       "closing_metric": 12.1
+      },
+      {
+       "number": 5,
+       "name": "Zephina",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Castana Power",
+       "rank": 3,
+       "classes": [
+        "THIRD",
+        "WARNING"
+       ],
+       "labels": [
+        "3ª",
+        "ADVERTENCIA"
+       ],
+       "withdrawn": false,
+       "reasoning": "Promedio 83,0 el más alto, pero solo dos actuaciones y 176 días de receso.",
+       "rating_average": 83.0,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Tres Rosas",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": "Ascenso puro.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 5,
+     "valid_leg": null,
+     "distance": 1400,
+     "time": "14:40",
+     "note": "Potrancas 2 años; cuatro no han ganado nunca",
+     "horses": [
+      {
+       "number": 6,
+       "name": "My Amazing Mate",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "SR 80, el más alto del lote; ganó su única salida; R11,4 mejor remate de las seis.",
+       "rating_average": null,
+       "closing_metric": 11.4
+      },
+      {
+       "number": 2,
+       "name": "Meheble",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Pekas",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Dama de Fuego",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": 12.1
+      }
+     ]
+    },
+    {
+     "race": 6,
+     "valid_leg": null,
+     "distance": 1100,
+     "time": "15:05",
+     "note": null,
+     "horses": [
+      {
+       "number": 1,
+       "name": "Cheeca Blue",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [
+        "1ª selección"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Dwtn Maddie Brown",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Multiverso",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 7,
+       "name": "Universal Joy",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 7,
+     "valid_leg": null,
+     "distance": 1400,
+     "time": "15:30",
+     "note": "Tres rivales nunca han corrido (El Heredero, El Mandamas, Iron War); los demás no han ganado",
+     "horses": [
+      {
+       "number": 8,
+       "name": "Gran Manuel",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA",
+        "BOMBA_DOBLE"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA",
+        "BOMBA DOBLE"
+       ],
+       "withdrawn": false,
+       "reasoning": "Invicto 3 de 3. SR 79-72-90: promedio 80,3, máximo 90 diez puntos sobre el segundo, R12,2. Patrón 'falsa debutante' validado 2 de 2; él fue uno de los casos (23/08).",
+       "rating_average": 80.3,
+       "closing_metric": 12.2
+      },
+      {
+       "number": 5,
+       "name": "Mantekado",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Kupido",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Entre Panas",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": 12.1
+      }
+     ]
+    },
+    {
+     "race": 8,
+     "valid_leg": 1,
+     "distance": 1400,
+     "time": "16:05",
+     "note": "Once corredores muy parejos entre 66 y 80 de promedio",
+     "horses": [
+      {
+       "number": 1,
+       "name": "Zaraceño",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [
+        "1ª selección"
+       ],
+       "withdrawn": false,
+       "reasoning": "Al Galope converge.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Rio Bravo",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Time Traveler",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Time Report",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [
+        "4ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 10,
+       "name": "El Gran Rulos",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": "R11,4, mejor remate del lote.",
+       "rating_average": null,
+       "closing_metric": 11.4
+      }
+     ]
+    },
+    {
+     "race": 9,
+     "valid_leg": 2,
+     "distance": 1200,
+     "time": "16:35",
+     "note": "Diez potrancas 2 años, ninguna ganadora, cinco nunca corrieron",
+     "horses": [
+      {
+       "number": 10,
+       "name": "Amada Princess",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [
+        "1ª selección"
+       ],
+       "withdrawn": false,
+       "reasoning": "Único dato discriminante: R11,4, el mejor por siete décimas.",
+       "rating_average": null,
+       "closing_metric": 11.4
+      },
+      {
+       "number": 1,
+       "name": "Forever Queen",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": "Al Galope 'SUPER DATO'; tiene un registro (SR 51).",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Niña Tania",
+       "rank": 3,
+       "classes": [
+        "THIRD",
+        "BATACAZO"
+       ],
+       "labels": [
+        "3ª",
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": "Debutante, R12,1.",
+       "rating_average": null,
+       "closing_metric": 12.1
+      },
+      {
+       "number": 6,
+       "name": "Fortuna Suprema",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [
+        "4ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 10,
+     "valid_leg": 3,
+     "distance": 1400,
+     "time": "17:05",
+     "note": null,
+     "horses": [
+      {
+       "number": 3,
+       "name": "Alkalino",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "72→78→84→89, ascenso puro, promedio 80,8 el más alto, máximo 89 nueve sobre el segundo, R12 mejor remate compartido; Al Galope 'IMPERDIBLE' y #1. Rescatado por el chequeo de nombres.",
+       "rating_average": 80.8,
+       "closing_metric": 12.0
+      },
+      {
+       "number": 4,
+       "name": "Magneto",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Lumiere",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "Juan Andres",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": 11.4
+      }
+     ]
+    },
+    {
+     "race": 11,
+     "valid_leg": 4,
+     "distance": 1400,
+     "time": "17:35",
+     "note": null,
+     "horses": [
+      {
+       "number": 7,
+       "name": "Fairytale",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "75→77→80→81 sin retroceder, promedio 78,2 con 4,4 de ventaja, R12 mejor remate compartido.",
+       "rating_average": 78.2,
+       "closing_metric": 12.0
+      },
+      {
+       "number": 1,
+       "name": "Emmawatson",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": "Pick #1 de Al Galope; picó 85 y bajó a 75.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Gypsy Queen",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Ten Classic",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 12,
+     "valid_leg": 5,
+     "distance": 1100,
+     "time": "18:05",
+     "note": "Diez corredoras, cuatro nunca han corrido",
+     "horses": [
+      {
+       "number": 2,
+       "name": "Gran Amelia",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "BOMBA"
+       ],
+       "labels": [
+        "1ª selección",
+        "BOMBA"
+       ],
+       "withdrawn": false,
+       "reasoning": "64→73→78, promedio 71,7 y máximo 78 los más altos, R12 mejor remate.",
+       "rating_average": 71.7,
+       "closing_metric": 12.0
+      },
+      {
+       "number": 4,
+       "name": "Spring Clean",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Only Cash",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": "Pick #1 de Al Galope; sin un solo registro de carrera.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Sonia Slew",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [
+        "4ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 10,
+       "name": "De Lara",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 13,
+     "valid_leg": 6,
+     "distance": 1100,
+     "time": "18:35",
+     "note": "Trece corredores, ninguno ganador; cobertura de cinco por regla",
+     "horses": [
+      {
+       "number": 9,
+       "name": "Inochi",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [
+        "1ª selección"
+       ],
+       "withdrawn": false,
+       "reasoning": "Ascenso más pronunciado de la jornada 51→59→76→87, máximo seis sobre todos; Al Galope coincide.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Almendares",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [
+        "2ª"
+       ],
+       "withdrawn": false,
+       "reasoning": "Mejor promedio (76,5).",
+       "rating_average": 76.5,
+       "closing_metric": null
+      },
+      {
+       "number": 12,
+       "name": "Louis the Duke",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [
+        "3ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 13,
+       "name": "Ciro",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [
+        "4ª"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Doctor Rodilla",
+       "rank": 5,
+       "classes": [
+        "FIFTH",
+        "BATACAZO"
+       ],
+       "labels": [
+        "5ª",
+        "BATACAZO"
+       ],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": 12.1
+      }
+     ]
+    }
+   ],
+   "tickets": [
+    {
+     "type": "ECONOMICA",
+     "name": "Económica",
+     "recommended": false,
+     "unit_bs": 35,
+     "published": {
+      "legs": [
+       [
+        1,
+        6
+       ],
+       [
+        10,
+        1
+       ],
+       [
+        3
+       ],
+       [
+        7
+       ],
+       [
+        2
+       ],
+       [
+        9,
+        6,
+        12
+       ]
+      ],
+      "combinations": 12,
+      "cost_bs": 420,
+      "line": "1-6 / 10-1 / 3 / 7 / 2 / 9-6-12"
+     },
+     "current": {
+      "legs": [
+       [
+        1,
+        6
+       ],
+       [
+        10,
+        1
+       ],
+       [
+        3
+       ],
+       [
+        7
+       ],
+       [
+        2
+       ],
+       [
+        9,
+        6,
+        12
+       ]
+      ],
+      "combinations": 12,
+      "cost_bs": 420,
+      "line": "1-6 / 10-1 / 3 / 7 / 2 / 9-6-12"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    },
+    {
+     "type": "EQUILIBRADA",
+     "name": "Equilibrada",
+     "recommended": true,
+     "unit_bs": 35,
+     "published": {
+      "legs": [
+       [
+        1,
+        6
+       ],
+       [
+        10,
+        1,
+        5
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        7,
+        1
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        9,
+        6,
+        12,
+        13
+       ]
+      ],
+      "combinations": 192,
+      "cost_bs": 6720,
+      "line": "1-6 / 10-1-5 / 3-4 / 7-1 / 2-4 / 9-6-12-13"
+     },
+     "current": {
+      "legs": [
+       [
+        1,
+        6
+       ],
+       [
+        10,
+        1,
+        5
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        7,
+        1
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        9,
+        6,
+        12,
+        13
+       ]
+      ],
+      "combinations": 192,
+      "cost_bs": 6720,
+      "line": "1-6 / 10-1-5 / 3-4 / 7-1 / 2-4 / 9-6-12-13"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    },
+    {
+     "type": "BLINDADA",
+     "name": "Blindada",
+     "recommended": false,
+     "unit_bs": 35,
+     "published": {
+      "legs": [
+       [
+        1,
+        6,
+        9,
+        4
+       ],
+       [
+        10,
+        1,
+        5,
+        6
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        7,
+        1
+       ],
+       [
+        2,
+        4,
+        8
+       ],
+       [
+        9,
+        6,
+        12,
+        13,
+        4
+       ]
+      ],
+      "combinations": 960,
+      "cost_bs": 33600,
+      "line": "1-6-9-4 / 10-1-5-6 / 3-4 / 7-1 / 2-4-8 / 9-6-12-13-4"
+     },
+     "current": {
+      "legs": [
+       [
+        1,
+        6,
+        9,
+        4
+       ],
+       [
+        10,
+        1,
+        5,
+        6
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        7,
+        1
+       ],
+       [
+        2,
+        4,
+        8
+       ],
+       [
+        9,
+        6,
+        12,
+        13,
+        4
+       ]
+      ],
+      "combinations": 960,
+      "cost_bs": 33600,
+      "line": "1-6-9-4 / 10-1-5-6 / 3-4 / 7-1 / 2-4-8 / 9-6-12-13-4"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    }
+   ]
+  }
+ ],
+ "race_metrics": [
+  {
+   "meeting_id": "VAL-R22-2026-09-05",
+   "track": "Valencia",
+   "date": "2026-09-05",
+   "version": "v3.7",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C1",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R22-2026-09-05",
+   "track": "Valencia",
+   "date": "2026-09-05",
+   "version": "v3.7",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C2",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R22-2026-09-05",
+   "track": "Valencia",
+   "date": "2026-09-05",
+   "version": "v3.7",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C3",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R22-2026-09-05",
+   "track": "Valencia",
+   "date": "2026-09-05",
+   "version": "v3.7",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V1",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R22-2026-09-05",
+   "track": "Valencia",
+   "date": "2026-09-05",
+   "version": "v3.7",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V2",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R22-2026-09-05",
+   "track": "Valencia",
+   "date": "2026-09-05",
+   "version": "v3.7",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V3",
+   "first": false,
+   "top3": false,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 1
+  },
+  {
+   "meeting_id": "VAL-R22-2026-09-05",
+   "track": "Valencia",
+   "date": "2026-09-05",
+   "version": "v3.7",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V4",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R22-2026-09-05",
+   "track": "Valencia",
+   "date": "2026-09-05",
+   "version": "v3.7",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V5",
+   "first": false,
+   "top3": false,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 1
+  },
+  {
+   "meeting_id": "VAL-R22-2026-09-05",
+   "track": "Valencia",
+   "date": "2026-09-05",
+   "version": "v3.7",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V6",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C1",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C2",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C3",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C4",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C5",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C6",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C7",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "C8",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V1",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V2",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V3",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V4",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V5",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R35-2026-09-06",
+   "track": "La Rinconada",
+   "date": "2026-09-06",
+   "version": "v3.8",
+   "status": "PARTIAL",
+   "tier": "B",
+   "label": "V6",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C1",
+   "first": false,
+   "top3": false,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 1
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C2",
+   "first": false,
+   "top3": false,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 2,
+   "bat_w": 1
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C3",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C4",
+   "first": false,
+   "top3": false,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 1
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C5",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C6",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C7",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V1",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V2",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V3",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V4",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V5",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R39-2026-10-04",
+   "track": "La Rinconada",
+   "date": "2026-10-04",
+   "version": "v3.9",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V6",
+   "first": false,
+   "top3": false,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 1
+  },
+  {
+   "meeting_id": "VAL-R25-2026-10-10",
+   "track": "Valencia",
+   "date": "2026-10-10",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "B+hora",
+   "label": "C1",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R25-2026-10-10",
+   "track": "Valencia",
+   "date": "2026-10-10",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "B+hora",
+   "label": "C2",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 1,
+   "ancla_w": 1,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R25-2026-10-10",
+   "track": "Valencia",
+   "date": "2026-10-10",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "B+hora",
+   "label": "C3",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R25-2026-10-10",
+   "track": "Valencia",
+   "date": "2026-10-10",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "B+hora",
+   "label": "V1",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R25-2026-10-10",
+   "track": "Valencia",
+   "date": "2026-10-10",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "B+hora",
+   "label": "V2",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R25-2026-10-10",
+   "track": "Valencia",
+   "date": "2026-10-10",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "B+hora",
+   "label": "V3",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 2,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R25-2026-10-10",
+   "track": "Valencia",
+   "date": "2026-10-10",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "B+hora",
+   "label": "V4",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 1,
+   "ancla_w": 1,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R25-2026-10-10",
+   "track": "Valencia",
+   "date": "2026-10-10",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "B+hora",
+   "label": "V5",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "VAL-R25-2026-10-10",
+   "track": "Valencia",
+   "date": "2026-10-10",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "B+hora",
+   "label": "V6",
+   "first": false,
+   "top3": false,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C1",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C2",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 1,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C3",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 1,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C4",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C5",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C6",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "C7",
+   "first": false,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 1,
+   "ancla_w": 0,
+   "bat_n": 1,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V1",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V2",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 1,
+   "bomba_w": 0,
+   "ancla_n": 1,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V3",
+   "first": false,
+   "top3": false,
+   "expanded": false,
+   "bomba_n": 0,
+   "bomba_w": 0,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V4",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V5",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  },
+  {
+   "meeting_id": "RIN-R40-2026-10-11",
+   "track": "La Rinconada",
+   "date": "2026-10-11",
+   "version": "v4.0",
+   "status": "VERIFIED",
+   "tier": "A",
+   "label": "V6",
+   "first": true,
+   "top3": true,
+   "expanded": true,
+   "bomba_n": 1,
+   "bomba_w": 1,
+   "ancla_n": 0,
+   "ancla_w": 0,
+   "bat_n": 0,
+   "bat_w": 0
+  }
+ ],
+ "corrections": [
+  {
+   "id": "C-2026-001",
+   "meeting": "RIN-R38-2026-09-27",
+   "date": "2026-10-16",
+   "title": "27/09 · La Rinconada R38: el balance publicado en la web no coincidía con el cuadro publicado antes de la jornada",
+   "old_record": [
+    "R38 · 1/6 · cuadro recomendado · 96 combinaciones",
+    "Boleto personal sellado 5/6 · 162 combinaciones · premio Bs 3.158,18 · costo Bs 5.670"
+   ],
+   "new_record": [
+    "Cuadro publicado el 25/09 en Telegram (16 combinaciones, Bs 560): 4-2 / 7 / 8-5 / 3 / 8-9 / 7-6 → 5 de 6 (solo falló la V3).",
+    "Con 5 aciertos el cuadro tenía 2 boletos con cinco × Bs 3.158,18 = Bs 6.316,36 teóricos sobre Bs 560 de costo.",
+    "Recomendado (162) y Premium (1.152) se publicaron sin sus patas: no son evaluables.",
+    "Boleto sellado: no se aportó evidencia del boleto; no se presenta como cobrado."
+   ],
+   "reason": "El registro anterior no coincide con ninguna publicación previa fechada. El cuadro de 16 sí está fechado (Telegram 2658, 25/09/2026 17:04:43 UTC) y cotejado con el resultado oficial.",
+   "evidence": [
+    "https://t.me/LaRectaCaliente/2658",
+    "https://meridiano.net/hipismo/asi-quedaron-los-resultados-de-las-carreras-de-la-rinconada-27-09-2026-202692719230"
+   ]
+  },
+  {
+   "id": "C-2026-002",
+   "meeting": "RIN-R39-2026-10-04",
+   "date": "2026-10-16",
+   "title": "04/10 · La Rinconada R39: versión canónica del pronóstico",
+   "old_record": [
+    "Coexistían tres versiones del pronóstico: Telegram 2663, Telegram 2669 y la ficha web R39 (sin fecha)."
+   ],
+   "new_record": [
+    "CANÓNICA: Telegram 2669 · 02/10/2026 18:25:09 UTC (última versión publicada antes de la primera carrera).",
+    "Telegram 2663 · 02/10/2026 18:14:29 UTC: SUPERSEDED_PRE_RACE (sustituida antes de correr).",
+    "Ficha web R39: UNTIMESTAMPED (sin fecha de publicación demostrable). Se conserva, pero no acredita aciertos."
+   ],
+   "reason": "La versión se elige por la hora de publicación, nunca por el rendimiento posterior. (La 2663 habría dado 2/6 y la canónica 3/6 en la Equilibrada; ese dato no influyó en la elección.)",
+   "evidence": [
+    "https://t.me/LaRectaCaliente/2669",
+    "https://t.me/LaRectaCaliente/2663"
+   ]
+  },
+  {
+   "id": "C-2026-003",
+   "meeting": "RIN-R35-2026-09-06 · RIN-R37-2026-09-20",
+   "date": "2026-10-16",
+   "title": "06/09 y 20/09: carreras con BOMBA mostradas como «Favorito pendiente»",
+   "old_record": [
+    "Las fichas web mostraban «Favorito pendiente» en las carreras cuya primera selección era una BOMBA."
+   ],
+   "new_record": [
+    "La ficha muestra ahora la primera selección con su clasificación original: «BOMBA».",
+    "Causa: el importador solo buscaba el rol «favorito» y no reconocía la primera selección cuando estaba clasificada como bomba. No se cambió ninguna selección."
+   ],
+   "reason": "Error de presentación del importador web, no del pronóstico.",
+   "evidence": []
+  },
+  {
+   "id": "C-2026-004",
+   "meeting": "RIN-R37-2026-09-20",
+   "date": "2026-10-16",
+   "title": "20/09 · La Rinconada R37: la Recomendada se publicó como «192 combinaciones», pero su estructura contiene 288",
+   "old_record": [
+    "Recomendada · 7-11 / 1-2 / 8-5-1 / 3-1-8 / 3-10 / 6-2-9-10 · «192 combinaciones»"
+   ],
+   "new_record": [
+    "2 × 2 × 3 × 3 × 2 × 4 = 288 combinaciones. El total publicado era incorrecto; las patas no se modifican.",
+    "La ficha web ya mostraba 288 desde una corrección anterior que no quedó registrada; este registro la documenta."
+   ],
+   "reason": "Error aritmético en la publicación original.",
+   "evidence": []
+  },
+  {
+   "id": "C-2026-005",
+   "meeting": "VAL-R25-2026-10-10",
+   "date": "2026-10-16",
+   "title": "10/10 · Valencia R25: cifras de portada",
+   "old_record": [
+    "«89% ganador cubierto»",
+    "«Nuestro mejor registro histórico en Valencia»"
+   ],
+   "new_record": [
+    "Ganador cubierto: 8 de 9 carreras evaluadas = 88,9 % (universo: las 9 carreras de esta reunión, Sistema 3.3 v4.0).",
+    "«Mejor registro histórico en Valencia» se retira: el universo histórico completo de Valencia no está reconstruido."
+   ],
+   "reason": "Toda cifra pública lleva numerador, denominador y universo.",
+   "evidence": []
+  }
+ ]
+}

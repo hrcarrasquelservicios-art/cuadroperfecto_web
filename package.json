@@ -1,12 +1,12 @@
 {
   "scripts": {
     "generate:legacy": "node scripts/migrate-legacy.cjs",
-    "syntax-check": "node --check js/main.js && node --check js/motion.js && node --check js/meeting-selection.js && node --check scripts/migrate-legacy.cjs && node --check scripts/snapshot-integrity.cjs && node --check scripts/seed-september-content.cjs && node --check scripts/freeze-current-snapshots.cjs && node --check tests/meeting-model.test.js && node --check js/jornada-model.js && node --check scripts/jornada-agent.cjs",
+    "syntax-check": "node --check js/main.js && node --check js/motion.js && node --check js/meeting-selection.js && node --check scripts/migrate-legacy.cjs && node --check scripts/snapshot-integrity.cjs && node --check scripts/seed-september-content.cjs && node --check scripts/freeze-current-snapshots.cjs && node --check tests/meeting-model.test.js && node --check js/jornada-model.js && node --check scripts/jornada-agent.cjs && node --check js/zcp-audit.js && node --check scripts/build-zcp-audit.cjs && node --check scripts/zcp-audit-validate.cjs && node --check tests/zcp-audit.test.js && node --check scripts/check-zcp-site.cjs",
     "seed:september": "node scripts/seed-september-content.cjs",
     "freeze:current": "node scripts/freeze-current-snapshots.cjs",
-    "build": "npm run generate:legacy && npm run freeze:current && npm run syntax-check && node scripts/build-pages.cjs",
+    "build": "npm run generate:legacy && npm run freeze:current && npm run syntax-check && node scripts/build-pages.cjs && node scripts/build-zcp-audit.cjs && node scripts/check-zcp-site.cjs",
     "lint": "eslint js tests",
-    "test": "npm run generate:legacy && node tests/meeting-model.test.js && node tests/jornada.test.js",
+    "test": "npm run generate:legacy && node tests/meeting-model.test.js && node tests/jornada.test.js && node tests/zcp-audit.test.js",
     "agent:ingest": "node scripts/jornada-agent.cjs"
   },
   "devDependencies": {

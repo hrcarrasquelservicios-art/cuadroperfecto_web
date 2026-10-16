@@ -167,9 +167,9 @@ function valencia() {
   const va = valValidas.map(r => `<article class="zr-card ${r.ok ? 'zr-card-win' : 'zr-card-miss'}"><header><span class="zr-race">${esc(r.v)}</span><span class="zr-tag ${r.ok ? 'zr-tag-ok' : 'zr-tag-miss'}">${r.ok ? '✅ CUBIERTO' : '❌ NO CUBIERTO'}</span></header><h4>${horse(r.n, r.name)}</h4>${r.anchor ? '<p class="zr-ctx">Fija / ancla · ganó</p>' : ''}</article>`).join('');
   return `<section class="zr-section zr-valencia" id="valencia-r25" aria-labelledby="zr-val-title">
 <div class="zr-head"><div><p class="eyebrow">VALENCIA · REUNIÓN 25 · 10/10/2026 · RESULTADO VERIFICADO</p>
-<h2 id="zr-val-title">VALENCIA: 5 DE 6 EN EL CUADRO PERFECTO</h2><p class="zr-lead zr-lead-dark">Nuestro mejor registro histórico en Valencia</p></div></div>
+<h2 id="zr-val-title">VALENCIA: 5 DE 6 EN EL CUADRO PERFECTO</h2><p class="zr-lead zr-lead-dark"><del>Nuestro mejor registro histórico en Valencia</del> · Ganador cubierto: 8 de 9 carreras evaluadas (88,9%) · <a href="/historico#C-2026-005">Corrección C-2026-005</a></p></div></div>
 <div class="zr-kpis zr-kpis-light">
-<article><strong>89%</strong><span>GANADOR CUBIERTO<br>8 de 9 carreras</span></article>
+<article><strong>8/9</strong><span>GANADOR CUBIERTO<br>88,9% · 9 carreras evaluadas</span></article>
 <article><strong>100%</strong><span>NO VÁLIDAS<br>3/3</span></article>
 <article><strong>83%</strong><span>VÁLIDAS 5Y6<br>5/6</span></article>
 <article><strong>2</strong><span>EXACTAS<br>ACERTADAS</span></article>
@@ -198,11 +198,11 @@ function historyHeading() {
 }
 
 function historyCards() {
-  return `<article class="card"><p>2026-10-11</p><h2>La Rinconada · R40</h2><a href="#rinconada-r40">Ver cuadro de hoy</a></article><article class="card"><p>2026-10-10</p><h2>Valencia · R25 · 5/6</h2><a href="#valencia-r25">Ver resultados</a></article>`;
+  return `<article class="card"><p>2026-10-11</p><h2>La Rinconada · R40</h2><a href="/resultados/la-rinconada-reunion-40-11-octubre-2026">Ver registro auditado</a></article><article class="card"><p>2026-10-10</p><h2>Valencia · R25 · 5/6</h2><a href="/resultados/valencia-reunion-25-10-octubre-2026">Ver registro auditado</a></article>`;
 }
 
 module.exports = {hero, rinconada, cuadro, bombasSection, valencia, social, historyHeading, historyCards, WHATSAPP, TELEGRAM,
   seo: {
-    title: 'Zona Caliente Pro | Cuadro Perfecto 5Y6 — La Rinconada 11/10/2026',
-    description: 'Pronósticos de La Rinconada, Cuadro Perfecto 5Y6, bombas y batacazos. Venimos de acertar 5 de 6 en Valencia con 89% de ganadores cubiertos.'
+    title: 'Zona Caliente Pro | Cuadro Perfecto 5Y6 — Valencia 17/10 y La Rinconada 18/10/2026',
+    description: 'Pronóstico previo de Valencia (17/10) y La Rinconada (18/10): favoritos, bombas, batacazos y cuadros 5y6, publicado antes de la jornada. Historial auditable con numerador y denominador.'
   }};
