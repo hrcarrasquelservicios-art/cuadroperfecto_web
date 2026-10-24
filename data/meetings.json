@@ -1355,7 +1355,7 @@
       "date": "2026-10-25",
       "status": "PROVISIONAL · PENDIENTE DE PARTE OFICIAL",
       "unit_value": null,
-      "analysis_snapshot_id": "snapshot-rinconada-2026-10-25-r42-provisional-v1",
+      "analysis_snapshot_id": "snapshot-rinconada-2026-10-25-r42-provisional-v2",
       "gate": {
         "retirados": null,
         "cambios_monta": null,
@@ -1366,7 +1366,7 @@
         "valor_unidad": null
       },
       "notice": [
-        "CUADRO PROVISIONAL. Retiros detectados, pendientes del parte oficial del INH: C11 #4 Gran Torrente y C6 #4 Señora Isabel (invalidados en la observación del programa oficial del 20/10/2026). Giant's Triumph (C8 #5) sigue en el programa y no está cubierto por el cuadro.",
+        "CUADRO PROVISIONAL. Retiros detectados, pendientes del parte oficial del INH: C11 #4 Gran Torrente y C6 #4 Señora Isabel (invalidados en la observación del programa oficial del 20/10/2026). Giant's Triumph (C8 #5) sigue válido en el programa y está incluido en el cuadro.",
         "Costos ESTIMADOS a Bs. 35 por combinación (valor de referencia de jornadas anteriores; el valor de la Reunión 42 no está confirmado).",
         "Orden de las opciones: cada opción recorta de la lista completa por el orden de preferencia del análisis (1ª, 2ª, 3ª…). Análisis de rendimiento, no garantía de resultados ni de rentabilidad."
       ],
@@ -1402,14 +1402,14 @@
         "carrera_trampa": null,
         "alertas": [
           "CUADRO PROVISIONAL: pendiente del parte oficial de retiros del INH.",
-          "Giant's Triumph (C8 #5) figura como ejemplar válido en el programa oficial y no está cubierto por ninguna opción del cuadro: revisión editorial pendiente.",
+          "Giant's Triumph (C8 #5) figura como ejemplar válido en el programa oficial y está incluido en las tres opciones del cuadro.",
           "V4/C11 es la pata más frágil: sin Gran Torrente quedan debutantes y ejemplares con 1-2 salidas sin ganar."
         ],
         "cambios_ultima_hora": [],
         "retirados": [
           "C11 #4 Gran Torrente (USA): retiro detectado; el programa oficial (generado el 20/10/2026) lo declara invalidado para todos los juegos. PENDIENTE del parte definitivo del INH.",
           "C6 #4 Señora Isabel (USA): retiro detectado; el programa oficial (generado el 20/10/2026) la declara invalidada para todos los juegos. PENDIENTE del parte definitivo del INH.",
-          "C8 #5 Giant's Triumph (USA): NO consta como retirado en el programa oficial; el borrador original lo daba por ausente y esa afirmación no se sostiene."
+          "C8 #5 Giant's Triumph (USA): figura como válido en el programa oficial (sin invalidación)."
         ]
       },
       "races": [
@@ -1900,7 +1900,7 @@
               "role": "ENEMIGO"
             }
           ],
-          "analysis": "Señora Isabel #4 era la primera opción del análisis original (dos victorias, ratings 99 y 101), pero el programa oficial la declara INVALIDADA para todos los juegos; sin primera opción publicada. Quedan en el orden original Colorada #3 (rating 96) y Giuliana Mia #5. Carrera no válida: pendiente de revisión editorial."
+          "analysis": "Colorada #3 como primera opción: tiene el mejor rating entre las válidas (96 en su última, 2ª en 1200 m el 04/10; Latina Fina, 62), 21 días de descanso, remate R12,3 y el primer puesto en el orden de Al Galope (Colorada, Latina Fina, La Gran Sabana). Giuliana Mia #5 es debutante con cuatro trabajos recientes (R12 a R13) y figura como posible sorpresa de Al Galope. Señora Isabel #4 (USA) está invalidada para todos los juegos en el programa oficial (Al Galope también la marca «no vale para ningún juego») y no forma parte de la selección. Carrera no válida; pendiente del parte oficial del INH."
         },
         {
           "id": "r42-c7",
@@ -2045,7 +2045,7 @@
               "trainer": "Martinez S Ismael A",
               "weight": null,
               "recent_form": null,
-              "role": "VALIDO_SIN_COBERTURA"
+              "role": "ENEMIGO"
             },
             {
               "number": 6,
@@ -2102,7 +2102,7 @@
               "role": "SIN_SELECCION"
             }
           ],
-          "analysis": "Carrera dividida. El Providencial #4 (ancla): ratings 78-74-67-80 (promedio 74,8) y remate R12. Gran Warrior #1: progresión 52→73→94 y remate R12,2 «FENÓMENO». More Than Galileo #8 y Tibu #2 completan el orden. AVISO: Giant's Triumph #5 (rating 95 en su última salida) figura como ejemplar válido en el programa oficial y NO está cubierto por ninguna de las tres opciones; el análisis original lo daba por retirado sin sustento en el programa. Pata PROVISIONAL, pendiente de revisión editorial."
+          "analysis": "Carrera dividida. El Providencial #4 (ancla): ratings 78-74-67-80 (promedio 74,8) y remate R12. Gran Warrior #1: progresión 52→73→94 y remate R12,2 «FENÓMENO». More Than Galileo #8 completa el núcleo. Giant's Triumph #5 (rating 95 en su última salida, 28 días de descanso, remate R13,1) figura como ejemplar válido en el programa oficial y se incluye en las tres opciones como selección adicional; Tibu #2 (último rating 92, R12,2) queda fuera solo de la Económica. Pata PROVISIONAL."
         },
         {
           "id": "r42-v2",
@@ -2339,7 +2339,7 @@
               "trainer": "Martinez S Ismael A",
               "weight": null,
               "recent_form": null,
-              "role": "INVALIDADO_PROGRAMA"
+              "role": "SIN_SELECCION"
             },
             {
               "number": 5,
@@ -2627,7 +2627,8 @@
             "1V": [
               4,
               1,
-              8
+              8,
+              5
             ],
             "2V": [
               4,
@@ -2659,7 +2660,8 @@
             "1V": {
               "4": "El Providencial",
               "1": "Gran Warrior",
-              "8": "More Than Galileo"
+              "8": "More Than Galileo",
+              "5": "Giant's Triumph"
             },
             "2V": {
               "4": "Andrella Royale",
@@ -2687,10 +2689,10 @@
               "4": "Gualberto"
             }
           },
-          "editorial_total": 729,
+          "editorial_total": 972,
           "validation_error": null,
           "estimated_unit_value": 35,
-          "estimated_cost": 25515,
+          "estimated_cost": 34020,
           "cost_status": "ESTIMADO: Bs. 35 por combinación es un valor de referencia de jornadas previas; no confirmado para la Reunión 42."
         },
         {
@@ -2701,6 +2703,7 @@
               4,
               1,
               8,
+              5,
               2
             ],
             "2V": [
@@ -2737,6 +2740,7 @@
               "4": "El Providencial",
               "1": "Gran Warrior",
               "8": "More Than Galileo",
+              "5": "Giant's Triumph",
               "2": "Tibu (PAN)"
             },
             "2V": {
@@ -2768,10 +2772,10 @@
               "8": "Black Anthony"
             }
           },
-          "editorial_total": 2304,
+          "editorial_total": 2880,
           "validation_error": null,
           "estimated_unit_value": 35,
-          "estimated_cost": 80640,
+          "estimated_cost": 100800,
           "cost_status": "ESTIMADO: Bs. 35 por combinación es un valor de referencia de jornadas previas; no confirmado para la Reunión 42."
         },
         {
@@ -2782,6 +2786,7 @@
               4,
               1,
               8,
+              5,
               2
             ],
             "2V": [
@@ -2822,6 +2827,7 @@
               "4": "El Providencial",
               "1": "Gran Warrior",
               "8": "More Than Galileo",
+              "5": "Giant's Triumph",
               "2": "Tibu (PAN)"
             },
             "2V": {
@@ -2857,10 +2863,10 @@
               "1": "Rio Manso"
             }
           },
-          "editorial_total": 6400,
+          "editorial_total": 8000,
           "validation_error": null,
           "estimated_unit_value": 35,
-          "estimated_cost": 224000,
+          "estimated_cost": 280000,
           "cost_status": "ESTIMADO: Bs. 35 por combinación es un valor de referencia de jornadas previas; no confirmado para la Reunión 42."
         }
       ],
