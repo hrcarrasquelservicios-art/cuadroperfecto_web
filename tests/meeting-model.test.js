@@ -49,3 +49,14 @@ const html = ['index.html','404.html','historial.html','reuniones/index.html','r
 for (const page of html) assert.match(page, /Content-Security-Policy/);
 assert.match(html[0], /og:image/); assert.match(html[0], /twitter:image/); assert.match(html[4], /og:image/); assert.match(html[4], /twitter:image/); assert.match(html[2], /\/reuniones/);
 console.log('migration, snapshots, tickets, gate, CSP, SEO and asset pipeline tests passed');
+const r42 = current.meetings.find(m => m.id === 'rinconada-2026-10-25-r42');
+assert.equal(r42.meeting_number, 42); assert.equal(r42.date, '2026-10-25'); assert.equal(r42.unit_value, null);
+assert.equal(r42.races.reduce((n, r) => n + r.horses.length, 0), 118);
+assert.equal(r42.races.filter(r => r.kind === 'NO_VALIDA').length, 7); assert.equal(r42.races.filter(r => r.kind === '5Y6').length, 6);
+assert.deepEqual(r42.tickets.map(t => combinations(t.legs)), [729, 2304, 6400]);
+assert.deepEqual(r42.tickets.map(t => t.estimated_cost), [25515, 80640, 224000]);
+for (const t of r42.tickets) { assert.equal(combinations(t.legs), t.editorial_total); for (const [leg, picks] of Object.entries(t.legs)) { assert.equal(new Set(picks).size, picks.length); const race = r42.races.find(r => r.public_label === leg); for (const n of picks) assert.ok(race.horses.some(h => h.number === n && !['INVALIDADO_PROGRAMA'].includes(h.role))); } }
+const nested = ['PRESENTADO', 'RECOMENDADO', 'PREMIUM'].map(t => r42.tickets.find(x => x.tier === t));
+for (const leg of Object.keys(nested[0].legs)) { assert.ok(nested[0].legs[leg].every(n => nested[1].legs[leg].includes(n))); assert.ok(nested[1].legs[leg].every(n => nested[2].legs[leg].includes(n))); }
+assert.ok(r42.post_mortem.races.every(x => x.winner_number === null && x.win_dividend_bs === null));
+assert.ok(r42.notice.some(x => /PROVISIONAL/.test(x)));

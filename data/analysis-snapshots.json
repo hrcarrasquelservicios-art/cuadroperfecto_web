@@ -8035,6 +8035,1519 @@
         }
       },
       "sha256": "633b6571f33e5871d49f1507af765c72e24b066e37cf72664189d70911a04954"
+    },
+    {
+      "id": "snapshot-rinconada-2026-10-25-r42-provisional-v1",
+      "meeting_id": "rinconada-2026-10-25-r42",
+      "kind": "PRE_CARRERA",
+      "frozen_at": "2026-10-24T01:52:55Z",
+      "source": "programa-oficial-JL-20261020+HT+AlGalope; borrador verificado; PROVISIONAL (retiros pendientes del parte INH)",
+      "analysis": {
+        "races": [
+          {
+            "id": "r42-c1",
+            "public_label": "1C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": "1.100 m",
+            "time": "1:00 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Tank Abbott",
+                "jockey": "Acosta Deyker L",
+                "trainer": "Aleman F Rafael V",
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 2,
+                "name": "Golden JE",
+                "jockey": "Rivero Jose A",
+                "trainer": "Lanz L Ruben A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 3,
+                "name": "El Pequeño Jose",
+                "jockey": "Gonzalez G Yoelbis D",
+                "trainer": "Rojas R Asdrubal J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 4,
+                "name": "Rey Vulcano",
+                "jockey": "Montilla Luis",
+                "trainer": "Perez Alejandro J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 5,
+                "name": "Miketyson",
+                "jockey": "Marquez O Felix D",
+                "trainer": "Sanchez M Jose A",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 6,
+                "name": "Aptitud",
+                "jockey": "Veliz R Winder J",
+                "trainer": "Sanchez M Jose A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 7,
+                "name": "Tintorero",
+                "jockey": "Gonzalez V Franklin J",
+                "trainer": "Parilli Tota Fernando A",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 8,
+                "name": "Zaraceño",
+                "jockey": "Lugo C Jaime L Jr",
+                "trainer": "Viera H Mauro J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": "Tintorero (ancla): ratings 87-78-88-93, remate R12,3, 56 días de descanso; Al Galope lo marca «DEBE GANAR». Batacazo: Tank Abbott #1 (rating 80 y 83, remate R12 «FENÓMENO» en HT)."
+          },
+          {
+            "id": "r42-c2",
+            "public_label": "2C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": "1.100 m",
+            "time": "1:30 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Decidida",
+                "jockey": "Aray Kelvin A",
+                "trainer": "Correia D J Humberto J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 2,
+                "name": "Queen Vanemar",
+                "jockey": "Alvarado G Jervis O",
+                "trainer": "Rodriguez P Ademar A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 3,
+                "name": "Miss Universo",
+                "jockey": "Garcia P Alfredo J",
+                "trainer": "Garcia H Jose G",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 4,
+                "name": "Impetuosa",
+                "jockey": "Marquez O Felix D",
+                "trainer": "Correia D J Humberto J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 5,
+                "name": "Salome",
+                "jockey": "Medina M Hemirxon D",
+                "trainer": "Sanchez F Wladimir E",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 6,
+                "name": "Paint White",
+                "jockey": "Aguilar Idelwis",
+                "trainer": "Rosendo A Luis A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 7,
+                "name": "Mostaza",
+                "jockey": "Lugo C Jaime L Jr",
+                "trainer": "Trujillo H Henry A",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 8,
+                "name": "Nostra Vittoria",
+                "jockey": "Dellan A Derrick B",
+                "trainer": "Casanova C Alain A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 9,
+                "name": "Sicarigua",
+                "jockey": "Rondon L Reniel R",
+                "trainer": "Sanchez M Jose A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 10,
+                "name": "Paula del Carmen",
+                "jockey": "Yanez Samuel",
+                "trainer": "Naranjo R Mauro",
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              }
+            ],
+            "analysis": "Salome #5 (ratings 58-98-96, 14 días de descanso), Mostaza #7 y Decidida #1 en el orden del análisis. Batacazo: Paula del Carmen #10. Carrera no válida: sin ficha de detalle adicional."
+          },
+          {
+            "id": "r42-c3",
+            "public_label": "3C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": "1.200 m",
+            "time": "2:00 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Valeria Time",
+                "jockey": "Capriles J Robert E",
+                "trainer": "Rojas V German I",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 2,
+                "name": "Sweet Galilea",
+                "jockey": "Nava L Jonathan A",
+                "trainer": "Chacon B Rafael L",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 3,
+                "name": "Wyoming Girl",
+                "jockey": "Brito Carlos",
+                "trainer": "Madera T Kenny J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 4,
+                "name": "Doña Carmen",
+                "jockey": "Chirinos R Arnaldo E",
+                "trainer": "Querales R Jose G",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 5,
+                "name": "Catira Milena",
+                "jockey": "Garcia P Alfredo J",
+                "trainer": "Perez R Cesar A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 6,
+                "name": "Amor Prohibido",
+                "jockey": "Gonzalez G Yoelbis D",
+                "trainer": "Garcia M Heli R",
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 7,
+                "name": "Siberian Queen",
+                "jockey": "Magallanes M Jesus D",
+                "trainer": "Madera T Kenny J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 8,
+                "name": "Gift Winner",
+                "jockey": "Veliz R Winder J",
+                "trainer": "Sanchez M Jose A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 9,
+                "name": "Bel Amore",
+                "jockey": "Yanez Samuel",
+                "trainer": "Campos G Abraham J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": "Valeria Time #1 (ratings 29-51-28-84, 14 días); Bel Amore #9 y Siberian Queen #7. Batacazo: Amor Prohibido #6 (remate R12). Carrera no válida."
+          },
+          {
+            "id": "r42-c4",
+            "public_label": "4C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": "1.300 m",
+            "time": "2:30 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Predador",
+                "jockey": "Marquez O Felix D",
+                "trainer": "Correia D J Humberto J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 2,
+                "name": "Athletic Time",
+                "jockey": "Funez Jr Luis A",
+                "trainer": "Rojas V German I",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 3,
+                "name": "Theo",
+                "jockey": "Lugo C Jaime L Jr",
+                "trainer": "Trujillo H Henry A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 4,
+                "name": "Gran Azabache",
+                "jockey": "Caguado M Yaniel E",
+                "trainer": "Di Luca F Vincenzo E",
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 5,
+                "name": "Golden Bros",
+                "jockey": "Solano Rafael",
+                "trainer": "Lanz L Ruben A",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 6,
+                "name": "Vinicius JR",
+                "jockey": "Pimentel P Ivan A",
+                "trainer": "Villamizar G Yorvis A",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 7,
+                "name": "El Perfecto",
+                "jockey": "Aguilar Idelwis",
+                "trainer": "Trujillo H Henry A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              }
+            ],
+            "analysis": "Athletic Time #2 (bomba): ratings 60-65-43-90 (promedio 64,5; último 90), remate R12,3 «movido al final y respondió», 35 días de descanso. Golden Bros #5 y Vinicius Jr #6 siguen en el orden. Batacazo: Gran Azabache #4."
+          },
+          {
+            "id": "r42-c5",
+            "public_label": "5C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": "1.300 m",
+            "time": "3:00 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Bendecida",
+                "jockey": "Cordero Gerfrin",
+                "trainer": "Petit G Freddy J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 2,
+                "name": "Sra Champ",
+                "jockey": "Aray Jhonatan A",
+                "trainer": "Salvador F Jorge S",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 3,
+                "name": "Mia Ragazza",
+                "jockey": "Marquez O Felix D",
+                "trainer": "D' Angelo B Riccardo",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 4,
+                "name": "Jenifer Daniela",
+                "jockey": "Gonzalez G Yoelbis D",
+                "trainer": "Martinez S Ismael A",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 5,
+                "name": "Cosmic Love",
+                "jockey": "Betancourt Eglinder",
+                "trainer": "Gonzalez M Oscar M",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 6,
+                "name": "Rose Sensations",
+                "jockey": "Lugo C Jaime L Jr",
+                "trainer": "D' Angelo B Riccardo",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 7,
+                "name": "Four Palms Queen",
+                "jockey": "Medina M Hemirxon D",
+                "trainer": "D' Angelo B Riccardo",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 8,
+                "name": "Antalya",
+                "jockey": "Rivero Jose A",
+                "trainer": "Salvador F Jorge S",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              }
+            ],
+            "analysis": "Jenifer Daniela #4 (ratings 66-87-83, remate R12,1), Rose Sensations #6 y Sra Champ #2. Batacazo: Bendecida #1 (remate R12, rating 77 en la última). Carrera no válida."
+          },
+          {
+            "id": "r42-c6",
+            "public_label": "6C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": "1.100 m",
+            "time": "3:30 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "La Gran Sabana",
+                "jockey": "Veliz R Winder J",
+                "trainer": "Dokmadji B Chaoukat",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 2,
+                "name": "Latina Fina",
+                "jockey": "Pimentel P Ivan A",
+                "trainer": "Correia L G Jr Humberto A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 3,
+                "name": "Colorada (USA)",
+                "jockey": "Rivero Jose A",
+                "trainer": "Parilli Tota Fernando A",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 4,
+                "name": "Señora Isabel (USA)",
+                "jockey": "Medina M Hemirxon D",
+                "trainer": "Martinez S Ismael A",
+                "weight": null,
+                "recent_form": null,
+                "role": "INVALIDADO_PROGRAMA"
+              },
+              {
+                "number": 5,
+                "name": "Giuliana Mia (USA)",
+                "jockey": "Gonzalez V Franklin J",
+                "trainer": "Parilli A Fernando J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": "Señora Isabel #4 era la primera opción del análisis original (dos victorias, ratings 99 y 101), pero el programa oficial la declara INVALIDADA para todos los juegos; sin primera opción publicada. Quedan en el orden original Colorada #3 (rating 96) y Giuliana Mia #5. Carrera no válida: pendiente de revisión editorial."
+          },
+          {
+            "id": "r42-c7",
+            "public_label": "7C",
+            "inh_code": null,
+            "kind": "NO_VALIDA",
+            "distance": "1.800 m",
+            "time": "4:00 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "First Time",
+                "jockey": "Aray Jhonatan A",
+                "trainer": "Garcia M Juan C",
+                "weight": null,
+                "recent_form": null,
+                "role": "SORPRESA"
+              },
+              {
+                "number": 2,
+                "name": "Brawuaisa",
+                "jockey": "Lugo C Jaime L Jr",
+                "trainer": "Perez R Cesar A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 3,
+                "name": "The Fieldher JR",
+                "jockey": "Rodriguez Jean C",
+                "trainer": "Rivas Jefferson D",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 4,
+                "name": "Tio Horacio",
+                "jockey": "Quevedo M Francisco",
+                "trainer": "Parilli A Fernando J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 5,
+                "name": "Invader",
+                "jockey": "Veliz R Winder J",
+                "trainer": "Rojas V German I",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 6,
+                "name": "Yasiel",
+                "jockey": "Gonzalez G Yoelbis D",
+                "trainer": "Rojas F Jose R",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 7,
+                "name": "Forrest Gump",
+                "jockey": "Medina M Hemirxon D",
+                "trainer": "Salvador F Jorge S",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 8,
+                "name": "Isobarico",
+                "jockey": "Capriles J Robert E",
+                "trainer": "Garcia M Juan C",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 9,
+                "name": "Deep Attack",
+                "jockey": "Medina V Oliver O",
+                "trainer": "Parilli A Fernando J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              }
+            ],
+            "analysis": "Forrest Gump #7 (ancla, no bomba): ratings 106-89-101-102 (promedio 99,5), remate R13,2; Al Galope lo marca «SUPER DATO». Tio Horacio #4 (rating máximo 106) e Invader #5. Batacazo: First Time #1 (remate R12,2). Isobárico #8 tiene rating 107 y no figura entre las selecciones."
+          },
+          {
+            "id": "r42-v1",
+            "public_label": "1V",
+            "inh_code": "C8",
+            "kind": "5Y6",
+            "distance": "1.300 m",
+            "time": "4:35 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Gran Warrior",
+                "jockey": "Gonzalez V Franklin J",
+                "trainer": "Aquino H Jose D",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 2,
+                "name": "Tibu (PAN)",
+                "jockey": "Funez Jr Luis A",
+                "trainer": "Rojas V German I",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 3,
+                "name": "Rey de Oro",
+                "jockey": "Rodriguez Jean C",
+                "trainer": "Petit G Freddy J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 4,
+                "name": "El Providencial",
+                "jockey": "Veliz R Winder J",
+                "trainer": "Parilli A Fernando J",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 5,
+                "name": "Giant's Triumph",
+                "jockey": "Capriles J Robert E",
+                "trainer": "Martinez S Ismael A",
+                "weight": null,
+                "recent_form": null,
+                "role": "VALIDO_SIN_COBERTURA"
+              },
+              {
+                "number": 6,
+                "name": "El Gran Campeon",
+                "jockey": "Alvarado G Jervis O",
+                "trainer": "Palencia P David G",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 7,
+                "name": "El de Lola",
+                "jockey": "Rivero Jose A",
+                "trainer": "Rivas Jefferson D",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 8,
+                "name": "More Than Galileo",
+                "jockey": "Marquez O Felix D",
+                "trainer": "Marquez M Gabriel J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 9,
+                "name": "Wadi Al Kouf (USA)",
+                "jockey": "Aray Jhonatan A",
+                "trainer": "Uzcategui Carlos L",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 10,
+                "name": "Loom",
+                "jockey": "Contreras S. Jose G.",
+                "trainer": "Flores Uvencio H",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 11,
+                "name": "El Toro Flores",
+                "jockey": "Solano Rafael",
+                "trainer": "Gonzalez M Oscar M",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              }
+            ],
+            "analysis": "Carrera dividida. El Providencial #4 (ancla): ratings 78-74-67-80 (promedio 74,8) y remate R12. Gran Warrior #1: progresión 52→73→94 y remate R12,2 «FENÓMENO». More Than Galileo #8 y Tibu #2 completan el orden. AVISO: Giant's Triumph #5 (rating 95 en su última salida) figura como ejemplar válido en el programa oficial y NO está cubierto por ninguna de las tres opciones; el análisis original lo daba por retirado sin sustento en el programa. Pata PROVISIONAL, pendiente de revisión editorial."
+          },
+          {
+            "id": "r42-v2",
+            "public_label": "2V",
+            "inh_code": "C9",
+            "kind": "5Y6",
+            "distance": "1.300 m",
+            "time": "5:05 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Indistinct Chatter",
+                "jockey": "Gonzalez G Yoelbis D",
+                "trainer": "Uzcategui Carlos L",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 2,
+                "name": "Coronada en Gloria",
+                "jockey": "Rivas M. Omar I.",
+                "trainer": "Regalado S Alejandro E",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 3,
+                "name": "Beyonce Champ",
+                "jockey": "Medina V Oliver O",
+                "trainer": "Salvador F Jorge S",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 4,
+                "name": "Andrella Royale",
+                "jockey": "Capriles J Robert E",
+                "trainer": "Gonzalez M Oscar M",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 5,
+                "name": "Alaska",
+                "jockey": "Solano Rafael",
+                "trainer": "Casanova C Alain A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 6,
+                "name": "De Gala",
+                "jockey": "Alvarado G Jervis O",
+                "trainer": "Garcia M Juan C",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 7,
+                "name": "Bambina Paola",
+                "jockey": "Finol N Alvaro A",
+                "trainer": "Romero F Jesus A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 8,
+                "name": "Mezcal",
+                "jockey": "Perfecto M Kelvin J",
+                "trainer": "Uzcategui Carlos L",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 9,
+                "name": "Chiararock",
+                "jockey": "Veliz R Winder J",
+                "trainer": "Rojas V German I",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 10,
+                "name": "Madagascar",
+                "jockey": "Lugo C Jaime L Jr",
+                "trainer": "D' Angelo B Riccardo",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              }
+            ],
+            "analysis": "Andrella Royale #4 (bomba): rating 86 y remate R12 «cómodos», 28 días de descanso. Advertencia: el 86 proviene de una sola actuación en dos salidas. Coronada en Gloria #2, Beyonce Champ #3 y Chiararock #9 completan el orden."
+          },
+          {
+            "id": "r42-v3",
+            "public_label": "3V",
+            "inh_code": "C10",
+            "kind": "5Y6",
+            "distance": "1.100 m",
+            "time": "5:35 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Celestia",
+                "jockey": "Veliz R Winder J",
+                "trainer": "Guevara R Deibis J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 2,
+                "name": "Shelovestotravel",
+                "jockey": "Medina M Hemirxon D",
+                "trainer": "Gonzalez M Oscar M",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 3,
+                "name": "Bulma",
+                "jockey": "Funez Jr Luis A",
+                "trainer": "Guevara R Deibis J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 4,
+                "name": "Isometrica",
+                "jockey": "Alvarado G Jervis O",
+                "trainer": "Garcia M Juan C",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 5,
+                "name": "Miss Morgan (USA)",
+                "jockey": "Quevedo M Francisco",
+                "trainer": "Uzcategui Carlos L",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 6,
+                "name": "Galgadot",
+                "jockey": "Lugo C Jaime L Jr",
+                "trainer": "Trujillo H Henry A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 7,
+                "name": "Toda Una Rubia",
+                "jockey": "Aray Jhonatan A",
+                "trainer": "Martinez M Antonio S",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 8,
+                "name": "Queen Paulette",
+                "jockey": "Yanez Samuel",
+                "trainer": "Garcia M Ramon",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 9,
+                "name": "Rue Du Bac",
+                "jockey": "Guedez M. Edgar",
+                "trainer": "Trujillo H Henry A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              }
+            ],
+            "analysis": "Toda Una Rubia #7 (ancla): ratings 54-71-63-92 (promedio 70,0), viene de marcar 92; remate R13 (flojo). Isometrica #4 (batacazo): remate R11,3 y ratings 20→43→76. Miss Morgan #5 (remate R12,1) y Bulma #3 (R12,3) completan el orden."
+          },
+          {
+            "id": "r42-v4",
+            "public_label": "4V",
+            "inh_code": "C11",
+            "kind": "5Y6",
+            "distance": "1.100 m",
+            "time": "6:05 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Aviador Mag (USA)",
+                "jockey": "Quevedo M Francisco",
+                "trainer": "Regalado S Alejandro E",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 2,
+                "name": "Midnight Warrior",
+                "jockey": "Zonett G Keyner E",
+                "trainer": "Garcia M Ramon",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 3,
+                "name": "Chokolate (USA)",
+                "jockey": "Aranguren P Johan E",
+                "trainer": "Marquez M Gabriel J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 4,
+                "name": "Gran Torrente (USA)",
+                "jockey": "Pimentel P Ivan A",
+                "trainer": "Martinez S Ismael A",
+                "weight": null,
+                "recent_form": null,
+                "role": "INVALIDADO_PROGRAMA"
+              },
+              {
+                "number": 5,
+                "name": "El Cuiba",
+                "jockey": "Puello Q Franklin K",
+                "trainer": "Rojas F Jose R",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 6,
+                "name": "El de Mateo",
+                "jockey": "Garcia P Alfredo J",
+                "trainer": "Rivas Jefferson D",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 7,
+                "name": "Carbonero",
+                "jockey": "Rivero Jose A",
+                "trainer": "Rivas Jefferson D",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 8,
+                "name": "Elohim (USA)",
+                "jockey": "Lugo V Jaime L",
+                "trainer": "Uzcategui Carlos L",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 9,
+                "name": "Piaroa (USA)",
+                "jockey": "Gonzalez G Yoelbis D",
+                "trainer": "Rojas F Jose R",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 10,
+                "name": "Maalo Papa (USA)",
+                "jockey": "Solano Rafael",
+                "trainer": "Romero P Jessenia D C",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 11,
+                "name": "Leono (USA)",
+                "jockey": "Aray Jhonatan A",
+                "trainer": "Marquez M Gabriel J",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": "Pata frágil. Con Gran Torrente #4 invalidado según el programa oficial, quedan debutantes y ejemplares con 1-2 salidas sin ganar. Elohim #8 (batacazo): remate R11,2 «agarrado», el más bajo entre las selecciones del programa, rating 18 en su única salida, 63 días; Al Galope lo marca «IMPERDIBLE». Midnight Warrior #2 (1000 m en 63,3) y Aviador Mag #1 (1000 m en 64) con trabajos recientes. Chokolate #3 y Leono #11 (tres trabajos de segunda vuelta con R12,1-12,2) completan el orden. No se inventa sustituto del invalidado."
+          },
+          {
+            "id": "r42-v5",
+            "public_label": "5V",
+            "inh_code": "C12",
+            "kind": "5Y6",
+            "distance": "1.100 m",
+            "time": "6:35 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Dra Bea",
+                "jockey": "Medina V Oliver O",
+                "trainer": "Guevara R Deibis J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 2,
+                "name": "Victoria de Oro",
+                "jockey": "Hernandez F Jose G",
+                "trainer": "Garcia M Heli R",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 3,
+                "name": "La Dama",
+                "jockey": "Lugo C Jaime L Jr",
+                "trainer": "Viera H Mauro J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 4,
+                "name": "Rompeparadigmas",
+                "jockey": "Magallanes M Jesus D",
+                "trainer": "Garcia M Ramon",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 5,
+                "name": "Spring Training",
+                "jockey": "Capriles J Robert E",
+                "trainer": "Di Luca F Vincenzo E",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 6,
+                "name": "Elorza Princess",
+                "jockey": "Siso Aldry",
+                "trainer": "Gomez S Eliecer A",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 7,
+                "name": "Waya Waya",
+                "jockey": "Marquez O Felix D",
+                "trainer": "Campos G Abraham J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 8,
+                "name": "Prioritise",
+                "jockey": "Yanez Samuel",
+                "trainer": "Romero R Jesus R",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 9,
+                "name": "Princesa Susej",
+                "jockey": "Lugo V Jaime L",
+                "trainer": "Romero P Jessenia D C",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              }
+            ],
+            "analysis": "Rompeparadigmas #4 y Spring Training #5 empatan en promedio de rating (77,2); desempate por experiencia (25 salidas, 5 victorias) y 7 días de descanso de Rompeparadigmas. Al Galope ordena Princesa Susej #9, Rompeparadigmas #4 y Spring Training #5. Elorza Princess #6: ascenso 46→63→80→92. Waya Waya #7 (remate R12,2, 56 días de descanso) no entra en las opciones."
+          },
+          {
+            "id": "r42-v6",
+            "public_label": "6V",
+            "inh_code": "C13",
+            "kind": "5Y6",
+            "distance": "1.100 m",
+            "time": "7:05 PM",
+            "horses": [
+              {
+                "number": 1,
+                "name": "Rio Manso",
+                "jockey": "Zapata A Bragham J",
+                "trainer": "Peraza L Luis E",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 2,
+                "name": "Isocorico",
+                "jockey": "Urdaneta P Francisco",
+                "trainer": "Rojas V German I",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 3,
+                "name": "Zascandil",
+                "jockey": "Medina M Hemirxon D",
+                "trainer": "De Abreu G Juan C",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 4,
+                "name": "Gualberto",
+                "jockey": "Caguado M Yaniel E",
+                "trainer": "Romero R Jesus R",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 5,
+                "name": "Lightning Spirit",
+                "jockey": "Pimentel P Ivan A",
+                "trainer": "Petit G Freddy J",
+                "weight": null,
+                "recent_form": null,
+                "role": "FAVORITO_ZCP"
+              },
+              {
+                "number": 6,
+                "name": "Top One",
+                "jockey": "Veliz R Winder J",
+                "trainer": "Rojas R Asdrubal J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 7,
+                "name": "Niki Lauda",
+                "jockey": "Medina V Oliver O",
+                "trainer": "Trujillo H Henry A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 8,
+                "name": "Black Anthony",
+                "jockey": "Hernandez F Jose G",
+                "trainer": "Santamaria R Radames",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 9,
+                "name": "Team Ramon",
+                "jockey": "Milla L Jose G",
+                "trainer": "Landaeta Z Wilmer E",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 10,
+                "name": "Go Daddy Go",
+                "jockey": "Andarcia R Jhoswall A",
+                "trainer": "Rojas R Asdrubal J",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              },
+              {
+                "number": 11,
+                "name": "Xtal",
+                "jockey": "Rivero Jose A",
+                "trainer": "Flores Uvencio H",
+                "weight": null,
+                "recent_form": null,
+                "role": "ENEMIGO"
+              },
+              {
+                "number": 12,
+                "name": "Cedsrunner",
+                "jockey": "Magallanes M Jesus D",
+                "trainer": "Trujillo H Henry A",
+                "weight": null,
+                "recent_form": null,
+                "role": "SIN_SELECCION"
+              }
+            ],
+            "analysis": "Doce corredores, ninguno ha ganado. Lightning Spirit #5 (batacazo): ratings 33→27→88→87, remate R12,2, 14 días de descanso. Xtal #11: promedio 67,2, serie estable (55-56-82-76). Gualberto #4 (R12,4), Black Anthony #8 (R12,3) y Rio Manso #1 completan el orden."
+          }
+        ],
+        "intelligence": {
+          "bases": [
+            "C1 · #7 Tintorero (ancla)",
+            "C7 · #7 Forrest Gump (ancla)",
+            "V1/C8 · #4 El Providencial (ancla)",
+            "V3/C10 · #7 Toda Una Rubia (ancla)"
+          ],
+          "bombas": [
+            {
+              "race": "C4",
+              "number": 2,
+              "name": "Athletic Time",
+              "why": "Último rating 90 (promedio 64,5) y remate R12,3."
+            },
+            {
+              "race": "V2/C9",
+              "number": 4,
+              "name": "Andrella Royale",
+              "why": "Rating 86 y remate R12; el 86 proviene de una sola actuación."
+            }
+          ],
+          "batacazos": [
+            "V6/C13 · #5 Lightning Spirit (remate R12,2; 14 días; ratings 33→27→88→87)",
+            "V3/C10 · #4 Isometrica (remate R11,3; ratings 20→43→76)",
+            "V4/C11 · #8 Elohim (remate R11,2; Al Galope «IMPERDIBLE»)",
+            "C1 · #1 Tank Abbott (remate R12 «FENÓMENO»)",
+            "C3 · #6 Amor Prohibido (remate R12)",
+            "C5 · #1 Bendecida (remate R12)"
+          ],
+          "carrera_trampa": null,
+          "alertas": [
+            "CUADRO PROVISIONAL: pendiente del parte oficial de retiros del INH.",
+            "Giant's Triumph (C8 #5) figura como ejemplar válido en el programa oficial y no está cubierto por ninguna opción del cuadro: revisión editorial pendiente.",
+            "V4/C11 es la pata más frágil: sin Gran Torrente quedan debutantes y ejemplares con 1-2 salidas sin ganar."
+          ],
+          "cambios_ultima_hora": [],
+          "retirados": [
+            "C11 #4 Gran Torrente (USA): retiro detectado; el programa oficial (generado el 20/10/2026) lo declara invalidado para todos los juegos. PENDIENTE del parte definitivo del INH.",
+            "C6 #4 Señora Isabel (USA): retiro detectado; el programa oficial (generado el 20/10/2026) la declara invalidada para todos los juegos. PENDIENTE del parte definitivo del INH.",
+            "C8 #5 Giant's Triumph (USA): NO consta como retirado en el programa oficial; el borrador original lo daba por ausente y esa afirmación no se sostiene."
+          ]
+        },
+        "tickets": [
+          {
+            "tier": "PRESENTADO",
+            "label": "Económica",
+            "legs": {
+              "1V": [
+                4,
+                1,
+                8
+              ],
+              "2V": [
+                4,
+                2,
+                3
+              ],
+              "3V": [
+                7,
+                4,
+                5
+              ],
+              "4V": [
+                8,
+                2,
+                1
+              ],
+              "5V": [
+                4,
+                5,
+                9
+              ],
+              "6V": [
+                5,
+                11,
+                4
+              ]
+            },
+            "leg_names": {
+              "1V": {
+                "1": "Gran Warrior",
+                "4": "El Providencial",
+                "8": "More Than Galileo"
+              },
+              "2V": {
+                "2": "Coronada en Gloria",
+                "3": "Beyonce Champ",
+                "4": "Andrella Royale"
+              },
+              "3V": {
+                "4": "Isometrica",
+                "5": "Miss Morgan (USA)",
+                "7": "Toda Una Rubia"
+              },
+              "4V": {
+                "1": "Aviador Mag (USA)",
+                "2": "Midnight Warrior",
+                "8": "Elohim (USA)"
+              },
+              "5V": {
+                "4": "Rompeparadigmas",
+                "5": "Spring Training",
+                "9": "Princesa Susej"
+              },
+              "6V": {
+                "4": "Gualberto",
+                "5": "Lightning Spirit",
+                "11": "Xtal"
+              }
+            },
+            "editorial_total": 729,
+            "validation_error": null,
+            "estimated_unit_value": 35,
+            "estimated_cost": 25515,
+            "cost_status": "ESTIMADO: Bs. 35 por combinación es un valor de referencia de jornadas previas; no confirmado para la Reunión 42."
+          },
+          {
+            "tier": "RECOMENDADO",
+            "label": "Equilibrada",
+            "legs": {
+              "1V": [
+                4,
+                1,
+                8,
+                2
+              ],
+              "2V": [
+                4,
+                2,
+                3
+              ],
+              "3V": [
+                7,
+                4,
+                5,
+                3
+              ],
+              "4V": [
+                8,
+                2,
+                1,
+                3
+              ],
+              "5V": [
+                4,
+                5,
+                9
+              ],
+              "6V": [
+                5,
+                11,
+                4,
+                8
+              ]
+            },
+            "leg_names": {
+              "1V": {
+                "1": "Gran Warrior",
+                "2": "Tibu (PAN)",
+                "4": "El Providencial",
+                "8": "More Than Galileo"
+              },
+              "2V": {
+                "2": "Coronada en Gloria",
+                "3": "Beyonce Champ",
+                "4": "Andrella Royale"
+              },
+              "3V": {
+                "3": "Bulma",
+                "4": "Isometrica",
+                "5": "Miss Morgan (USA)",
+                "7": "Toda Una Rubia"
+              },
+              "4V": {
+                "1": "Aviador Mag (USA)",
+                "2": "Midnight Warrior",
+                "3": "Chokolate (USA)",
+                "8": "Elohim (USA)"
+              },
+              "5V": {
+                "4": "Rompeparadigmas",
+                "5": "Spring Training",
+                "9": "Princesa Susej"
+              },
+              "6V": {
+                "4": "Gualberto",
+                "5": "Lightning Spirit",
+                "8": "Black Anthony",
+                "11": "Xtal"
+              }
+            },
+            "editorial_total": 2304,
+            "validation_error": null,
+            "estimated_unit_value": 35,
+            "estimated_cost": 80640,
+            "cost_status": "ESTIMADO: Bs. 35 por combinación es un valor de referencia de jornadas previas; no confirmado para la Reunión 42."
+          },
+          {
+            "tier": "PREMIUM",
+            "label": "Blindada",
+            "legs": {
+              "1V": [
+                4,
+                1,
+                8,
+                2
+              ],
+              "2V": [
+                4,
+                2,
+                3,
+                9
+              ],
+              "3V": [
+                7,
+                4,
+                5,
+                3
+              ],
+              "4V": [
+                8,
+                2,
+                1,
+                3,
+                11
+              ],
+              "5V": [
+                4,
+                5,
+                9,
+                6
+              ],
+              "6V": [
+                5,
+                11,
+                4,
+                8,
+                1
+              ]
+            },
+            "leg_names": {
+              "1V": {
+                "1": "Gran Warrior",
+                "2": "Tibu (PAN)",
+                "4": "El Providencial",
+                "8": "More Than Galileo"
+              },
+              "2V": {
+                "2": "Coronada en Gloria",
+                "3": "Beyonce Champ",
+                "4": "Andrella Royale",
+                "9": "Chiararock"
+              },
+              "3V": {
+                "3": "Bulma",
+                "4": "Isometrica",
+                "5": "Miss Morgan (USA)",
+                "7": "Toda Una Rubia"
+              },
+              "4V": {
+                "1": "Aviador Mag (USA)",
+                "2": "Midnight Warrior",
+                "3": "Chokolate (USA)",
+                "8": "Elohim (USA)",
+                "11": "Leono (USA)"
+              },
+              "5V": {
+                "4": "Rompeparadigmas",
+                "5": "Spring Training",
+                "6": "Elorza Princess",
+                "9": "Princesa Susej"
+              },
+              "6V": {
+                "1": "Rio Manso",
+                "4": "Gualberto",
+                "5": "Lightning Spirit",
+                "8": "Black Anthony",
+                "11": "Xtal"
+              }
+            },
+            "editorial_total": 6400,
+            "validation_error": null,
+            "estimated_unit_value": 35,
+            "estimated_cost": 224000,
+            "cost_status": "ESTIMADO: Bs. 35 por combinación es un valor de referencia de jornadas previas; no confirmado para la Reunión 42."
+          }
+        ],
+        "gate": {
+          "retirados": null,
+          "cambios_monta": null,
+          "pesos_descargos": null,
+          "implementos": null,
+          "condicion_pista": null,
+          "cambios_ultima_hora": null,
+          "valor_unidad": null
+        }
+      },
+      "sha256": "814d73ad0a8f82d120d3eef0cf9c05b2f59ddeb99159509f9f6c3250965826b1"
     }
   ]
 }
