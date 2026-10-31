@@ -28,6 +28,11 @@ assert.throws(() => validateAudit(bad), /2669/);
 const t = id => Object.fromEntries(D.prerace.find(p => p.id === id).tickets.map(x => [x.type, [x.current.combinations, x.current.cost_bs]]));
 assert.deepStrictEqual(t('VAL-R26-2026-10-17'), {ECONOMICA: [16, 560], EQUILIBRADA: [216, 7560], BLINDADA: [576, 20160]});
 assert.deepStrictEqual(t('RIN-R41-2026-10-18'), {ECONOMICA: [12, 420], EQUILIBRADA: [192, 6720], BLINDADA: [960, 33600]});
+assert.deepStrictEqual(t('VAL-R27-2026-10-31'), {ECONOMICA: [729, 25515], EQUILIBRADA: [1728, 60480], BLINDADA: [3840, 134400]});
+// Valencia R27: cada cuadro toma las primeras N selecciones de cada válida (sin caballos fuera de la lista publicada)
+const r27 = D.prerace.find(p => p.id === 'VAL-R27-2026-10-31');
+for (const tk of r27.tickets) tk.current.legs.forEach((leg, i) => { const ranked = r27.races.find(r => r.valid_leg === i + 1).horses.filter(h => h.rank).sort((a, b) => a.rank - b.rank).map(h => h.number); assert.deepStrictEqual(leg, ranked.slice(0, leg.length), `${tk.type} V${i + 1}`); });
+assert.strictEqual(r27.status, 'AWAITING_OFFICIAL_EVIDENCE');
 // Roma #3: retiro mostrado sin fusionar identidades
 const roma = D.prerace.find(p => p.id === 'RIN-R41-2026-10-18').withdrawals.find(w => w.race === 4);
 assert.strictEqual(roma.identity, 'UNRESOLVED'); assert.strictEqual(roma.name, null);

@@ -8,7 +8,7 @@ const {validateAudit, ratio, EXPECTED_PRERACE} = require('./zcp-audit-validate.c
 
 const D = JSON.parse(fs.readFileSync('data/zcp-audit.json', 'utf8'));
 validateAudit(D);
-const V = 'zcp1';
+const V = 'zcp2';
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const int = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 const bs = n => n === null || n === undefined ? '—' : 'Bs ' + (Number.isInteger(n) ? int(n) : int(Math.trunc(n)) + ',' + Math.round((Math.abs(n) % 1) * 100).toString().padStart(2, '0'));
@@ -47,6 +47,8 @@ function write(route, title, description, content, extraScript = false) {
 const hero = (kicker, h1, lead) => `<section class="za-hero"><div class="wrap"><p class="za-kicker">${kicker}</p><h1>${h1}</h1>${lead ? `<p class="za-lead">${lead}</p>` : ''}<p class="za-tagline">«No se trata de adivinar, se trata de encontrar valor.»</p></div></section>`;
 const subnav = `<p class="za-actions"><a class="za-btn-ghost za-btn" href="/historico">Histórico</a><a class="za-btn-ghost za-btn" href="/rendimiento">Rendimiento</a><a class="za-btn-ghost za-btn" href="/resultados">Resultados</a><a class="za-btn-ghost za-btn" href="/metodologia">Metodología</a></p>`;
 
+const sysLabel = p => p.system_label || `Sistema 3.3 ${p.system_version}`;
+const pubWhere = p => p.telegram_ticket_msg ? `Telegram ${p.telegram_ticket_msg}` : 'cuadroperfecto.com';
 /* ---------------- tarjetas de reunión ---------------- */
 const pre = D.prerace;
 const best5y6 = m => { const t = m.tickets.filter(x => !x.superseded); return t.length ? t.map(x => `${esc(x.name)} ${x.hits}/6`).join(' · ') : '—'; };
@@ -73,8 +75,8 @@ function cardPre(p) {
   const eq = p.tickets.find(t => t.type === 'EQUILIBRADA');
   return `<article class="za-card za-is-pre" data-track="${esc(p.track)}" data-version="${esc(p.system_version)}" data-status="${esc(p.status)}" data-month="${esc(p.date.slice(0, 7))}">
 <header><div><p class="za-kicker">${esc(p.track)} · Reunión ${p.meeting}</p><h3>${esc(longDate(p.date))}</h3></div>${badge(p.status)}</header>
-<dl><dt>Sistema</dt><dd>Sistema 3.3 ${esc(p.system_version)}</dd>
-<dt>Pronóstico</dt><dd><strong>PUBLICADO ANTES DE LA JORNADA</strong> · Telegram ${esc(p.telegram_ticket_msg)} · ${esc(caracas(p.SOURCE_PUBLISHED_AT))} (Caracas)</dd>
+<dl><dt>Sistema</dt><dd>${esc(sysLabel(p))}</dd>
+<dt>Pronóstico</dt><dd><strong>PUBLICADO ANTES DE LA JORNADA</strong> · ${esc(pubWhere(p))} · ${esc(caracas(p.SOURCE_PUBLISHED_AT))} (Caracas)</dd>
 <dt>Resultado</dt><dd>Pendiente del resultado oficial</dd>
 <dt>5y6</dt><dd>Recomendada: ${int(eq.current.combinations)} combinaciones · ${bs(eq.current.cost_bs)}</dd>
 <dt>Bombas</dt><dd>${p.races.reduce((n, r) => n + r.horses.filter(h => h.classes.includes('BOMBA') && !h.withdrawn).length, 0)} publicadas</dd>
@@ -187,26 +189,33 @@ for (const m of D.meetings) write('/resultados/' + m.slug, `${m.track} R${m.meet
 
 /* ---------------- /reuniones/<pronóstico previo> ---------------- */
 function prePage(p) {
+  const nameOf = (leg, n) => (p.races.find(r => r.valid_leg === leg).horses.find(h => h.number === n) || {}).name || '';
+  const KIND = {BOMBA: ['za-t-BOMBA', 'Bomba'], ANCLA: ['za-t-ANCLA', 'Ancla'], RIESGO: ['za-t-WARNING', 'Riesgo']};
+  const highlights = (p.highlights || []).length ? `<h2>Lo esencial</h2><div class="za-grid za-grid-2">${p.highlights.map(x => `<article class="za-card za-hl za-hl-${esc(x.kind)}"><p><span class="za-tag ${KIND[x.kind] ? KIND[x.kind][0] : ''}">${esc(KIND[x.kind] ? KIND[x.kind][1] : x.kind)}</span> <span class="za-muted za-small">${esc(x.where)}</span></p><h3>${esc(x.horse)}</h3><p>${esc(x.text)}</p></article>`).join('')}</div>` : '';
+  const checks = (p.checks || []).length ? `<h2>Controles antes de publicar</h2><ul class="za-checks">${p.checks.map(c => `<li>${esc(c)}</li>`).join('')}</ul>` : '';
+  const vRaces = p.races.filter(r => r.valid_leg).sort((a, b) => a.valid_leg - b.valid_leg);
+  const maxN = Math.max(...vRaces.map(r => r.horses.filter(h => h.rank).length));
+  const grid = `<div class="za-scroll" tabindex="0" role="region" aria-label="Selecciones del 5y6"><table><thead><tr><th>Válida</th>${Array.from({length: maxN}, (_, i) => `<th>${i + 1}ª</th>`).join('')}</tr></thead><tbody>${vRaces.map(r => { const hs = r.horses.filter(h => h.rank).sort((a, b) => a.rank - b.rank); return `<tr><th scope="row">V${r.valid_leg}<br><span class="za-small za-muted">C${r.race} · ${esc(r.time)}</span></th>${Array.from({length: maxN}, (_, i) => { const h = hs[i]; return `<td>${h ? `<span class="num">${esc(h.number)}</span>${esc(h.name)}${h.classes.includes('BOMBA') ? ' <span class="za-tag za-t-BOMBA">Bomba</span>' : ''}${h.classes.includes('BATACAZO') ? ' <span class="za-tag za-t-BATACAZO">Batacazo</span>' : ''}` : '—'}</td>`; }).join('')}</tr>`; }).join('')}</tbody></table></div>`;
   const nv = p.races.filter(r => r.valid_leg === null), va = p.races.filter(r => r.valid_leg !== null);
   const horseLi = h => `<li><span class="za-rank">${h.rank ? h.rank + 'ª' : '·'}</span><span class="num${h.withdrawn ? ' out' : ''}">${esc(h.number)}</span><span class="za-horse">${esc(h.name)}</span> ${h.withdrawn ? '<span class="za-tag za-t-WITHDRAWN">RETIRADO</span>' : ''}${h.classes.filter(c => !['FAVORITE', 'SECOND', 'THIRD', 'FOURTH', 'FIFTH'].includes(c)).map(c => `<span class="za-tag za-t-${esc(c)}">${esc(c === 'WARNING' ? 'Advertencia' : c === 'EXTERNAL_REFERENCE' ? 'Referencia externa' : c.replace('_', ' '))}</span>`).join('')}${h.reasoning ? `<p>${esc(h.reasoning)}</p>` : ''}</li>`;
   const race = r => `<section class="za-race" id="c${r.race}"><header><strong>C${r.race}${r.valid_leg ? ` · V${r.valid_leg}` : ''}</strong><span class="za-muted">${esc(r.time)} · ${int(r.distance)} m</span>${r.valid_leg ? '<span class="za-tag">5y6</span>' : '<span class="za-tag">No válida</span>'}</header>${r.note ? `<p class="za-small za-muted wrap-pad">&nbsp;${esc(r.note)}</p>` : ''}<ol>${r.horses.map(horseLi).join('')}</ol></section>`;
   const fav = p.races.map(r => { const h = r.horses.find(x => x.rank === 1); return `<li><strong>C${r.race}${r.valid_leg ? '/V' + r.valid_leg : ''}</strong> <span class="num">${esc(h.number)}</span>${esc(h.name)}</li>`; }).join('');
   const byClass = c => p.races.flatMap(r => r.horses.filter(h => h.classes.includes(c)).map(h => `<li><strong>C${r.race}${r.valid_leg ? '/V' + r.valid_leg : ''}</strong> <span class="num${h.withdrawn ? ' out' : ''}">${esc(h.number)}</span>${esc(h.name)}${h.withdrawn ? ' <span class="za-tag za-t-WITHDRAWN">RETIRADO</span>' : ''}</li>`)).join('') || '<li>Ninguna</li>';
   const ticket = t => `<article class="za-ticket${t.recommended ? ' za-rec' : ''}"><p class="za-kicker">${t.recommended ? 'Recomendada' : 'Cuadro 5y6'}</p><h3>${esc(t.name)}</h3><div class="za-total">${int(t.current.combinations)} <span>combinaciones</span></div>
-<ol>${t.current.legs.map((l, i) => `<li><span>V${i + 1}</span>${l.join(' - ')}</li>`).join('')}</ol><p class="za-cost">${bs(t.current.cost_bs)}</p><p class="za-small">${int(t.current.combinations)} × Bs ${t.unit_bs}</p>
+<ol>${t.current.legs.map((l, i) => `<li><span>V${i + 1}</span>${l.join(' - ')}</li>`).join('')}</ol><details class="za-legnames"><summary>Ver nombres</summary><ul>${t.current.legs.map((l, i) => `<li><strong>V${i + 1}</strong> ${l.map(n => `#${n} ${esc(nameOf(i + 1, n))}`).join(' · ')}</li>`).join('')}</ul></details><p class="za-cost">${bs(t.current.cost_bs)}</p><p class="za-small">${int(t.current.combinations)} × Bs ${t.unit_bs}</p>
 ${t.withdrawal_adjusted ? `<p class="za-adj"><strong>Ajuste mecánico por retiro:</strong> ${t.adjustment.map(a => esc(a.event)).join(', ')}. Publicado: <del>${esc(t.published.line)} · ${int(t.published.combinations)} comb. · ${bs(t.published.cost_bs)}</del></p>` : ''}</article>`;
   const wd = p.withdrawals.map(w => w.identity === 'CONFIRMED' ? `<li><strong>C${w.race}</strong> <span class="num out">${w.number}</span>${esc(w.name)} — ${w.in_analysis ? 'estaba en nuestro análisis; sale de los cuadros' : 'no estaba en nuestras selecciones'}</li>` : `<li><strong>C${w.race}</strong> <span class="num out">${w.number}</span>${esc(w.note)}</li>`).join('');
   const tg = p.telegram.map(x => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">Telegram @LaRectaCaliente ${esc(x.msg)} ↗</a> · ${esc(caracas(x.datetime))} Caracas (${esc(utcShort(x.datetime))}) · huella del texto <code>${short(x.text_sha256)}</code></li>`).join('');
-  return hero(`${esc(p.track)} · Reunión ${p.meeting} · Sistema 3.3 ${esc(p.system_version)}`, `${esc(p.track)} · ${esc(longDate(p.date))}`, p.result_slug ? 'Pronóstico oficial publicado antes de la jornada, conservado tal como se publicó.' : 'Pronóstico oficial publicado antes de la jornada. Todavía no hay resultado: esta página no marca ningún ganador.') +
+  return hero(`${esc(p.track)} · Reunión ${p.meeting} · ${esc(sysLabel(p))}${p.entries ? ` · ${p.races.length} carreras · ${p.entries} inscritos` : ''}`, `${esc(p.track)} · ${esc(longDate(p.date))}`, p.result_slug ? 'Pronóstico oficial publicado antes de la jornada, conservado tal como se publicó.' : 'Pronóstico oficial publicado antes de la jornada. Todavía no hay resultado: esta página no marca ningún ganador.') +
   `<div class="wrap">${subnav}<div class="za-stamp"><span class="za-badge za-pre">PRONÓSTICO PREVIO</span>${badge(p.status)}</div>${p.result_slug ? `<p class="za-notice">El resultado oficial ya está publicado. Este pronóstico no se modificó. <a href="/resultados/${esc(p.result_slug)}">Ver el registro auditado →</a></p>` : ''}
-<p class="za-stamp"><strong>PUBLICADO ANTES DE LA JORNADA</strong><span>Pronóstico registrado antes de la carrera · Telegram ${esc(p.telegram_ticket_msg)} · ${esc(caracas(p.SOURCE_PUBLISHED_AT))} (hora de Caracas)</span></p>
-<details><summary>VER EVIDENCIA</summary><dl class="za-card"><dt>Publicación</dt><dd><ul>${tg}</ul></dd><dt>Análisis fuente</dt><dd>Huella SHA-256 <code>${short(p.SOURCE_SHA256)}</code></dd><dt>Pronóstico congelado</dt><dd>Huella SHA-256 <code>${short(p.DATASET_SHA256)}</code> · congelado el ${esc(caracas(p.PREDICTION_FROZEN_AT.replace(/\.\d+\+00:00$/, 'Z')))} (Caracas)</dd><dt>Versión</dt><dd>Sistema 3.3 ${esc(p.SYSTEM_VERSION)}</dd><dt>Retiros</dt><dd>Solo ajustes mecánicos por retiros oficiales; consultados hasta ${esc(caracas(p.withdrawals_as_of.replace(/^(\S+)T(\d\d:\d\d)Z.*$/, '$1T$2:00Z')))} (Caracas).</dd></dl><p class="za-small za-muted">La huella permite comprobar que el pronóstico guardado es idéntico al publicado. Solo mostramos los primeros caracteres.</p></details>
-<h2>Retiros oficiales</h2><ul>${wd}</ul><p class="za-small za-muted">Los cuadros solo cambian por retiros oficiales confirmados. Fuente de retiros: Meridiano.</p>
+<p class="za-stamp"><strong>PUBLICADO ANTES DE LA JORNADA</strong><span>Pronóstico registrado antes de la carrera · ${esc(pubWhere(p))} · ${esc(caracas(p.SOURCE_PUBLISHED_AT))} (hora de Caracas)</span></p>
+<details><summary>VER EVIDENCIA</summary><dl class="za-card"><dt>Publicación</dt><dd>${p.telegram.length ? `<ul>${tg}</ul>` : `cuadroperfecto.com · ${esc(caracas(p.SOURCE_PUBLISHED_AT))} Caracas (${esc(utcShort(p.SOURCE_PUBLISHED_AT))}). Cada versión de esta página queda en el <a href="https://github.com/hrcarrasquelservicios-art/cuadroperfecto_web/commits/main/data/zcp-audit.json" target="_blank" rel="noopener noreferrer">historial público del sitio ↗</a>.`}</dd><dt>Análisis fuente</dt><dd>Huella SHA-256 <code>${short(p.SOURCE_SHA256)}</code></dd><dt>Pronóstico congelado</dt><dd>Huella SHA-256 <code>${short(p.DATASET_SHA256)}</code> · congelado el ${esc(caracas(p.PREDICTION_FROZEN_AT.replace(/\.\d+\+00:00$/, 'Z')))} (Caracas)</dd><dt>Versión</dt><dd>${esc(sysLabel(p))}</dd><dt>Retiros</dt><dd>Solo ajustes mecánicos por retiros oficiales; consultados hasta ${esc(caracas(p.withdrawals_as_of.replace(/^(\S+)T(\d\d:\d\d)Z.*$/, '$1T$2:00Z')))} (Caracas).</dd></dl><p class="za-small za-muted">La huella permite comprobar que el pronóstico guardado es idéntico al publicado. Solo mostramos los primeros caracteres.</p></details>
+${highlights}${checks}<h2>Retiros oficiales</h2>${wd ? `<ul>${wd}</ul>` : `<p class="za-notice">${esc(p.withdrawals_note || 'Sin retiros oficiales confirmados.')}</p>`}<p class="za-small za-muted">Los cuadros solo cambian por retiros oficiales confirmados.</p>
 <h2>Favoritos</h2><ul>${fav}</ul>
 <div class="za-grid za-grid-3"><div class="za-card"><h3>Bombas</h3><ul>${byClass('BOMBA')}</ul></div><div class="za-card"><h3>Anclas</h3><ul>${byClass('ANCLA')}</ul></div><div class="za-card"><h3>Batacazos</h3><ul>${byClass('BATACAZO')}</ul></div></div>
 <h2>No válidas</h2>${nv.map(race).join('')}
-<h2>5y6 · las seis válidas</h2>${va.map(race).join('')}
-<h2>Cuadros 5y6</h2><div class="za-tickets">${p.tickets.map(ticket).join('')}</div>
+<h2>Cuadro Perfecto 5y6 · selecciones</h2>${grid}<h2>5y6 · las seis válidas</h2>${va.map(race).join('')}
+<h2 id="cuadros">Cuadros 5y6</h2><div class="za-tickets">${p.tickets.map(ticket).join('')}</div>
 <p class="za-small za-muted">Valor de la combinación: Bs 35. El costo total es combinaciones × Bs 35. Verifica retiros y montos en el portal oficial antes de jugar.</p>
 <p class="za-notice">Después de la jornada, el resultado oficial se publicará en <a href="/resultados">Resultados</a> junto a este mismo pronóstico, sin modificarlo.</p></div>`;
 }

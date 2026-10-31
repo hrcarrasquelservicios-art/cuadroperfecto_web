@@ -4,7 +4,7 @@ const homeMarkup = root.innerHTML;
 const model = window.ZCP;
 /* Páginas estáticas del historial auditable: main.js no las re-renderiza ni intercepta su navegación. */
 const STATIC_PAGE = root.dataset.static === 'zcp';
-const STATIC_ROUTE = /^\/(historico|rendimiento|metodologia|resultados)(\/|$)|^\/reuniones\/(valencia-reunion-26-17-octubre-2026|la-rinconada-reunion-41-18-octubre-2026)\/?$/;
+const STATIC_ROUTE = /^\/(historico|rendimiento|metodologia|resultados)(\/|$)|^\/reuniones\/(valencia-reunion-26-17-octubre-2026|la-rinconada-reunion-41-18-octubre-2026|valencia-reunion-27-31-octubre-2026)\/?$/;
 let audit = null;
 const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dateES = value => new Intl.DateTimeFormat('es-VE',{weekday:'long',day:'numeric',month:'long',timeZone:'America/Caracas'}).format(new Date(`${value}T12:00:00-04:00`));

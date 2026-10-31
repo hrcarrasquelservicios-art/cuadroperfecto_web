@@ -126,3 +126,16 @@
 @media(min-width:640px){.zcp-weekend-grid{grid-template-columns:1fr 1fr}}
 #balance-title small{display:block;font-size:.42em;letter-spacing:0;font-weight:700;opacity:.75;margin-top:6px}
 .result-summary del,.result-note del{opacity:.75}
+.za-hl h3{font-size:1.35rem;margin:4px 0}
+.za-hl-BOMBA{border-top:3px solid var(--za-red)}
+.za-hl-ANCLA{border-top:3px solid #2a5bd7}
+.za-hl-RIESGO{border-top:3px solid var(--za-gold)}
+.za-checks{list-style:none;padding:0;display:grid;gap:8px}
+.za-checks li{background:var(--za-coal);border:1px solid var(--za-line);border-left:4px solid var(--za-ok);border-radius:8px;padding:10px 12px}
+.za-checks li:before{content:'✔ ';color:var(--za-ok);font-weight:900}
+.za-ticket details.za-legnames{background:transparent;border:0;border-top:1px solid #ddd7cf;border-radius:0;padding:0;margin:6px 0}
+.za-ticket details.za-legnames summary{color:#8a3500;min-height:40px;font-size:.9rem}
+.za-ticket details.za-legnames ul{list-style:none;padding:0;margin:0 0 8px;font-size:.85rem}
+.za-ticket details.za-legnames li{display:block;border:0;padding:4px 0;font-weight:600}
+.zcp-weekend .zr-alert{color:#2b1a0b}
+.zcp-weekend .zr-alert h3,.zcp-weekend .zr-alert p{color:#2b1a0b}

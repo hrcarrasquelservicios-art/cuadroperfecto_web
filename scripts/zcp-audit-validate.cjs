@@ -5,7 +5,10 @@ const EXPECTED_PRERACE = {
   'VAL-R26-2026-10-17': {DATASET_SHA256: '894051ec0e4a52936ec6308d7379b95e46f45865b8dbb29ef9b216d688243633', SOURCE_SHA256: 'da0be129d715c9e91d46b4f49bfc49c138ffdfc8559145e85d89fa31c7dacecc',
     ECONOMICA: [16, 560, '8-7 / 7 / 7-6 / 7 / 6-4 / 3-6'], EQUILIBRADA: [216, 7560, '8-7 / 7-8 / 7-6-2 / 7-4 / 6-4-5 / 3-6-7'], BLINDADA: [576, 20160, '8-7-3 / 7-8 / 7-6-2-4 / 7-4 / 6-4-5 / 3-6-7-5']},
   'RIN-R41-2026-10-18': {DATASET_SHA256: '002f69e6c8cff3aaf20708040ad91eed5af1a096bff604178483773bb5b84e0c', SOURCE_SHA256: '2566b5c8250a15fa985734c2e1b3bd1f5e958f324787569e9cf4ce09863d1aa9',
-    ECONOMICA: [12, 420, '1-6 / 10-1 / 3 / 7 / 2 / 9-6-12'], EQUILIBRADA: [192, 6720, '1-6 / 10-1-5 / 3-4 / 7-1 / 2-4 / 9-6-12-13'], BLINDADA: [960, 33600, '1-6-9-4 / 10-1-5-6 / 3-4 / 7-1 / 2-4-8 / 9-6-12-13-4']}
+    ECONOMICA: [12, 420, '1-6 / 10-1 / 3 / 7 / 2 / 9-6-12'], EQUILIBRADA: [192, 6720, '1-6 / 10-1-5 / 3-4 / 7-1 / 2-4 / 9-6-12-13'], BLINDADA: [960, 33600, '1-6-9-4 / 10-1-5-6 / 3-4 / 7-1 / 2-4-8 / 9-6-12-13-4']},
+  // Valencia R27 · 31/10/2026 · Sistema 4.2 (análisis cerrado el 30/10/2026)
+  'VAL-R27-2026-10-31': {DATASET_SHA256: '119dfb111b31c54156d7e7b27eb3593cf769442e0320ced834e70bca508da0d6', SOURCE_SHA256: 'ad2c2ac5ccf50ab0358a7672887538b7e2c65df9b0781c441961c129b79376da',
+    ECONOMICA: [729, 25515, '2-6-7 / 3-1-5 / 2-6-1 / 3-9-8 / 9-3-6 / 4-6-10'], EQUILIBRADA: [1728, 60480, '2-6-7 / 3-1-5 / 2-6-1-4 / 3-9-8-1 / 9-3-6 / 4-6-10-8'], BLINDADA: [3840, 134400, '2-6-7 / 3-1-5-2 / 2-6-1-4 / 3-9-8-1-6 / 9-3-6-7 / 4-6-10-8']}
 };
 const B_MARKERS = [/COUNTERFACTUAL/i, /frozen\/b1/i, /REVISION_1/i, /B_SHA256/, /B privado/i, /PRIVATE_/];
 const STATUSES = ['VERIFIED', 'PARTIAL', 'AWAITING_OFFICIAL_EVIDENCE', 'NEEDS_EVIDENCE'];
@@ -18,7 +21,7 @@ function validateAudit(D) {
   for (const re of B_MARKERS) if (re.test(blob)) fail('private counterfactual marker present: ' + re);
   for (const m of [...D.meetings, ...D.needs_evidence, ...D.prerace]) if (!STATUSES.includes(m.status)) fail('bad status ' + m.status);
   // pre-race A
-  if (D.prerace.length !== 2) fail('expected 2 pre-race meetings');
+  if (D.prerace.length !== Object.keys(EXPECTED_PRERACE).length) fail('pre-race meetings must match EXPECTED_PRERACE');
   for (const p of D.prerace) {
     const E = EXPECTED_PRERACE[p.id]; if (!E) fail('unexpected pre-race ' + p.id);
     if (p.status === 'VERIFIED') { if (!p.result_slug || !D.meetings.some(m => m.id === p.id && m.slug === p.result_slug && m.status === 'VERIFIED')) fail('VERIFIED pre-race needs its approved result record ' + p.id); }
