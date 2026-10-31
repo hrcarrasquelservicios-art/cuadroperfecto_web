@@ -139,3 +139,7 @@
 .za-ticket details.za-legnames li{display:block;border:0;padding:4px 0;font-weight:600}
 .zcp-weekend .zr-alert{color:#2b1a0b}
 .zcp-weekend .zr-alert h3,.zcp-weekend .zr-alert p{color:#2b1a0b}
+.za-t-REMATE{background:#3b2a12;color:#ffcf8a}
+.za-hl-AVISO{border-top:3px solid var(--za-orange)}
+.zcp-meet{border-top:1px solid #3a1d0b;padding-top:18px;margin-top:18px}
+.zcp-meet-title{color:#fff;font-size:clamp(1.5rem,5vw,2.4rem);line-height:1.1;margin:6px 0 8px}

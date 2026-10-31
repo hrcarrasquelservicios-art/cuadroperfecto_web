@@ -6,9 +6,12 @@ const EXPECTED_PRERACE = {
     ECONOMICA: [16, 560, '8-7 / 7 / 7-6 / 7 / 6-4 / 3-6'], EQUILIBRADA: [216, 7560, '8-7 / 7-8 / 7-6-2 / 7-4 / 6-4-5 / 3-6-7'], BLINDADA: [576, 20160, '8-7-3 / 7-8 / 7-6-2-4 / 7-4 / 6-4-5 / 3-6-7-5']},
   'RIN-R41-2026-10-18': {DATASET_SHA256: '002f69e6c8cff3aaf20708040ad91eed5af1a096bff604178483773bb5b84e0c', SOURCE_SHA256: '2566b5c8250a15fa985734c2e1b3bd1f5e958f324787569e9cf4ce09863d1aa9',
     ECONOMICA: [12, 420, '1-6 / 10-1 / 3 / 7 / 2 / 9-6-12'], EQUILIBRADA: [192, 6720, '1-6 / 10-1-5 / 3-4 / 7-1 / 2-4 / 9-6-12-13'], BLINDADA: [960, 33600, '1-6-9-4 / 10-1-5-6 / 3-4 / 7-1 / 2-4-8 / 9-6-12-13-4']},
-  // Valencia R27 · 31/10/2026 · Sistema 4.2 (análisis cerrado el 30/10/2026)
+  // Valencia R27 · 31/10/2026 · Sistema 4.2 · publicado con Bs 35; corregido a Bs 50 (C-2026-006)
   'VAL-R27-2026-10-31': {DATASET_SHA256: '119dfb111b31c54156d7e7b27eb3593cf769442e0320ced834e70bca508da0d6', SOURCE_SHA256: 'ad2c2ac5ccf50ab0358a7672887538b7e2c65df9b0781c441961c129b79376da',
-    ECONOMICA: [729, 25515, '2-6-7 / 3-1-5 / 2-6-1 / 3-9-8 / 9-3-6 / 4-6-10'], EQUILIBRADA: [1728, 60480, '2-6-7 / 3-1-5 / 2-6-1-4 / 3-9-8-1 / 9-3-6 / 4-6-10-8'], BLINDADA: [3840, 134400, '2-6-7 / 3-1-5-2 / 2-6-1-4 / 3-9-8-1-6 / 9-3-6-7 / 4-6-10-8']}
+    ECONOMICA: [729, 36450, '2-6-7 / 3-1-5 / 2-6-1 / 3-9-8 / 9-3-6 / 4-6-10'], EQUILIBRADA: [1728, 86400, '2-6-7 / 3-1-5 / 2-6-1-4 / 3-9-8-1 / 9-3-6 / 4-6-10-8'], BLINDADA: [3840, 192000, '2-6-7 / 3-1-5-2 / 2-6-1-4 / 3-9-8-1-6 / 9-3-6-7 / 4-6-10-8']},
+  // La Rinconada R43 · 01/11/2026 · Sistema 4.2 · múltiplo Bs 50
+  'RIN-R43-2026-11-01': {DATASET_SHA256: '116147340c4d956bfd30ebafff2d1977132e07cd5777e8e6c1cc1cb4c5d5980e', SOURCE_SHA256: '046a5bfdaceeae3a5609a7a7415b4c4edf0d84a7c1a9499355e6d9a73e4a3ece',
+    ECONOMICA: [729, 36450, '6-10-9 / 1-2-8 / 5-9-8 / 9-8-3 / 11-1-6 / 12-10-4'], EQUILIBRADA: [1296, 64800, '6-10-9 / 1-2-8 / 5-9-8-4 / 9-8-3-10 / 11-1-6 / 12-10-4'], BLINDADA: [2880, 144000, '6-10-9-1 / 1-2-8 / 5-9-8-4-1 / 9-8-3-10 / 11-1-6-2 / 12-10-4']}
 };
 const B_MARKERS = [/COUNTERFACTUAL/i, /frozen\/b1/i, /REVISION_1/i, /B_SHA256/, /B privado/i, /PRIVATE_/];
 const STATUSES = ['VERIFIED', 'PARTIAL', 'AWAITING_OFFICIAL_EVIDENCE', 'NEEDS_EVIDENCE'];
@@ -29,10 +32,11 @@ function validateAudit(D) {
     if (p.DATASET_SHA256 !== E.DATASET_SHA256 || p.SOURCE_SHA256 !== E.SOURCE_SHA256) fail('A hashes differ from frozen evidence ' + p.id);
     if (!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$/.test(p.SOURCE_PUBLISHED_AT) || Date.parse(p.SOURCE_PUBLISHED_AT) >= Date.parse(p.first_post_utc)) fail('publication must precede first race ' + p.id);
     for (const t of p.tickets) {
+      if (![35, 50].includes(t.unit_bs) || (p.date >= '2026-10-28') !== (t.unit_bs === 50)) fail(`unit value ${t.unit_bs} not valid for ${p.date} (múltiplo 50 desde el comunicado INH del 28/10/2026)`);
       const [c, cost, line] = E[t.type];
       if (t.current.legs.length !== 6 || t.current.legs.some(l => !l.length || new Set(l).size !== l.length)) fail('malformed ticket ' + p.id + ' ' + t.type);
-      if (product(t.current.legs) !== c || t.current.combinations !== c || t.current.cost_bs !== cost || c * UNIT !== cost || t.current.line !== line) fail(`ticket math ${p.id} ${t.type}`);
-      if (product(t.published.legs) !== t.published.combinations || t.published.combinations * UNIT !== t.published.cost_bs) fail('published ticket math ' + t.type);
+      if (product(t.current.legs) !== c || t.current.combinations !== c || t.current.cost_bs !== cost || c * t.unit_bs !== cost || t.current.line !== line) fail(`ticket math ${p.id} ${t.type}`);
+      if (product(t.published.legs) !== t.published.combinations || t.published.combinations * (t.published_unit_bs || t.unit_bs) !== t.published.cost_bs) fail('published ticket math ' + t.type);
       if (t.withdrawal_adjusted !== (t.published.combinations !== t.current.combinations)) fail('adjustment flag ' + t.type);
       // every ticket number must be a horse of that race in A and not withdrawn
       t.current.legs.forEach((leg, i) => { const race = p.races.find(r => r.valid_leg === i + 1); for (const n of leg) { const h = race && race.horses.find(x => x.number === n); if (!h) fail(`ticket horse #${n} V${i + 1} missing in A ${p.id}`); if (h.withdrawn) fail(`withdrawn horse #${n} in ticket ${p.id}`); } });

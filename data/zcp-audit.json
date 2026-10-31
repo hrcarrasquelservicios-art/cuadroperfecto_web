@@ -1,6 +1,6 @@
 {
  "schema_version": "zcp-audit-1",
- "generated_at": "2026-10-30",
+ "generated_at": "2026-10-31",
  "policy": {
   "rule": "Nunca se reconstruyen pronósticos desde resultados oficiales.",
   "public_prediction": "Solo se publica el pronóstico oficial A. La versión experimental privada no se publica.",
@@ -5898,7 +5898,7 @@
      "type": "ECONOMICA",
      "name": "Económica",
      "recommended": false,
-     "unit_bs": 35,
+     "unit_bs": 50,
      "published": {
       "legs": [
        [
@@ -5970,17 +5970,19 @@
        ]
       ],
       "combinations": 729,
-      "cost_bs": 25515,
+      "cost_bs": 36450,
       "line": "2-6-7 / 3-1-5 / 2-6-1 / 3-9-8 / 9-3-6 / 4-6-10"
      },
      "withdrawal_adjusted": false,
-     "adjustment": []
+     "adjustment": [],
+     "published_unit_bs": 35,
+     "cost_correction": "C-2026-006"
     },
     {
      "type": "EQUILIBRADA",
      "name": "Equilibrada",
      "recommended": true,
-     "unit_bs": 35,
+     "unit_bs": 50,
      "published": {
       "legs": [
        [
@@ -6058,17 +6060,19 @@
        ]
       ],
       "combinations": 1728,
-      "cost_bs": 60480,
+      "cost_bs": 86400,
       "line": "2-6-7 / 3-1-5 / 2-6-1-4 / 3-9-8-1 / 9-3-6 / 4-6-10-8"
      },
      "withdrawal_adjusted": false,
-     "adjustment": []
+     "adjustment": [],
+     "published_unit_bs": 35,
+     "cost_correction": "C-2026-006"
     },
     {
      "type": "BLINDADA",
      "name": "Blindada",
      "recommended": false,
-     "unit_bs": 35,
+     "unit_bs": 50,
      "published": {
       "legs": [
        [
@@ -6152,11 +6156,13 @@
        ]
       ],
       "combinations": 3840,
-      "cost_bs": 134400,
+      "cost_bs": 192000,
       "line": "2-6-7 / 3-1-5-2 / 2-6-1-4 / 3-9-8-1-6 / 9-3-6-7 / 4-6-10-8"
      },
      "withdrawal_adjusted": false,
-     "adjustment": []
+     "adjustment": [],
+     "published_unit_bs": 35,
+     "cost_correction": "C-2026-006"
     }
    ],
    "withdrawals": [],
@@ -6170,6 +6176,1217 @@
    "SOURCE_PUBLISHED_AT": "2026-10-31T00:28:00Z",
    "DATASET_SHA256": "119dfb111b31c54156d7e7b27eb3593cf769442e0320ced834e70bca508da0d6",
    "PREDICTION_FROZEN_AT": "2026-10-31T00:25:13Z",
+   "published_on": "cuadroperfecto.com",
+   "corrections": [
+    "C-2026-006"
+   ]
+  },
+  {
+   "id": "RIN-R43-2026-11-01",
+   "slug": "la-rinconada-reunion-43-1-noviembre-2026",
+   "track": "La Rinconada",
+   "meeting": 43,
+   "date": "2026-11-01",
+   "system_version": "v4.2",
+   "system_label": "Sistema 4.2 «La Vencida»",
+   "status": "AWAITING_OFFICIAL_EVIDENCE",
+   "status_label": "PRONÓSTICO PREVIO",
+   "result_slug": null,
+   "first_post_utc": "2026-11-01T17:00:00Z",
+   "entries": 130,
+   "unit_note": "Primera jornada con el múltiplo del 5y6 en Bs 50 (comunicado del INH del 28/10/2026).",
+   "checks": [
+    "130 inscritos contrastados contra el programa oficial.",
+    "Tres retiros detectados antes del parte del INH: los tres huecos de numeración del padrón coinciden con los tres ejemplares que faltan en la revista.",
+    "Revisión manual de las líneas de victoria: recuperó los registros de Tuscan Gold (USA), que la extracción automática había perdido.",
+    "Cuadros calculados con el múltiplo de Bs 50 desde el diseño."
+   ],
+   "highlights": [
+    {
+     "kind": "ANCLA",
+     "where": "V6 · C13 · 7:30 pm",
+     "horse": "#12 Tuscan Gold (USA)",
+     "text": "5 de 5 victorias, dos clásicos G1; promedio 108,2. Riesgo declarado: 56 días sin correr."
+    },
+    {
+     "kind": "ANCLA",
+     "where": "V5 · C12 · 6:45 pm",
+     "horse": "#11 Emperor D'Oro (USA)",
+     "text": "2 de 2 victorias; rating 108 contra 82,5 del segundo mejor promedio."
+    },
+    {
+     "kind": "ANCLA",
+     "where": "C4 · 2:30 pm",
+     "horse": "#3 Aless Queen (USA)",
+     "text": "2 de 2 victorias; rating 103 contra 92. Ganó por 10¼ cuerpos."
+    },
+    {
+     "kind": "AVISO",
+     "where": "Toda la jornada",
+     "horse": "Hoy no hay bombas",
+     "text": "El retiro de Macho Abarrio (C11) se llevó la única convergencia de mejor rating y mejor remate. Los demás líderes de rating no traen trabajo con remate publicado."
+    },
+    {
+     "kind": "RIESGO",
+     "where": "V3 · C10 · 5:45 pm",
+     "horse": "Pata sin datos",
+     "text": "Ocho potras debutantes sin trabajos matinales publicados. Es la pata que llega a cinco en la Blindada."
+    }
+   ],
+   "races": [
+    {
+     "race": 1,
+     "valid_leg": null,
+     "distance": 1400,
+     "time": "1:00 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 7,
+       "name": "Furetto",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Promedio 80,5; último registro 98.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Prince Cheraf",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Don Cacayo",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Online",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "Polaroid",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 2,
+     "valid_leg": null,
+     "distance": 1800,
+     "time": "1:30 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 5,
+       "name": "Gran Feronia",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor promedio del lote; 14 días de descanso.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Truly You (USA)",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Muscle Maiden",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 7,
+       "name": "Hi Barbie",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Remate R12,2.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 3,
+     "valid_leg": null,
+     "distance": 1500,
+     "time": "2:00 pm",
+     "note": "Retirado #6 Special Element (USA), que era el mejor promedio del lote",
+     "horses": [
+      {
+       "number": 1,
+       "name": "One Thing (BRZ)",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Pico de 125, ganando por 6 cuerpos a Magicshadow, que corre hoy. Mejor remate del lote (R12,1). No es bomba por medio punto: promedio 97,0 contra 97,5 de El Gran Eladio.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "El Gran Eladio",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor promedio del lote (97,5).",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Magicshadow",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Calgary",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Remate R12,3; sorpresa de una de las revistas consultadas.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 4,
+     "valid_leg": null,
+     "distance": 1400,
+     "time": "2:30 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 3,
+       "name": "Aless Queen (USA)",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "2 salidas, 2 victorias. Rating 103 contra 92 del segundo; ganó el 27/09 por 10¼ cuerpos.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Decidida",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Benicia (ARG)",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Grand Sticker",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Remate R12,2.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 5,
+     "valid_leg": null,
+     "distance": 1300,
+     "time": "3:00 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 10,
+       "name": "Elorza Princess",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Serie 63-80-92-97: el ascenso más limpio; último registro 9 puntos sobre el resto del lote. 7 días de descanso.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 11,
+       "name": "Boiled Milk",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "La Dama",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Mi Goajira Adorada",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Remate R12,1.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 6,
+     "valid_leg": null,
+     "distance": 1400,
+     "time": "3:30 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 3,
+       "name": "Gran Andres",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Ascenso limpio; último registro 103.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Isobarico",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 7,
+       "name": "King Julien",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Prometheus",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "R11,2, el mejor remate de la jornada, con 182 días sin correr.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 7,
+     "valid_leg": null,
+     "distance": 1300,
+     "time": "4:00 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 4,
+       "name": "Bulma",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Serie 33-60-65-101; 7 días de descanso.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "Isometrica",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Mitologia",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 7,
+       "name": "Orolinda",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 8,
+     "valid_leg": 1,
+     "distance": 1300,
+     "time": "4:45 pm",
+     "note": "14 corredores y ninguno ha ganado: carrera dividida",
+     "horses": [
+      {
+       "number": 6,
+       "name": "Abuelo José",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Lidera el promedio (88,0 contra 69,5) con serie 80-96 y 14 días.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 10,
+       "name": "Doctor Rodilla",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Rey de Oro",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Isocorico",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Mort",
+       "rank": null,
+       "classes": [
+        "REMATE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Remate R12,1; fuera de los cuadros.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 9,
+     "valid_leg": 2,
+     "distance": 1300,
+     "time": "5:15 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 1,
+       "name": "Spring Clean",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Serie 47-32-90-91: ascenso fuerte y sostenido; 14 días.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "Madagascar",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Chiararock",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Promedio alto, pero serie descendente 81-66: baja a tercera.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Reysgar",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 10,
+     "valid_leg": 3,
+     "distance": 1200,
+     "time": "5:45 pm",
+     "note": "Ocho potras debutantes sin trabajos matinales publicados: la pata que el sistema menos puede discriminar",
+     "horses": [
+      {
+       "number": 5,
+       "name": "Anna Moon",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Una de las dos únicas con historial; la revista consultada coincide.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Presumida",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "La otra con historial.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Cristal",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "La sorpresa de la revista consultada.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Scaloneta",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Linda del Valle",
+       "rank": 5,
+       "classes": [
+        "FIFTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 11,
+     "valid_leg": 4,
+     "distance": 1800,
+     "time": "6:15 pm",
+     "note": "Retirado #7 Macho Abarrio (USA), la única bomba de la jornada: la pata queda abierta, sin bomba de reemplazo",
+     "horses": [
+      {
+       "number": 9,
+       "name": "Triunfante",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor remate de la carrera (R12,1) y mejor promedio de los que quedan (77,0); serie 75-69-87.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "King Fray",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Ascenso 62-80-88; remate R12,4.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Shaword (USA)",
+       "rank": 3,
+       "classes": [
+        "THIRD",
+        "WARNING"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Rating más alto del lote (86), pero una sola salida y 189 días sin correr.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 10,
+       "name": "Inmenssus",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 12,
+     "valid_leg": 5,
+     "distance": 1300,
+     "time": "6:45 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 11,
+       "name": "Emperor D'Oro (USA)",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "2 salidas, 2 victorias. Rating 108 contra 82,5 del segundo mejor promedio: +25 puntos. Ganó por 4 cuerpos el 4/10; R12,2 con 28 días.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Mr Thunder",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "El Gran Sech",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor remate del lote (R11,4): por eso la primera no es bomba.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "Inalcanzable",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 13,
+     "valid_leg": 6,
+     "distance": 2400,
+     "time": "7:30 pm",
+     "note": "Clásico Simón Bolívar (G1) · retirado #9 Only in America (USA)",
+     "horses": [
+      {
+       "number": 12,
+       "name": "Tuscan Gold (USA)",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA",
+        "WARNING"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "5 salidas, 5 victorias; ratings 96-105-113-119, promedio 108,2 (+9,2 sobre el segundo). Ganó dos clásicos G1 y ya venció a Gran Yaco y a Lured Away. Riesgo: 56 días sin correr y sin trabajo con remate publicado.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 10,
+       "name": "Lured Away",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Viene de ganar el Clásico Jockey con rating 112.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Gun Bolt",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "2 de 2, con 105 en su última.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Astuto",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Ganador de un G1.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "McKellen (USA)",
+       "rank": null,
+       "classes": [
+        "REMATE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Remate R11,3; fuera de los cuadros.",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    }
+   ],
+   "tickets": [
+    {
+     "type": "ECONOMICA",
+     "name": "Económica",
+     "recommended": false,
+     "unit_bs": 50,
+     "published": {
+      "legs": [
+       [
+        6,
+        10,
+        9
+       ],
+       [
+        1,
+        2,
+        8
+       ],
+       [
+        5,
+        9,
+        8
+       ],
+       [
+        9,
+        8,
+        3
+       ],
+       [
+        11,
+        1,
+        6
+       ],
+       [
+        12,
+        10,
+        4
+       ]
+      ],
+      "combinations": 729,
+      "cost_bs": 36450,
+      "line": "6-10-9 / 1-2-8 / 5-9-8 / 9-8-3 / 11-1-6 / 12-10-4"
+     },
+     "current": {
+      "legs": [
+       [
+        6,
+        10,
+        9
+       ],
+       [
+        1,
+        2,
+        8
+       ],
+       [
+        5,
+        9,
+        8
+       ],
+       [
+        9,
+        8,
+        3
+       ],
+       [
+        11,
+        1,
+        6
+       ],
+       [
+        12,
+        10,
+        4
+       ]
+      ],
+      "combinations": 729,
+      "cost_bs": 36450,
+      "line": "6-10-9 / 1-2-8 / 5-9-8 / 9-8-3 / 11-1-6 / 12-10-4"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    },
+    {
+     "type": "EQUILIBRADA",
+     "name": "Equilibrada",
+     "recommended": true,
+     "unit_bs": 50,
+     "published": {
+      "legs": [
+       [
+        6,
+        10,
+        9
+       ],
+       [
+        1,
+        2,
+        8
+       ],
+       [
+        5,
+        9,
+        8,
+        4
+       ],
+       [
+        9,
+        8,
+        3,
+        10
+       ],
+       [
+        11,
+        1,
+        6
+       ],
+       [
+        12,
+        10,
+        4
+       ]
+      ],
+      "combinations": 1296,
+      "cost_bs": 64800,
+      "line": "6-10-9 / 1-2-8 / 5-9-8-4 / 9-8-3-10 / 11-1-6 / 12-10-4"
+     },
+     "current": {
+      "legs": [
+       [
+        6,
+        10,
+        9
+       ],
+       [
+        1,
+        2,
+        8
+       ],
+       [
+        5,
+        9,
+        8,
+        4
+       ],
+       [
+        9,
+        8,
+        3,
+        10
+       ],
+       [
+        11,
+        1,
+        6
+       ],
+       [
+        12,
+        10,
+        4
+       ]
+      ],
+      "combinations": 1296,
+      "cost_bs": 64800,
+      "line": "6-10-9 / 1-2-8 / 5-9-8-4 / 9-8-3-10 / 11-1-6 / 12-10-4"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    },
+    {
+     "type": "BLINDADA",
+     "name": "Blindada",
+     "recommended": false,
+     "unit_bs": 50,
+     "published": {
+      "legs": [
+       [
+        6,
+        10,
+        9,
+        1
+       ],
+       [
+        1,
+        2,
+        8
+       ],
+       [
+        5,
+        9,
+        8,
+        4,
+        1
+       ],
+       [
+        9,
+        8,
+        3,
+        10
+       ],
+       [
+        11,
+        1,
+        6,
+        2
+       ],
+       [
+        12,
+        10,
+        4
+       ]
+      ],
+      "combinations": 2880,
+      "cost_bs": 144000,
+      "line": "6-10-9-1 / 1-2-8 / 5-9-8-4-1 / 9-8-3-10 / 11-1-6-2 / 12-10-4"
+     },
+     "current": {
+      "legs": [
+       [
+        6,
+        10,
+        9,
+        1
+       ],
+       [
+        1,
+        2,
+        8
+       ],
+       [
+        5,
+        9,
+        8,
+        4,
+        1
+       ],
+       [
+        9,
+        8,
+        3,
+        10
+       ],
+       [
+        11,
+        1,
+        6,
+        2
+       ],
+       [
+        12,
+        10,
+        4
+       ]
+      ],
+      "combinations": 2880,
+      "cost_bs": 144000,
+      "line": "6-10-9-1 / 1-2-8 / 5-9-8-4-1 / 9-8-3-10 / 11-1-6-2 / 12-10-4"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    }
+   ],
+   "withdrawals": [
+    {
+     "race": 3,
+     "number": 6,
+     "name": "Special Element (USA)",
+     "reported_name": "Special Element (USA)",
+     "in_analysis": false,
+     "identity": "DETECTED",
+     "note": "#6 Special Element (USA) — no figura en el padrón oficial (hueco de numeración) ni en la revista. Era el mejor promedio de su lote; no estaba en nuestras selecciones."
+    },
+    {
+     "race": 11,
+     "number": 7,
+     "name": "Macho Abarrio (USA)",
+     "reported_name": "Macho Abarrio (USA)",
+     "in_analysis": false,
+     "identity": "DETECTED",
+     "note": "#7 Macho Abarrio (USA) — hueco de numeración en el padrón oficial. Era la única bomba de la jornada; la V4 queda abierta y no se nombra bomba de reemplazo."
+    },
+    {
+     "race": 13,
+     "number": 9,
+     "name": "Only in America (USA)",
+     "reported_name": "Only in America (USA)",
+     "in_analysis": false,
+     "identity": "DETECTED",
+     "note": "#9 Only in America (USA) — hueco de numeración en el padrón oficial. Promedio 92,5 en el Clásico; no estaba en nuestras selecciones."
+    }
+   ],
+   "withdrawals_note": "Retiros detectados antes del parte oficial del INH. Si el parte trae otros que afecten los cuadros, se ajustan de forma mecánica y el cambio queda registrado aquí.",
+   "withdrawals_as_of": "2026-10-31T17:13:00Z",
+   "telegram": [],
+   "telegram_ticket_msg": null,
+   "SOURCE_SHA256": "046a5bfdaceeae3a5609a7a7415b4c4edf0d84a7c1a9499355e6d9a73e4a3ece",
+   "SYSTEM_VERSION": "v4.2",
+   "ANALYSIS_CLOSED_AT": "2026-10-31T17:13:00Z",
+   "SOURCE_PUBLISHED_AT": "2026-10-31T17:17:02Z",
+   "DATASET_SHA256": "116147340c4d956bfd30ebafff2d1977132e07cd5777e8e6c1cc1cb4c5d5980e",
+   "PREDICTION_FROZEN_AT": "2026-10-31T17:15:13Z",
    "published_on": "cuadroperfecto.com"
   }
  ],
@@ -7304,6 +8521,25 @@
     "«Mejor registro histórico en Valencia» se retira: el universo histórico completo de Valencia no está reconstruido."
    ],
    "reason": "Toda cifra pública lleva numerador, denominador y universo.",
+   "evidence": []
+  },
+  {
+   "id": "C-2026-006",
+   "meeting": "VAL-R27-2026-10-31",
+   "date": "2026-10-31",
+   "title": "31/10 · Valencia R27: costos publicados con el múltiplo anterior (Bs 35)",
+   "old_record": [
+    "Económica: 729 combinaciones × Bs 35 = Bs 25.515",
+    "Equilibrada: 1.728 combinaciones × Bs 35 = Bs 60.480",
+    "Blindada: 3.840 combinaciones × Bs 35 = Bs 134.400"
+   ],
+   "new_record": [
+    "Económica: 729 combinaciones × Bs 50 = Bs 36.450",
+    "Equilibrada: 1.728 combinaciones × Bs 50 = Bs 86.400",
+    "Blindada: 3.840 combinaciones × Bs 50 = Bs 192.000",
+    "Selecciones y combinaciones sin cambios."
+   ],
+   "reason": "El pronóstico de Valencia R27 se calculó con Bs 35 por combinación. Desde el comunicado del INH del 28/10 el múltiplo es Bs 50. Las selecciones y las combinaciones no cambian: solo el costo. Fuente: Comunicado del INH del 28/10/2026 (múltiplo del 5y6 de Bs 35 a Bs 50), informado por el analista el 31/10/2026, después de publicar Valencia R27.",
    "evidence": []
   }
  ]

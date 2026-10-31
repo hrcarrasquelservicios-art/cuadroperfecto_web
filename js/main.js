@@ -4,7 +4,7 @@ const homeMarkup = root.innerHTML;
 const model = window.ZCP;
 /* Páginas estáticas del historial auditable: main.js no las re-renderiza ni intercepta su navegación. */
 const STATIC_PAGE = root.dataset.static === 'zcp';
-const STATIC_ROUTE = /^\/(historico|rendimiento|metodologia|resultados)(\/|$)|^\/reuniones\/(valencia-reunion-26-17-octubre-2026|la-rinconada-reunion-41-18-octubre-2026|valencia-reunion-27-31-octubre-2026)\/?$/;
+const STATIC_ROUTE = /^\/(historico|rendimiento|metodologia|resultados)(\/|$)|^\/reuniones\/(valencia-reunion-26-17-octubre-2026|la-rinconada-reunion-41-18-octubre-2026|valencia-reunion-27-31-octubre-2026|la-rinconada-reunion-43-1-noviembre-2026)\/?$/;
 let audit = null;
 const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dateES = value => new Intl.DateTimeFormat('es-VE',{weekday:'long',day:'numeric',month:'long',timeZone:'America/Caracas'}).format(new Date(`${value}T12:00:00-04:00`));
@@ -99,7 +99,10 @@ function meeting(m,home=false) {
  document.title=`${home?'Zona Caliente Pro · ':''}${m.track} ${m.date} | Cuadro Perfecto`;
 }
 function archive() {
- root.innerHTML=section('Calendario y archivo',`<p>Jornadas próximas en orden cronológico. El archivo conserva las reuniones anteriores.</p>${['Próximas jornadas','Archivo'].map((label,i)=>`<h2>${label}</h2><div class="archive-grid">${store.meetings.filter(m=>i?m.date<today():m.date>=today()).sort((a,b)=>i?b.date.localeCompare(a.date):a.date.localeCompare(b.date)).map(m=>`<article class="card"><div class="eyebrow">${esc(dateES(m.date))}</div><h3>${title(m)}</h3><p>${esc(meetingStatus(m))}</p>${link('/reuniones/'+m.slug,'Consultar jornada →','text-link')}</article>`).join('')}</div>`).join('')}`);
+ /* Calendario sincronizado: suma los pronósticos previos del historial auditable que no están en meetings.json. */
+ const extra=(audit?.prerace||[]).filter(p=>!store.meetings.some(m=>m.slug===p.slug)).map(p=>({id:p.id,slug:p.slug,track:p.track,meeting_number:p.meeting,date:p.date,races:[],status:p.status==='AWAITING_OFFICIAL_EVIDENCE'?'PRONÓSTICO PREVIO PUBLICADO':'RESULTADO PUBLICADO'}));
+ const all=[...store.meetings,...extra];
+ root.innerHTML=section('Calendario y archivo',`<p>Jornadas próximas en orden cronológico. El archivo conserva las reuniones anteriores.</p>${['Próximas jornadas','Archivo'].map((label,i)=>`<h2>${label}</h2><div class="archive-grid">${all.filter(m=>i?m.date<today():m.date>=today()).sort((a,b)=>i?b.date.localeCompare(a.date):a.date.localeCompare(b.date)).map(m=>`<article class="card"><div class="eyebrow">${esc(dateES(m.date))}</div><h3>${title(m)}</h3><p>${esc(meetingStatus(m))}</p>${link('/reuniones/'+m.slug,'Consultar jornada →','text-link')}</article>`).join('')}</div>`).join('')}`);
 }
 function today() {return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Caracas',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
 function results() {
