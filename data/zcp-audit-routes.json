@@ -15,6 +15,7 @@
   "/reuniones/la-rinconada-reunion-41-18-octubre-2026",
   "/reuniones/valencia-reunion-27-31-octubre-2026",
   "/reuniones/la-rinconada-reunion-43-1-noviembre-2026",
+  "/reuniones/valencia-reunion-28-7-noviembre-2026",
   "/resultados"
  ],
  "expected_prerace": {
@@ -92,6 +93,20 @@
     2880,
     144000,
     "6-10-9-1 / 1-2-8 / 5-9-8-4-1 / 9-8-3-10 / 11-1-6-2 / 12-10-4"
+   ]
+  },
+  "VAL-R28-2026-11-07": {
+   "DATASET_SHA256": "34347922fa307b5832999eca4db7949d1a0a2eac3630b73f0f335a25c844fbd9",
+   "SOURCE_SHA256": "c41b9e8f41045f81d862c4167e059fbdf38cc79788270742b4cd75e34b08e802",
+   "ECONOMICA": [
+    1296,
+    64800,
+    "6-4-1 / 9-4-1-7 / 4-7-1-5 / 1-4-6 / 9-4-8 / 7-1-8"
+   ],
+   "EQUILIBRADA": [
+    2700,
+    135000,
+    "6-4-1 / 9-4-1-7-3 / 4-7-1-5-6 / 1-4-6 / 9-4-8 / 7-1-8-9"
    ]
   }
  }

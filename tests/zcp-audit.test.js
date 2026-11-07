@@ -41,6 +41,11 @@ for (const w of r43.withdrawals) { const leg = r43.races.find(r => r.race === w.
 const r27 = D.prerace.find(p => p.id === 'VAL-R27-2026-10-31');
 for (const tk of r27.tickets) tk.current.legs.forEach((leg, i) => { const ranked = r27.races.find(r => r.valid_leg === i + 1).horses.filter(h => h.rank).sort((a, b) => a.rank - b.rank).map(h => h.number); assert.deepStrictEqual(leg, ranked.slice(0, leg.length), `${tk.type} V${i + 1}`); });
 assert.strictEqual(r27.status, 'AWAITING_OFFICIAL_EVIDENCE');
+// Valencia R28: retiros del parte oficial fuera de los cuadros; Blindada declarada pero no publicada
+assert.deepStrictEqual(t('VAL-R28-2026-11-07'), {ECONOMICA: [1296, 64800], EQUILIBRADA: [2700, 135000]});
+const r28 = D.prerace.find(p => p.id === 'VAL-R28-2026-11-07');
+for (const tk of r28.tickets) tk.current.legs.forEach((leg, i) => { const race = r28.races.find(r => r.valid_leg === i + 1); const ranked = race.horses.filter(h => h.rank).sort((a, b) => a.rank - b.rank).map(h => h.number); assert.deepStrictEqual(leg, ranked.slice(0, leg.length)); assert.ok(!leg.some(n => race.horses.find(h => h.number === n).withdrawn)); });
+assert.strictEqual(r28.withdrawals.length, 5); assert.strictEqual(r28.missing_tickets[0].combinations, 4 * 5 * 6 * 4 * 3 * 4);
 // Roma #3: retiro mostrado sin fusionar identidades
 const roma = D.prerace.find(p => p.id === 'RIN-R41-2026-10-18').withdrawals.find(w => w.race === 4);
 assert.strictEqual(roma.identity, 'UNRESOLVED'); assert.strictEqual(roma.name, null);

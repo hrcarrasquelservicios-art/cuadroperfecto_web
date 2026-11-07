@@ -1,6 +1,6 @@
 {
  "schema_version": "zcp-audit-1",
- "generated_at": "2026-10-31",
+ "generated_at": "2026-11-06",
  "policy": {
   "rule": "Nunca se reconstruyen pronósticos desde resultados oficiales.",
   "public_prediction": "Solo se publica el pronóstico oficial A. La versión experimental privada no se publica.",
@@ -7387,6 +7387,926 @@
    "SOURCE_PUBLISHED_AT": "2026-10-31T17:17:02Z",
    "DATASET_SHA256": "116147340c4d956bfd30ebafff2d1977132e07cd5777e8e6c1cc1cb4c5d5980e",
    "PREDICTION_FROZEN_AT": "2026-10-31T17:15:13Z",
+   "published_on": "cuadroperfecto.com"
+  },
+  {
+   "id": "VAL-R28-2026-11-07",
+   "slug": "valencia-reunion-28-7-noviembre-2026",
+   "track": "Valencia",
+   "meeting": 28,
+   "date": "2026-11-07",
+   "system_version": "v4.4",
+   "system_label": "Sistema 4.4 «La Vencida»",
+   "status": "AWAITING_OFFICIAL_EVIDENCE",
+   "status_label": "PRONÓSTICO PREVIO",
+   "result_slug": null,
+   "first_post_utc": "2026-11-07T17:30:00Z",
+   "entries": 74,
+   "unit_note": "Múltiplo del 5y6: Bs 50.",
+   "checks": [
+    "Retiros tomados del parte oficial del INH y verificados por nombre y dorsal contra el programa oficial: cinco retiros, ninguno deducido por conteo.",
+    "74 inscritos; 69 corredores efectivos.",
+    "Sin trabajos matinales en las fuentes disponibles: no hay valores de remate en ninguna carrera.",
+    "Velocidad calculada desde el km/h de cada actuación, normalizada a la distancia de la carrera."
+   ],
+   "data_warning": "Las fuentes de esta jornada no traen trabajos matinales. Sin valores de remate no se pueden marcar bombas ni batacazos por criterio: hoy se publica con la mitad de las señales del sistema y la expectativa es más baja que en una jornada completa.",
+   "highlights": [
+    {
+     "kind": "AVISO",
+     "where": "Toda la jornada",
+     "horse": "Hoy no hay bombas",
+     "text": "Sin trabajos matinales no hay remate medible, y la bomba exige mejor rating y mejor remate en el mismo ejemplar."
+    },
+    {
+     "kind": "ANCLA",
+     "where": "C2 · 1:55 pm",
+     "horse": "#2 Unstoppable",
+     "text": "44% de efectividad; mejor promedio y mejor último registro del lote. Riesgo: 49 días sin correr."
+    },
+    {
+     "kind": "ANCLA",
+     "where": "V5 · C8 · 4:35 pm",
+     "horse": "#9 Ancelotti",
+     "text": "Mejor promedio del lote y primero de la revista consultada."
+    },
+    {
+     "kind": "ANCLA",
+     "where": "V6 · C9 · 5:00 pm",
+     "horse": "#7 Red Time",
+     "text": "Mejor promedio del día (58,58) y pico de 60,4 km/h."
+    },
+    {
+     "kind": "RIESGO",
+     "where": "V2 · V3",
+     "horse": "Dos patas ciegas",
+     "text": "V2: nueve yeguas con 1 o 2 victorias en hasta 56 salidas. V3: siete yeguas y ninguna ha ganado. Por eso llevan cinco caballos en la Equilibrada."
+    }
+   ],
+   "races": [
+    {
+     "race": 1,
+     "valid_leg": null,
+     "distance": 1700,
+     "time": "1:30 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 4,
+       "name": "Optimus Back",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Primero de la revista consultada con 22 puntos, el doble que el tercero; 7 victorias en 28 salidas (25%), la mejor efectividad del lote.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "First Time",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Barbarroja",
+       "rank": 3,
+       "classes": [
+        "THIRD",
+        "WARNING"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Lidera el promedio nominal (55,2), pero inflado por un 58,1 aislado; sus otras tres son 54,7-53,3-54,7.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Helios",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor último registro del lote (55,3), con ascenso limpio.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Gran Despertar",
+       "rank": null,
+       "classes": [
+        "WITHDRAWN"
+       ],
+       "labels": [],
+       "withdrawn": true,
+       "reasoning": "Retirado por el parte oficial del INH (tos).",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 2,
+     "valid_leg": null,
+     "distance": 1200,
+     "time": "1:55 pm",
+     "note": "Retirado #1 Strength Monster, el favorito de la revista consultada",
+     "horses": [
+      {
+       "number": 2,
+       "name": "Unstoppable",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA",
+        "WARNING"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor promedio (58,4) y mejor último registro (59,0), progresión ascendente y 8 victorias en 18 salidas (44%). Riesgo: 49 días sin correr.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "King of Success",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Star White",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Candoroso",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Strength Monster",
+       "rank": null,
+       "classes": [
+        "WITHDRAWN"
+       ],
+       "labels": [],
+       "withdrawn": true,
+       "reasoning": "Retirado por el parte oficial del INH (claudicación del posterior derecho).",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 3,
+     "valid_leg": null,
+     "distance": 1200,
+     "time": "2:20 pm",
+     "note": "La carrera más cerrada del día: seis yeguas en 0,75 km/h",
+     "horses": [
+      {
+       "number": 5,
+       "name": "Snow Sensations",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Lidera por poco; la revista consultada coincide.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Money on Time",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 2,
+       "name": "Magical Song",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Pintada",
+       "rank": null,
+       "classes": [
+        "BATACAZO"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 4,
+     "valid_leg": 1,
+     "distance": 1400,
+     "time": "2:55 pm",
+     "note": "Dos retiros abren la carrera",
+     "horses": [
+      {
+       "number": 6,
+       "name": "Deep Love",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor promedio del lote (56,58), 25% de efectividad, 21 días.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Flecha Monton",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Potenciada",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Primera de la revista consultada; séptima de ocho en nuestro cálculo. Entra por cobertura.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Enchanted Moon",
+       "rank": 4,
+       "classes": [
+        "FOURTH",
+        "WARNING"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Descenso monótono (56,7-56,6-55,8-55,3) y 91 días sin correr.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Nice Time",
+       "rank": null,
+       "classes": [
+        "WITHDRAWN"
+       ],
+       "labels": [],
+       "withdrawn": true,
+       "reasoning": "Retirado por el parte oficial del INH (inflamación de corvejón).",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Mariecurie",
+       "rank": null,
+       "classes": [
+        "WITHDRAWN"
+       ],
+       "labels": [],
+       "withdrawn": true,
+       "reasoning": "Retirado por el parte oficial del INH (cólico).",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 5,
+     "valid_leg": 2,
+     "distance": 1200,
+     "time": "3:20 pm",
+     "note": "Pata ciega: nueve yeguas con 1 o 2 victorias en 18 a 56 salidas",
+     "horses": [
+      {
+       "number": 9,
+       "name": "My Unflagging Mate",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Lidera por velocidad; 7 días de descanso.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Sicarigua",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "La serie más estable del lote (55,2-54,6-54,8-55,1).",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Guapachosa",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "El único nombre que da la revista consultada; octava de nueve en nuestro cálculo.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 7,
+       "name": "Matematica",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 3,
+       "name": "Go Nany Go",
+       "rank": 5,
+       "classes": [
+        "FIFTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 6,
+     "valid_leg": 3,
+     "distance": 1300,
+     "time": "3:45 pm",
+     "note": "Pata ciega: siete yeguas, ninguna ha ganado; #2 Balbi Moon corre sin datos",
+     "horses": [
+      {
+       "number": 4,
+       "name": "Gran Suseh",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Único ascenso limpio del lote (54,8-53,9-55,7-56,3) y mejor último registro.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 7,
+       "name": "Linda Duquesa",
+       "rank": 2,
+       "classes": [
+        "SECOND",
+        "WARNING"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Imperdible de la revista consultada, pero 104 días sin correr.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Melania",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Primera de la revista consultada; serie errática (56,6-55,5-49,8-52,7).",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Macarena",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "Picuadepericantar",
+       "rank": 5,
+       "classes": [
+        "FIFTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 7,
+     "valid_leg": 4,
+     "distance": 1400,
+     "time": "4:10 pm",
+     "note": "Retirado #5 Rey Cotua, el mejor promedio del lote",
+     "horses": [
+      {
+       "number": 1,
+       "name": "Ambasciatore",
+       "rank": 1,
+       "classes": [
+        "FAVORITE"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Primero en promedio tras el retiro (55,67), 7 días de descanso y respaldo de la revista consultada.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Center Middle",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor último registro (57,3).",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 6,
+       "name": "El Gran Rocky",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 5,
+       "name": "Rey Cotua",
+       "rank": null,
+       "classes": [
+        "WITHDRAWN"
+       ],
+       "labels": [],
+       "withdrawn": true,
+       "reasoning": "Retirado por el parte oficial del INH (piroplasmosis).",
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 8,
+     "valid_leg": 5,
+     "distance": 1300,
+     "time": "4:35 pm",
+     "note": "La pata más sólida: las dos fuentes coinciden",
+     "horses": [
+      {
+       "number": 9,
+       "name": "Ancelotti",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor promedio (57,23) y primero de la revista consultada.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 4,
+       "name": "Don Mario",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "El Hacha",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    },
+    {
+     "race": 9,
+     "valid_leg": 6,
+     "distance": 1100,
+     "time": "5:00 pm",
+     "note": null,
+     "horses": [
+      {
+       "number": 7,
+       "name": "Red Time",
+       "rank": 1,
+       "classes": [
+        "FAVORITE",
+        "ANCLA"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Mejor promedio del día (58,58) con un pico de 60,4 km/h; primero de la revista consultada.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 1,
+       "name": "Doble Ataque",
+       "rank": 2,
+       "classes": [
+        "SECOND"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "El ascenso más limpio de las nueve carreras (57,9-58,4-58,9-58,7).",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 8,
+       "name": "Gran Morey",
+       "rank": 3,
+       "classes": [
+        "THIRD"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": "Segundo de la revista consultada.",
+       "rating_average": null,
+       "closing_metric": null
+      },
+      {
+       "number": 9,
+       "name": "Folklore",
+       "rank": 4,
+       "classes": [
+        "FOURTH"
+       ],
+       "labels": [],
+       "withdrawn": false,
+       "reasoning": null,
+       "rating_average": null,
+       "closing_metric": null
+      }
+     ]
+    }
+   ],
+   "tickets": [
+    {
+     "type": "ECONOMICA",
+     "name": "Económica",
+     "recommended": false,
+     "unit_bs": 50,
+     "published": {
+      "legs": [
+       [
+        6,
+        4,
+        1
+       ],
+       [
+        9,
+        4,
+        1,
+        7
+       ],
+       [
+        4,
+        7,
+        1,
+        5
+       ],
+       [
+        1,
+        4,
+        6
+       ],
+       [
+        9,
+        4,
+        8
+       ],
+       [
+        7,
+        1,
+        8
+       ]
+      ],
+      "combinations": 1296,
+      "cost_bs": 64800,
+      "line": "6-4-1 / 9-4-1-7 / 4-7-1-5 / 1-4-6 / 9-4-8 / 7-1-8"
+     },
+     "current": {
+      "legs": [
+       [
+        6,
+        4,
+        1
+       ],
+       [
+        9,
+        4,
+        1,
+        7
+       ],
+       [
+        4,
+        7,
+        1,
+        5
+       ],
+       [
+        1,
+        4,
+        6
+       ],
+       [
+        9,
+        4,
+        8
+       ],
+       [
+        7,
+        1,
+        8
+       ]
+      ],
+      "combinations": 1296,
+      "cost_bs": 64800,
+      "line": "6-4-1 / 9-4-1-7 / 4-7-1-5 / 1-4-6 / 9-4-8 / 7-1-8"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    },
+    {
+     "type": "EQUILIBRADA",
+     "name": "Equilibrada",
+     "recommended": true,
+     "unit_bs": 50,
+     "published": {
+      "legs": [
+       [
+        6,
+        4,
+        1
+       ],
+       [
+        9,
+        4,
+        1,
+        7,
+        3
+       ],
+       [
+        4,
+        7,
+        1,
+        5,
+        6
+       ],
+       [
+        1,
+        4,
+        6
+       ],
+       [
+        9,
+        4,
+        8
+       ],
+       [
+        7,
+        1,
+        8,
+        9
+       ]
+      ],
+      "combinations": 2700,
+      "cost_bs": 135000,
+      "line": "6-4-1 / 9-4-1-7-3 / 4-7-1-5-6 / 1-4-6 / 9-4-8 / 7-1-8-9"
+     },
+     "current": {
+      "legs": [
+       [
+        6,
+        4,
+        1
+       ],
+       [
+        9,
+        4,
+        1,
+        7,
+        3
+       ],
+       [
+        4,
+        7,
+        1,
+        5,
+        6
+       ],
+       [
+        1,
+        4,
+        6
+       ],
+       [
+        9,
+        4,
+        8
+       ],
+       [
+        7,
+        1,
+        8,
+        9
+       ]
+      ],
+      "combinations": 2700,
+      "cost_bs": 135000,
+      "line": "6-4-1 / 9-4-1-7-3 / 4-7-1-5-6 / 1-4-6 / 9-4-8 / 7-1-8-9"
+     },
+     "withdrawal_adjusted": false,
+     "adjustment": []
+    }
+   ],
+   "missing_tickets": [
+    {
+     "name": "Blindada",
+     "shape": "4·5·6·4·3·4",
+     "combinations": 5760,
+     "cost_bs": 288000,
+     "reason": "El análisis declara 6 caballos en la V3 y 4 en la V4, pero solo nombra 5 y 3. Se publicará cuando se completen esos dos nombres."
+    }
+   ],
+   "withdrawals": [
+    {
+     "race": 1,
+     "number": 5,
+     "name": "Gran Despertar",
+     "in_analysis": true,
+     "identity": "CONFIRMED",
+     "note": "#5 Gran Despertar — tos"
+    },
+    {
+     "race": 2,
+     "number": 1,
+     "name": "Strength Monster",
+     "in_analysis": true,
+     "identity": "CONFIRMED",
+     "note": "#1 Strength Monster — claudicación del posterior derecho"
+    },
+    {
+     "race": 4,
+     "number": 3,
+     "name": "Nice Time",
+     "in_analysis": true,
+     "identity": "CONFIRMED",
+     "note": "#3 Nice Time — inflamación de corvejón"
+    },
+    {
+     "race": 4,
+     "number": 8,
+     "name": "Mariecurie",
+     "in_analysis": true,
+     "identity": "CONFIRMED",
+     "note": "#8 Mariecurie — cólico"
+    },
+    {
+     "race": 7,
+     "number": 5,
+     "name": "Rey Cotua",
+     "in_analysis": true,
+     "identity": "CONFIRMED",
+     "note": "#5 Rey Cotua — piroplasmosis"
+    }
+   ],
+   "withdrawals_note": "Parte oficial del INH.",
+   "withdrawals_as_of": "2026-11-07T02:05:00Z",
+   "telegram": [],
+   "telegram_ticket_msg": null,
+   "SOURCE_SHA256": "c41b9e8f41045f81d862c4167e059fbdf38cc79788270742b4cd75e34b08e802",
+   "SYSTEM_VERSION": "v4.4",
+   "ANALYSIS_CLOSED_AT": "2026-11-07T02:05:00Z",
+   "SOURCE_PUBLISHED_AT": "2026-11-07T02:07:15Z",
+   "DATASET_SHA256": "34347922fa307b5832999eca4db7949d1a0a2eac3630b73f0f335a25c844fbd9",
+   "PREDICTION_FROZEN_AT": "2026-11-07T02:06:48Z",
    "published_on": "cuadroperfecto.com"
   }
  ],

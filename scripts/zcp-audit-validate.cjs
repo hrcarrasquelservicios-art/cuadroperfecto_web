@@ -11,7 +11,10 @@ const EXPECTED_PRERACE = {
     ECONOMICA: [729, 36450, '2-6-7 / 3-1-5 / 2-6-1 / 3-9-8 / 9-3-6 / 4-6-10'], EQUILIBRADA: [1728, 86400, '2-6-7 / 3-1-5 / 2-6-1-4 / 3-9-8-1 / 9-3-6 / 4-6-10-8'], BLINDADA: [3840, 192000, '2-6-7 / 3-1-5-2 / 2-6-1-4 / 3-9-8-1-6 / 9-3-6-7 / 4-6-10-8']},
   // La Rinconada R43 · 01/11/2026 · Sistema 4.2 · múltiplo Bs 50
   'RIN-R43-2026-11-01': {DATASET_SHA256: '116147340c4d956bfd30ebafff2d1977132e07cd5777e8e6c1cc1cb4c5d5980e', SOURCE_SHA256: '046a5bfdaceeae3a5609a7a7415b4c4edf0d84a7c1a9499355e6d9a73e4a3ece',
-    ECONOMICA: [729, 36450, '6-10-9 / 1-2-8 / 5-9-8 / 9-8-3 / 11-1-6 / 12-10-4'], EQUILIBRADA: [1296, 64800, '6-10-9 / 1-2-8 / 5-9-8-4 / 9-8-3-10 / 11-1-6 / 12-10-4'], BLINDADA: [2880, 144000, '6-10-9-1 / 1-2-8 / 5-9-8-4-1 / 9-8-3-10 / 11-1-6-2 / 12-10-4']}
+    ECONOMICA: [729, 36450, '6-10-9 / 1-2-8 / 5-9-8 / 9-8-3 / 11-1-6 / 12-10-4'], EQUILIBRADA: [1296, 64800, '6-10-9 / 1-2-8 / 5-9-8-4 / 9-8-3-10 / 11-1-6 / 12-10-4'], BLINDADA: [2880, 144000, '6-10-9-1 / 1-2-8 / 5-9-8-4-1 / 9-8-3-10 / 11-1-6-2 / 12-10-4']},
+  // Valencia R28 · 07/11/2026 · Sistema 4.4 · múltiplo Bs 50 · Blindada no publicada (análisis incompleto)
+  'VAL-R28-2026-11-07': {DATASET_SHA256: '34347922fa307b5832999eca4db7949d1a0a2eac3630b73f0f335a25c844fbd9', SOURCE_SHA256: 'c41b9e8f41045f81d862c4167e059fbdf38cc79788270742b4cd75e34b08e802',
+    ECONOMICA: [1296, 64800, '6-4-1 / 9-4-1-7 / 4-7-1-5 / 1-4-6 / 9-4-8 / 7-1-8'], EQUILIBRADA: [2700, 135000, '6-4-1 / 9-4-1-7-3 / 4-7-1-5-6 / 1-4-6 / 9-4-8 / 7-1-8-9']}
 };
 const B_MARKERS = [/COUNTERFACTUAL/i, /frozen\/b1/i, /REVISION_1/i, /B_SHA256/, /B privado/i, /PRIVATE_/];
 const STATUSES = ['VERIFIED', 'PARTIAL', 'AWAITING_OFFICIAL_EVIDENCE', 'NEEDS_EVIDENCE'];
